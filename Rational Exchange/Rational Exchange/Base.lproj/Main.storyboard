@@ -25,7 +25,7 @@
                                     <rect key="frame" x="16" y="84" width="97" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="foreignTaxFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="7bA-8A-Adn"/>
+                                    <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="z6j-rf-m3s"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3L-fO-hpA">
@@ -36,7 +36,7 @@
                                     <rect key="frame" x="119" y="110" width="97" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="foreignExchangeFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Jwq-bg-cnM"/>
+                                    <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="yjy-xe-pC4"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9rt-CD-70G">
@@ -47,7 +47,7 @@
                                     <rect key="frame" x="16" y="132" width="97" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="foreignTipFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Je6-1H-nlU"/>
+                                    <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="dbO-df-FXb"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="740-ce-6sB">
@@ -58,7 +58,7 @@
                                     <rect key="frame" x="125" y="516" width="97" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="homeTipFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="IFL-Mv-Oqk"/>
+                                    <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="4GK-c8-3H6"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UDv-E4-v5n">
@@ -69,7 +69,7 @@
                                     <rect key="frame" x="43" y="218" width="97" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="foreignCostFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Bfi-x4-FS0"/>
+                                    <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="TUa-Bs-j2L"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WHAT THEY WANT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2T-Qc-lO2">
@@ -118,7 +118,7 @@
                                     <rect key="frame" x="16" y="516" width="97" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="homeTaxFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="j4M-Nn-HlW"/>
+                                    <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Dea-K1-PL0"/>
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foreign Tax" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8O-eo-Cg1">

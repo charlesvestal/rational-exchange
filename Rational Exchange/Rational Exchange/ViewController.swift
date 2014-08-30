@@ -31,30 +31,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func foreignTaxFieldChanged(sender : AnyObject) {
+    @IBAction func fieldChanged(sender : AnyObject) {
         updateUI()
     }
-    
-    @IBAction func foreignTipFieldChanged(sender : AnyObject) {
-        updateUI()
-    }
-    
-    @IBAction func foreignExchangeFieldChanged(sender : AnyObject) {
-        updateUI()
-    }
-    
-    @IBAction func foreignCostFieldChanged(sender: AnyObject) {
-        updateUI()
-    }
-    
-    @IBAction func homeTaxFieldChanged(sender: AnyObject) {
-        updateUI()
-    }
-    
-    @IBAction func homeTipFieldChanged(sender: AnyObject) {
-        updateUI()
-    }
-    
     
     @IBAction func viewTapped(sender : AnyObject) {
         self.view.endEditing(true)
