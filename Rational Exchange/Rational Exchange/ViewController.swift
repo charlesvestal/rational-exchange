@@ -41,7 +41,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetButtonPressed(sender: AnyObject) {
-        resetUI()
+        let usa = country(taxRate: 0.0825, tipRate: 0.2, exchangeRate:1)
+        let norway = country(taxRate: 0.0, tipRate: 0.0, exchangeRate:6)
+        resetUI(usa, foreignCountry: norway)
     }
     
     let tipCalc = TipCalculatorModel(foreignTheyWant: 96,
@@ -79,15 +81,13 @@ class ViewController: UIViewController {
             tipCalc.calcShouldTaxLike())
     }
 
-    func resetUI() {
-        let usa = country(taxRate: 0.0825, tipRate: 0.2, exchangeRate:1)
-        let norway = country(taxRate: 0.0, tipRate: 0.0, exchangeRate:6)
-        tipCalc.foreignTaxRate =  norway.taxRate
-        tipCalc.foreignTipRate = norway.tipRate
-        tipCalc.exchangeRate =  norway.exchangeRate / usa.exchangeRate
+    func resetUI(homeCountry:country, foreignCountry:country) {
+        tipCalc.foreignTaxRate =  foreignCountry.taxRate
+        tipCalc.foreignTipRate = foreignCountry.tipRate
+        tipCalc.exchangeRate =  foreignCountry.exchangeRate / homeCountry.exchangeRate
         tipCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
-        tipCalc.homeTaxRate =  usa.taxRate
-        tipCalc.homeTipRate =  usa.tipRate
+        tipCalc.homeTaxRate =  homeCountry.taxRate
+        tipCalc.homeTipRate =  homeCountry.tipRate
         homeCostField.text = NSString (format: "%.2f", tipCalc.calcShouldFeelLike())
         homeCostLabel.text = String(format: "%0.2f total = %0.2f + %0.2f tip + %0.2f tax",
             tipCalc.calcTotalAmount(),
