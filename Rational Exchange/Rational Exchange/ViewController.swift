@@ -38,12 +38,14 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
     
+    var usa = country(taxRate: 0.825, tipRate: 0.2)
+    var norway = country(taxRate: 0, tipRate: 0)
+        
     let tipCalc = TipCalculatorModel(foreignTheyWant: 96,
                                     exchangeRate: 6.0,
-                                    foreignTaxRate: 0.0,
-                                    foreignTipRate: 0.0,
-                                    homeTaxRate: 8.25,
-                                    homeTipRate: 20)
+                                    country1: country(taxRate: 0, tipRate: 0),
+                                    country2: country(taxRate: 0.825, tipRate: 0.2)
+    )
     
     func initUI() {
         foreignTaxField.text = String(format: "%0.2f", tipCalc.foreignTaxRate)

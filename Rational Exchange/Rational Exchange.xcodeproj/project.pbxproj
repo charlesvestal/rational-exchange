@@ -7,12 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FE5FC40F19B2718A0008333D /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5FC40E19B2718A0008333D /* CountryModel.swift */; };
 		FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5319B1767B00852F94 /* AppDelegate.swift */; };
 		FEE86B5619B1767B00852F94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5519B1767B00852F94 /* ViewController.swift */; };
 		FEE86B5919B1767B00852F94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE86B5719B1767B00852F94 /* Main.storyboard */; };
 		FEE86B5B19B1767B00852F94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE86B5A19B1767B00852F94 /* Images.xcassets */; };
 		FEE86B6719B1767B00852F94 /* Rational_ExchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B6619B1767B00852F94 /* Rational_ExchangeTests.swift */; };
-		FEE86B7119B1771600852F94 /* TipCalculadorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B7019B1771600852F94 /* TipCalculadorModel.swift */; };
+		FEE86B7119B1771600852F94 /* TipCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B7019B1771600852F94 /* TipCalculatorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FE5FC40E19B2718A0008333D /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		FEE86B4E19B1767B00852F94 /* Rational Exchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rational Exchange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE86B5219B1767B00852F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEE86B5319B1767B00852F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,7 +37,7 @@
 		FEE86B6019B1767B00852F94 /* Rational ExchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rational ExchangeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE86B6519B1767B00852F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEE86B6619B1767B00852F94 /* Rational_ExchangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rational_ExchangeTests.swift; sourceTree = "<group>"; };
-		FEE86B7019B1771600852F94 /* TipCalculadorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculadorModel.swift; sourceTree = "<group>"; };
+		FEE86B7019B1771600852F94 /* TipCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculatorModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +61,8 @@
 		FEE86B4519B1767B00852F94 = {
 			isa = PBXGroup;
 			children = (
-				FEE86B7019B1771600852F94 /* TipCalculadorModel.swift */,
+				FE5FC40E19B2718A0008333D /* CountryModel.swift */,
+				FEE86B7019B1771600852F94 /* TipCalculatorModel.swift */,
 				FEE86B5019B1767B00852F94 /* Rational Exchange */,
 				FEE86B6319B1767B00852F94 /* Rational ExchangeTests */,
 				FEE86B4F19B1767B00852F94 /* Products */,
@@ -213,8 +216,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEE86B7119B1771600852F94 /* TipCalculadorModel.swift in Sources */,
+				FEE86B7119B1771600852F94 /* TipCalculatorModel.swift in Sources */,
 				FEE86B5619B1767B00852F94 /* ViewController.swift in Sources */,
+				FE5FC40F19B2718A0008333D /* CountryModel.swift in Sources */,
 				FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
