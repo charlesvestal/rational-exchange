@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>59AA08B7-A428-4906-B41B-AF1CCE03CCF5</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Rational Exchange</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>21ECA3E5E9517A033EBA8E40B93C724DF51E3732</key>
+		<string>https://github.com/charlesvestal/rational-exchange.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Rational Exchange/Rational Exchange.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>21ECA3E5E9517A033EBA8E40B93C724DF51E3732</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/charlesvestal/rational-exchange.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>21ECA3E5E9517A033EBA8E40B93C724DF51E3732</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>21ECA3E5E9517A033EBA8E40B93C724DF51E3732</string>
+			<key>IDESourceControlWCCName</key>
+			<string>rational-exchange</string>
+		</dict>
+	</array>
+</dict>
+</plist>
