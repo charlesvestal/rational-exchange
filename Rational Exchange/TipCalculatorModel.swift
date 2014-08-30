@@ -10,8 +10,8 @@ import Foundation
 
 class TipCalculatorModel {
     
-    var country1:country
-    var country2:country
+    var foreignCountry:country
+    var homeCountry:country
     var exchangeRate:Double
     var foreignTheyWant:Double
     var foreignTaxRate:Double
@@ -19,15 +19,15 @@ class TipCalculatorModel {
     var homeTaxRate:Double
     var homeTipRate:Double
     
-    init(foreignTheyWant:Double, exchangeRate:Double, country1:country, country2:country) {
+    init(foreignTheyWant:Double, foreignCountry:country, homeCountry:country) {
         self.foreignTheyWant = foreignTheyWant
-        self.exchangeRate = exchangeRate
-        self.country1 = country1
-        self.country2 = country2
-        self.foreignTaxRate = 0.01 * country1.taxRate
-        self.foreignTipRate = 0.01 * country1.tipRate
-        self.homeTaxRate  = 0.01 * country2.taxRate
-        self.homeTipRate  = 0.01 * country2.tipRate
+        self.exchangeRate = foreignCountry.exchangeRate / homeCountry.exchangeRate
+        self.foreignCountry = foreignCountry
+        self.homeCountry = homeCountry
+        self.foreignTaxRate = foreignCountry.taxRate
+        self.foreignTipRate = foreignCountry.tipRate
+        self.homeTaxRate  =  homeCountry.taxRate
+        self.homeTipRate  =  homeCountry.tipRate
     }
     
     func calcTotalAmount () -> Double {
@@ -51,8 +51,6 @@ class TipCalculatorModel {
         var shouldTaxLike = homeTaxRate * calcShouldFeelLike()
         return shouldTaxLike
     }
-    
-    
     
 }
 

@@ -11,10 +11,12 @@ import Foundation
 class country {
     var taxRate:Double
     var tipRate:Double
+    var exchangeRate:Double
   
-    init(taxRate:Double, tipRate:Double) {
+    init(taxRate:Double, tipRate:Double, exchangeRate:Double) {
         self.taxRate = taxRate
         self.tipRate = tipRate
+        self.exchangeRate = exchangeRate
     }
     
 }

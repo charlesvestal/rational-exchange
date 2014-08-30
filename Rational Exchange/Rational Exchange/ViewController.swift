@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController {
 
+
     @IBOutlet weak var foreignTaxField: UITextField!
     @IBOutlet weak var foreignTipField: UITextField!
     @IBOutlet weak var foreignExchangeField: UITextField!
@@ -18,6 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var homeCostLabel: UILabel!
     @IBOutlet weak var homeTaxField: UITextField!
     @IBOutlet weak var homeTipField: UITextField!
+    @IBOutlet weak var resetButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,13 +40,13 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    var usa = country(taxRate: 0.825, tipRate: 0.2)
-    var norway = country(taxRate: 0, tipRate: 0)
-        
+    @IBAction func resetButtonPressed(sender: AnyObject) {
+        resetUI()
+    }
+    
     let tipCalc = TipCalculatorModel(foreignTheyWant: 96,
-                                    exchangeRate: 6.0,
-                                    country1: country(taxRate: 0, tipRate: 0),
-                                    country2: country(taxRate: 0.825, tipRate: 0.2)
+                                    foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 6.0),
+                                    homeCountry: country(taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0)
     )
     
     func initUI() {
@@ -77,5 +79,22 @@ class ViewController: UIViewController {
             tipCalc.calcShouldTaxLike())
     }
 
+    func resetUI() {
+        let usa = country(taxRate: 0.0825, tipRate: 0.2, exchangeRate:1)
+        let norway = country(taxRate: 0.0, tipRate: 0.0, exchangeRate:6)
+        tipCalc.foreignTaxRate =  norway.taxRate
+        tipCalc.foreignTipRate = norway.tipRate
+        tipCalc.exchangeRate =  norway.exchangeRate / usa.exchangeRate
+        tipCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
+        tipCalc.homeTaxRate =  usa.taxRate
+        tipCalc.homeTipRate =  usa.tipRate
+        homeCostField.text = NSString (format: "%.2f", tipCalc.calcShouldFeelLike())
+        homeCostLabel.text = String(format: "%0.2f total = %0.2f + %0.2f tip + %0.2f tax",
+            tipCalc.calcTotalAmount(),
+            tipCalc.calcShouldFeelLike(),
+            tipCalc.calcShouldTipLike(),
+            tipCalc.calcShouldTaxLike())
+        initUI()
+    }
 }
 
