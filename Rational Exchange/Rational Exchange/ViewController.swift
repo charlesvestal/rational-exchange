@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIPickerViewDelegate {
 
     @IBOutlet weak var foreignCostField: UITextField!
     @IBOutlet weak var homeCostField: UITextField!
@@ -56,9 +56,26 @@ class ViewController: UIViewController {
             tipCalc.calcShouldTipLike(),
             tipCalc.calcShouldTaxLike())
        
-        let pickerData: [String] = ["Norway", "USA", "Germany"]
+        
     }
 
+      func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int
+      {
+        return 1
+    }
+    
+    let pickerData = ["Norway", "USA", "Germany"]
+    
+    func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int
+    {
+    return pickerData.count
+    }
+    
+    func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String!
+    {
+        return pickerData[row]
+    }
+    
     func updateUI()   {
         tipCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
         homeCostField.text = NSString (format: "%.2f", tipCalc.calcShouldFeelLike())
