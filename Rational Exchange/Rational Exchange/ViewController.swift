@@ -36,7 +36,19 @@ class ViewController: UIViewController {
     }
 
     @IBAction func calculateTapped(sender : AnyObject) {
-        
+        tipCalc.foreignTaxRate =  Double((foreignTaxField.text as NSString).doubleValue)
+        tipCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
+        tipCalc.exchangeRate =  Double((foreignExchangeField.text as NSString).doubleValue)
+        tipCalc.foreignTipRate = Double((foreignTipField.text as NSString).doubleValue)
+        tipCalc.homeTaxRate =  Double((homeTaxField.text as NSString).doubleValue)
+        tipCalc.homeTipRate =  Double((homeTipField.text as NSString).doubleValue)
+        homeCostField.text = NSString (format: "%.2f", tipCalc.calcShouldFeelLike())
+        homeCostLabel.text = String(format: "%0.2f total = %0.2f + %0.2f tip + %0.2f tax",
+            tipCalc.calcTotalAmount(),
+            tipCalc.calcShouldFeelLike(),
+            tipCalc.calcShouldTipLike(),
+            tipCalc.calcShouldTaxLike())
+
     }
     
     @IBAction func foreignTaxFieldChanged(sender : AnyObject) {
@@ -50,6 +62,12 @@ class ViewController: UIViewController {
     
     @IBAction func viewTapped(sender : AnyObject) {
         foreignTaxField.resignFirstResponder()
+        foreignExchangeField.resignFirstResponder()
+        foreignTipField.resignFirstResponder()
+        foreignCostField.resignFirstResponder()
+        homeTaxField.resignFirstResponder()
+        homeTipField.resignFirstResponder()
+        
     }
     
     let tipCalc = TipCalculatorModel(foreignTheyWant: 96,
@@ -60,7 +78,6 @@ class ViewController: UIViewController {
                                     homeTipRate: 20)
     
     func refreshUI() {
-        // 1
         foreignTaxField.text = String(format: "%0.2f", tipCalc.foreignTaxRate)
         foreignTipField.text = String(format: "%0.2f", tipCalc.foreignTipRate)
         foreignExchangeField.text = String(format: "%0.2f", tipCalc.exchangeRate)
@@ -71,7 +88,7 @@ class ViewController: UIViewController {
             tipCalc.calcShouldFeelLike(),
             tipCalc.calcShouldTipLike(),
             tipCalc.calcShouldTaxLike())
-        homeTaxField.text = String(format: "%0.2f", tipCalc.homeTaxRate)
+        homeTaxField.text = String(format: "%0.4f", tipCalc.homeTaxRate)
         homeTipField.text = String(format: "%0.2f", tipCalc.homeTipRate)
     }
 
