@@ -18,6 +18,7 @@ class TipCalculatorModel {
     var foreignTipRate:Double
     var homeTaxRate:Double
     var homeTipRate:Double
+    var precision:Double
     
     init(foreignTheyWant:Double, foreignCountry:country, homeCountry:country) {
         self.foreignTheyWant = foreignTheyWant
@@ -28,6 +29,7 @@ class TipCalculatorModel {
         self.foreignTipRate = foreignCountry.tipRate
         self.homeTaxRate  =  homeCountry.taxRate
         self.homeTipRate  =  homeCountry.tipRate
+        self.precision = homeCountry.precision
     }
     
     func calcTotalAmount () -> Double {
@@ -38,6 +40,7 @@ class TipCalculatorModel {
     func calcShouldFeelLike() -> Double
     {
         var shouldFeelLike = calcTotalAmount()/(1.0 + homeTaxRate + homeTipRate)
+        shouldFeelLike = precision * floor((shouldFeelLike/precision)+0.5)
         return shouldFeelLike
     }
     

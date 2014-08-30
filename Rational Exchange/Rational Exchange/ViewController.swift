@@ -41,14 +41,14 @@ class ViewController: UIViewController {
     }
     
     @IBAction func resetButtonPressed(sender: AnyObject) {
-        let usa = country(taxRate: 0.0825, tipRate: 0.2, exchangeRate:1)
-        let norway = country(taxRate: 0.0, tipRate: 0.0, exchangeRate:6)
+        let norway = country(taxRate: 0.0, tipRate: 0.0, exchangeRate:6, precision:1.0)
+        let usa = country(taxRate: 0.0825, tipRate: 0.2, exchangeRate:1, precision:0.5)
         resetUI(usa, foreignCountry: norway)
     }
     
     let tipCalc = TipCalculatorModel(foreignTheyWant: 96,
-                                    foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 6.0),
-                                    homeCountry: country(taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0)
+        foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1.0),
+        homeCountry: country(taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.5)
     )
     
     func initUI() {

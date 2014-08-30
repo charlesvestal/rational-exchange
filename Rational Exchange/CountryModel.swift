@@ -12,11 +12,13 @@ class country {
     var taxRate:Double
     var tipRate:Double
     var exchangeRate:Double
+    var precision:Double
   
-    init(taxRate:Double, tipRate:Double, exchangeRate:Double) {
+    init(taxRate:Double, tipRate:Double, exchangeRate:Double, precision:Double) {
         self.taxRate = taxRate
         self.tipRate = tipRate
         self.exchangeRate = exchangeRate
+        self.precision = precision
     }
     
 }
