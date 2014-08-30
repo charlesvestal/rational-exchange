@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        refreshUI()
+        initUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,30 +35,31 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func calculateTapped(sender : AnyObject) {
-        tipCalc.foreignTaxRate =  Double((foreignTaxField.text as NSString).doubleValue)
-        tipCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
-        tipCalc.exchangeRate =  Double((foreignExchangeField.text as NSString).doubleValue)
-        tipCalc.foreignTipRate = Double((foreignTipField.text as NSString).doubleValue)
-        tipCalc.homeTaxRate =  Double((homeTaxField.text as NSString).doubleValue)
-        tipCalc.homeTipRate =  Double((homeTipField.text as NSString).doubleValue)
-        homeCostField.text = NSString (format: "%.2f", tipCalc.calcShouldFeelLike())
-        homeCostLabel.text = String(format: "%0.2f total = %0.2f + %0.2f tip + %0.2f tax",
-            tipCalc.calcTotalAmount(),
-            tipCalc.calcShouldFeelLike(),
-            tipCalc.calcShouldTipLike(),
-            tipCalc.calcShouldTaxLike())
-
-    }
-    
     @IBAction func foreignTaxFieldChanged(sender : AnyObject) {
+        updateUI()
     }
     
     @IBAction func foreignTipFieldChanged(sender : AnyObject) {
+        updateUI()
     }
     
     @IBAction func foreignExchangeFieldChanged(sender : AnyObject) {
+        updateUI()
     }
+    
+    @IBAction func foreignCostFieldChanged(sender: AnyObject) {
+        updateUI()
+    }
+    
+    @IBAction func homeTaxFieldChanged(sender: AnyObject) {
+        updateUI()
+    }
+    
+    @IBAction func homeTipFieldChanged(sender: AnyObject) {
+        updateUI()
+    }
+    
+    
     
     @IBAction func viewTapped(sender : AnyObject) {
         foreignTaxField.resignFirstResponder()
@@ -77,12 +78,12 @@ class ViewController: UIViewController {
                                     homeTaxRate: 8.25,
                                     homeTipRate: 20)
     
-    func refreshUI() {
+    func initUI() {
         foreignTaxField.text = String(format: "%0.2f", tipCalc.foreignTaxRate)
         foreignTipField.text = String(format: "%0.2f", tipCalc.foreignTipRate)
         foreignExchangeField.text = String(format: "%0.2f", tipCalc.exchangeRate)
         foreignCostField.text = String(format: "%0.2f", tipCalc.foreignTheyWant)
-        homeCostField.text = String(format: "%0.2f", tipCalc.calcShouldFeelLike()) // how to get this? convert to functions?
+        homeCostField.text = String(format: "%0.2f", tipCalc.calcShouldFeelLike())
         homeCostLabel.text = String(format: "%0.2f total = %0.2f + %0.2f tip + %0.2f tax",
             tipCalc.calcTotalAmount(),
             tipCalc.calcShouldFeelLike(),
@@ -90,6 +91,21 @@ class ViewController: UIViewController {
             tipCalc.calcShouldTaxLike())
         homeTaxField.text = String(format: "%0.4f", tipCalc.homeTaxRate)
         homeTipField.text = String(format: "%0.2f", tipCalc.homeTipRate)
+    }
+
+    func updateUI()   {
+        tipCalc.foreignTaxRate =  Double((foreignTaxField.text as NSString).doubleValue)
+        tipCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
+        tipCalc.exchangeRate =  Double((foreignExchangeField.text as NSString).doubleValue)
+        tipCalc.foreignTipRate = Double((foreignTipField.text as NSString).doubleValue)
+        tipCalc.homeTaxRate =  Double((homeTaxField.text as NSString).doubleValue)
+        tipCalc.homeTipRate =  Double((homeTipField.text as NSString).doubleValue)
+        homeCostField.text = NSString (format: "%.2f", tipCalc.calcShouldFeelLike())
+        homeCostLabel.text = String(format: "%0.2f total = %0.2f + %0.2f tip + %0.2f tax",
+            tipCalc.calcTotalAmount(),
+            tipCalc.calcShouldFeelLike(),
+            tipCalc.calcShouldTipLike(),
+            tipCalc.calcShouldTaxLike())
     }
 
 }

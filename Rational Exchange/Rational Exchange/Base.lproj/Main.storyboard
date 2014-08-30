@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3DH-9s-nSH">
     <dependencies>
+        <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
     </dependencies>
     <scenes>
@@ -24,7 +25,7 @@
                                     <rect key="frame" x="16" y="84" width="97" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="foreignTaxFieldChanged:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="ZKq-jG-okt"/>
+                                    <action selector="foreignTaxFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="7bA-8A-Adn"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r3L-fO-hpA">
@@ -35,7 +36,7 @@
                                     <rect key="frame" x="119" y="110" width="97" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="foreignExchangeFieldChanged:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="3oS-eE-eT8"/>
+                                    <action selector="foreignExchangeFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Jwq-bg-cnM"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9rt-CD-70G">
@@ -46,7 +47,7 @@
                                     <rect key="frame" x="16" y="132" width="97" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="foreignTipFieldChanged:" destination="vXZ-lx-hvc" eventType="editingDidEnd" id="a1b-JB-RXn"/>
+                                    <action selector="foreignTipFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Je6-1H-nlU"/>
                                 </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="740-ce-6sB">
@@ -56,6 +57,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="125" y="516" width="97" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="homeTipFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="IFL-Mv-Oqk"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UDv-E4-v5n">
                                 <rect key="frame" x="90" y="215" width="97" height="30"/>
@@ -64,6 +68,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="43" y="218" width="97" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="foreignCostFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Bfi-x4-FS0"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="WHAT THEY WANT" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2T-Qc-lO2">
                                 <rect key="frame" x="63" y="174" width="150" height="21"/>
@@ -103,18 +110,6 @@
                                     <rect key="frame" x="16" y="478" width="214" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n77-8A-YKL">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Calculate">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="51" y="294" width="65" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="calculateTapped:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="bIx-Vi-xBo"/>
-                                </connections>
-                            </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sLa-ab-SMM">
                                 <rect key="frame" x="90" y="78" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -122,6 +117,9 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="16" y="516" width="97" height="30"/>
                                 </variation>
+                                <connections>
+                                    <action selector="homeTaxFieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="j4M-Nn-HlW"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="foreign Tax" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h8O-eo-Cg1">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -177,7 +175,6 @@
                                 <exclude reference="YEb-Gq-hKV"/>
                                 <exclude reference="eWY-F6-VD7"/>
                                 <exclude reference="7Lp-Fy-Sdf"/>
-                                <exclude reference="n77-8A-YKL"/>
                                 <exclude reference="sLa-ab-SMM"/>
                                 <exclude reference="h8O-eo-Cg1"/>
                                 <exclude reference="qC2-V6-cQm"/>
@@ -192,7 +189,6 @@
                                 <include reference="YEb-Gq-hKV"/>
                                 <include reference="eWY-F6-VD7"/>
                                 <include reference="7Lp-Fy-Sdf"/>
-                                <include reference="n77-8A-YKL"/>
                                 <include reference="sLa-ab-SMM"/>
                                 <include reference="h8O-eo-Cg1"/>
                                 <include reference="qC2-V6-cQm"/>
@@ -207,7 +203,6 @@
                     </view>
                     <navigationItem key="navigationItem" title="Rational Exchange" id="ugM-q9-Wj8"/>
                     <connections>
-                        <outlet property="calculateButton" destination="n77-8A-YKL" id="EWO-Rh-ixv"/>
                         <outlet property="foreignCostField" destination="UDv-E4-v5n" id="K0D-Us-Hby"/>
                         <outlet property="foreignExchangeField" destination="r3L-fO-hpA" id="u73-bL-UzD"/>
                         <outlet property="foreignTaxField" destination="Itz-rW-e1D" id="PSK-0r-Y4Z"/>
