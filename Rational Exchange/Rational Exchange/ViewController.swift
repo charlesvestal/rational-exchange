@@ -13,14 +13,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var foreignTaxField: UITextField!
     @IBOutlet weak var foreignTipField: UITextField!
     @IBOutlet weak var foreignExchangeField: UITextField!
-   
     @IBOutlet weak var foreignCostField: UITextField!
-    
     @IBOutlet weak var calculateButton: UIButton!
-    
     @IBOutlet weak var homeCostField: UITextField!
     @IBOutlet weak var homeCostLabel: UILabel!
-    
     @IBOutlet weak var homeTaxField: UITextField!
     @IBOutlet weak var homeTipField: UITextField!
     
@@ -60,15 +56,8 @@ class ViewController: UIViewController {
     }
     
     
-    
     @IBAction func viewTapped(sender : AnyObject) {
-        foreignTaxField.resignFirstResponder()
-        foreignExchangeField.resignFirstResponder()
-        foreignTipField.resignFirstResponder()
-        foreignCostField.resignFirstResponder()
-        homeTaxField.resignFirstResponder()
-        homeTipField.resignFirstResponder()
-        
+        self.view.endEditing(true)
     }
     
     let tipCalc = TipCalculatorModel(foreignTheyWant: 96,
