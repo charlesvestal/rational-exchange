@@ -6,7 +6,6 @@ class TipCalculator {
     let thereTipRate:Double
     let homeTaxRate:Double
     let homeTipRate:Double
-    let shouldFeelLike:Double
     
     init(hereTheyWant:Double, exchangeRate:Double, thereTaxRate:Double, thereTipRate:Double, homeTaxRate:Double, homeTipRate:Double) {
         self.hereTheyWant = hereTheyWant
@@ -15,7 +14,6 @@ class TipCalculator {
         self.thereTipRate = 0.01 * thereTipRate
         self.homeTaxRate  = 0.01 * homeTaxRate
         self.homeTipRate  = 0.01 * homeTipRate
-        self.shouldFeelLike = 0.0
     }
 
     func calcTotals() -> [String: Double]
