@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var foreignTipField: UITextField!
     @IBOutlet weak var foreignExchangeField: UITextField!
     @IBOutlet weak var foreignCostField: UITextField!
-    @IBOutlet weak var calculateButton: UIButton!
     @IBOutlet weak var homeCostField: UITextField!
     @IBOutlet weak var homeCostLabel: UILabel!
     @IBOutlet weak var homeTaxField: UITextField!
