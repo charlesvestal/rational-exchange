@@ -13,9 +13,6 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var foreignCostField: UITextField!
     @IBOutlet weak var homeCostField: UITextField!
     @IBOutlet weak var homeCostLabel: UILabel!
-    @IBOutlet weak var resetButton: UIButton!
-    @IBOutlet weak var foreignPicker: UIPickerView!
-    @IBOutlet weak var homePicker: UIPickerView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,12 +33,6 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         self.view.endEditing(true)
     }
     
-    @IBAction func resetButtonPressed(sender: AnyObject) {
-        let norway = country(taxRate: 0.0, tipRate: 0.0, exchangeRate:6, precision:1.0)
-        let usa = country(taxRate: 0.0825, tipRate: 0.2, exchangeRate:1, precision:0.5)
-        resetUI(usa, foreignCountry: norway)
-    }
-    
     let tipCalc = TipCalculatorModel(foreignTheyWant: 96,
         foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1.0),
         homeCountry: country(taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.5)
@@ -55,27 +46,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             tipCalc.calcShouldFeelLike(),
             tipCalc.calcShouldTipLike(),
             tipCalc.calcShouldTaxLike())
-       
-        
+
     }
 
-      func numberOfComponentsInPickerView(pickerView: UIPickerView!) -> Int
-      {
-        return 1
-    }
-    
-    let pickerData = ["Norway", "USA", "Germany"]
-    
-    func pickerView(pickerView: UIPickerView!, numberOfRowsInComponent component: Int) -> Int
-    {
-    return pickerData.count
-    }
-    
-    func pickerView(pickerView: UIPickerView!, titleForRow row: Int, forComponent component: Int) -> String!
-    {
-        return pickerData[row]
-    }
-    
     func updateUI()   {
         tipCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
         homeCostField.text = NSString (format: "%.2f", tipCalc.calcShouldFeelLike())
@@ -86,6 +59,12 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             tipCalc.calcShouldTaxLike())
     }
 
+    func changeHomeCountry(homeCountry: country) {
+        tipCalc.homeCountry = homeCountry
+        updateUI()
+    }
+    
+    
     func resetUI(homeCountry:country, foreignCountry:country) {
         tipCalc.foreignTaxRate =  foreignCountry.taxRate
         tipCalc.foreignTipRate = foreignCountry.tipRate

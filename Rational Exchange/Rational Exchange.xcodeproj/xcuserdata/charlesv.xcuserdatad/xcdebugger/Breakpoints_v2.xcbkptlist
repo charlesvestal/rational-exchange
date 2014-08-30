@@ -2,4 +2,80 @@
 <Bucket
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Rational Exchange/ViewController.swift"
+            timestampString = "431135735.495187"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "ViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Rational_Exchange.ViewController.foreignCostField.setter : weak Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.UITextField&gt;"
+                  moduleName = "Rational Exchange"
+                  urlString = "file:///Users/charlesv/Development/rational-exchange/Rational%20Exchange/Rational%20Exchange/ViewController.swift"
+                  timestampString = "431135840.644856"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "16">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Rational_Exchange.ViewController.init (Rational_Exchange.ViewController.Type)(nibName : Swift.ImplicitlyUnwrappedOptional&lt;Swift.String&gt;, bundle : Swift.ImplicitlyUnwrappedOptional&lt;ObjectiveC.NSBundle&gt;) -&gt; Rational_Exchange.ViewController"
+                  moduleName = "Rational Exchange"
+                  urlString = "file:///Users/charlesv/Development/rational-exchange/Rational%20Exchange/Rational%20Exchange/ViewController.swift"
+                  timestampString = "431135840.645147"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Rational_Exchange.ViewController.init (Rational_Exchange.ViewController.Type)() -&gt; Rational_Exchange.ViewController"
+                  moduleName = "Rational Exchange"
+                  urlString = "file:///Users/charlesv/Development/rational-exchange/Rational%20Exchange/Rational%20Exchange/ViewController.swift"
+                  timestampString = "431135840.645394"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "27">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Rational_Exchange.ViewController.init (Rational_Exchange.ViewController.Type)(coder : ObjectiveC.NSCoder) -&gt; Rational_Exchange.ViewController"
+                  moduleName = "Rational Exchange"
+                  urlString = "file:///Users/charlesv/Development/rational-exchange/Rational%20Exchange/Rational%20Exchange/ViewController.swift"
+                  timestampString = "431135840.645632"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "13"
+                  endingLineNumber = "13"
+                  offsetFromSymbolStart = "27">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
