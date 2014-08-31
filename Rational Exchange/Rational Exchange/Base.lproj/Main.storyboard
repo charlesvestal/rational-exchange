@@ -17,6 +17,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UDv-E4-v5n">
+                                <rect key="frame" x="90" y="215" width="97" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="112" y="193" width="97" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="TUa-Bs-j2L"/>
+                                </connections>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YEb-Gq-hKV">
                                 <rect key="frame" x="90" y="215" width="97" height="30"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -25,7 +36,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="222" width="97" height="30"/>
+                                    <rect key="frame" x="112" y="260" width="97" height="30"/>
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="But it really should feel like" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWY-F6-VD7">
@@ -34,7 +45,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="58" y="193" width="205" height="21"/>
+                                    <rect key="frame" x="58" y="231" width="205" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's like this" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Lp-Fy-Sdf">
@@ -43,7 +54,7 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="53" y="260" width="214" height="21"/>
+                                    <rect key="frame" x="53" y="298" width="214" height="21"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLf-wV-ma1">
@@ -52,53 +63,51 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="6" y="84" width="32" height="30"/>
+                                    <rect key="frame" x="16" y="84" width="32" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="euroButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TIG-14-YpP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKc-9s-UPT">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Norway">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="261" y="84" width="53" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="norwayButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9dh-a4-sIN"/>
-                                </connections>
-                            </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="UDv-E4-v5n">
-                                <rect key="frame" x="90" y="215" width="97" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="112" y="155" width="97" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="TUa-Bs-j2L"/>
-                                </connections>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="In NOK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2T-Qc-lO2">
                                 <rect key="frame" x="63" y="174" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="132" y="126" width="56" height="21"/>
+                                    <rect key="frame" x="132" y="164" width="56" height="21"/>
                                 </variation>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oq2-rl-xrQ">
                                 <rect key="frame" x="-25" y="-15" width="51" height="31"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="139" y="84" width="51" height="31"/>
+                                    <rect key="frame" x="178" y="125" width="51" height="31"/>
                                 </variation>
                                 <connections>
                                     <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="b68-DW-xJ5"/>
                                 </connections>
                             </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tippable?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFZ-N1-A9Z">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="94" y="130" width="76" height="21"/>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKc-9s-UPT">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Norway">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="251" y="84" width="53" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="norwayButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9dh-a4-sIN"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -108,8 +117,9 @@
                                 <exclude reference="eWY-F6-VD7"/>
                                 <exclude reference="7Lp-Fy-Sdf"/>
                                 <exclude reference="MLf-wV-ma1"/>
-                                <exclude reference="gKc-9s-UPT"/>
                                 <exclude reference="Oq2-rl-xrQ"/>
+                                <exclude reference="xFZ-N1-A9Z"/>
+                                <exclude reference="gKc-9s-UPT"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -118,8 +128,9 @@
                                 <include reference="eWY-F6-VD7"/>
                                 <include reference="7Lp-Fy-Sdf"/>
                                 <include reference="MLf-wV-ma1"/>
-                                <include reference="gKc-9s-UPT"/>
                                 <include reference="Oq2-rl-xrQ"/>
+                                <include reference="xFZ-N1-A9Z"/>
+                                <include reference="gKc-9s-UPT"/>
                             </mask>
                         </variation>
                         <connections>
