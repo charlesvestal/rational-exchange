@@ -17,7 +17,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        initUI()
+        updateUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,22 +33,11 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         self.view.endEditing(true)
     }
     
-    let tipCalc = TipCalculatorModel(foreignTheyWant: 96,
+    let tipCalc = TipCalculatorModel(foreignTheyWant: 0,
         foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1.0),
         homeCountry: country(taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.5)
     )
     
-    func initUI() {
-        foreignCostField.text = String(format: "%0.2f", tipCalc.foreignTheyWant)
-        homeCostField.text = String(format: "%0.2f", tipCalc.calcShouldFeelLike())
-        homeCostLabel.text = String(format: "%0.2f total = %0.2f + %0.2f tip + %0.2f tax",
-            tipCalc.calcTotalAmount(),
-            tipCalc.calcShouldFeelLike(),
-            tipCalc.calcShouldTipLike(),
-            tipCalc.calcShouldTaxLike())
-
-    }
-
     func updateUI()   {
         tipCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
         homeCostField.text = NSString (format: "%.2f", tipCalc.calcShouldFeelLike())
@@ -78,7 +67,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             tipCalc.calcShouldFeelLike(),
             tipCalc.calcShouldTipLike(),
             tipCalc.calcShouldTaxLike())
-        initUI()
+        updateUI()
     }
 }
 
