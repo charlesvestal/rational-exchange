@@ -17,6 +17,11 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var norwayButton: UIButton!
     @IBOutlet weak var foreignLabel: UILabel!
     @IBOutlet weak var tipSwitch: UISwitch!
+    @IBOutlet weak var usaButton: UIButton!
+    
+    @IBOutlet weak var homeEuroButton: UIButton!
+    @IBOutlet weak var homeUSAButton: UIButton!
+    @IBOutlet weak var homeNorwayButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +46,24 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         updateForeignCountry("Euro")
     }
     
+    @IBAction func usaButtonPressed(sender: AnyObject) {
+        updateForeignCountry("USA")
+    }
+    
     @IBAction func norwayButtonPressed(sender: AnyObject) {
         updateForeignCountry("Norway")
+    }
+    
+    @IBAction func homeEuroButtonPressed(sender: AnyObject) {
+        updateHomeCountry("Euro")
+    }
+    
+    @IBAction func homeUSAButtonPressed(sender: AnyObject) {
+        updateHomeCountry("USA")
+    }
+    
+    @IBAction func homeNorwayButtonPressed(sender: AnyObject) {
+        updateHomeCountry("Norway")
     }
     
     var countries: Dictionary<String, AnyObject> = [
@@ -53,7 +74,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         countries = [
             "USA": country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25, currencyShort:"USD"),
             "Euro": country(taxRate: 0, tipRate: 0, exchangeRate: 0.76, precision: 1, currencyShort:"EUR"),
-            "Norway": country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1, currencyShort:"NOK")
+            "Norway": country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1, currencyShort:"NOK"),
+            "Magic10": country(taxRate: 0.1, tipRate: 0.1, exchangeRate: 1, precision: 1, currencyShort:"M10"),
+            "Magic20": country(taxRate: 0.2, tipRate: 0.2, exchangeRate: 1, precision: 1, currencyShort:"M20")
         ]
     }
     
@@ -73,25 +96,34 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         
         exchangeCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
         exchangeCalc.calcExchangeRate()
-        homeCostField.text = NSString (format: "%.2f", exchangeCalc.calcShouldFeelLike(isTippable))
-        homeCostLabel.text = String(format: "%0.2f total = %0.2f + %0.2f tip + %0.2f tax",
+        homeCostField.text = NSString (format: "$%.2f", exchangeCalc.calcShouldFeelLike(isTippable))
+        homeCostLabel.text = String(format: "$%0.2f total = $%0.2f + $%0.2f tip at %0.2f + $%0.2f tax at %0.4f",
             exchangeCalc.calcTotalAmount(isTippable),
             exchangeCalc.calcShouldFeelLike(isTippable),
             exchangeCalc.calcShouldTipLike(isTippable),
-            exchangeCalc.calcShouldTaxLike(isTippable))
+            exchangeCalc.homeTipRate,
+            exchangeCalc.calcShouldTaxLike(isTippable),
+            exchangeCalc.homeTaxRate
+        )
        
     }
 
     func updateForeignCountry(newCountryName:String) {
         let newCountry: country? = countries[newCountryName] as? country
         exchangeCalc.foreignCountry = newCountry!
+        exchangeCalc.foreignTaxRate = newCountry!.taxRate
+        exchangeCalc.foreignTipRate = newCountry!.tipRate
         let newCountryCurrency = newCountry?.currencyShort
         foreignLabel.text = String(format: "In %@", newCountryCurrency!)
         updateUI()
     }
     
-    func updateHomeCountry(newHomeCountry:AnyObject) {
-        exchangeCalc.homeCountry = newHomeCountry as country
+    func updateHomeCountry(newCountryName:String) {
+        let newCountry: country? = countries[newCountryName] as? country
+        exchangeCalc.homeCountry = newCountry!
+        exchangeCalc.homeTaxRate = newCountry!.taxRate
+        exchangeCalc.homeTipRate = newCountry!.tipRate
+        exchangeCalc.precision = newCountry!.precision
         updateUI()
     }
 }
