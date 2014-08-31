@@ -13,6 +13,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var foreignCostField: UITextField!
     @IBOutlet weak var homeCostField: UITextField!
     @IBOutlet weak var homeCostLabel: UILabel!
+    @IBOutlet weak var euroButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +33,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBAction func viewTapped(sender : AnyObject) {
         self.view.endEditing(true)
     }
+    
+    @IBAction func euroButtonPressed(sender: AnyObject) {
+        }
     
     let tipCalc = TipCalculatorModel(foreignTheyWant: 0,
         foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1.0),
@@ -53,4 +57,19 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         tipCalc.foreignCountry = foreignCountry
         updateUI()
     }
+    
+    
+    var countries: Dictionary<String, Any> = [
+        "Country": "Name",
+        "Object": country(taxRate: 0.1, tipRate: 0.2, exchangeRate: 0.3, precision: 0.4),
+    ]
+    
+    override func awakeFromNib() {
+        let usa = country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25)
+        let norway = country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25)
+        let euro = country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25)
+        
+        countries = ["USA": usa, "Euro": euro, "Norway": norway]
+     }
+
 }
