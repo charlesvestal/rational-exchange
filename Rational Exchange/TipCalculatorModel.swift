@@ -32,6 +32,7 @@ class TipCalculatorModel {
         self.precision = homeCountry.precision
     }
     
+    
     func calcTotalAmount () -> Double {
         var totalamount:Double = (foreignTheyWant * (1.0 + foreignTaxRate + foreignTipRate) / exchangeRate)
         return totalamount
@@ -53,6 +54,11 @@ class TipCalculatorModel {
     func calcShouldTaxLike() -> Double {
         var shouldTaxLike = homeTaxRate * calcShouldFeelLike()
         return shouldTaxLike
+    }
+    
+    func calcExchangeRate() -> Double {
+        exchangeRate = foreignCountry.exchangeRate / homeCountry.exchangeRate
+        return exchangeRate
     }
     
 }
