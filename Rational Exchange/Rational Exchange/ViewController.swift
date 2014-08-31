@@ -16,6 +16,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var euroButton: UIButton!
     @IBOutlet weak var norwayButton: UIButton!
     @IBOutlet weak var foreignLabel: UILabel!
+    @IBOutlet weak var tipSwitch: UISwitch!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,14 +65,21 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     )
     
     func updateUI()   {
+        var isTippable:Double
+        if tipSwitch.on
+        { isTippable = 1.0}
+        else
+        { isTippable = 0.0}
+        
         exchangeCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
         exchangeCalc.calcExchangeRate()
-        homeCostField.text = NSString (format: "%.2f", exchangeCalc.calcShouldFeelLike())
+        homeCostField.text = NSString (format: "%.2f", exchangeCalc.calcShouldFeelLike(isTippable))
         homeCostLabel.text = String(format: "%0.2f total = %0.2f + %0.2f tip + %0.2f tax",
-            exchangeCalc.calcTotalAmount(),
-            exchangeCalc.calcShouldFeelLike(),
-            exchangeCalc.calcShouldTipLike(),
-            exchangeCalc.calcShouldTaxLike())
+            exchangeCalc.calcTotalAmount(isTippable),
+            exchangeCalc.calcShouldFeelLike(isTippable),
+            exchangeCalc.calcShouldTipLike(isTippable),
+            exchangeCalc.calcShouldTaxLike(isTippable))
+       
     }
 
     func updateForeignCountry(newCountryName:String) {
