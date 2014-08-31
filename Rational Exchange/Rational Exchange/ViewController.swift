@@ -37,20 +37,30 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     @IBAction func euroButtonPressed(sender: AnyObject) {
-        let newCountry = "Euro"
-        updateForeignCountry(countries[newCountry]!)
-        foreignLabel.text = String(format: "In %@", newCountry)
+        updateForeignCountry("Euro")
     }
     
     @IBAction func norwayButtonPressed(sender: AnyObject) {
-        let newCountry = "Norway"
-        updateForeignCountry(countries[newCountry]!)
-        foreignLabel.text = String(format: "In %@", newCountry)
+        updateForeignCountry("Norway")
     }
     
+    var countries: Dictionary<String, AnyObject> = [
+        "Country": country(taxRate: 0.0, tipRate: 0.0, exchangeRate: 0.0, precision: 0.0, currencyShort:"")
+    ]
+    
+    override func awakeFromNib() {
+        
+        countries = [
+            "USA": country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25, currencyShort:"USD"),
+            "Euro": country(taxRate: 0, tipRate: 0, exchangeRate: 0.76, precision: 1, currencyShort:"EUR"),
+            "Norway": country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1, currencyShort:"NOK")
+        ]
+    }
+
+    
     var exchangeCalc = exchangeCalculatorModel(foreignTheyWant: 0,
-        foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1.0, currencyCode:"NOK"),
-        homeCountry: country(taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.5, currencyCode:"USD")
+        foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1.0, currencyShort:"NOK"),
+        homeCountry: country(taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.5, currencyShort:"USD")
         // TODO set up defaults and remember user state
     )
     
@@ -65,8 +75,11 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             exchangeCalc.calcShouldTaxLike())
     }
 
-    func updateForeignCountry(newForeignCountry:AnyObject) {
-        exchangeCalc.foreignCountry = newForeignCountry as country
+    func updateForeignCountry(newCountryName:String) {
+        let newCountry: country? = countries[newCountryName] as? country
+        exchangeCalc.foreignCountry = newCountry!
+        let newCountryCurrency = newCountry?.currencyShort
+        foreignLabel.text = String(format: "In %@", newCountryCurrency!)
         updateUI()
     }
     
@@ -74,18 +87,4 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         exchangeCalc.homeCountry = newHomeCountry as country
         updateUI()
     }
-    
-    var countries: Dictionary<String, AnyObject> = [
-        "Country": country(taxRate: 0.0, tipRate: 0.0, exchangeRate: 0.0, precision: 0.0, currencyCode:"")
-    ]
-    
-    override func awakeFromNib() {
-     
-        countries = [
-            "USA": country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25, currencyCode:"USD"),
-            "Euro": country(taxRate: 0, tipRate: 0, exchangeRate: 0.76, precision: 1, currencyCode:"EUR"),
-            "Norway": country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1, currencyCode:"NOK")
-                    ]
-     }
-
 }
