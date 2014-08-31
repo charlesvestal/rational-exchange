@@ -38,11 +38,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ExchangeCalculatorModel.swift"
-            timestampString = "431220203.79232"
+            timestampString = "431221418.97197"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
             landmarkName = "calcTotalAmount(_:)"
             landmarkType = "5">
          </BreakpointContent>

@@ -35,7 +35,6 @@ class exchangeCalculatorModel {
     
     func calcTotalAmount (tippable:Double) -> Double {
         // this should be the total cost all inclusive of what you'll end up paying
-        
         var foreignTotalAmount:Double = (foreignTheyWant + (foreignTheyWant * foreignTaxRate) + (foreignTheyWant * (tippable * foreignTipRate)))/exchangeRate
     
         return foreignTotalAmount
@@ -45,7 +44,6 @@ class exchangeCalculatorModel {
     {
         // this is what, given the foreign and local customs, you would see on a menu back home, but end up paying the same amount
         var shouldFeelLike = calcTotalAmount(tippable)/(1 + (tippable * homeTipRate) + homeTaxRate)
-        
         //shouldFeelLike = precision * floor((shouldFeelLike/precision)+0.5)
         return shouldFeelLike
     }

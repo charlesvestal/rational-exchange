@@ -98,7 +98,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         
         exchangeCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
         exchangeCalc.calcExchangeRate()
-        homeCostField.text = NSString (format: "$%.2f", exchangeCalc.calcShouldFeelLike(isTippable))
+        homeCostField.text = NSString (format: "$%.2f %@", exchangeCalc.calcShouldFeelLike(isTippable), exchangeCalc.homeCountry.currencyShort)
         homeCostLabel.text = String(format: "it will cost you $%0.2f in home currency total, but think about it like $%0.2f on the menu + you would tip $%0.2f at home at %0.2f + you would pay $%0.2f in tax at %0.4f",
             exchangeCalc.calcTotalAmount(isTippable),
             exchangeCalc.calcShouldFeelLike(isTippable),
