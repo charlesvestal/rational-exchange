@@ -37,18 +37,15 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     @IBAction func euroButtonPressed(sender: AnyObject) {
-        //print(countries) 
-        // not sure why I can't pass the countries objects into updateCountries
-        // updateCountries(homeCountry:countries["USA"], foreignCountry:["Euro"])
-        updateCountries(country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25), foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 0.76, precision: 1))
-        foreignLabel.text = String(format: "In Euro") //TODO: either pull key as the name or add currency code to Country model
+        updateForeignCountry(countries["Euro"]!)
+        foreignLabel.text = String(format: "In Euro")
+        //TODO: either pull key as the name or add currency code to Country model
     }
     
     
     @IBAction func norwayButtonPressed(sender: AnyObject) {
-        updateCountries(country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25), foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 6, precision: 1))
+     updateForeignCountry(countries["Norway"]!)
         foreignLabel.text = String(format: "In Norway")
-        //TODO: get rid of this and replace with real methods once I resolve passing countries to update
     }
     
     var tipCalc = TipCalculatorModel(foreignTheyWant: 0,
@@ -68,9 +65,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             tipCalc.calcShouldTaxLike())
     }
 
-    func updateCountries(homeCountry:country, foreignCountry:country) {
-        tipCalc.homeCountry = homeCountry
-        tipCalc.foreignCountry = foreignCountry
+    func updateForeignCountry(newForeignCountry:AnyObject) {
+        tipCalc.foreignCountry = newForeignCountry as country
         updateUI()
     }
     
