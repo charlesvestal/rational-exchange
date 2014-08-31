@@ -46,22 +46,21 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     var countries: Dictionary<String, AnyObject> = [
         "Country": country(taxRate: 0.0, tipRate: 0.0, exchangeRate: 0.0, precision: 0.0, currencyShort:"")
-    ]
+    ] // is there a better way to set up the array here?
     
     override func awakeFromNib() {
-        
         countries = [
             "USA": country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25, currencyShort:"USD"),
             "Euro": country(taxRate: 0, tipRate: 0, exchangeRate: 0.76, precision: 1, currencyShort:"EUR"),
             "Norway": country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1, currencyShort:"NOK")
         ]
     }
-
     
     var exchangeCalc = exchangeCalculatorModel(foreignTheyWant: 0,
         foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1.0, currencyShort:"NOK"),
         homeCountry: country(taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.5, currencyShort:"USD")
         // TODO set up defaults and remember user state
+        // Is there a way to set this up using the countries dict we already have? IE foreignCountry: countries["Norway"]
     )
     
     func updateUI()   {
