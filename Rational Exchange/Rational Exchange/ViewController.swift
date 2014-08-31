@@ -35,7 +35,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     @IBAction func euroButtonPressed(sender: AnyObject) {
-        }
+        print(countries)
+       // updateCountries(homeCountry:countries["USA"], foreignCountry: countries["Euro"])
+    }
     
     let tipCalc = TipCalculatorModel(foreignTheyWant: 0,
         foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1.0),
@@ -52,7 +54,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             tipCalc.calcShouldTaxLike())
     }
 
-    func updateCountries(homeCountry: country, foreignCountry:country) {
+    func updateCountries(homeCountry:country, foreignCountry:country) {
         tipCalc.homeCountry = homeCountry
         tipCalc.foreignCountry = foreignCountry
         updateUI()
@@ -66,8 +68,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     override func awakeFromNib() {
         let usa = country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25)
-        let norway = country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25)
-        let euro = country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25)
+        let norway = country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1)
+        let euro = country(taxRate: 0, tipRate: 0, exchangeRate: 1.3, precision: 1)
         
         countries = ["USA": usa, "Euro": euro, "Norway": norway]
      }
