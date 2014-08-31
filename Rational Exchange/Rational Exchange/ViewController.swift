@@ -37,7 +37,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     @IBAction func euroButtonPressed(sender: AnyObject) {
-        //print(countries) // not sure why I can't pass the countries objects into updateCountries
+        //print(countries) 
+        // not sure why I can't pass the countries objects into updateCountries
+        // updateCountries(homeCountry:countries["USA"], foreignCountry:["Euro"])
         updateCountries(country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25), foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 0.76, precision: 1))
         foreignLabel.text = String(format: "In Euro") //TODO: either pull key as the name or add currency code to Country model
     }
@@ -74,16 +76,16 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     
     var countries: Dictionary<String, AnyObject> = [
-        "Country": "Name",
-        "Object": country(taxRate: 0.0, tipRate: 0.0, exchangeRate: 0.0, precision: 0.0),
+        "Country": country(taxRate: 0.0, tipRate: 0.0, exchangeRate: 0.0, precision: 0.0)
     ]
     
     override func awakeFromNib() {
-        let usa = country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25)
-        let norway = country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1)
-        let euro = country(taxRate: 0, tipRate: 0, exchangeRate: 0.76, precision: 1)
-        
-        countries = ["USA": usa, "Euro": euro, "Norway": norway]
+     
+        countries = [
+                    "USA": country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25),
+                    "Euro": country(taxRate: 0, tipRate: 0, exchangeRate: 0.76, precision: 1),
+                    "Norway": country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1)
+                    ]
      }
 
 }
