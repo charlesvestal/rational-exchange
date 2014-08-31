@@ -35,8 +35,9 @@ class exchangeCalculatorModel {
     
     func calcTotalAmount (tippable:Double) -> Double {
         // this should be the total cost all inclusive of what you'll end up paying
+        //var foreignTotalAmount:Double = (foreignTheyWant + (foreignTheyWant * foreignTaxRate) + (foreignTheyWant * (tippable * foreignTipRate)))/exchangeRate
         var foreignTotalAmount:Double = (foreignTheyWant + (foreignTheyWant * foreignTaxRate) + (foreignTheyWant * (tippable * foreignTipRate)))/exchangeRate
-    
+        
         return foreignTotalAmount
     }
     
