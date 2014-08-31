@@ -39,13 +39,13 @@
                                     <rect key="frame" x="112" y="222" width="97" height="30"/>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="But if you paid it in the States" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWY-F6-VD7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="But it really should feel like" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eWY-F6-VD7">
                                 <rect key="frame" x="63" y="174" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="47" y="193" width="227" height="21"/>
+                                    <rect key="frame" x="58" y="193" width="205" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's like this" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Lp-Fy-Sdf">
@@ -63,7 +63,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="84" width="32" height="30"/>
+                                    <rect key="frame" x="6" y="84" width="32" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="euroButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TIG-14-YpP"/>
@@ -75,7 +75,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="253" y="84" width="53" height="30"/>
+                                    <rect key="frame" x="261" y="84" width="53" height="30"/>
                                 </variation>
                                 <connections>
                                     <action selector="norwayButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9dh-a4-sIN"/>

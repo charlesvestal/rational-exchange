@@ -37,20 +37,20 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
     
     @IBAction func euroButtonPressed(sender: AnyObject) {
-        updateForeignCountry(countries["Euro"]!)
-        foreignLabel.text = String(format: "In Euro")
-        //TODO: either pull key as the name or add currency code to Country model
+        let newCountry = "Euro"
+        updateForeignCountry(countries[newCountry]!)
+        foreignLabel.text = String(format: "In %@", newCountry)
     }
     
-    
     @IBAction func norwayButtonPressed(sender: AnyObject) {
-     updateForeignCountry(countries["Norway"]!)
-        foreignLabel.text = String(format: "In Norway")
+        let newCountry = "Norway"
+        updateForeignCountry(countries[newCountry]!)
+        foreignLabel.text = String(format: "In %@", newCountry)
     }
     
     var tipCalc = TipCalculatorModel(foreignTheyWant: 0,
-        foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1.0),
-        homeCountry: country(taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.5)
+        foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1.0, currencyCode:"NOK"),
+        homeCountry: country(taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.5, currencyCode:"USD")
         // TODO set up defaults and remember user state
     )
     
@@ -70,17 +70,21 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         updateUI()
     }
     
+    func updateHomeCountry(newHomeCountry:AnyObject) {
+        tipCalc.homeCountry = newHomeCountry as country
+        updateUI()
+    }
     
     var countries: Dictionary<String, AnyObject> = [
-        "Country": country(taxRate: 0.0, tipRate: 0.0, exchangeRate: 0.0, precision: 0.0)
+        "Country": country(taxRate: 0.0, tipRate: 0.0, exchangeRate: 0.0, precision: 0.0, currencyCode:"")
     ]
     
     override func awakeFromNib() {
      
         countries = [
-                    "USA": country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25),
-                    "Euro": country(taxRate: 0, tipRate: 0, exchangeRate: 0.76, precision: 1),
-                    "Norway": country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1)
+            "USA": country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25, currencyCode:"USD"),
+            "Euro": country(taxRate: 0, tipRate: 0, exchangeRate: 0.76, precision: 1, currencyCode:"EUR"),
+            "Norway": country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1, currencyCode:"NOK")
                     ]
      }
 
