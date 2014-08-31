@@ -69,6 +69,18 @@
                                     <action selector="euroButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TIG-14-YpP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKc-9s-UPT">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Norway">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="253" y="84" width="53" height="30"/>
+                                </variation>
+                                <connections>
+                                    <action selector="norwayButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9dh-a4-sIN"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="In Norway" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2T-Qc-lO2">
                                 <rect key="frame" x="63" y="174" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -87,6 +99,7 @@
                                 <exclude reference="eWY-F6-VD7"/>
                                 <exclude reference="7Lp-Fy-Sdf"/>
                                 <exclude reference="MLf-wV-ma1"/>
+                                <exclude reference="gKc-9s-UPT"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -95,6 +108,7 @@
                                 <include reference="eWY-F6-VD7"/>
                                 <include reference="7Lp-Fy-Sdf"/>
                                 <include reference="MLf-wV-ma1"/>
+                                <include reference="gKc-9s-UPT"/>
                             </mask>
                         </variation>
                         <connections>
@@ -113,6 +127,7 @@
                         <outlet property="foreignLabel" destination="Q2T-Qc-lO2" id="ToF-3w-mav"/>
                         <outlet property="homeCostField" destination="YEb-Gq-hKV" id="ydv-TD-s5X"/>
                         <outlet property="homeCostLabel" destination="7Lp-Fy-Sdf" id="4gk-T0-wa3"/>
+                        <outlet property="norwayButton" destination="gKc-9s-UPT" id="Dug-1L-O2m"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
