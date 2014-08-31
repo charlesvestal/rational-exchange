@@ -48,30 +48,30 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         foreignLabel.text = String(format: "In %@", newCountry)
     }
     
-    var tipCalc = TipCalculatorModel(foreignTheyWant: 0,
+    var exchangeCalc = exchangeCalculatorModel(foreignTheyWant: 0,
         foreignCountry: country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1.0, currencyCode:"NOK"),
         homeCountry: country(taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.5, currencyCode:"USD")
         // TODO set up defaults and remember user state
     )
     
     func updateUI()   {
-        tipCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
-        tipCalc.calcExchangeRate()
-        homeCostField.text = NSString (format: "%.2f", tipCalc.calcShouldFeelLike())
+        exchangeCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
+        exchangeCalc.calcExchangeRate()
+        homeCostField.text = NSString (format: "%.2f", exchangeCalc.calcShouldFeelLike())
         homeCostLabel.text = String(format: "%0.2f total = %0.2f + %0.2f tip + %0.2f tax",
-            tipCalc.calcTotalAmount(),
-            tipCalc.calcShouldFeelLike(),
-            tipCalc.calcShouldTipLike(),
-            tipCalc.calcShouldTaxLike())
+            exchangeCalc.calcTotalAmount(),
+            exchangeCalc.calcShouldFeelLike(),
+            exchangeCalc.calcShouldTipLike(),
+            exchangeCalc.calcShouldTaxLike())
     }
 
     func updateForeignCountry(newForeignCountry:AnyObject) {
-        tipCalc.foreignCountry = newForeignCountry as country
+        exchangeCalc.foreignCountry = newForeignCountry as country
         updateUI()
     }
     
     func updateHomeCountry(newHomeCountry:AnyObject) {
-        tipCalc.homeCountry = newHomeCountry as country
+        exchangeCalc.homeCountry = newHomeCountry as country
         updateUI()
     }
     

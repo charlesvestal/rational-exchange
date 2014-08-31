@@ -1,5 +1,5 @@
 //
-//  TipCalculadorModel.swift
+//  exchangeCalculatorModel.swift
 //  Rational Exchange
 //
 //  Created by Charles Vestal on 8/29/14.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class TipCalculatorModel {
+class exchangeCalculatorModel {
     
     var foreignCountry:country
     var homeCountry:country
