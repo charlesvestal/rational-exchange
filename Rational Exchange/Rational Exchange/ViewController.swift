@@ -48,26 +48,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             tipCalc.calcShouldTaxLike())
     }
 
-    func changeHomeCountry(homeCountry: country) {
+    func updateCountries(homeCountry: country, foreignCountry:country) {
         tipCalc.homeCountry = homeCountry
-        updateUI()
-    }
-    
-    
-    func resetUI(homeCountry:country, foreignCountry:country) {
-        tipCalc.foreignTaxRate =  foreignCountry.taxRate
-        tipCalc.foreignTipRate = foreignCountry.tipRate
-        tipCalc.exchangeRate =  foreignCountry.exchangeRate / homeCountry.exchangeRate
-        tipCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
-        tipCalc.homeTaxRate =  homeCountry.taxRate
-        tipCalc.homeTipRate =  homeCountry.tipRate
-        homeCostField.text = NSString (format: "%.2f", tipCalc.calcShouldFeelLike())
-        homeCostLabel.text = String(format: "%0.2f total = %0.2f + %0.2f tip + %0.2f tax",
-            tipCalc.calcTotalAmount(),
-            tipCalc.calcShouldFeelLike(),
-            tipCalc.calcShouldTipLike(),
-            tipCalc.calcShouldTaxLike())
+        tipCalc.foreignCountry = foreignCountry
         updateUI()
     }
 }
-
