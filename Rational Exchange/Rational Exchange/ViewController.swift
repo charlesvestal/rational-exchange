@@ -23,6 +23,8 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBOutlet weak var homeUSAButton: UIButton!
     @IBOutlet weak var homeNorwayButton: UIButton!
     
+    @IBOutlet weak var exchangeLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -72,7 +74,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     
     override func awakeFromNib() {
         countries = [
-            "USA": country(taxRate: 0.825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25, currencyShort:"USD"),
+            "USA": country(taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25, currencyShort:"USD"),
             "Euro": country(taxRate: 0, tipRate: 0, exchangeRate: 0.76, precision: 1, currencyShort:"EUR"),
             "Norway": country(taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1, currencyShort:"NOK"),
             "Magic10": country(taxRate: 0.1, tipRate: 0.1, exchangeRate: 1, precision: 1, currencyShort:"M10"),
@@ -105,6 +107,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             exchangeCalc.calcShouldTaxLike(isTippable),
             exchangeCalc.homeTaxRate
         )
+        exchangeLabel.text = String(format: "Converting from %@ to %@", exchangeCalc.foreignCountry.currencyShort, exchangeCalc.homeCountry.currencyShort)
        
     }
 

@@ -156,6 +156,15 @@
                                     <action selector="homeNorwayButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nrp-aP-BHZ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J2F-uo-iTU">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="39" y="481" width="241" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -172,6 +181,7 @@
                                 <exclude reference="jpn-XB-Kk1"/>
                                 <exclude reference="jI8-sI-Rfc"/>
                                 <exclude reference="wO6-1F-dtn"/>
+                                <exclude reference="J2F-uo-iTU"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -187,6 +197,7 @@
                                 <include reference="jpn-XB-Kk1"/>
                                 <include reference="jI8-sI-Rfc"/>
                                 <include reference="wO6-1F-dtn"/>
+                                <include reference="J2F-uo-iTU"/>
                             </mask>
                         </variation>
                         <connections>
@@ -201,6 +212,7 @@
                     </simulatedScreenMetrics>
                     <connections>
                         <outlet property="euroButton" destination="MLf-wV-ma1" id="heR-YI-UnO"/>
+                        <outlet property="exchangeLabel" destination="J2F-uo-iTU" id="Nmw-Ad-hpr"/>
                         <outlet property="foreignCostField" destination="UDv-E4-v5n" id="K0D-Us-Hby"/>
                         <outlet property="foreignLabel" destination="Q2T-Qc-lO2" id="ToF-3w-mav"/>
                         <outlet property="homeCostField" destination="YEb-Gq-hKV" id="ydv-TD-s5X"/>
