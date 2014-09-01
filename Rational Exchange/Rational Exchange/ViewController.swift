@@ -48,18 +48,17 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar!) {
-        var newHomeCountry = homeSearchBar.text
-        var newForeignCountry = foreignSearchBar.text
+        var newCountry = searchBar.text
         
-        if((countries[newHomeCountry] != nil) && (countries[newForeignCountry] != nil))
+        if(countries[newCountry] != nil)
         {
             if(searchBar==homeSearchBar)
             {
-                updateHomeCountry(newHomeCountry)
+                updateHomeCountry(newCountry)
             }
             else if(searchBar==foreignSearchBar)
             {
-                updateForeignCountry(newForeignCountry)
+                updateForeignCountry(newCountry)
             }
             searchBar.resignFirstResponder()
         }
@@ -70,16 +69,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBarShouldEndEditing(searchBar: UISearchBar!) {
-        if(searchBar==homeSearchBar)
-        {
-            searchBarSearchButtonClicked(homeSearchBar)
-            
-        }
-        else if(searchBar==foreignSearchBar)
-        {
-            searchBarSearchButtonClicked(foreignSearchBar)
-        }
-
+         searchBarSearchButtonClicked(searchBar)
     }
     
     func unsupportedCountries()
