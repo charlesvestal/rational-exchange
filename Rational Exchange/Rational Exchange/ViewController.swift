@@ -146,4 +146,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
         exchangeCalc.precision = newCountry.precision
         updateUI()
     }
+    
+    func keyboardWasShown (notification: NSNotification)
+    {
+        
+    }
 }
