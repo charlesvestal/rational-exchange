@@ -89,8 +89,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
         homeCostField.text = NSString (format: "$%.2f %@",
             exchangeCalc.calcShouldFeelLikeRounded(isTippable),
             exchangeCalc.homeCountry.currencyShort)
-        homeCostLabel.text = String(format: "it will cost you $%0.2f in home currency total, but think about it like $%0.2f on the menu + you would tip $%0.2f at home at %0.2f + you would pay $%0.2f in tax at %0.4f",
+        homeCostLabel.text = String(format: "it will cost you $%0.2f in %@ total, but think about it like $%0.2f on the menu + you would tip $%0.2f at home at %0.2f + you would pay $%0.2f in tax at %0.4f",
             exchangeCalc.calcTotalAmount(isTippable),
+            exchangeCalc.homeCountry.currencyShort,
             exchangeCalc.calcShouldFeelLike(isTippable),
             exchangeCalc.calcShouldTipLike(isTippable),
             exchangeCalc.homeTipRate,
