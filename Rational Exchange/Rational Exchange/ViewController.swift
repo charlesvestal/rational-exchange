@@ -47,21 +47,48 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     
-    func searchBarShouldEndEditing(searchBar: UISearchBar!) {
+    func searchBarSearchButtonClicked(searchBar: UISearchBar!) {
         var newHomeCountry = homeSearchBar.text
         var newForeignCountry = foreignSearchBar.text
         
-        if ((countries[newHomeCountry] !=  nil) && (countries[newForeignCountry] != nil)) // check if countries exist
+        if((countries[newHomeCountry] != nil) && (countries[newForeignCountry] != nil))
         {
-            updateHomeCountry(newHomeCountry)
-            updateForeignCountry(newForeignCountry)
+            if(searchBar==homeSearchBar)
+            {
+                updateHomeCountry(newHomeCountry)
+            }
+            else if(searchBar==foreignSearchBar)
+            {
+                updateForeignCountry(newForeignCountry)
+            }
+            searchBar.resignFirstResponder()
         }
-        else {
-            let alert = UIAlertView()
-            alert.title = "Unsupported Country"
-            alert.message = "Try Norway, USA, Euro, Magic10 or Magic20"
-            alert.addButtonWithTitle("OK")
-            alert.show()        }
+        else
+        {
+            unsupportedCountries()
+        }
+    }
+    
+    func searchBarShouldEndEditing(searchBar: UISearchBar!) {
+        if(searchBar==homeSearchBar)
+        {
+            searchBarSearchButtonClicked(homeSearchBar)
+            
+        }
+        else if(searchBar==foreignSearchBar)
+        {
+            searchBarSearchButtonClicked(foreignSearchBar)
+        }
+
+    }
+    
+    func unsupportedCountries()
+    {
+        let alert = UIAlertView()
+        alert.title = "Unsupported Country"
+        alert.message = "Try Norway, USA, Euro, Magic10 or Magic20"
+        alert.addButtonWithTitle("OK")
+        alert.show()
     }
     
     var countries: Dictionary<String, AnyObject> = [
