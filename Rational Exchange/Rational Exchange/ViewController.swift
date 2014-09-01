@@ -23,6 +23,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var exchangeLabel: UILabel!
     
+    var selecteTextFieldOriginalY:CGFloat = 0.0;
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -34,6 +36,11 @@ class ViewController: UIViewController, UISearchBarDelegate {
 
         
         scrollView.contentOffset = CGPointMake(0,44)
+        
+        super.viewDidLoad()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
+        
             updateUI()
     }
 
@@ -158,8 +165,34 @@ class ViewController: UIViewController, UISearchBarDelegate {
         updateUI()
     }
     
-    func keyboardWasShown (notification: NSNotification)
-    {
+    func keyboardWillShow(sender: NSNotification) {
+        let dict:NSDictionary = sender.userInfo! as NSDictionary
+        let s:NSValue = dict.valueForKey(UIKeyboardFrameEndUserInfoKey) as NSValue;
+        let rect :CGRect = s.CGRectValue();
         
+        var frame = self.homeSearchBar.frame;
+        selecteTextFieldOriginalY = frame.origin.y;
+        
+        //Adjust 80 according to your need actually if is for padding and quickTypeView
+        var offset = (rect.height - ((self.view.frame.height - self.homeSearchBar.frame.origin.y)+self.homeSearchBar.frame.size.height))+150;
+        print(offset)
+        frame.origin.y = offset>0 ? frame.origin.y - offset : frame.origin.y ;
+        UIView.animateWithDuration(0.3, animations:{
+            self.homeSearchBar.frame = frame;
+            
+            }
+        )
     }
-}
+    
+    func keyboardWillHide(sender: NSNotification) {
+        let dict:NSDictionary = sender.userInfo! as NSDictionary
+        let s:NSValue = dict.valueForKey(UIKeyboardFrameBeginUserInfoKey) as NSValue;
+        let rect :CGRect = s.CGRectValue();
+        var frame = self.homeSearchBar.frame;
+        frame.origin.y = selecteTextFieldOriginalY ;
+        
+        UIView.animateWithDuration(0.3, animations:{
+            self.homeSearchBar.frame = frame;
+            
+        })
+    }}
