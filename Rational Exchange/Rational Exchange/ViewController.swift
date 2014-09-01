@@ -44,31 +44,34 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         self.view.endEditing(true)
     }
     
-// these buttons are all stupid
-    @IBAction func euroButtonPressed(sender: AnyObject) {
-        updateForeignCountry("Euro")
-    }
+                // these buttons are all stupid
+                // TODO: move to pickers so we're at least just returning the name from a single function
     
-    @IBAction func usaButtonPressed(sender: AnyObject) {
-        updateForeignCountry("USA")
-    }
+                    @IBAction func euroButtonPressed(sender: AnyObject) {
+                        updateForeignCountry("Euro")
+                    }
+                    
+                    @IBAction func usaButtonPressed(sender: AnyObject) {
+                        updateForeignCountry("USA")
+                    }
+                    
+                    @IBAction func norwayButtonPressed(sender: AnyObject) {
+                        updateForeignCountry("Norway")
+                    }
+                    
+                    @IBAction func homeEuroButtonPressed(sender: AnyObject) {
+                        updateHomeCountry("Euro")
+                    }
+                    
+                    @IBAction func homeUSAButtonPressed(sender: AnyObject) {
+                        updateHomeCountry("USA")
+                    }
+                    
+                    @IBAction func homeNorwayButtonPressed(sender: AnyObject) {
+                        updateHomeCountry("Norway")
+                    }
+                // end stupid buttons
     
-    @IBAction func norwayButtonPressed(sender: AnyObject) {
-        updateForeignCountry("Norway")
-    }
-    
-    @IBAction func homeEuroButtonPressed(sender: AnyObject) {
-        updateHomeCountry("Euro")
-    }
-    
-    @IBAction func homeUSAButtonPressed(sender: AnyObject) {
-        updateHomeCountry("USA")
-    }
-    
-    @IBAction func homeNorwayButtonPressed(sender: AnyObject) {
-        updateHomeCountry("Norway")
-    }
-    // end stupid buttons 
     var countries: Dictionary<String, AnyObject> = [
         "Country": country(taxRate: 0.0, tipRate: 0.0, exchangeRate: 0.0, precision: 0.0, currencyShort:"")
     ] // is there a better way to set up the array here?
@@ -81,6 +84,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             "Magic10": country(taxRate: 0.1, tipRate: 0.1, exchangeRate: 1, precision: 1, currencyShort:"M10"),
             "Magic20": country(taxRate: 0.2, tipRate: 0.2, exchangeRate: 1, precision: 1, currencyShort:"M20")
         ]
+        // ideally pull this in from an eternal data source to eventually hit an API
     }
     
     var exchangeCalc = exchangeCalculatorModel(foreignTheyWant: 0,
@@ -100,7 +104,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         exchangeCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
         exchangeCalc.calcExchangeRate()
         homeCostField.text = NSString (format: "$%.2f %@",
-            (exchangeCalc.homeCountry.precision * floor((exchangeCalc.calcShouldFeelLike(isTippable)/exchangeCalc.homeCountry.precision)+0.5)),
+            exchangeCalc.calcShouldFeelLikeRounded(isTippable),
             exchangeCalc.homeCountry.currencyShort)
         homeCostLabel.text = String(format: "it will cost you $%0.2f in home currency total, but think about it like $%0.2f on the menu + you would tip $%0.2f at home at %0.2f + you would pay $%0.2f in tax at %0.4f",
             exchangeCalc.calcTotalAmount(isTippable),
