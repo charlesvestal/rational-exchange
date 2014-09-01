@@ -33,8 +33,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         homeSearchBar.text = "USA"
 
         
-        scrollView.contentOffset = CGPointMake(0,44);
-        
+        scrollView.contentOffset = CGPointMake(0,44)
             updateUI()
     }
 
@@ -116,10 +115,15 @@ class ViewController: UIViewController, UISearchBarDelegate {
         { isTippable = 0.0}
         
         exchangeCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
+        
         exchangeCalc.calcExchangeRate()
+
+        foreignLabel.text = String(format: "In %@", exchangeCalc.foreignCountry.currencyShort)
+
         homeCostField.text = NSString (format: "$%.2f %@",
             exchangeCalc.calcShouldFeelLikeRounded(isTippable),
             exchangeCalc.homeCountry.currencyShort)
+        
         homeCostLabel.text = String(format: "it will cost you $%0.2f in %@ total, but think about it like $%0.2f on the menu + you would tip $%0.2f at home at %0.2f + you would pay $%0.2f in tax at %0.4f",
             exchangeCalc.calcTotalAmount(isTippable),
             exchangeCalc.homeCountry.currencyShort,
@@ -129,7 +133,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
             exchangeCalc.calcShouldTaxLike(isTippable),
             exchangeCalc.homeTaxRate
         )
+        
         exchangeLabel.text = String(format: "Converting from %@ to %@ at %0.2f", exchangeCalc.foreignCountry.currencyShort, exchangeCalc.homeCountry.currencyShort,exchangeCalc.exchangeRate)
+        
+        
     }
 
     func updateForeignCountry(newCountryName:String) {
@@ -138,7 +145,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
         exchangeCalc.foreignTaxRate = newCountry.taxRate
         exchangeCalc.foreignTipRate = newCountry.tipRate
         let newCountryCurrency = newCountry.currencyShort
-        foreignLabel.text = String(format: "In %@", newCountryCurrency)
         updateUI()
     }
     
