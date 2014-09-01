@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "FEE86B4D19B1767B00852F94"
-               BuildableName = "Rational Exchange.app"
+               BuildableName = "RationalEx.app"
                BlueprintName = "Rational Exchange"
                ReferencedContainer = "container:Rational Exchange.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FEE86B4D19B1767B00852F94"
-            BuildableName = "Rational Exchange.app"
+            BuildableName = "RationalEx.app"
             BlueprintName = "Rational Exchange"
             ReferencedContainer = "container:Rational Exchange.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FEE86B4D19B1767B00852F94"
-            BuildableName = "Rational Exchange.app"
+            BuildableName = "RationalEx.app"
             BlueprintName = "Rational Exchange"
             ReferencedContainer = "container:Rational Exchange.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "FEE86B4D19B1767B00852F94"
-            BuildableName = "Rational Exchange.app"
+            BuildableName = "RationalEx.app"
             BlueprintName = "Rational Exchange"
             ReferencedContainer = "container:Rational Exchange.xcodeproj">
          </BuildableReference>

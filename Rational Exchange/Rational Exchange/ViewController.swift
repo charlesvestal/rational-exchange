@@ -99,7 +99,9 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         
         exchangeCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
         exchangeCalc.calcExchangeRate()
-        homeCostField.text = NSString (format: "$%.2f %@", exchangeCalc.calcShouldFeelLike(isTippable), exchangeCalc.homeCountry.currencyShort)
+        homeCostField.text = NSString (format: "$%.2f %@",
+            (exchangeCalc.homeCountry.precision * floor((exchangeCalc.calcShouldFeelLike(isTippable)/exchangeCalc.homeCountry.precision)+0.5)),
+            exchangeCalc.homeCountry.currencyShort)
         homeCostLabel.text = String(format: "it will cost you $%0.2f in home currency total, but think about it like $%0.2f on the menu + you would tip $%0.2f at home at %0.2f + you would pay $%0.2f in tax at %0.4f",
             exchangeCalc.calcTotalAmount(isTippable),
             exchangeCalc.calcShouldFeelLike(isTippable),
@@ -108,7 +110,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             exchangeCalc.calcShouldTaxLike(isTippable),
             exchangeCalc.homeTaxRate
         )
-        exchangeLabel.text = String(format: "Converting from %@ to %@", exchangeCalc.foreignCountry.currencyShort, exchangeCalc.homeCountry.currencyShort)
+        exchangeLabel.text = String(format: "Converting from %@ to %@ at %0.2f", exchangeCalc.foreignCountry.currencyShort, exchangeCalc.homeCountry.currencyShort,exchangeCalc.exchangeRate)
        
     }
 
@@ -127,6 +129,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         exchangeCalc.homeCountry = newCountry
         exchangeCalc.homeTaxRate = newCountry.taxRate
         exchangeCalc.homeTipRate = newCountry.tipRate
+        exchangeCalc.homeCountry.exchangeRate = newCountry.exchangeRate
         exchangeCalc.precision = newCountry.precision
         updateUI()
     }

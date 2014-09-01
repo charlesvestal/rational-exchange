@@ -40,7 +40,7 @@ class exchangeCalculatorModel {
         
         return foreignTotalAmount
     }
-    
+
     func calcShouldFeelLike(tippable:Double) -> Double
     {
         // this is what, given the foreign and local customs, you would see on a menu back home, but end up paying the same amount
