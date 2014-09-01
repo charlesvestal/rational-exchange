@@ -177,6 +177,7 @@
                         <outlet property="homeCostField" destination="Jn1-Vc-f0t" id="UD1-Dv-uhf"/>
                         <outlet property="homeCostLabel" destination="UGW-cI-PP4" id="iqw-Wo-0O5"/>
                         <outlet property="homeSearchBar" destination="b8n-qv-Gh2" id="U2q-Lp-qDQ"/>
+                        <outlet property="scrollView" destination="noG-ku-5uo" id="Lui-EO-vv1"/>
                         <outlet property="tipSwitch" destination="L0z-gl-kou" id="URo-6Q-s9r"/>
                     </connections>
                 </viewController>

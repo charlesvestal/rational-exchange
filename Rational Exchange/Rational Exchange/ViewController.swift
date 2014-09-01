@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController, UISearchBarDelegate {
 
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     @IBOutlet weak var foreignCostField: UITextField!
     @IBOutlet weak var homeCostField: UITextField!
     @IBOutlet weak var homeCostLabel: UILabel!
@@ -30,7 +32,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
         foreignSearchBar.text = "Norway"
         homeSearchBar.text = "USA"
 
-        updateUI()
+        
+        scrollView.contentOffset = CGPointMake(0,44);
+        
+            updateUI()
     }
 
     override func didReceiveMemoryWarning() {
