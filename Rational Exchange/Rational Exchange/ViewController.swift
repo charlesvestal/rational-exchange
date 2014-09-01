@@ -57,10 +57,11 @@ class ViewController: UIViewController, UISearchBarDelegate {
             updateForeignCountry(newForeignCountry)
         }
         else {
-            var alert = UIAlertController(title: "Unsupported Country", message: "Try Norway, USA, Euro, Magic10 or Magic20", preferredStyle: UIAlertControllerStyle.Alert)
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil))
-            self.presentViewController(alert, animated: true, completion: nil)
-        }
+            let alert = UIAlertView()
+            alert.title = "Unsupported Country"
+            alert.message = "Try Norway, USA, Euro, Magic10 or Magic20"
+            alert.addButtonWithTitle("OK")
+            alert.show()        }
     }
     
     var countries: Dictionary<String, AnyObject> = [
