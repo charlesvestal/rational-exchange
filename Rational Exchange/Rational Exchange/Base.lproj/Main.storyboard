@@ -57,18 +57,6 @@
                                     <rect key="frame" x="53" y="298" width="214" height="145"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLf-wV-ma1">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Euro">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="84" width="32" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="euroButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="TIG-14-YpP"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="In NOK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q2T-Qc-lO2">
                                 <rect key="frame" x="63" y="174" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -87,63 +75,6 @@
                                     <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="b68-DW-xJ5"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Is it a tipping situation?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFZ-N1-A9Z">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="41" y="130" width="179" height="21"/>
-                                </variation>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gKc-9s-UPT">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Norway">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="251" y="84" width="53" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="norwayButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9dh-a4-sIN"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jpn-XB-Kk1">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Euro">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="16" y="530" width="32" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="homeEuroButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="owF-OT-E9H"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jI8-sI-Rfc">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="USA">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="144" y="530" width="31" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="homeUSAButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UpN-n5-p3G"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wO6-1F-dtn">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="Norway">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="251" y="530" width="53" height="30"/>
-                                </variation>
-                                <connections>
-                                    <action selector="homeNorwayButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nrp-aP-BHZ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J2F-uo-iTU">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -153,18 +84,29 @@
                                     <rect key="frame" x="39" y="481" width="241" height="21"/>
                                 </variation>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Onn-03-6dN">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" title="USA">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you at a rest / bar?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFZ-N1-A9Z">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="144" y="84" width="31" height="30"/>
+                                    <rect key="frame" x="39" y="130" width="176" height="21"/>
                                 </variation>
-                                <connections>
-                                    <action selector="usaButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aBU-TL-uW1"/>
-                                </connections>
-                            </button>
+                            </label>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" text="" translatesAutoresizingMaskIntoConstraints="NO" id="t4W-nH-HpL">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-2" y="72" width="320" height="44"/>
+                                </variation>
+                            </searchBar>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="wsz-xj-y9C">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="-2" y="524" width="320" height="44"/>
+                                </variation>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
@@ -173,15 +115,11 @@
                                 <exclude reference="YEb-Gq-hKV"/>
                                 <exclude reference="eWY-F6-VD7"/>
                                 <exclude reference="7Lp-Fy-Sdf"/>
-                                <exclude reference="MLf-wV-ma1"/>
                                 <exclude reference="Oq2-rl-xrQ"/>
-                                <exclude reference="xFZ-N1-A9Z"/>
-                                <exclude reference="gKc-9s-UPT"/>
-                                <exclude reference="jpn-XB-Kk1"/>
-                                <exclude reference="jI8-sI-Rfc"/>
-                                <exclude reference="wO6-1F-dtn"/>
                                 <exclude reference="J2F-uo-iTU"/>
-                                <exclude reference="Onn-03-6dN"/>
+                                <exclude reference="xFZ-N1-A9Z"/>
+                                <exclude reference="t4W-nH-HpL"/>
+                                <exclude reference="wsz-xj-y9C"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -189,15 +127,11 @@
                                 <include reference="YEb-Gq-hKV"/>
                                 <include reference="eWY-F6-VD7"/>
                                 <include reference="7Lp-Fy-Sdf"/>
-                                <include reference="MLf-wV-ma1"/>
                                 <include reference="Oq2-rl-xrQ"/>
-                                <include reference="xFZ-N1-A9Z"/>
-                                <include reference="gKc-9s-UPT"/>
-                                <include reference="jpn-XB-Kk1"/>
-                                <include reference="jI8-sI-Rfc"/>
-                                <include reference="wO6-1F-dtn"/>
                                 <include reference="J2F-uo-iTU"/>
-                                <include reference="Onn-03-6dN"/>
+                                <include reference="xFZ-N1-A9Z"/>
+                                <include reference="t4W-nH-HpL"/>
+                                <include reference="wsz-xj-y9C"/>
                             </mask>
                         </variation>
                         <connections>
@@ -211,18 +145,14 @@
                         <size key="landscapeSize" width="568" height="320"/>
                     </simulatedScreenMetrics>
                     <connections>
-                        <outlet property="euroButton" destination="MLf-wV-ma1" id="heR-YI-UnO"/>
                         <outlet property="exchangeLabel" destination="J2F-uo-iTU" id="Nmw-Ad-hpr"/>
                         <outlet property="foreignCostField" destination="UDv-E4-v5n" id="K0D-Us-Hby"/>
                         <outlet property="foreignLabel" destination="Q2T-Qc-lO2" id="ToF-3w-mav"/>
+                        <outlet property="foreignSearchBar" destination="t4W-nH-HpL" id="ijT-eB-Dkg"/>
                         <outlet property="homeCostField" destination="YEb-Gq-hKV" id="ydv-TD-s5X"/>
                         <outlet property="homeCostLabel" destination="7Lp-Fy-Sdf" id="4gk-T0-wa3"/>
-                        <outlet property="homeEuroButton" destination="jpn-XB-Kk1" id="zfm-hr-m2s"/>
-                        <outlet property="homeNorwayButton" destination="wO6-1F-dtn" id="nJS-FO-Awg"/>
-                        <outlet property="homeUSAButton" destination="jI8-sI-Rfc" id="zlz-c0-hBD"/>
-                        <outlet property="norwayButton" destination="gKc-9s-UPT" id="Dug-1L-O2m"/>
+                        <outlet property="homeSearchBar" destination="wsz-xj-y9C" id="2c2-ES-UCU"/>
                         <outlet property="tipSwitch" destination="Oq2-rl-xrQ" id="qp2-oQ-p5l"/>
-                        <outlet property="usaButton" destination="Onn-03-6dN" id="sRb-e5-ioo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>

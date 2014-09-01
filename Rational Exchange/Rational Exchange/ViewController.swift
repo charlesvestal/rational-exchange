@@ -8,26 +8,28 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIPickerViewDelegate {
+class ViewController: UIViewController, UISearchBarDelegate {
 
     @IBOutlet weak var foreignCostField: UITextField!
     @IBOutlet weak var homeCostField: UITextField!
     @IBOutlet weak var homeCostLabel: UILabel!
-    @IBOutlet weak var euroButton: UIButton!
-    @IBOutlet weak var norwayButton: UIButton!
     @IBOutlet weak var foreignLabel: UILabel!
     @IBOutlet weak var tipSwitch: UISwitch!
-    @IBOutlet weak var usaButton: UIButton!
     
-    @IBOutlet weak var homeEuroButton: UIButton!
-    @IBOutlet weak var homeUSAButton: UIButton!
-    @IBOutlet weak var homeNorwayButton: UIButton!
+    @IBOutlet weak var foreignSearchBar: UISearchBar!
+    @IBOutlet weak var homeSearchBar: UISearchBar!
     
     @IBOutlet weak var exchangeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        foreignSearchBar.delegate = self
+        homeSearchBar.delegate = self
+
+        foreignSearchBar.text = "Norway"
+        homeSearchBar.text = "USA"
+
         updateUI()
     }
 
@@ -44,33 +46,14 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         self.view.endEditing(true)
     }
     
-                // these buttons are all stupid
-                // TODO: move to pickers so we're at least just returning the name from a single function
-    
-                    @IBAction func euroButtonPressed(sender: AnyObject) {
-                        updateForeignCountry("Euro")
-                    }
-                    
-                    @IBAction func usaButtonPressed(sender: AnyObject) {
-                        updateForeignCountry("USA")
-                    }
-                    
-                    @IBAction func norwayButtonPressed(sender: AnyObject) {
-                        updateForeignCountry("Norway")
-                    }
-                    
-                    @IBAction func homeEuroButtonPressed(sender: AnyObject) {
-                        updateHomeCountry("Euro")
-                    }
-                    
-                    @IBAction func homeUSAButtonPressed(sender: AnyObject) {
-                        updateHomeCountry("USA")
-                    }
-                    
-                    @IBAction func homeNorwayButtonPressed(sender: AnyObject) {
-                        updateHomeCountry("Norway")
-                    }
-                // end stupid buttons
+    func searchBarSearchButtonClicked(searchBar: UISearchBar!)
+    {
+        var newHomeCountry = homeSearchBar.text
+        var newForeignCountry = foreignSearchBar.text
+        updateHomeCountry(newHomeCountry)
+        updateForeignCountry(newForeignCountry)
+        
+    }
     
     var countries: Dictionary<String, AnyObject> = [
         "Country": country(taxRate: 0.0, tipRate: 0.0, exchangeRate: 0.0, precision: 0.0, currencyShort:"")
@@ -115,7 +98,6 @@ class ViewController: UIViewController, UIPickerViewDelegate {
             exchangeCalc.homeTaxRate
         )
         exchangeLabel.text = String(format: "Converting from %@ to %@ at %0.2f", exchangeCalc.foreignCountry.currencyShort, exchangeCalc.homeCountry.currencyShort,exchangeCalc.exchangeRate)
-       
     }
 
     func updateForeignCountry(newCountryName:String) {
