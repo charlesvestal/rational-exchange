@@ -30,7 +30,7 @@
 /* Begin PBXFileReference section */
 		FE5FC40E19B2718A0008333D /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		FE5FC41019B299820008333D /* countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = countries.plist; sourceTree = "<group>"; };
-		FEE86B4E19B1767B00852F94 /* Rational Exchange.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Rational Exchange.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEE86B4E19B1767B00852F94 /* RationalEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RationalEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE86B5219B1767B00852F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEE86B5319B1767B00852F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEE86B5519B1767B00852F94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 		FEE86B4F19B1767B00852F94 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FEE86B4E19B1767B00852F94 /* Rational Exchange.app */,
+				FEE86B4E19B1767B00852F94 /* RationalEx.app */,
 				FEE86B6019B1767B00852F94 /* Rational ExchangeTests.xctest */,
 			);
 			name = Products;
@@ -135,7 +135,7 @@
 			);
 			name = "Rational Exchange";
 			productName = "Rational Exchange";
-			productReference = FEE86B4E19B1767B00852F94 /* Rational Exchange.app */;
+			productReference = FEE86B4E19B1767B00852F94 /* RationalEx.app */;
 			productType = "com.apple.product-type.application";
 		};
 		FEE86B5F19B1767B00852F94 /* Rational ExchangeTests */ = {
@@ -342,7 +342,7 @@
 				INFOPLIST_FILE = "Rational Exchange/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RationalEx;
 			};
 			name = Debug;
 		};
@@ -354,7 +354,7 @@
 				INFOPLIST_FILE = "Rational Exchange/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = RationalEx;
 			};
 			name = Release;
 		};

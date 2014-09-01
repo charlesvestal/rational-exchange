@@ -44,6 +44,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
         self.view.endEditing(true)
     }
     
+// these buttons are all stupid
     @IBAction func euroButtonPressed(sender: AnyObject) {
         updateForeignCountry("Euro")
     }
@@ -67,7 +68,7 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     @IBAction func homeNorwayButtonPressed(sender: AnyObject) {
         updateHomeCountry("Norway")
     }
-    
+    // end stupid buttons 
     var countries: Dictionary<String, AnyObject> = [
         "Country": country(taxRate: 0.0, tipRate: 0.0, exchangeRate: 0.0, precision: 0.0, currencyShort:"")
     ] // is there a better way to set up the array here?
