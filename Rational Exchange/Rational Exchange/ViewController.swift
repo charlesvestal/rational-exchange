@@ -112,21 +112,21 @@ class ViewController: UIViewController, UIPickerViewDelegate {
     }
 
     func updateForeignCountry(newCountryName:String) {
-        let newCountry: country? = countries[newCountryName] as? country
-        exchangeCalc.foreignCountry = newCountry!
-        exchangeCalc.foreignTaxRate = newCountry!.taxRate
-        exchangeCalc.foreignTipRate = newCountry!.tipRate
-        let newCountryCurrency = newCountry?.currencyShort
-        foreignLabel.text = String(format: "In %@", newCountryCurrency!)
+        let newCountry = countries[newCountryName] as country
+        exchangeCalc.foreignCountry = newCountry
+        exchangeCalc.foreignTaxRate = newCountry.taxRate
+        exchangeCalc.foreignTipRate = newCountry.tipRate
+        let newCountryCurrency = newCountry.currencyShort
+        foreignLabel.text = String(format: "In %@", newCountryCurrency)
         updateUI()
     }
     
     func updateHomeCountry(newCountryName:String) {
-        let newCountry: country? = countries[newCountryName] as? country
-        exchangeCalc.homeCountry = newCountry!
-        exchangeCalc.homeTaxRate = newCountry!.taxRate
-        exchangeCalc.homeTipRate = newCountry!.tipRate
-        exchangeCalc.precision = newCountry!.precision
+        let newCountry = countries[newCountryName] as country
+        exchangeCalc.homeCountry = newCountry
+        exchangeCalc.homeTaxRate = newCountry.taxRate
+        exchangeCalc.homeTipRate = newCountry.tipRate
+        exchangeCalc.precision = newCountry.precision
         updateUI()
     }
 }
