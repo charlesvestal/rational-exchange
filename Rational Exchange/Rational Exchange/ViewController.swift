@@ -172,19 +172,17 @@ class ViewController: UIViewController, UISearchBarDelegate {
         let k:NSValue = dict.valueForKey(UIKeyboardFrameBeginUserInfoKey) as NSValue
         let kRect: CGRect = k.CGRectValue()
         
-        (UIKeyboardFrameBeginUserInfoKey)
-
-        var frame = self.homeSearchBar.frame;
-        selecteTextFieldOriginalY = frame.origin.y;
-        
-        var offset = (kRect.height) ;
-        print(offset)
-        frame.origin.y = offset>0 ? frame.origin.y - offset : frame.origin.y ;
-        UIView.animateWithDuration(0.3, animations:{
-            self.homeSearchBar.frame = frame;
+        if self.homeSearchBar.isFirstResponder() { // figure out how to get this first and not run through any of this
+            var frame = self.homeSearchBar.frame;
+            selecteTextFieldOriginalY = frame.origin.y;
             
-            }
-        )
+            var offset = (kRect.height) ;
+            print(offset)
+            frame.origin.y = offset>0 ? frame.origin.y - offset : frame.origin.y ;
+            UIView.animateWithDuration(0.3, animations:{
+                self.homeSearchBar.frame = frame;
+                })
+        }
     }
 
     
@@ -195,9 +193,11 @@ class ViewController: UIViewController, UISearchBarDelegate {
         let rect :CGRect = s.CGRectValue()
         var frame = self.homeSearchBar.frame
         frame.origin.y = selecteTextFieldOriginalY
-        UIView.animateWithDuration(0.3, animations:{
+        
+        if self.homeSearchBar.isFirstResponder() { // figure out how to get this first and not run through any of this
+            UIView.animateWithDuration(0.3, animations:{
             self.homeSearchBar.frame = frame;
-            
-        })
+            })
+        }
     }
 }
