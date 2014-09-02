@@ -26,7 +26,7 @@
                                             <searchBar contentMode="redraw" placeholder="Where are you now?" translatesAutoresizingMaskIntoConstraints="NO" id="9qw-zx-83R" userLabel="foreignBar">
                                                 <rect key="frame" x="20" y="20" width="320" height="44"/>
                                                 <textInputTraits key="textInputTraits"/>
-                                                <variation key="widthClass=compact" ambiguous="YES">
+                                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                                 </variation>
                                             </searchBar>
@@ -62,15 +62,6 @@
                                                     <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Wao-0c-O1D"/>
                                                 </connections>
                                             </switch>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="In CUR" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dP-FW-QR6">
-                                                <rect key="frame" x="157" y="122" width="56" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="widthClass=compact" ambiguous="YES">
-                                                    <rect key="frame" x="132" y="114" width="56" height="21"/>
-                                                </variation>
-                                            </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LhP-aO-v0h" userLabel="Foreign Amount">
                                                 <rect key="frame" x="137" y="158" width="97" height="30"/>
                                                 <constraints>
@@ -83,7 +74,7 @@
                                                         <exclude reference="Mpj-yi-gm2"/>
                                                     </mask>
                                                 </variation>
-                                                <variation key="widthClass=compact" ambiguous="YES">
+                                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="112" y="156" width="97" height="30"/>
                                                     <mask key="constraints">
                                                         <include reference="Mpj-yi-gm2"/>
@@ -93,13 +84,13 @@
                                                     <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="qwH-Pz-VRa"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="But it really should feel like" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kx-AV-dEs">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Should feel like roughly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kx-AV-dEs">
                                                 <rect key="frame" x="83" y="210" width="205" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                    <rect key="frame" x="58" y="212" width="205" height="21"/>
+                                                    <rect key="frame" x="58" y="212" width="178" height="21"/>
                                                 </variation>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jn1-Vc-f0t">
@@ -163,6 +154,15 @@
                                                     <rect key="frame" x="0.0" y="459" width="320" height="44"/>
                                                 </variation>
                                             </searchBar>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The price in USD is" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dP-FW-QR6">
+                                                <rect key="frame" x="157" y="122" width="56" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="86" y="114" width="148" height="21"/>
+                                                </variation>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>

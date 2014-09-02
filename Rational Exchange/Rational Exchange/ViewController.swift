@@ -124,7 +124,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
         exchangeCalc.calcExchangeRate()
 
-        foreignLabel.text = String(format: "In %@", exchangeCalc.foreignCountry.currencyShort)
+        foreignLabel.text = String(format: "The price in %@", exchangeCalc.foreignCountry.currencyShort)
 
         homeCostField.text = NSString (format: "$%.2f %@",
             exchangeCalc.calcShouldFeelLikeRounded(isTippable),
