@@ -14,7 +14,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="noG-ku-5uo">
@@ -295,10 +295,10 @@
                                 <exclude reference="noG-ku-5uo"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="8nT-zc-JAh"/>
                                 <exclude reference="UHt-Db-bPY"/>
                                 <exclude reference="BYT-gK-AsB"/>
                                 <exclude reference="TYG-0c-3DP"/>
-                                <exclude reference="8nT-zc-JAh"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -306,10 +306,10 @@
                                 <include reference="noG-ku-5uo"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="8nT-zc-JAh"/>
                                 <include reference="UHt-Db-bPY"/>
                                 <include reference="BYT-gK-AsB"/>
                                 <include reference="TYG-0c-3DP"/>
-                                <include reference="8nT-zc-JAh"/>
                             </mask>
                         </variation>
                         <connections>

@@ -36,6 +36,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
 
         
      //   scrollView.contentOffset = CGPointMake(0,44)
+
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
         
        updateUI()
     }
@@ -161,4 +164,40 @@ class ViewController: UIViewController, UISearchBarDelegate {
         updateUI()
     }
     
+    func keyboardWillShow(sender: NSNotification) {
+        let dict:NSDictionary = sender.userInfo! as NSDictionary
+        let s:NSValue = dict.valueForKey(UIKeyboardFrameEndUserInfoKey) as NSValue;
+        let rect :CGRect = s.CGRectValue();
+        
+        let k:NSValue = dict.valueForKey(UIKeyboardFrameBeginUserInfoKey) as NSValue
+        let kRect: CGRect = k.CGRectValue()
+        
+        (UIKeyboardFrameBeginUserInfoKey)
+
+        var frame = self.homeSearchBar.frame;
+        selecteTextFieldOriginalY = frame.origin.y;
+        
+        var offset = (kRect.height) ;
+        print(offset)
+        frame.origin.y = offset>0 ? frame.origin.y - offset : frame.origin.y ;
+        UIView.animateWithDuration(0.3, animations:{
+            self.homeSearchBar.frame = frame;
+            
+            }
+        )
+    }
+
+    
+    
+    func keyboardWillHide(sender: NSNotification) {
+        let dict:NSDictionary = sender.userInfo! as NSDictionary
+        let s:NSValue = dict.valueForKey(UIKeyboardFrameBeginUserInfoKey) as NSValue
+        let rect :CGRect = s.CGRectValue()
+        var frame = self.homeSearchBar.frame
+        frame.origin.y = selecteTextFieldOriginalY
+        UIView.animateWithDuration(0.3, animations:{
+            self.homeSearchBar.frame = frame;
+            
+        })
+    }
 }
