@@ -194,10 +194,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
         var frame = self.homeSearchBar.frame
         frame.origin.y = selecteTextFieldOriginalY
         
-        if self.homeSearchBar.isFirstResponder() { // figure out how to get this first and not run through any of this
+       // if self.homeSearchBar.isFirstResponder() { // figure out how to get this first and not run through any of this
             UIView.animateWithDuration(0.3, animations:{
             self.homeSearchBar.frame = frame;
             })
-        }
+        //}
     }
 }
