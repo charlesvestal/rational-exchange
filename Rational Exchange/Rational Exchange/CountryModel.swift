@@ -8,14 +8,17 @@
 
 import Foundation
 
-class country {
+class Country {
+    var name:String
     var taxRate:Double
     var tipRate:Double
     var exchangeRate:Double
     var precision:Double
     var currencyShort:String
+    
   
-    init(taxRate:Double, tipRate:Double, exchangeRate:Double, precision:Double, currencyShort:String) {
+    init(name:String, taxRate:Double, tipRate:Double, exchangeRate:Double, precision:Double, currencyShort:String) {
+        self.name = name
         self.taxRate = taxRate
         self.tipRate = tipRate
         self.exchangeRate = exchangeRate

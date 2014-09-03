@@ -10,8 +10,8 @@ import Foundation
 
 class exchangeCalculatorModel {
     
-    var foreignCountry:country
-    var homeCountry:country
+    var foreignCountry:Country
+    var homeCountry:Country
     var exchangeRate:Double
     var foreignTheyWant:Double
     var foreignTaxRate:Double
@@ -21,7 +21,7 @@ class exchangeCalculatorModel {
     var precision:Double
 
     
-    init(foreignTheyWant:Double, foreignCountry:country, homeCountry:country) {
+    init(foreignTheyWant:Double, foreignCountry:Country, homeCountry:Country) {
         self.foreignTheyWant = foreignTheyWant
         self.exchangeRate = foreignCountry.exchangeRate / homeCountry.exchangeRate
         self.foreignCountry = foreignCountry
