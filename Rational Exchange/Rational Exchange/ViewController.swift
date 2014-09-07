@@ -42,15 +42,16 @@ class ViewController: UIViewController, UISearchBarDelegate {
         foreignSearchBar.text = "Norway"
         homeSearchBar.text = "USA"
 
-        
-        
         self.automaticallyAdjustsScrollViewInsets = false
         
-        var numberOfPages:CGFloat = 3.0
+        var numberOfPages:CGFloat = CGFloat(scrollView.subviews.count)
+        
+        let startingPage:CGFloat = 1
         
         scrollView.contentSize = CGSize(width: mainView.bounds.width, height: (mainView.bounds.height * numberOfPages))
 
-        scrollView.contentOffset = CGPointMake(0,(scrollView.contentSize.height/numberOfPages)) // this won't really scale
+        
+        scrollView.contentOffset = CGPointMake(0,(mainView.bounds.height * startingPage))
         
         middlePage.bounds = CGRect(x: middlePage.bounds.origin.x, y: (mainView.bounds.height * -1), width: middlePage.bounds.width, height: middlePage.bounds.height)
         

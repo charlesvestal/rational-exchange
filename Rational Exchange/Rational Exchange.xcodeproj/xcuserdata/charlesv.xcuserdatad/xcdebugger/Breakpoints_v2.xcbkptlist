@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rational Exchange/ViewController.swift"
-            timestampString = "431802152.338966"
+            timestampString = "431809148.318602"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252">
+            startingLineNumber = "275"
+            endingLineNumber = "275">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rational Exchange/ViewController.swift"
-            timestampString = "431802152.338966"
+            timestampString = "431809148.318602"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271">
+            startingLineNumber = "294"
+            endingLineNumber = "294">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -38,13 +38,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rational Exchange/ViewController.swift"
-            timestampString = "431802152.338966"
+            timestampString = "431809148.318602"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "exchangeCalc"
-            landmarkType = "19">
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "updateUI()"
+            landmarkType = "5">
             <Locations>
                <Location
                   shouldBeEnabled = "No"

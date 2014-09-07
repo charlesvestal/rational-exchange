@@ -277,7 +277,6 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="S2e-v9-8Zq" firstAttribute="height" secondItem="mqe-kK-qGj" secondAttribute="height" id="0fB-BM-f6S"/>
-                                    <constraint firstAttribute="height" secondItem="S2e-v9-8Zq" secondAttribute="height" id="7Mp-Sc-eZh"/>
                                     <constraint firstItem="S2e-v9-8Zq" firstAttribute="width" secondItem="mqe-kK-qGj" secondAttribute="width" id="JIm-GX-X35">
                                         <variation key="widthClass=compact" constant="0.0"/>
                                     </constraint>
@@ -285,7 +284,6 @@
                                     <constraint firstItem="S2e-v9-8Zq" firstAttribute="height" secondItem="wdr-dH-vph" secondAttribute="height" id="KbH-Jn-qFh"/>
                                     <constraint firstItem="wdr-dH-vph" firstAttribute="bottom" secondItem="noG-ku-5uo" secondAttribute="bottom" id="QJo-FM-r5b"/>
                                     <constraint firstItem="mqe-kK-qGj" firstAttribute="top" secondItem="noG-ku-5uo" secondAttribute="top" id="ld7-QS-VXW"/>
-                                    <constraint firstAttribute="width" secondItem="S2e-v9-8Zq" secondAttribute="width" id="o9S-YC-jVh"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
@@ -299,11 +297,9 @@
                                     </mask>
                                     <mask key="constraints">
                                         <exclude reference="0fB-BM-f6S"/>
-                                        <exclude reference="7Mp-Sc-eZh"/>
                                         <exclude reference="JIm-GX-X35"/>
                                         <exclude reference="JS1-IJ-lUR"/>
                                         <exclude reference="KbH-Jn-qFh"/>
-                                        <exclude reference="o9S-YC-jVh"/>
                                         <exclude reference="ld7-QS-VXW"/>
                                         <exclude reference="QJo-FM-r5b"/>
                                     </mask>
@@ -316,11 +312,9 @@
                                     </mask>
                                     <mask key="constraints">
                                         <include reference="0fB-BM-f6S"/>
-                                        <include reference="7Mp-Sc-eZh"/>
                                         <include reference="JIm-GX-X35"/>
                                         <include reference="JS1-IJ-lUR"/>
                                         <include reference="KbH-Jn-qFh"/>
-                                        <include reference="o9S-YC-jVh"/>
                                         <include reference="ld7-QS-VXW"/>
                                         <include reference="QJo-FM-r5b"/>
                                     </mask>
@@ -333,7 +327,9 @@
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="b8n-qv-Gh2" secondAttribute="bottom" constant="1" id="8nT-zc-JAh">
                                 <variation key="widthClass=compact" constant="0.0"/>
                             </constraint>
+                            <constraint firstItem="S2e-v9-8Zq" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="9gv-mA-zWE"/>
                             <constraint firstItem="noG-ku-5uo" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="BYT-gK-AsB"/>
+                            <constraint firstItem="S2e-v9-8Zq" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" id="Kqs-21-MWE"/>
                             <constraint firstItem="noG-ku-5uo" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" id="TYG-0c-3DP"/>
                             <constraint firstItem="9qw-zx-83R" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="-20" id="UHt-Db-bPY">
                                 <variation key="widthClass=compact" constant="0.0"/>
@@ -344,10 +340,12 @@
                                 <exclude reference="noG-ku-5uo"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="8nT-zc-JAh"/>
-                                <exclude reference="UHt-Db-bPY"/>
                                 <exclude reference="BYT-gK-AsB"/>
                                 <exclude reference="TYG-0c-3DP"/>
+                                <exclude reference="UHt-Db-bPY"/>
+                                <exclude reference="9gv-mA-zWE"/>
+                                <exclude reference="Kqs-21-MWE"/>
+                                <exclude reference="8nT-zc-JAh"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -355,10 +353,12 @@
                                 <include reference="noG-ku-5uo"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="8nT-zc-JAh"/>
-                                <exclude reference="UHt-Db-bPY"/>
                                 <include reference="BYT-gK-AsB"/>
                                 <include reference="TYG-0c-3DP"/>
+                                <exclude reference="UHt-Db-bPY"/>
+                                <include reference="9gv-mA-zWE"/>
+                                <include reference="Kqs-21-MWE"/>
+                                <exclude reference="8nT-zc-JAh"/>
                             </mask>
                         </variation>
                         <connections>
