@@ -12,8 +12,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
 
 
     
+    @IBOutlet var mainView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var middlePage: UIView!
     @IBOutlet weak var foreignCostField: UITextField!
     @IBOutlet weak var homeCostField: UITextField!
     @IBOutlet weak var homeCostLabel: UILabel!
@@ -27,8 +29,12 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     var selecteTextFieldOriginalY:CGFloat = 0.0;
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBarHidden = true
+        
         // Do any additional setup after loading the view, typically from a nib.
         foreignSearchBar.delegate = self
         homeSearchBar.delegate = self
@@ -37,8 +43,19 @@ class ViewController: UIViewController, UISearchBarDelegate {
         homeSearchBar.text = "USA"
 
         
-     //   scrollView.contentOffset = CGPointMake(0,44)
+        
+        self.automaticallyAdjustsScrollViewInsets = false
+        
+        var numberOfPages:CGFloat = 3.0
+        
+        scrollView.contentSize = CGSize(width: mainView.bounds.width, height: (mainView.bounds.height * numberOfPages))
 
+        scrollView.contentOffset = CGPointMake(0,(scrollView.contentSize.height/numberOfPages)) // this won't really scale
+        
+        middlePage.bounds = CGRect(x: middlePage.bounds.origin.x, y: (mainView.bounds.height * -1), width: middlePage.bounds.width, height: middlePage.bounds.height)
+        
+        
+        
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
         
@@ -105,6 +122,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
             "Magic10": Country(name:"Magic10", taxRate: 0.1, tipRate: 0.1, exchangeRate: 1, precision: 1, currencyShort:"M10"),
             "Magic20": Country(name:"Magic20", taxRate: 0.2, tipRate: 0.2, exchangeRate: 1, precision: 1, currencyShort:"M20")
         ]
+        
         // ideally pull this in from an eternal data source to eventually hit an API
     }
     

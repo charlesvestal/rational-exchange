@@ -19,6 +19,7 @@ class exchangeCalculatorModel {
     var homeTaxRate:Double
     var homeTipRate:Double
     var precision:Double
+//    var countries:Dictionary<String, Country>
 
     
     init(foreignTheyWant:Double, foreignCountry:Country, homeCountry:Country) {
@@ -31,6 +32,15 @@ class exchangeCalculatorModel {
         self.homeTaxRate  =  homeCountry.taxRate
         self.homeTipRate  =  homeCountry.tipRate
         self.precision = homeCountry.precision
+//        self.countries = [
+//            "Prague":  Country(name:"Prague", taxRate: 0.0, tipRate: 0.0, exchangeRate: 21.31, precision: 1, currencyShort:"USD"),
+//            "USA":  Country(name:"USA", taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25, currencyShort:"USD"),
+//            "Euro": Country(name:"Euro", taxRate: 0, tipRate: 0, exchangeRate: 0.76, precision: 1, currencyShort:"EUR"),
+//            "Norway": Country(name:"Norway", taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1, currencyShort:"NOK"),
+//            "Magic10": Country(name:"Magic10", taxRate: 0.1, tipRate: 0.1, exchangeRate: 1, precision: 1, currencyShort:"M10"),
+//            "Magic20": Country(name:"Magic20", taxRate: 0.2, tipRate: 0.2, exchangeRate: 1, precision: 1, currencyShort:"M20")
+//        ]
+
     }
     
     func calcTotalAmount (tippable:Double) -> Double {
