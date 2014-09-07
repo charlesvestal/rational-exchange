@@ -44,11 +44,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
         homeSearchBar.text = "USA"
 
         self.automaticallyAdjustsScrollViewInsets = false
-        
-        
-        
-       
-        
+      
+            let startingPage:CGFloat = 1
+            scrollView.contentOffset = CGPointMake(0,(mainView.bounds.height * startingPage))
         
         updateUI()
     }
@@ -58,11 +56,13 @@ class ViewController: UIViewController, UISearchBarDelegate {
         var numberOfPages:CGFloat = CGFloat(scrollView.subviews.count)
         scrollView.contentSize = CGSize(width: mainView.bounds.width, height: (mainView.bounds.height * (numberOfPages - 1)))
         
-        let startingPage:CGFloat = 1
-        
-        scrollView.contentOffset = CGPointMake(0,(mainView.bounds.height * startingPage))
-
-        
+        let currentVersion:NSString = UIDevice.currentDevice().systemVersion
+        if (currentVersion.doubleValue < 8.0)
+        {
+            let startingPage:CGFloat = 1
+            scrollView.contentOffset = CGPointMake(0,(mainView.bounds.height * startingPage))
+            println("probably 7")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -78,12 +78,11 @@ class ViewController: UIViewController, UISearchBarDelegate {
         self.view.endEditing(true)
     }
     
-
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar!) {
         var newCountry = searchBar.text
         
-        if(exchangeCalc.countriesList[newCountry] != nil)
+        if(CountryList().countryListDict[newCountry] != nil)
         {
             if(searchBar==homeSearchBar)
             {
@@ -118,12 +117,11 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     
+    
     var exchangeCalc = exchangeCalculatorModel(foreignTheyWant: 0,
-        foreignCountry: Country(name:"Norway", taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1.0, currencyShort:"NOK"),
-        homeCountry: Country(name:"USA", taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25, currencyShort:"USD")
-        // TODO set up defaults and remember user state
-        // Is there a way to set this up using the countries dict we already have? IE foreignCountry: countries["Norway"]
-    )
+        foreignCountry: CountryList().countryListDict["Norway"] as Country,
+        homeCountry: CountryList().countryListDict["USA"] as Country
+        )
     
     func updateUI()   {
         var isTippable:Double
@@ -158,7 +156,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
 
     func updateForeignCountry(newCountryName:String) {
-        let newCountry = exchangeCalc.countriesList[newCountryName] as Country
+        let newCountry = CountryList().countryListDict[newCountryName] as Country
         exchangeCalc.foreignCountry = newCountry
         exchangeCalc.foreignTaxRate = newCountry.taxRate
         exchangeCalc.foreignTipRate = newCountry.tipRate
@@ -167,7 +165,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     func updateHomeCountry(newCountryName:String) {
-        let newCountry = exchangeCalc.countriesList[newCountryName] as Country
+        let newCountry = CountryList().countryListDict[newCountryName] as Country
         exchangeCalc.homeCountry = newCountry
         exchangeCalc.homeTaxRate = newCountry.taxRate
         exchangeCalc.homeTipRate = newCountry.tipRate

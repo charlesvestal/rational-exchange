@@ -9,10 +9,10 @@
 import Foundation
 
 class CountryList {
-    var countryList:Dictionary<String, AnyObject>
+    var countryListDict:Dictionary<String, AnyObject>
     
     init() {
-        self.countryList = [
+        self.countryListDict = [
             "Prague":  Country(name:"Prague", taxRate: 0.0, tipRate: 0.0, exchangeRate: 21.31, precision: 1, currencyShort:"USD"),
             "USA":  Country(name:"USA", taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25, currencyShort:"USD"),
             "Euro": Country(name:"Euro", taxRate: 0, tipRate: 0, exchangeRate: 0.76, precision: 1, currencyShort:"EUR"),
