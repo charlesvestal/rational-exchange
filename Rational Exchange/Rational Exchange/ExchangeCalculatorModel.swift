@@ -19,7 +19,6 @@ class exchangeCalculatorModel {
     var homeTaxRate:Double
     var homeTipRate:Double
     var precision:Double
-//    var countries:Dictionary<String, Country>
 
     
     init(foreignTheyWant:Double, foreignCountry:Country, homeCountry:Country) {

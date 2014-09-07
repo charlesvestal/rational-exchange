@@ -46,21 +46,15 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
         var numberOfPages:CGFloat = CGFloat(scrollView.subviews.count)
         
+        println(numberOfPages)
         let startingPage:CGFloat = 1
         
-        scrollView.contentSize = CGSize(width: mainView.bounds.width, height: (mainView.bounds.height * numberOfPages))
+        scrollView.contentSize = CGSize(width: mainView.bounds.width, height: (mainView.bounds.height * (numberOfPages - 1)))
 
         
         scrollView.contentOffset = CGPointMake(0,(mainView.bounds.height * startingPage))
-        
-        middlePage.bounds = CGRect(x: middlePage.bounds.origin.x, y: (mainView.bounds.height * -1), width: middlePage.bounds.width, height: middlePage.bounds.height)
-        
-        
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name:UIKeyboardWillShowNotification, object: nil);
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil);
-        
-       updateUI()
+
+        updateUI()
     }
 
     override func didReceiveMemoryWarning() {
@@ -145,7 +139,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
         exchangeCalc.calcExchangeRate()
 
-        foreignLabel.text = String(format: "The price in %@", exchangeCalc.foreignCountry.currencyShort)
+        foreignLabel.text = String(format: "Converting from %@", exchangeCalc.foreignCountry.currencyShort)
 
         homeCostField.text = NSString (format: "$%.2f %@",
             exchangeCalc.calcShouldFeelLikeRounded(isTippable),
@@ -161,7 +155,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
             exchangeCalc.homeTaxRate
         )
         
-        exchangeLabel.text = String(format: "Converting from %@ to %@ at %0.2f", exchangeCalc.foreignCountry.currencyShort, exchangeCalc.homeCountry.currencyShort,exchangeCalc.exchangeRate)
+        exchangeLabel.text = String(format:"Converting to %@", exchangeCalc.homeCountry.currencyShort) //String(format: "Converting from %@ to %@ at %0.2f", exchangeCalc.foreignCountry.currencyShort, exchangeCalc.homeCountry.currencyShort,exchangeCalc.exchangeRate)
         
         
     }
@@ -183,42 +177,5 @@ class ViewController: UIViewController, UISearchBarDelegate {
         exchangeCalc.homeCountry.exchangeRate = newCountry.exchangeRate
         exchangeCalc.precision = newCountry.precision
         updateUI()
-    }
-    
-    func keyboardWillShow(sender: NSNotification) {
-        let dict:NSDictionary = sender.userInfo! as NSDictionary
-        let s:NSValue = dict.valueForKey(UIKeyboardFrameEndUserInfoKey) as NSValue;
-        let rect :CGRect = s.CGRectValue();
-        
-        let k:NSValue = dict.valueForKey(UIKeyboardFrameBeginUserInfoKey) as NSValue
-        let kRect: CGRect = k.CGRectValue()
-        
-        if self.homeSearchBar.isFirstResponder() { // figure out how to get this first and not run through any of this
-            var frame = self.homeSearchBar.frame;
-            selecteTextFieldOriginalY = frame.origin.y;
-            
-            var offset = (kRect.height) ;
-            print(offset)
-            frame.origin.y = offset>0 ? frame.origin.y - offset : frame.origin.y ;
-            UIView.animateWithDuration(0.3, animations:{
-                self.homeSearchBar.frame = frame;
-                })
-        }
-    }
-
-    
-    
-    func keyboardWillHide(sender: NSNotification) {
-        let dict:NSDictionary = sender.userInfo! as NSDictionary
-        let s:NSValue = dict.valueForKey(UIKeyboardFrameBeginUserInfoKey) as NSValue
-        let rect :CGRect = s.CGRectValue()
-        var frame = self.homeSearchBar.frame
-        frame.origin.y = selecteTextFieldOriginalY
-        
-       // if self.homeSearchBar.isFirstResponder() { // figure out how to get this first and not run through any of this
-            UIView.animateWithDuration(0.3, animations:{
-            self.homeSearchBar.frame = frame;
-            })
-        //}
     }
 }
