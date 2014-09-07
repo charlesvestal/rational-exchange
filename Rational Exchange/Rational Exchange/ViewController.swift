@@ -23,6 +23,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var tipSwitch: UISwitch!
     
   
+    
     @IBOutlet weak var foreignSearchBar: UISearchBar!
     @IBOutlet weak var homeSearchBar: UISearchBar!
     
@@ -40,8 +41,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
         foreignSearchBar.delegate = self
         homeSearchBar.delegate = self
 
-        foreignSearchBar.text = "Norway"
-        homeSearchBar.text = "USA"
+        foreignSearchBar.text = "Prague"
+        homeSearchBar.text = "Portland"
 
         self.automaticallyAdjustsScrollViewInsets = false
       
@@ -83,6 +84,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     
+    @IBAction func homeCostTapped(sender: AnyObject) {
+    println("touched")
+    }
+    
     func searchBarSearchButtonClicked(searchBar: UISearchBar!) {
         var newCountry = searchBar.text
         
@@ -115,7 +120,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     {
         let alert = UIAlertView()
         alert.title = "Unsupported Country"
-        alert.message = "Try Norway, USA, Euro, Magic10 or Magic20"
+        alert.message = "Try Prague, Norway, USA, Portland, Euro, Magic10 or Magic20"
         alert.addButtonWithTitle("OK")
         alert.show()
     }
@@ -123,8 +128,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     
     var exchangeCalc = exchangeCalculatorModel(foreignTheyWant: 0,
-        foreignCountry: CountryList().countryListDict["Norway"] as Country,
-        homeCountry: CountryList().countryListDict["USA"] as Country
+        foreignCountry: CountryList().countryListDict["Prague"] as Country!,
+        homeCountry: CountryList().countryListDict["Portland"] as Country!
         )
     
     func updateUI()   {
@@ -160,7 +165,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
 
     func updateForeignCountry(newCountryName:String) {
-        let newCountry = CountryList().countryListDict[newCountryName] as Country
+        let newCountry = CountryList().countryListDict[newCountryName] as Country!
         exchangeCalc.foreignCountry = newCountry
         exchangeCalc.foreignTaxRate = newCountry.taxRate
         exchangeCalc.foreignTipRate = newCountry.tipRate
@@ -169,7 +174,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     func updateHomeCountry(newCountryName:String) {
-        let newCountry = CountryList().countryListDict[newCountryName] as Country
+        let newCountry = CountryList().countryListDict[newCountryName] as Country!
         exchangeCalc.homeCountry = newCountry
         exchangeCalc.homeTaxRate = newCountry.taxRate
         exchangeCalc.homeTipRate = newCountry.tipRate
