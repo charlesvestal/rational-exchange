@@ -74,7 +74,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     func searchBarSearchButtonClicked(searchBar: UISearchBar!) {
         var newCountry = searchBar.text
         
-        if(countries[newCountry] != nil)
+        if(exchangeCalc.countriesList[newCountry] != nil)
         {
             if(searchBar==homeSearchBar)
             {
@@ -105,21 +105,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
         alert.show()
     }
     
-    var countries: Dictionary<String, AnyObject> = [
-        "Country": Country(name:"Default", taxRate: 0.0, tipRate: 0.0, exchangeRate: 0.0, precision: 0.0, currencyShort:"")
-    ] // is there a better way to set up the array here?
-    
-    override func awakeFromNib() {
-        countries = [
-            "USA":  Country(name:"USA", taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25, currencyShort:"USD"),
-            "Euro": Country(name:"Euro", taxRate: 0, tipRate: 0, exchangeRate: 0.76, precision: 1, currencyShort:"EUR"),
-            "Norway": Country(name:"Norway", taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1, currencyShort:"NOK"),
-            "Magic10": Country(name:"Magic10", taxRate: 0.1, tipRate: 0.1, exchangeRate: 1, precision: 1, currencyShort:"M10"),
-            "Magic20": Country(name:"Magic20", taxRate: 0.2, tipRate: 0.2, exchangeRate: 1, precision: 1, currencyShort:"M20")
-        ]
-        
-        // ideally pull this in from an eternal data source to eventually hit an API
-    }
     
     var exchangeCalc = exchangeCalculatorModel(foreignTheyWant: 0,
         foreignCountry: Country(name:"Norway", taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1.0, currencyShort:"NOK"),
@@ -161,7 +146,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
 
     func updateForeignCountry(newCountryName:String) {
-        let newCountry = countries[newCountryName] as Country
+        let newCountry = exchangeCalc.countriesList[newCountryName] as Country
         exchangeCalc.foreignCountry = newCountry
         exchangeCalc.foreignTaxRate = newCountry.taxRate
         exchangeCalc.foreignTipRate = newCountry.tipRate
@@ -170,7 +155,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     func updateHomeCountry(newCountryName:String) {
-        let newCountry = countries[newCountryName] as Country
+        let newCountry = exchangeCalc.countriesList[newCountryName] as Country
         exchangeCalc.homeCountry = newCountry
         exchangeCalc.homeTaxRate = newCountry.taxRate
         exchangeCalc.homeTipRate = newCountry.tipRate

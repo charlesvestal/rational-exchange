@@ -24,6 +24,6 @@ class Country {
         self.exchangeRate = exchangeRate
         self.precision = precision
         self.currencyShort = currencyShort
-    }
+         }
     
 }

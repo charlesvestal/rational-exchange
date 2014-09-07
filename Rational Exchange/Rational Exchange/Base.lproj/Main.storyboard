@@ -95,7 +95,7 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                    <rect key="frame" x="70" y="76" width="182" height="21"/>
+                                                    <rect key="frame" x="70" y="77" width="182" height="21"/>
                                                 </variation>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LhP-aO-v0h" userLabel="Foreign Amount Field">
@@ -210,14 +210,14 @@
                                                 <exclude reference="I3w-cw-ums"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <exclude reference="0TD-RU-eHg"/>
-                                                <exclude reference="lXe-TI-29J"/>
                                                 <exclude reference="Ia4-nA-xdw"/>
                                                 <exclude reference="h5O-SD-MJN"/>
+                                                <exclude reference="kzj-pW-9GQ"/>
+                                                <exclude reference="0TD-RU-eHg"/>
+                                                <exclude reference="lXe-TI-29J"/>
                                                 <exclude reference="4Ud-vW-IDo"/>
                                                 <exclude reference="elV-1X-1NE"/>
                                                 <exclude reference="sA7-zf-HLH"/>
-                                                <exclude reference="kzj-pW-9GQ"/>
                                                 <exclude reference="0Lt-ZK-EFF"/>
                                                 <exclude reference="gCf-Bu-yuA"/>
                                                 <exclude reference="Anr-th-Cev"/>
@@ -238,14 +238,14 @@
                                                 <include reference="I3w-cw-ums"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="0TD-RU-eHg"/>
-                                                <include reference="lXe-TI-29J"/>
                                                 <include reference="Ia4-nA-xdw"/>
                                                 <include reference="h5O-SD-MJN"/>
+                                                <include reference="kzj-pW-9GQ"/>
+                                                <include reference="0TD-RU-eHg"/>
+                                                <include reference="lXe-TI-29J"/>
                                                 <include reference="4Ud-vW-IDo"/>
                                                 <include reference="elV-1X-1NE"/>
                                                 <include reference="sA7-zf-HLH"/>
-                                                <include reference="kzj-pW-9GQ"/>
                                                 <include reference="0Lt-ZK-EFF"/>
                                                 <include reference="gCf-Bu-yuA"/>
                                                 <include reference="Anr-th-Cev"/>
@@ -321,10 +321,10 @@
                                         <exclude reference="ZVx-6t-XRk"/>
                                         <exclude reference="g4p-yS-VZQ"/>
                                         <exclude reference="oeu-WR-SFY"/>
-                                        <exclude reference="ElL-LK-ICa"/>
                                         <exclude reference="RXf-xn-5mM"/>
                                         <exclude reference="qjg-Mg-x8n"/>
                                         <exclude reference="xgn-UY-euy"/>
+                                        <exclude reference="ElL-LK-ICa"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -340,10 +340,10 @@
                                         <include reference="ZVx-6t-XRk"/>
                                         <include reference="g4p-yS-VZQ"/>
                                         <include reference="oeu-WR-SFY"/>
-                                        <include reference="ElL-LK-ICa"/>
                                         <include reference="RXf-xn-5mM"/>
                                         <include reference="qjg-Mg-x8n"/>
                                         <include reference="xgn-UY-euy"/>
+                                        <include reference="ElL-LK-ICa"/>
                                     </mask>
                                 </variation>
                             </scrollView>
