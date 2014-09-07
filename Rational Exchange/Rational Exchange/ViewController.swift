@@ -45,22 +45,26 @@ class ViewController: UIViewController, UISearchBarDelegate {
 
         self.automaticallyAdjustsScrollViewInsets = false
       
-            let startingPage:CGFloat = 1
-            scrollView.contentOffset = CGPointMake(0,(mainView.bounds.height * startingPage))
-        
+        setupScrollView()
+
         updateUI()
     }
     
-    override func viewDidLayoutSubviews() {
-        
+
+    func setupScrollView ()
+    {
         var numberOfPages:CGFloat = CGFloat(scrollView.subviews.count)
         scrollView.contentSize = CGSize(width: mainView.bounds.width, height: (mainView.bounds.height * (numberOfPages - 1)))
-        
+       
+        let startingPage:CGFloat = 1
+            scrollView.contentOffset = CGPointMake(0,(mainView.bounds.height * startingPage))
+    }
+
+    override func viewDidLayoutSubviews() {
         let currentVersion:NSString = UIDevice.currentDevice().systemVersion
         if (currentVersion.doubleValue < 8.0)
         {
-            let startingPage:CGFloat = 1
-            scrollView.contentOffset = CGPointMake(0,(mainView.bounds.height * startingPage))
+            setupScrollView()
             println("probably 7")
         }
     }
