@@ -17,11 +17,12 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var middlePage: UIView!
     @IBOutlet weak var foreignCostField: UITextField!
-    @IBOutlet weak var homeCostField: UITextField!
+    @IBOutlet weak var homeCostField: UILabel!
     @IBOutlet weak var homeCostLabel: UILabel!
     @IBOutlet weak var foreignLabel: UILabel!
     @IBOutlet weak var tipSwitch: UISwitch!
     
+  
     @IBOutlet weak var foreignSearchBar: UISearchBar!
     @IBOutlet weak var homeSearchBar: UISearchBar!
     
@@ -44,17 +45,24 @@ class ViewController: UIViewController, UISearchBarDelegate {
 
         self.automaticallyAdjustsScrollViewInsets = false
         
+        
+        
+       
+        
+        
+        updateUI()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
         var numberOfPages:CGFloat = CGFloat(scrollView.subviews.count)
-        
-        println(numberOfPages)
-        let startingPage:CGFloat = 1
-        
         scrollView.contentSize = CGSize(width: mainView.bounds.width, height: (mainView.bounds.height * (numberOfPages - 1)))
-
+        
+        let startingPage:CGFloat = 1
         
         scrollView.contentOffset = CGPointMake(0,(mainView.bounds.height * startingPage))
 
-        updateUI()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,6 +78,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         self.view.endEditing(true)
     }
     
+
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar!) {
         var newCountry = searchBar.text
@@ -95,6 +104,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
     func searchBarShouldEndEditing(searchBar: UISearchBar!) {
          searchBarSearchButtonClicked(searchBar)
     }
+    
+    
+
     
     func unsupportedCountries()
     {
