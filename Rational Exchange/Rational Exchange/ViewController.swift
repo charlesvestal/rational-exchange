@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UISearchBarDelegate {
+    let currentVersion:NSString = UIDevice.currentDevice().systemVersion
 
 
     
@@ -51,10 +52,16 @@ class ViewController: UIViewController, UISearchBarDelegate {
         updateUI()
     }
     
-
     func setupScrollView ()
     {
         var numberOfPages:CGFloat = CGFloat(scrollView.subviews.count)
+        
+        if (currentVersion.doubleValue < 8.0)
+        {
+        numberOfPages--
+        }
+
+        
         scrollView.contentSize = CGSize(width: mainView.bounds.width, height: (mainView.bounds.height * (numberOfPages - 1)))
        
         let startingPage:CGFloat = 1
@@ -62,7 +69,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
 
     override func viewDidLayoutSubviews() {
-        let currentVersion:NSString = UIDevice.currentDevice().systemVersion
         if (currentVersion.doubleValue < 8.0)
         {
             setupScrollView()
