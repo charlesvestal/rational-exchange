@@ -3,7 +3,6 @@
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Rational Exchange-->
@@ -35,7 +34,7 @@
                                         <color key="backgroundColor" red="0.078727411499999997" green="0.29996017390000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstItem="9qw-zx-83R" firstAttribute="width" secondItem="mqe-kK-qGj" secondAttribute="width" id="AzX-J6-7DO"/>
-                                            <constraint firstItem="9qw-zx-83R" firstAttribute="topMargin" secondItem="mqe-kK-qGj" secondAttribute="top" constant="20" id="I7m-64-seq"/>
+                                            <constraint firstItem="9qw-zx-83R" firstAttribute="top" secondItem="mqe-kK-qGj" secondAttribute="top" constant="20" id="I7m-64-seq"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
