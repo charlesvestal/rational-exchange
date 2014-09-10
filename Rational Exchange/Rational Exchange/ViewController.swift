@@ -46,21 +46,14 @@ class ViewController: UIViewController, UISearchBarDelegate {
         homeSearchBar.text = "Portland"
 
         self.automaticallyAdjustsScrollViewInsets = false
-      
+      initUI()
         setupScrollView()
-
         updateUI()
     }
     
     func setupScrollView ()
     {
-        var numberOfPages:CGFloat = CGFloat(scrollView.subviews.count)
-        
-        if (currentVersion.doubleValue < 8.0)
-        {
-        numberOfPages--
-        }
-
+        var numberOfPages:CGFloat = CGFloat(scrollView.subviews.count) - 1
         
         scrollView.contentSize = CGSize(width: mainView.bounds.width, height: (mainView.bounds.height * (numberOfPages - 1)))
        
@@ -94,10 +87,21 @@ class ViewController: UIViewController, UISearchBarDelegate {
     println("touched")
     }
     
+    
+    var exchangeCalc = exchangeCalculator(foreignTheyWant: 0,
+        foreignCountry:  countryListSingleton.getCountry("Prague"),
+        homeCountry:  countryListSingleton.getCountry("Portland")
+    )
+
+   func initUI()
+   {
+   
+    }
+    
     func searchBarSearchButtonClicked(searchBar: UISearchBar!) {
         var newCountry = searchBar.text
         
-        if(CountryList().countryListDict[newCountry] != nil)
+        if(exchangeCalc.countryList.getCountry(newCountry).name != "None")
         {
             if(searchBar==homeSearchBar)
             {
@@ -115,12 +119,11 @@ class ViewController: UIViewController, UISearchBarDelegate {
         }
     }
     
+
     func searchBarShouldEndEditing(searchBar: UISearchBar!) {
          searchBarSearchButtonClicked(searchBar)
     }
     
-    
-
     
     func unsupportedCountries()
     {
@@ -131,14 +134,16 @@ class ViewController: UIViewController, UISearchBarDelegate {
         alert.show()
     }
     
+
     
+    //reference
     
-    var exchangeCalc = exchangeCalculatorModel(foreignTheyWant: 0,
-        foreignCountry: CountryList().countryListDict["Prague"] as Country!,
-        homeCountry: CountryList().countryListDict["Portland"] as Country!
-        )
+    // or you can just access properties and call methods directly
+   
+
     
     func updateUI()   {
+        
         var isTippable:Double
         if tipSwitch.on
         { isTippable = 1.0}
@@ -160,9 +165,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
             exchangeCalc.homeCountry.currencyShort,
             exchangeCalc.calcShouldFeelLike(isTippable),
             exchangeCalc.calcShouldTipLike(isTippable),
-            exchangeCalc.homeTipRate,
+            exchangeCalc.homeCountry.tipRate,
             exchangeCalc.calcShouldTaxLike(isTippable),
-            exchangeCalc.homeTaxRate
+            exchangeCalc.homeCountry.taxRate
         )
         
         exchangeLabel.text = String(format:"Converting to %@", exchangeCalc.homeCountry.currencyShort) //String(format: "Converting from %@ to %@ at %0.2f", exchangeCalc.foreignCountry.currencyShort, exchangeCalc.homeCountry.currencyShort,exchangeCalc.exchangeRate)
@@ -171,19 +176,19 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
 
     func updateForeignCountry(newCountryName:String) {
-        let newCountry = CountryList().countryListDict[newCountryName] as Country!
+        let newCountry = exchangeCalc.countryList.getCountry(newCountryName)
         exchangeCalc.foreignCountry = newCountry
-        exchangeCalc.foreignTaxRate = newCountry.taxRate
-        exchangeCalc.foreignTipRate = newCountry.tipRate
+        exchangeCalc.foreignCountry.taxRate = newCountry.taxRate
+        exchangeCalc.foreignCountry.tipRate = newCountry.tipRate
         let newCountryCurrency = newCountry.currencyShort
         updateUI()
     }
     
     func updateHomeCountry(newCountryName:String) {
-        let newCountry = CountryList().countryListDict[newCountryName] as Country!
+        let newCountry = exchangeCalc.countryList.getCountry(newCountryName)
         exchangeCalc.homeCountry = newCountry
-        exchangeCalc.homeTaxRate = newCountry.taxRate
-        exchangeCalc.homeTipRate = newCountry.tipRate
+        exchangeCalc.homeCountry.taxRate = newCountry.taxRate
+        exchangeCalc.homeCountry.tipRate = newCountry.tipRate
         exchangeCalc.homeCountry.exchangeRate = newCountry.exchangeRate
         exchangeCalc.precision = newCountry.precision
         updateUI()

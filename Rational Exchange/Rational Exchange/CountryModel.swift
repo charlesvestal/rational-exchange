@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Country {
+struct Country {
     var name:String
     var taxRate:Double
     var tipRate:Double

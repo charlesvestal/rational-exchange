@@ -8,33 +8,27 @@
 
 import Foundation
 
-class exchangeCalculatorModel {
+class exchangeCalculator {
     
     var foreignCountry:Country
     var homeCountry:Country
     var exchangeRate:Double
     var foreignTheyWant:Double
-    var foreignTaxRate:Double
-    var foreignTipRate:Double
-    var homeTaxRate:Double
-    var homeTipRate:Double
     var precision:Double
 
+    var countryList = countryListSingleton
+    
     init(foreignTheyWant:Double, foreignCountry:Country, homeCountry:Country) {
         self.foreignTheyWant = foreignTheyWant
         self.exchangeRate = foreignCountry.exchangeRate / homeCountry.exchangeRate
         self.foreignCountry = foreignCountry
         self.homeCountry = homeCountry
-        self.foreignTaxRate = foreignCountry.taxRate
-        self.foreignTipRate = foreignCountry.tipRate
-        self.homeTaxRate  =  homeCountry.taxRate
-        self.homeTipRate  =  homeCountry.tipRate
         self.precision = homeCountry.precision
     }
     
     func calcTotalAmount (tippable:Double) -> Double {
         // this should be the total cost all inclusive of what you'll end up paying
-        var foreignTotalAmount:Double = (foreignTheyWant + (foreignTheyWant * foreignTaxRate) + (foreignTheyWant * (tippable * foreignTipRate)))/exchangeRate
+        var foreignTotalAmount:Double = (foreignTheyWant + (foreignTheyWant * foreignCountry.taxRate) + (foreignTheyWant * (tippable * foreignCountry.tipRate)))/exchangeRate
         
         return foreignTotalAmount
     }
@@ -42,7 +36,7 @@ class exchangeCalculatorModel {
     func calcShouldFeelLike(tippable:Double) -> Double
     {
         // this is what, given the foreign and local customs, you would see on a menu back home, but end up paying the same amount
-        var shouldFeelLike = calcTotalAmount(tippable)/(1 + (tippable * homeTipRate) + homeTaxRate)
+        var shouldFeelLike = calcTotalAmount(tippable)/(1 + (tippable * homeCountry.tipRate) + homeCountry.taxRate)
         
         return shouldFeelLike
     }
@@ -58,14 +52,14 @@ class exchangeCalculatorModel {
     func calcShouldTipLike(tippable:Double) -> Double
     {
         // this is how much you'd tip back home
-        var shouldTipLike = (tippable * homeTipRate) * calcShouldFeelLike(tippable)
+        var shouldTipLike = (tippable * homeCountry.tipRate) * calcShouldFeelLike(tippable)
         
         return shouldTipLike
     }
     
     func calcShouldTaxLike(tippable:Double) -> Double {
         // this is how much you'd pay in tax back home
-        var shouldTaxLike = homeTaxRate * calcShouldFeelLike(tippable)
+        var shouldTaxLike = homeCountry.taxRate * calcShouldFeelLike(tippable)
         
         return shouldTaxLike
     }

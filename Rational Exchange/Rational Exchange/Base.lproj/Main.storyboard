@@ -222,11 +222,11 @@
                                                 <include reference="gCf-Bu-yuA"/>
                                                 <include reference="7LK-Di-Iwg"/>
                                                 <include reference="GdP-fH-dJ6"/>
-                                                <include reference="2cm-yr-BwM"/>
-                                                <include reference="9ul-5t-BuP"/>
                                                 <include reference="Anr-th-Cev"/>
                                                 <exclude reference="j7v-Yo-Jhi"/>
                                                 <include reference="lGO-Jg-hNI"/>
+                                                <include reference="2cm-yr-BwM"/>
+                                                <include reference="9ul-5t-BuP"/>
                                                 <include reference="C9n-lV-7Yg"/>
                                                 <include reference="diC-g0-2Pf"/>
                                                 <include reference="yfh-9g-Xru"/>
@@ -325,6 +325,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1704"/>
+               
                     <connections>
                         <outlet property="exchangeLabel" destination="XZb-vh-HMg" id="jzM-s9-XAy"/>
                         <outlet property="foreignCostField" destination="LhP-aO-v0h" id="YaQ-Sa-3dW"/>
