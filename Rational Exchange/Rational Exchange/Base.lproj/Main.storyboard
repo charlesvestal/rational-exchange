@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.9" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3DH-9s-nSH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3DH-9s-nSH">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
         <!--Rational Exchange-->
@@ -17,14 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1704"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="noG-ku-5uo">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="noG-ku-5uo">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1704"/>
                                 <subviews>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mqe-kK-qGj" userLabel="topPage">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mqe-kK-qGj" userLabel="topPage">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1704"/>
                                         <subviews>
-                                            <searchBar contentMode="redraw" placeholder="Where are you now?" translatesAutoresizingMaskIntoConstraints="NO" id="9qw-zx-83R" userLabel="foreignBar">
-                                                <rect key="frame" x="20" y="20" width="320" height="44"/>
+                                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" placeholder="Where are you now?" translatesAutoresizingMaskIntoConstraints="NO" id="9qw-zx-83R" userLabel="foreignBar">
+                                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <variation key="widthClass=compact" ambiguous="YES">
                                                     <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -35,16 +35,10 @@
                                         <constraints>
                                             <constraint firstItem="9qw-zx-83R" firstAttribute="width" secondItem="mqe-kK-qGj" secondAttribute="width" id="AzX-J6-7DO"/>
                                             <constraint firstItem="9qw-zx-83R" firstAttribute="top" secondItem="mqe-kK-qGj" secondAttribute="top" constant="20" id="I7m-64-seq"/>
-                                            <constraint firstItem="9qw-zx-83R" firstAttribute="leading" secondItem="mqe-kK-qGj" secondAttribute="leading" id="YDb-ZM-S67"/>
                                         </constraints>
                                         <variation key="default">
-                                            <mask key="subviews">
-                                                <exclude reference="9qw-zx-83R"/>
-                                            </mask>
                                             <mask key="constraints">
-                                                <exclude reference="AzX-J6-7DO"/>
                                                 <exclude reference="I7m-64-seq"/>
-                                                <exclude reference="YDb-ZM-S67"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -55,15 +49,14 @@
                                             <mask key="constraints">
                                                 <include reference="AzX-J6-7DO"/>
                                                 <include reference="I7m-64-seq"/>
-                                                <include reference="YDb-ZM-S67"/>
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S2e-v9-8Zq" userLabel="middlePage">
-                                        <rect key="frame" x="-20" y="-20" width="360" height="544"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S2e-v9-8Zq" userLabel="middlePage">
+                                        <rect key="frame" x="0.0" y="568" width="320" height="568"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you at a bar / rest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM1-TV-D0n">
-                                                <rect key="frame" x="82" y="83" width="166" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Are you at a bar / rest" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM1-TV-D0n">
+                                                <rect key="frame" x="49" y="176" width="166" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -71,8 +64,8 @@
                                                     <rect key="frame" x="48" y="169" width="168" height="21"/>
                                                 </variation>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L0z-gl-kou">
-                                                <rect key="frame" x="256" y="78" width="51" height="31"/>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L0z-gl-kou">
+                                                <rect key="frame" x="223" y="171" width="51" height="31"/>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="223" y="164" width="51" height="31"/>
                                                 </variation>
@@ -80,17 +73,8 @@
                                                     <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Wao-0c-O1D"/>
                                                 </connections>
                                             </switch>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Converting from NOK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dP-FW-QR6">
-                                                <rect key="frame" x="157" y="122" width="56" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="widthClass=compact" ambiguous="YES">
-                                                    <rect key="frame" x="77" y="20" width="166" height="21"/>
-                                                </variation>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's the listed price?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3w-cw-ums">
-                                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="What's the listed price?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3w-cw-ums">
+                                                <rect key="frame" x="0.0" y="76" width="320" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -98,8 +82,8 @@
                                                     <rect key="frame" x="70" y="77" width="182" height="21"/>
                                                 </variation>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LhP-aO-v0h" userLabel="Foreign Amount Field">
-                                                <rect key="frame" x="137" y="158" width="97" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LhP-aO-v0h" userLabel="Foreign Amount Field">
+                                                <rect key="frame" x="112" y="108" width="97" height="30"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="97" id="2B5-Dh-H0X"/>
                                                     <constraint firstAttribute="height" constant="30" id="dFN-as-wqI"/>
@@ -123,8 +107,8 @@
                                                     <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="qwH-Pz-VRa"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Should feel like roughly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kx-AV-dEs">
-                                                <rect key="frame" x="83" y="210" width="205" height="21"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Should feel like roughly" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kx-AV-dEs">
+                                                <rect key="frame" x="63" y="210" width="205" height="21"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -132,8 +116,8 @@
                                                     <rect key="frame" x="76" y="250" width="178" height="21"/>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It's like this" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="UGW-cI-PP4" userLabel="Longform cost story">
-                                                <rect key="frame" x="55" y="277" width="250" height="88"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It's like this" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="UGW-cI-PP4" userLabel="Longform cost story">
+                                                <rect key="frame" x="0.0" y="277" width="320" height="88"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -141,17 +125,8 @@
                                                     <rect key="frame" x="36" y="408" width="250" height="88"/>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Converting to USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="XZb-vh-HMg" userLabel="Currency Conversion Label">
-                                                <rect key="frame" x="81" y="381" width="199" height="21"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                    <rect key="frame" x="61" y="539" width="198" height="21"/>
-                                                </variation>
-                                            </label>
-                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jn1-Vc-f0t" userLabel="converted Amount">
-                                                <rect key="frame" x="137" y="239" width="97" height="30"/>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jn1-Vc-f0t" userLabel="converted Amount">
+                                                <rect key="frame" x="117" y="239" width="97" height="30"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                                 </accessibility>
@@ -167,6 +142,24 @@
                                                     <action selector="roughAmountTouched:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Lbu-ba-XjN"/>
                                                 </connections>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Converting to USD" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="XZb-vh-HMg" userLabel="Currency Conversion Label">
+                                                <rect key="frame" x="61" y="529" width="199" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="61" y="539" width="198" height="21"/>
+                                                </variation>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Converting from NOK" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2dP-FW-QR6">
+                                                <rect key="frame" x="57" y="20" width="207" height="32"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact" ambiguous="YES">
+                                                    <rect key="frame" x="77" y="20" width="166" height="21"/>
+                                                </variation>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
@@ -211,33 +204,6 @@
                                             </constraint>
                                             <constraint firstItem="XZb-vh-HMg" firstAttribute="top" relation="greaterThanOrEqual" secondItem="UGW-cI-PP4" secondAttribute="bottom" constant="43" id="yfh-9g-Xru"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="subviews">
-                                                <exclude reference="I3w-cw-ums"/>
-                                            </mask>
-                                            <mask key="constraints">
-                                                <exclude reference="Ia4-nA-xdw"/>
-                                                <exclude reference="h5O-SD-MJN"/>
-                                                <exclude reference="kzj-pW-9GQ"/>
-                                                <exclude reference="0TD-RU-eHg"/>
-                                                <exclude reference="lXe-TI-29J"/>
-                                                <exclude reference="4Ud-vW-IDo"/>
-                                                <exclude reference="elV-1X-1NE"/>
-                                                <exclude reference="sA7-zf-HLH"/>
-                                                <exclude reference="0Lt-ZK-EFF"/>
-                                                <exclude reference="gCf-Bu-yuA"/>
-                                                <exclude reference="Anr-th-Cev"/>
-                                                <exclude reference="j7v-Yo-Jhi"/>
-                                                <exclude reference="lGO-Jg-hNI"/>
-                                                <exclude reference="7LK-Di-Iwg"/>
-                                                <exclude reference="GdP-fH-dJ6"/>
-                                                <exclude reference="2cm-yr-BwM"/>
-                                                <exclude reference="9ul-5t-BuP"/>
-                                                <exclude reference="C9n-lV-7Yg"/>
-                                                <exclude reference="diC-g0-2Pf"/>
-                                                <exclude reference="yfh-9g-Xru"/>
-                                            </mask>
-                                        </variation>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="0.0" y="568" width="320" height="568"/>
                                             <mask key="subviews">
@@ -267,11 +233,11 @@
                                             </mask>
                                         </variation>
                                     </view>
-                                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wdr-dH-vph" userLabel="bottomPage">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdr-dH-vph" userLabel="bottomPage">
+                                        <rect key="frame" x="0.0" y="1136" width="320" height="568"/>
                                         <subviews>
-                                            <searchBar contentMode="redraw" text="" placeholder="Where are you from?" translatesAutoresizingMaskIntoConstraints="NO" id="b8n-qv-Gh2" userLabel="homeBar">
-                                                <rect key="frame" x="20" y="480" width="320" height="44"/>
+                                            <searchBar contentMode="redraw" ambiguous="YES" misplaced="YES" text="" placeholder="Where are you from?" translatesAutoresizingMaskIntoConstraints="NO" id="b8n-qv-Gh2" userLabel="homeBar">
+                                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -283,15 +249,6 @@
                                             <constraint firstItem="b8n-qv-Gh2" firstAttribute="top" secondItem="wdr-dH-vph" secondAttribute="top" constant="20" id="VYd-UT-ovW"/>
                                             <constraint firstItem="b8n-qv-Gh2" firstAttribute="width" secondItem="wdr-dH-vph" secondAttribute="width" id="Xe5-pO-ZFX"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="subviews">
-                                                <exclude reference="b8n-qv-Gh2"/>
-                                            </mask>
-                                            <mask key="constraints">
-                                                <exclude reference="VYd-UT-ovW"/>
-                                                <exclude reference="Xe5-pO-ZFX"/>
-                                            </mask>
-                                        </variation>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="0.0" y="1136" width="320" height="568"/>
                                             <mask key="subviews">
@@ -317,22 +274,6 @@
                                     </constraint>
                                     <constraint firstItem="S2e-v9-8Zq" firstAttribute="height" secondItem="wdr-dH-vph" secondAttribute="height" id="xgn-UY-euy"/>
                                 </constraints>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="wdr-dH-vph"/>
-                                    </mask>
-                                    <mask key="constraints">
-                                        <exclude reference="46L-dK-9ZV"/>
-                                        <exclude reference="9uW-lD-Puh"/>
-                                        <exclude reference="ZVx-6t-XRk"/>
-                                        <exclude reference="g4p-yS-VZQ"/>
-                                        <exclude reference="oeu-WR-SFY"/>
-                                        <exclude reference="RXf-xn-5mM"/>
-                                        <exclude reference="qjg-Mg-x8n"/>
-                                        <exclude reference="xgn-UY-euy"/>
-                                        <exclude reference="ElL-LK-ICa"/>
-                                    </mask>
-                                </variation>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="1704"/>
                                     <mask key="subviews">
@@ -363,18 +304,6 @@
                             <constraint firstItem="noG-ku-5uo" firstAttribute="width" secondItem="kh9-bI-dsS" secondAttribute="width" id="i8F-34-vWy"/>
                             <constraint firstAttribute="width" secondItem="noG-ku-5uo" secondAttribute="width" id="kHT-3b-iTT"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="noG-ku-5uo"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="U38-8V-efD"/>
-                                <exclude reference="086-L1-7Oc"/>
-                                <exclude reference="Qhl-wH-55O"/>
-                                <exclude reference="i8F-34-vWy"/>
-                                <exclude reference="kHT-3b-iTT"/>
-                            </mask>
-                        </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="noG-ku-5uo"/>
