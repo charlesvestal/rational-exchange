@@ -77,15 +77,15 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
         var country : Country
         if tableView == self.searchDisplayController!.searchResultsTableView {
             country = filteredCountries[indexPath.row]
+            cell.textLabel!.text = country.name
+            cell.detailTextLabel?.text = country.currencyShort
         } else {
             country = countries[0]
         }
         
         // Configure the cell
-        var color = UIColor(hue: 0.0, saturation: 0.0, brightness: 0.0, alpha: 0.0)
-        cell.backgroundColor = color
+
         
-        cell.textLabel!.text = country.name
         
         
         return cell

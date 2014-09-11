@@ -23,8 +23,9 @@
                                     <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mqe-kK-qGj" userLabel="topPage">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="1704"/>
                                         <subviews>
-                                            <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9wv-ny-PzC">
-                                                <rect key="frame" x="0.0" y="133" width="320" height="435"/>
+                                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9wv-ny-PzC">
+                                                <rect key="frame" x="0.0" y="-5" width="320" height="573"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <segue destination="bfl-eG-BOs" kind="embed" id="SO4-nA-btb"/>
                                                 </connections>
@@ -32,7 +33,7 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.078727411499999997" green="0.29996017390000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="9wv-ny-PzC" firstAttribute="height" secondItem="mqe-kK-qGj" secondAttribute="height" id="f24-KV-RV2"/>
+                                            <constraint firstItem="9wv-ny-PzC" firstAttribute="height" secondItem="mqe-kK-qGj" secondAttribute="height" constant="-20" id="f24-KV-RV2"/>
                                             <constraint firstItem="9wv-ny-PzC" firstAttribute="width" secondItem="mqe-kK-qGj" secondAttribute="width" id="lXh-Io-LaU"/>
                                         </constraints>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -252,6 +253,7 @@
                                     <constraint firstItem="mqe-kK-qGj" firstAttribute="top" secondItem="noG-ku-5uo" secondAttribute="top" id="46L-dK-9ZV"/>
                                     <constraint firstItem="mqe-kK-qGj" firstAttribute="width" secondItem="S2e-v9-8Zq" secondAttribute="width" id="9uW-lD-Puh"/>
                                     <constraint firstItem="wdr-dH-vph" firstAttribute="top" secondItem="S2e-v9-8Zq" secondAttribute="bottom" id="ElL-LK-ICa"/>
+                                    <constraint firstItem="S2e-v9-8Zq" firstAttribute="bottom" secondItem="9wv-ny-PzC" secondAttribute="bottom" constant="568" id="Jrb-82-pfg"/>
                                     <constraint firstItem="S2e-v9-8Zq" firstAttribute="width" secondItem="wdr-dH-vph" secondAttribute="width" id="RXf-xn-5mM"/>
                                     <constraint firstItem="mqe-kK-qGj" firstAttribute="width" secondItem="noG-ku-5uo" secondAttribute="width" id="ZVx-6t-XRk"/>
                                     <constraint firstItem="mqe-kK-qGj" firstAttribute="height" secondItem="S2e-v9-8Zq" secondAttribute="height" id="g4p-yS-VZQ"/>
@@ -338,11 +340,13 @@
         <scene sceneID="I2N-vs-nqz">
             <objects>
                 <tableViewController id="bfl-eG-BOs" userLabel="Foreign Table View Controller" customClass="CountryTableViewController" customModule="RationalEx" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f86-vJ-JCJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="435"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" delaysContentTouches="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f86-vJ-JCJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="573"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" id="zq5-5b-0gK" userLabel="foreignBar">
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" id="zq5-5b-0gK" userLabel="foreignBar">
                             <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -351,11 +355,26 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" id="wlU-Py-wa7">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" textLabel="mXG-UK-i56" detailTextLabel="bRp-XE-cgu" style="IBUITableViewCellStyleValue1" id="wlU-Py-wa7">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wlU-Py-wa7" id="VuI-Q9-ZR3">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mXG-UK-i56">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bRp-XE-cgu">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -363,6 +382,9 @@
                             <outlet property="delegate" destination="bfl-eG-BOs" id="gnS-UD-eVJ"/>
                         </connections>
                     </tableView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="foreignBar" destination="zq5-5b-0gK" id="33Q-1o-dmH"/>
                         <outlet property="searchDisplayController" destination="MRm-ck-SSf" id="mNj-uN-DVN"/>
