@@ -11,8 +11,9 @@
 		FE2AFEB819B4C95B0056F0E0 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2AFEB619B4C95B0056F0E0 /* CountryModel.swift */; };
 		FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */; };
 		FE5FC41119B299820008333D /* countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE5FC41019B299820008333D /* countries.plist */; };
+		FE891BF019C12C4B008CC947 /* CountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE891BEF19C12C4B008CC947 /* CountryTableViewController.swift */; };
 		FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5319B1767B00852F94 /* AppDelegate.swift */; };
-		FEE86B5619B1767B00852F94 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5519B1767B00852F94 /* ViewController.swift */; };
+		FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5519B1767B00852F94 /* MainViewController.swift */; };
 		FEE86B5919B1767B00852F94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE86B5719B1767B00852F94 /* Main.storyboard */; };
 		FEE86B5B19B1767B00852F94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE86B5A19B1767B00852F94 /* Images.xcassets */; };
 		FEE86B6719B1767B00852F94 /* Rational_ExchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B6619B1767B00852F94 /* Rational_ExchangeTests.swift */; };
@@ -33,11 +34,12 @@
 		FE2AFEB619B4C95B0056F0E0 /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeCalculator.swift; sourceTree = "<group>"; };
 		FE5FC41019B299820008333D /* countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = countries.plist; sourceTree = "<group>"; };
+		FE891BEF19C12C4B008CC947 /* CountryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryTableViewController.swift; sourceTree = "<group>"; };
 		FEABBF1419C099CC00E8A50C /* arraytest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = arraytest.playground; path = ../../Ancillary/arraytest.playground; sourceTree = "<group>"; };
 		FEE86B4E19B1767B00852F94 /* RationalEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RationalEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE86B5219B1767B00852F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEE86B5319B1767B00852F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FEE86B5519B1767B00852F94 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FEE86B5519B1767B00852F94 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FEE86B5819B1767B00852F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEE86B5A19B1767B00852F94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FEE86B6019B1767B00852F94 /* Rational ExchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rational ExchangeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,7 +91,8 @@
 				FEABBF1419C099CC00E8A50C /* arraytest.playground */,
 				FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */,
 				FEE86B5319B1767B00852F94 /* AppDelegate.swift */,
-				FEE86B5519B1767B00852F94 /* ViewController.swift */,
+				FEE86B5519B1767B00852F94 /* MainViewController.swift */,
+				FE891BEF19C12C4B008CC947 /* CountryTableViewController.swift */,
 				FE5FC41019B299820008333D /* countries.plist */,
 				FEE86B5719B1767B00852F94 /* Main.storyboard */,
 				FEE86B5A19B1767B00852F94 /* Images.xcassets */,
@@ -225,8 +228,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEE86B5619B1767B00852F94 /* ViewController.swift in Sources */,
+				FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */,
 				FE205DC919BD040F00A2ADD8 /* CountryFetcher.swift in Sources */,
+				FE891BF019C12C4B008CC947 /* CountryTableViewController.swift in Sources */,
 				FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */,
 				FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */,
 				FE2AFEB819B4C95B0056F0E0 /* CountryModel.swift in Sources */,

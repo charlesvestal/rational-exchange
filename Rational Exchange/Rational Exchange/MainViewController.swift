@@ -39,10 +39,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
         self.navigationController?.navigationBarHidden = true
         
         // Do any additional setup after loading the view, typically from a nib.
-        foreignSearchBar.delegate = self
         homeSearchBar.delegate = self
 
-        foreignSearchBar.text = "Prague"
         homeSearchBar.text = "Portland"
 
         self.automaticallyAdjustsScrollViewInsets = false
