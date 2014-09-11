@@ -16,6 +16,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     
+
     @IBOutlet weak var middlePage: UIView!
     @IBOutlet weak var foreignCostField: UITextField!
     @IBOutlet weak var homeCostField: UILabel!
@@ -30,6 +31,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var exchangeLabel: UILabel!
     
+    var exchangeCalc = exchangeCalculator(foreignTheyWant: 0,
+        foreignCountry:  countryListSingleton.getCountry("Prague"),
+        homeCountry:  countryListSingleton.getCountry("Portland")
+    )
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,8 +42,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
         self.navigationController?.navigationBarHidden = true
         
         // Do any additional setup after loading the view, typically from a nib.
-        homeSearchBar.delegate = self
-        homeSearchBar.text = "Portland"
+//        homeSearchBar.delegate = self
+//        homeSearchBar.text = "Portland"
 
         self.automaticallyAdjustsScrollViewInsets = false
         
@@ -85,14 +90,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     
-    var exchangeCalc = exchangeCalculator(foreignTheyWant: 0,
-        foreignCountry:  countryListSingleton.getCountry("Prague"),
-        homeCountry:  countryListSingleton.getCountry("Portland")
-    )
-
    func initUI()
    {
-   
         let keyboardDoneButtonView:UIToolbar = UIToolbar()
             keyboardDoneButtonView.sizeToFit()
         
@@ -102,7 +101,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
             action: "doneClicked")
         
         keyboardDoneButtonView.setItems([doneButton], animated:false)
-        
+        println("keyboard type")
+        println(foreignCostField.keyboardType)
         foreignCostField.inputAccessoryView = keyboardDoneButtonView
 
     }
@@ -202,4 +202,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         exchangeCalc.precision = newCountry.precision
         updateUI()
     }
+    
+
 }
+

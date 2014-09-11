@@ -17,7 +17,6 @@ class CountryList {
     }
     
     var list:[Country] = [
-        Country(name:"None", taxRate: 0.0, tipRate: 0.0, exchangeRate: 21.31, precision: 1, currencyShort:"CZK"),
         Country(name:"Prague", taxRate: 0.0, tipRate: 0.0, exchangeRate: 21.31, precision: 1, currencyShort:"CZK"),
         Country(name:"USA", taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25, currencyShort:"USD"),
         Country(name:"Portland", taxRate: 0.0, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25, currencyShort:"USD"),

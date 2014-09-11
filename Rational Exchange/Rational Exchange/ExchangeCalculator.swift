@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+
 class exchangeCalculator {
     
     var foreignCountry:Country
@@ -24,6 +26,10 @@ class exchangeCalculator {
         self.foreignCountry = foreignCountry
         self.homeCountry = homeCountry
         self.precision = homeCountry.precision
+    }
+    
+    func updateForeignCountry (newCountry: Country) {
+        self.foreignCountry = newCountry
     }
     
     func calcTotalAmount (tippable:Double) -> Double {

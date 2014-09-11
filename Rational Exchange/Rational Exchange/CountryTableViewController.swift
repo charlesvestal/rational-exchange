@@ -17,7 +17,7 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
     
     func filterContentForSearchText(searchText: String) {
         
-        self.filteredCountries = self.countries.filter({( country: Country) -> Bool in
+      self.filteredCountries = self.countries.filter({( country: Country) -> Bool in
             
             let nameMatch = country.name.rangeOfString(searchText, options:NSStringCompareOptions(1))
             let currencyMatch = country.currencyShort.rangeOfString(searchText, options:NSStringCompareOptions(1))
@@ -31,7 +31,7 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
              return nameMatch != nil
             }
             
-            return nameMatch != nil
+            return 0
         })
     }
     
@@ -50,11 +50,9 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
         self.navigationController?.navigationBarHidden = true
         
         foreignBar.delegate = self
-        foreignBar.text = "Prague"
- 
+      
         self.tableView.delegate = self
         self.tableView.dataSource = self
-        
         
         self.tableView.reloadData()
     }
@@ -98,13 +96,22 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
     
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("was selected")
-    }
-    
-    //    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-    //        println("will be touched")
-    //        return indexPath
-    //    }
+
+        let selectedCountry = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text
+        let newCountry = countryListSingleton.getCountry(selectedCountry!)
+
+        println(newCountry.name)
+        
+        
+        
+        let viewController = parentViewController as ViewController
+       
+        
+        viewController.updateForeignCountry(newCountry.name)
+     // how do I update home Country?
+        self.searchDisplayController?.setActive(false, animated: true)
+        
+        }
 
     
     /*
@@ -142,14 +149,11 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
     }
     */
     
-    /*
-    // MARK: - Navigation
-    
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    override func prepareForSegue(segue: UIStoryboardSegue,
+        sender: AnyObject!){
+         println("segue")
     }
-    */
+    
     
 }
+
