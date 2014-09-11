@@ -78,9 +78,6 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
                 }
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println("touched")
-    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         //ask for a reusable cell from the tableview, the tableview will create a new one if it doesn't have any
@@ -96,14 +93,19 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
             country = countries[0]
         }
         
-        // Configure the cell
-
-        
-        
-        
         return cell
     }
     
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        println("was selected")
+    }
+    
+    //    override func tableView(tableView: UITableView, willSelectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+    //        println("will be touched")
+    //        return indexPath
+    //    }
+
     
     /*
     // Override to support conditional editing of the table view.
