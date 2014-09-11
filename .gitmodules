@@ -1,0 +1,3 @@
+[submodule "Rational Exchange/Alamofire"]
+	path = Rational Exchange/Alamofire
+	url = https://github.com/Alamofire/Alamofire
