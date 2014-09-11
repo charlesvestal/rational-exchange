@@ -355,7 +355,7 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" textLabel="mXG-UK-i56" detailTextLabel="bRp-XE-cgu" style="IBUITableViewCellStyleValue1" id="wlU-Py-wa7">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="Cell" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="mXG-UK-i56" detailTextLabel="bRp-XE-cgu" rowHeight="44" style="IBUITableViewCellStyleValue1" id="wlU-Py-wa7">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wlU-Py-wa7" id="VuI-Q9-ZR3">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -373,6 +373,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableViewCell>

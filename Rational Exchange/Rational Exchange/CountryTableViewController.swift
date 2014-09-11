@@ -52,7 +52,10 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
         foreignBar.delegate = self
         foreignBar.text = "Prague"
  
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        self.tableView.delegate = self
+        self.tableView.dataSource = self
+        
+        
         self.tableView.reloadData()
     }
     
@@ -88,7 +91,7 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
         if tableView == self.searchDisplayController!.searchResultsTableView {
             country = filteredCountries[indexPath.row]
             cell.textLabel!.text = country.name
-            cell.detailTextLabel?.text = country.currencyShort
+            cell.detailTextLabel?.text = String(format:"%@",country.currencyShort)
         } else {
             country = countries[0]
         }
