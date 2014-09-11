@@ -19,9 +19,19 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
         
         self.filteredCountries = self.countries.filter({( country: Country) -> Bool in
             
-            let stringMatch = country.name.rangeOfString(searchText, options:NSStringCompareOptions(1))
+            let nameMatch = country.name.rangeOfString(searchText, options:NSStringCompareOptions(1))
+            let currencyMatch = country.currencyShort.rangeOfString(searchText, options:NSStringCompareOptions(1))
             
-            return stringMatch != nil
+            if (currencyMatch != nil)
+            {
+              return currencyMatch != nil
+            }
+            
+            if (nameMatch != nil){
+             return nameMatch != nil
+            }
+            
+            return nameMatch != nil
         })
     }
     
