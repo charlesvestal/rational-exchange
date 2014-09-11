@@ -38,8 +38,7 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationBarHidden = true
-    
-        // Reload the table
+        
         foreignBar.delegate = self
         foreignBar.text = "Prague"
  
@@ -59,11 +58,11 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //        if tableView == self.searchDisplayController!.searchResultsTableView {
+                if tableView == self.searchDisplayController!.searchResultsTableView {
         return self.filteredCountries.count
-        //        } else {
-        //            return self.countries.count
-        //        }
+                } else {
+                    return 0
+                }
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -74,16 +73,20 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
         //ask for a reusable cell from the tableview, the tableview will create a new one if it doesn't have any
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
         
+        
         var country : Country
         if tableView == self.searchDisplayController!.searchResultsTableView {
             country = filteredCountries[indexPath.row]
         } else {
-            country = countries[indexPath.row]
+            country = countries[0]
         }
         
         // Configure the cell
+        var color = UIColor(hue: 0.0, saturation: 0.0, brightness: 0.0, alpha: 0.0)
+        cell.backgroundColor = color
+        
         cell.textLabel!.text = country.name
-        cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
+        
         
         return cell
     }
