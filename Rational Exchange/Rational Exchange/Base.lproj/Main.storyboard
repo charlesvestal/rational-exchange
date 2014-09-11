@@ -77,7 +77,7 @@
                                                     <constraint firstAttribute="height" constant="30" id="dFN-as-wqI"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                 <variation key="default">
                                                     <mask key="constraints">
                                                         <exclude reference="2B5-Dh-H0X"/>
@@ -150,6 +150,7 @@
                                             </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstItem="5Kx-AV-dEs" firstAttribute="centerY" secondItem="S2e-v9-8Zq" secondAttribute="centerY" constant="23.5" id="0Lt-ZK-EFF">
                                                 <variation key="widthClass=compact" constant="-23.5"/>
@@ -305,9 +306,6 @@
                                 <include reference="kHT-3b-iTT"/>
                             </mask>
                         </variation>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="qDv-M2-2Ic" appends="YES" id="1b2-65-h7P"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Rational Exchange" id="ugM-q9-Wj8"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -328,11 +326,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="qDv-M2-2Ic">
-                    <connections>
-                        <action selector="viewTapped:" destination="vXZ-lx-hvc" id="nGj-vY-eHv"/>
-                    </connections>
-                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="951" y="136"/>
         </scene>

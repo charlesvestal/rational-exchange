@@ -30,8 +30,19 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     @IBOutlet weak var exchangeLabel: UILabel!
     
-    var selecteTextFieldOriginalY:CGFloat = 0.0;
+    
 
+
+    
+    
+//    UIToolbar* keyboardDoneButtonView = [[UIToolbar alloc] init];
+//    [keyboardDoneButtonView sizeToFit];
+//    UIBarButtonItem* doneButton = [[UIBarButtonItem alloc] initWithTitle:@"Done"
+//    style:UIBarButtonItemStyleBordered target:self
+//    action:@selector(doneClicked:)];
+//    [keyboardDoneButtonView setItems:[NSArray arrayWithObjects:doneButton, nil]];
+//    txtField.inputAccessoryView = keyboardDoneButtonView;
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,11 +51,33 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
         // Do any additional setup after loading the view, typically from a nib.
         homeSearchBar.delegate = self
-
         homeSearchBar.text = "Portland"
 
+        
+        func doneClicked()
+        {
+            println("Done Clicked.")
+        }
+        
+        let keyboardDoneButtonView:UIToolbar = UIToolbar()
+            keyboardDoneButtonView.sizeToFit()
+        let doneButton:UIBarButtonItem = UIBarButtonItem()
+            doneButton.title = "Done"
+            //doneButton.style = 1 as UIBarButtonItemStyle
+            //doneButton.target =
+            doneButton.action = "doneClicked"
+   
+        
+
+        keyboardDoneButtonView.setItems([doneButton], animated:false)
+        
+ 
+        
+        
+        foreignCostField.inputAccessoryView = keyboardDoneButtonView
+
         self.automaticallyAdjustsScrollViewInsets = false
-      initUI()
+        initUI()
         setupScrollView()
         updateUI()
     }
