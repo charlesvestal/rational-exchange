@@ -12,8 +12,7 @@ import UIKit
     
 
     @IBInspectable var isForeign: Bool = false
-    
-    
+
     @IBOutlet weak var foreignBar: UISearchBar!
     @IBOutlet weak var homeBar: UISearchBar!
     

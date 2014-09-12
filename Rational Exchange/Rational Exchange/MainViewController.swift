@@ -66,7 +66,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
         if (currentVersion.doubleValue < 8.0)
         {
             setupScrollView()
-            println("probably 7")
         }
     }
 
@@ -86,7 +85,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     
     @IBAction func homeCostTapped(sender: AnyObject) {
-    println("touched")
+  
     }
     
     
@@ -101,8 +100,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
             action: "doneClicked")
         
         keyboardDoneButtonView.setItems([doneButton], animated:false)
-        println("keyboard type")
-        println(foreignCostField.keyboardType)
+    
         foreignCostField.inputAccessoryView = keyboardDoneButtonView
 
     }

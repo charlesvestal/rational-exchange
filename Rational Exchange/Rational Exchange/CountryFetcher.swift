@@ -13,7 +13,6 @@ var countryListSingleton = CountryList()
 class CountryList {
     
     init() {
-        println("you initialized a CountryList")
     }
     
     var list:[Country] = [
