@@ -11,6 +11,7 @@ import UIKit
 class CountryTableViewController : UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
     
     @IBOutlet weak var foreignBar: UISearchBar!
+    @IBOutlet weak var homeBar: UISearchBar!
     
     var countries = countryListSingleton.list
     var filteredCountries = [Country]()
@@ -47,9 +48,10 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationBarHidden = true
         
-        foreignBar.delegate = self
+        
+        //homeBar.delegate = self
+        //foreignBar.delegate = self
       
         self.tableView.delegate = self
         self.tableView.dataSource = self
@@ -78,8 +80,8 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        //ask for a reusable cell from the tableview, the tableview will create a new one if it doesn't have any
-        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
+       
+         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
         
         
         var country : Country
@@ -97,17 +99,24 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
+        
         let selectedCountry = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text
         let newCountry = countryListSingleton.getCountry(selectedCountry!)
-
-        println(newCountry.name)
-        
-        
         
         let viewController = parentViewController as ViewController
-       
         
-        viewController.updateForeignCountry(newCountry.name)
+        let tableViewName = self.view.restorationIdentifier
+        if tableViewName == "foreignTableView"
+        {
+            viewController.updateForeignCountry(newCountry.name)
+        }
+        
+        if tableViewName == "homeTableView"
+        {
+            viewController.updateHomeCountry(newCountry.name)
+        }
+    
+        
      // how do I update home Country?
         self.searchDisplayController?.setActive(false, animated: true)
         
