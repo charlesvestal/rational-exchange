@@ -8,13 +8,19 @@
 
 import UIKit
 
-class CountryTableViewController : UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
+@IBDesignable class CountryTableViewController : UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
+    
+
+    @IBInspectable var isForeign: Bool = false
+    
     
     @IBOutlet weak var foreignBar: UISearchBar!
     @IBOutlet weak var homeBar: UISearchBar!
     
     var countries = countryListSingleton.list
     var filteredCountries = [Country]()
+   
+    
     
     func filterContentForSearchText(searchText: String) {
         
@@ -48,7 +54,6 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         //homeBar.delegate = self
         //foreignBar.delegate = self
@@ -105,13 +110,11 @@ class CountryTableViewController : UITableViewController, UISearchBarDelegate, U
         
         let viewController = parentViewController as ViewController
         
-        let tableViewName = self.view.restorationIdentifier
-        if tableViewName == "foreignTableView"
+        if(isForeign)
         {
             viewController.updateForeignCountry(newCountry.name)
         }
-        
-        if tableViewName == "homeTableView"
+        else
         {
             viewController.updateHomeCountry(newCountry.name)
         }

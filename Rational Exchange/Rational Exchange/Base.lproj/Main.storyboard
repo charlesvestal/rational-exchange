@@ -366,6 +366,9 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isForeign" value="YES"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="foreignBar" destination="zq5-5b-0gK" id="33Q-1o-dmH"/>
                         <outlet property="searchDisplayController" destination="MRm-ck-SSf" id="mNj-uN-DVN"/>
@@ -412,7 +415,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Where Are You?" id="SVE-Kw-tvd" userLabel="homeBar">
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Where Are You From?" id="SVE-Kw-tvd" userLabel="homeBar">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
@@ -451,6 +454,9 @@
                     <extendedEdge key="edgesForExtendedLayout"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="isForeign" value="NO"/>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <outlet property="homeBar" destination="SVE-Kw-tvd" id="Z07-au-AKa"/>
                         <outlet property="searchDisplayController" destination="dYI-CM-EpQ" id="XhF-JN-giK"/>
