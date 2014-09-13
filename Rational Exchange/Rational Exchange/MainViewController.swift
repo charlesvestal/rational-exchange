@@ -32,8 +32,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var exchangeLabel: UILabel!
     
     var exchangeCalc = exchangeCalculator(foreignTheyWant: 0,
-        foreignCountry:  countryListSingleton.getCountry("Prague"),
-        homeCountry:  countryListSingleton.getCountry("Portland")
+        foreignCountry:  countryListSingleton.getCountry("boo"),
+        homeCountry:  countryListSingleton.getCountry("soo")
     )
     
     override func viewDidLoad() {

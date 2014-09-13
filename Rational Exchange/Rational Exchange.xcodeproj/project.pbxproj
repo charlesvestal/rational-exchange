@@ -12,6 +12,9 @@
 		FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */; };
 		FE5FC41119B299820008333D /* countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE5FC41019B299820008333D /* countries.plist */; };
 		FE891BF019C12C4B008CC947 /* CountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE891BEF19C12C4B008CC947 /* CountryTableViewController.swift */; };
+		FEA302EA19C4893E00E0FC4E /* NetworkingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA302E819C4893E00E0FC4E /* NetworkingHelper.swift */; };
+		FEA302EB19C4893E00E0FC4E /* TranslatorHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEA302E919C4893E00E0FC4E /* TranslatorHelper.swift */; };
+		FEE41C8519C344A500460538 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE41C8419C344A500460538 /* SwiftyJSON.swift */; };
 		FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5319B1767B00852F94 /* AppDelegate.swift */; };
 		FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5519B1767B00852F94 /* MainViewController.swift */; };
 		FEE86B5919B1767B00852F94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE86B5719B1767B00852F94 /* Main.storyboard */; };
@@ -20,6 +23,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		FEE41C7D19C3417C00460538 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEE41C7819C3417C00460538 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
+		FEE41C7F19C3417C00460538 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEE41C7819C3417C00460538 /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = AlamofireTests;
+		};
+		FEE41C8119C3418300460538 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FEE41C7819C3417C00460538 /* Alamofire.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
+			remoteInfo = Alamofire;
+		};
 		FEE86B6119B1767B00852F94 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = FEE86B4619B1767B00852F94 /* Project object */;
@@ -35,7 +59,11 @@
 		FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeCalculator.swift; sourceTree = "<group>"; };
 		FE5FC41019B299820008333D /* countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = countries.plist; sourceTree = "<group>"; };
 		FE891BEF19C12C4B008CC947 /* CountryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryTableViewController.swift; sourceTree = "<group>"; };
+		FEA302E819C4893E00E0FC4E /* NetworkingHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingHelper.swift; sourceTree = "<group>"; };
+		FEA302E919C4893E00E0FC4E /* TranslatorHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslatorHelper.swift; sourceTree = "<group>"; };
 		FEABBF1419C099CC00E8A50C /* arraytest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = arraytest.playground; path = ../../Ancillary/arraytest.playground; sourceTree = "<group>"; };
+		FEE41C7819C3417C00460538 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		FEE41C8419C344A500460538 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		FEE86B4E19B1767B00852F94 /* RationalEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RationalEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE86B5219B1767B00852F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEE86B5319B1767B00852F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -65,12 +93,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FEE41C7919C3417C00460538 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FEE41C7E19C3417C00460538 /* Alamofire.framework */,
+				FEE41C8019C3417C00460538 /* AlamofireTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		FEE86B4519B1767B00852F94 = {
 			isa = PBXGroup;
 			children = (
 				FEE86B5019B1767B00852F94 /* Rational Exchange */,
 				FEE86B6319B1767B00852F94 /* Rational ExchangeTests */,
 				FEE86B4F19B1767B00852F94 /* Products */,
+				FEE41C7819C3417C00460538 /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +124,9 @@
 		FEE86B5019B1767B00852F94 /* Rational Exchange */ = {
 			isa = PBXGroup;
 			children = (
+				FEA302E819C4893E00E0FC4E /* NetworkingHelper.swift */,
+				FEA302E919C4893E00E0FC4E /* TranslatorHelper.swift */,
+				FEE41C8419C344A500460538 /* SwiftyJSON.swift */,
 				FE2AFEB619B4C95B0056F0E0 /* CountryModel.swift */,
 				FE205DC819BD040F00A2ADD8 /* CountryFetcher.swift */,
 				FEABBF1419C099CC00E8A50C /* arraytest.playground */,
@@ -140,6 +181,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				FEE41C8219C3418300460538 /* PBXTargetDependency */,
 			);
 			name = "Rational Exchange";
 			productName = "Rational Exchange";
@@ -195,6 +237,12 @@
 			mainGroup = FEE86B4519B1767B00852F94;
 			productRefGroup = FEE86B4F19B1767B00852F94 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = FEE41C7919C3417C00460538 /* Products */;
+					ProjectRef = FEE41C7819C3417C00460538 /* Alamofire.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				FEE86B4D19B1767B00852F94 /* Rational Exchange */,
@@ -202,6 +250,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		FEE41C7E19C3417C00460538 /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = FEE41C7D19C3417C00460538 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		FEE41C8019C3417C00460538 /* AlamofireTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = AlamofireTests.xctest;
+			remoteRef = FEE41C7F19C3417C00460538 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		FEE86B4C19B1767B00852F94 /* Resources */ = {
@@ -229,10 +294,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */,
+				FEA302EA19C4893E00E0FC4E /* NetworkingHelper.swift in Sources */,
 				FE205DC919BD040F00A2ADD8 /* CountryFetcher.swift in Sources */,
 				FE891BF019C12C4B008CC947 /* CountryTableViewController.swift in Sources */,
 				FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */,
+				FEA302EB19C4893E00E0FC4E /* TranslatorHelper.swift in Sources */,
 				FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */,
+				FEE41C8519C344A500460538 /* SwiftyJSON.swift in Sources */,
 				FE2AFEB819B4C95B0056F0E0 /* CountryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -248,6 +316,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		FEE41C8219C3418300460538 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Alamofire;
+			targetProxy = FEE41C8119C3418300460538 /* PBXContainerItemProxy */;
+		};
 		FEE86B6219B1767B00852F94 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FEE86B4D19B1767B00852F94 /* Rational Exchange */;
