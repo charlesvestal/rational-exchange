@@ -32,7 +32,7 @@ import UIKit
       self.filteredCountries = self.countries.filter({( country: Country) -> Bool in
             
             let nameMatch = country.name.rangeOfString(searchText, options:NSStringCompareOptions(1))
-            let currencyMatch = country.currencyShort.rangeOfString(searchText, options:NSStringCompareOptions(1))
+            let currencyMatch = country.currencyCode.rangeOfString(searchText, options:NSStringCompareOptions(1))
             
             if (currencyMatch != nil)
             {
@@ -105,7 +105,7 @@ import UIKit
         if tableView == self.searchDisplayController!.searchResultsTableView {
             country = filteredCountries[indexPath.row]
             cell.textLabel!.text = country.name
-            cell.detailTextLabel?.text = String(format:"%@",country.currencyShort)
+            cell.detailTextLabel?.text = String(format:"%@",country.currencyCode)
         } else {
             country = countries[0]
         }

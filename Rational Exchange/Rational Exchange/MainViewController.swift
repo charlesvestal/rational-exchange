@@ -107,15 +107,15 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
         exchangeCalc.calcExchangeRate()
 
-        foreignLabel.text = String(format: "Converting from %@", exchangeCalc.foreignCountry.currencyShort)
+        foreignLabel.text = String(format: "Converting from %@", exchangeCalc.foreignCountry.currencyCode)
 
         homeCostField.text = NSString (format: "$%.2f %@",
             exchangeCalc.calcShouldFeelLikeRounded(isTippable),
-            exchangeCalc.homeCountry.currencyShort)
+            exchangeCalc.homeCountry.currencyCode)
         
         homeCostLabel.text = String(format: "it will cost you $%0.2f in %@ total, but think about it like $%0.2f on the menu + you would tip $%0.2f at home at %0.2f + you would pay $%0.2f in tax at %0.4f",
             exchangeCalc.calcTotalAmount(isTippable),
-            exchangeCalc.homeCountry.currencyShort,
+            exchangeCalc.homeCountry.currencyCode,
             exchangeCalc.calcShouldFeelLike(isTippable),
             exchangeCalc.calcShouldTipLike(isTippable),
             exchangeCalc.homeCountry.tipRate,
@@ -123,7 +123,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
             exchangeCalc.homeCountry.taxRate
         )
         
-        exchangeLabel.text = String(format:"Converting to %@", exchangeCalc.homeCountry.currencyShort) 
+        exchangeLabel.text = String(format:"Converting to %@", exchangeCalc.homeCountry.currencyCode) 
         
         
     }
@@ -133,7 +133,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         exchangeCalc.foreignCountry = newCountry
         exchangeCalc.foreignCountry.taxRate = newCountry.taxRate
         exchangeCalc.foreignCountry.tipRate = newCountry.tipRate
-        let newCountryCurrency = newCountry.currencyShort
+        let newCountryCurrency = newCountry.currencyCode
         updateUI()
     }
     
