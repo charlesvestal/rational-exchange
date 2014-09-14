@@ -44,7 +44,6 @@ class exchangeCalculator {
     {
         // this is what, given the foreign and local customs, you would see on a menu back home, but end up paying the same amount
         var shouldFeelLike = calcTotalAmount(tippable)/(1 + (tippable * homeLocale.tipRate) + homeLocale.taxRate)
-        
         return shouldFeelLike
     }
     
@@ -52,7 +51,6 @@ class exchangeCalculator {
     {
         // take the "what it should feel like" number and round it to the nearest precision based on your homeLocale preferences
         var shouldFeelLikeRounded = precision * floor((calcShouldFeelLike(tippable)/precision)+0.5)
-        
         return shouldFeelLikeRounded
     }
     

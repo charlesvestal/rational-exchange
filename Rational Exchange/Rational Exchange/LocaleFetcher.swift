@@ -20,8 +20,8 @@ class LocaleList {
         Locale(name:"Prague", country:"Czech Republic", taxRate: 0.0, tipRate: 0.0, exchangeRate: 21.31, precision: 1, currencyName: "Czeck Something", currencyCode:"CZK"),
         Locale(name:"Texas", country:"USA", taxRate: 0.0825, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25, currencyName: "Dollar",  currencyCode:"USD"),
         Locale(name:"Oregon", country:"USA", taxRate: 0.0, tipRate: 0.2, exchangeRate: 1.0, precision: 0.25, currencyName: "Dollar", currencyCode:"USD"),
-        Locale(name:"Berlin", country:"Germany", taxRate: 0, tipRate: 0, exchangeRate: 0.76, precision: 1, currencyName:"Euro", currencyCode:"EUR"),
-        Locale(name:"Oslo", country:"Norway", taxRate: 0, tipRate: 0, exchangeRate: 6.0, precision: 1, currencyName: "Norwegian Kroner", currencyCode:"NOK"),
+        Locale(name:"Berlin", country:"Germany", taxRate: 0.0, tipRate: 0.0, exchangeRate: 0.76, precision: 1, currencyName:"Euro", currencyCode:"EUR"),
+        Locale(name:"Oslo", country:"Norway", taxRate: 0.0, tipRate: 0.0, exchangeRate: 6.0, precision: 1, currencyName: "Norwegian Kroner", currencyCode:"NOK"),
         ]
 
     init() {
@@ -49,7 +49,7 @@ class LocaleList {
                     
                     let price = resource["resource"]["fields"]["price"].double!
                     
-                    self.list.append(Locale(name: name, country:name, taxRate: 0.0, tipRate: 0.0, exchangeRate: price, precision: 0.0, currencyName: name, currencyCode: name))
+                    self.list.append(Locale(name: name, country:name, taxRate: 0.0, tipRate: 0.0, exchangeRate: price, precision: 0.5, currencyName: name, currencyCode: name))
                 }
                 
                 println("Updated Locales")

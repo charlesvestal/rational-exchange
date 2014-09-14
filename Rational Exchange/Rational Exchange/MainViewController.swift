@@ -33,7 +33,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     var exchangeCalc = exchangeCalculator(foreignTheyWant: 0,
         foreignLocale:  localeListSingleton.getLocale("Prague"),
-        homeLocale:  localeListSingleton.getLocale("USA")
+        homeLocale:  localeListSingleton.getLocale("Texas")
     )
     
     override func viewDidLoad() {
