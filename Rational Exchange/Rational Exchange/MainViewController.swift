@@ -25,9 +25,15 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var tipSwitch: UISwitch!
     
   
-    
-    @IBOutlet weak var foreignSearchBar: UISearchBar!
-    @IBOutlet weak var homeSearchBar: UISearchBar!
+    @IBOutlet weak var topFrameLocaleName: UILabel!
+    @IBOutlet weak var topFrameCurrencyName: UILabel!
+    @IBOutlet weak var topFrameTaxString: UILabel!
+    @IBOutlet weak var topFrameTipString: UILabel!
+
+    @IBOutlet weak var bottomFrameLocaleName: UILabel!
+    @IBOutlet weak var bottomFrameCurrencyName: UILabel!
+    @IBOutlet weak var bottomFrameTaxString: UILabel!
+    @IBOutlet weak var bottomFrameTipString: UILabel!
     
     @IBOutlet weak var exchangeLabel: UILabel!
     
@@ -107,6 +113,44 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
         exchangeCalc.calcExchangeRate()
 
+        // set up foreign labels
+        topFrameLocaleName.text = exchangeCalc.foreignLocale.name.uppercaseString
+        topFrameCurrencyName.text = String(format:"%@ (%@)", exchangeCalc.foreignLocale.currencyName, exchangeCalc.foreignLocale.currencyCode)
+      
+            if(exchangeCalc.foreignLocale.taxRate == 0){
+                topFrameTaxString.text = "Nothing! Tax is included."
+            }
+            else {
+                topFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.foreignLocale.taxRate * 100)
+            }
+
+            if (exchangeCalc.foreignLocale.tipRate == 0.0){
+                topFrameTipString.text = "Nada. Don't worry about it."
+            }
+            else {
+                topFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.foreignLocale.tipRate * 100)
+            }
+        
+        // set up home labels
+        bottomFrameLocaleName.text = exchangeCalc.homeLocale.name.uppercaseString
+        bottomFrameCurrencyName.text = String(format:"%@ (%@)", exchangeCalc.homeLocale.currencyName, exchangeCalc.homeLocale.currencyCode)
+        
+        if(exchangeCalc.homeLocale.taxRate == 0){
+            bottomFrameTaxString.text = "Nothing! Tax is included."
+        }
+        else {
+            bottomFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.homeLocale.taxRate * 100)
+        }
+        
+        if (exchangeCalc.homeLocale.tipRate == 0.0){
+            bottomFrameTipString.text = "Nada. Don't worry about it."
+        }
+        else {
+            bottomFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.homeLocale.tipRate * 100)
+        }
+        
+        
+        
         foreignLabel.text = String(format: "Converting from %@", exchangeCalc.foreignLocale.currencyCode)
 
         homeCostField.text = NSString (format: "$%.2f %@",

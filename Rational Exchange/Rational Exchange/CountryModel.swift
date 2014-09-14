@@ -8,8 +8,10 @@
 
 import Foundation
 
+
 struct Country {
     var countryName: String
     var currencyName: String
     var currencyCode: String
+    
 }
