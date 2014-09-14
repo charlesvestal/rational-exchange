@@ -39,19 +39,12 @@ class CountryList {
             .responseJSON { (request, response, data, error) in
                 
                 let jsonData = JSONValue(data!)
+
                 
-                if let boardsArray = JSONValue(data!)["list"]["resources"].array as Array!{
-                let countOfArray = boardsArray.count //Here you got your count
-                    
-                    for(var i=0;i<countOfArray; i++)
-                        {
-                            let name = JSONValue(data!)["list"]["resources"][i]["resource"]["fields"]["name"].string!
-                            let quote = JSONValue(data!)["list"]["resources"][i]["resource"]["fields"]["price"].double!
-                            self.list.append(Country(name: name, taxRate: 0.0, tipRate: 0.0, exchangeRate: quote, precision: 0.0, currencyShort: name))
-                            println(String(format: "Adding country %i", i))
-                        }
-                    
-                    
+                for resource in jsonData["list"]["resources"].array!{
+                    let name = resource["resource"]["fields"]["symbol"].string!
+                    let price = resource["resource"]["fields"]["price"].double!
+                    self.list.append(Country(name: name, taxRate: 0.0, tipRate: 0.0, exchangeRate: price, precision: 0.0, currencyShort: name))
                 }
                 
                 // code for returning keypath error
