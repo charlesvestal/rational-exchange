@@ -27,9 +27,7 @@ class CountryList {
     ]
 
     init() {
-    
         list = defaultCountryList
-        
     }
     
     
@@ -37,21 +35,24 @@ class CountryList {
         
         let url = "http://finance.yahoo.com/webservice/v1/symbols/allcurrencies/quote?format=json"
         
-       
         Alamofire.request(.GET, url)
             .responseJSON { (request, response, data, error) in
                 
-                
                 let jsonData = JSONValue(data!)
                 
-                let name = JSONValue(data!)["list"]["resources"][0]["resource"]["fields"]["name"].string!
-                let quote = JSONValue(data!)["list"]["resources"][0]["resource"]["fields"]["price"].double!
-                
-                println(name) // testing returning json data
-                println(quote)
-                
-                self.list.append(Country(name: name, taxRate: 0.0, tipRate: 0.0, exchangeRate: quote, precision: 0.0, currencyShort: name))
-                
+                if let boardsArray = JSONValue(data!)["list"]["resources"].array as Array!{
+                let countOfArray = boardsArray.count //Here you got your count
+                    
+                    for(var i=0;i<countOfArray; i++)
+                        {
+                            let name = JSONValue(data!)["list"]["resources"][i]["resource"]["fields"]["name"].string!
+                            let quote = JSONValue(data!)["list"]["resources"][i]["resource"]["fields"]["price"].double!
+                            self.list.append(Country(name: name, taxRate: 0.0, tipRate: 0.0, exchangeRate: quote, precision: 0.0, currencyShort: name))
+                            println(String(format: "Adding country %i", i))
+                        }
+                    
+                    
+                }
                 
                 // code for returning keypath error
                 //                let jsonTest = JSONValue(data!)["list"]["resources"][0]["resource"]["fields"]["price"]
