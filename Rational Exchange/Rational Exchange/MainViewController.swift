@@ -7,11 +7,46 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController, UISearchBarDelegate {
+class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDelegate {
     let currentVersion:NSString = UIDevice.currentDevice().systemVersion
 
-
+let locationManager = CLLocationManager()
+    
+    func setupLocationManager() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: {(placemarks, error)->Void in
+            
+            if (error != nil) {
+                println("Reverse geocoder failed with error" + error.localizedDescription)
+                return
+            }
+            
+            if placemarks.count > 0 {
+                let pm = placemarks[0] as CLPlacemark
+                self.displayLocationInfo(pm)
+            } else {
+                println("Problem with the data received from geocoder")
+            }
+        })
+    }
+    func displayLocationInfo(placemark: CLPlacemark) {
+        if placemark.description != nil {
+            //stop updating location to save battery life
+            locationManager.stopUpdatingLocation()
+            println(placemark.locality)
+            println(placemark.postalCode)
+            println(placemark.administrativeArea)
+            println(placemark.country)
+        }
+    }
+    
     
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
@@ -39,9 +74,11 @@ class ViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         self.navigationController?.navigationBarHidden = true
            self.automaticallyAdjustsScrollViewInsets = false
         
+      
         initUI()
         setupScrollView()
         updateUI()
@@ -96,7 +133,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     func updateUI()   {
-        
+        setupLocationManager()
         var isTippable:Double
         if tipSwitch.on
         { isTippable = 1.0}

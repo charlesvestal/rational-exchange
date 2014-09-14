@@ -15,6 +15,7 @@
 		FEA302F719C51E6000E0FC4E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE41C7E19C3417C00460538 /* Alamofire.framework */; };
 		FEA302F819C51E6000E0FC4E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FEE41C7E19C3417C00460538 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FEACB10A19C5D3F4006F372D /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB10919C5D3F4006F372D /* CountryModel.swift */; };
+		FEACB11119C5EA36006F372D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEACB11019C5EA36006F372D /* CoreLocation.framework */; };
 		FEE41C8519C344A500460538 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE41C8419C344A500460538 /* SwiftyJSON.swift */; };
 		FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5319B1767B00852F94 /* AppDelegate.swift */; };
 		FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5519B1767B00852F94 /* MainViewController.swift */; };
@@ -82,6 +83,7 @@
 		FE5FC41019B299820008333D /* countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = countries.plist; sourceTree = "<group>"; };
 		FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleTableViewController.swift; sourceTree = "<group>"; };
 		FEACB10919C5D3F4006F372D /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		FEACB11019C5EA36006F372D /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FEE41C7819C3417C00460538 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		FEE41C8419C344A500460538 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		FEE86B4E19B1767B00852F94 /* RationalEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RationalEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEACB11119C5EA36006F372D /* CoreLocation.framework in Frameworks */,
 				FEA302F719C51E6000E0FC4E /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +129,7 @@
 		FEE86B4519B1767B00852F94 = {
 			isa = PBXGroup;
 			children = (
+				FEACB11019C5EA36006F372D /* CoreLocation.framework */,
 				FEE86B5019B1767B00852F94 /* Rational Exchange */,
 				FEE86B6319B1767B00852F94 /* Rational ExchangeTests */,
 				FEE86B4F19B1767B00852F94 /* Products */,

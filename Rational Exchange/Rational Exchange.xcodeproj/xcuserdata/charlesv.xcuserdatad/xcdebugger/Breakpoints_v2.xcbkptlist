@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rational Exchange/MainViewController.swift"
-            timestampString = "432351855.808731"
+            timestampString = "432401270.288363"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193">
+            startingLineNumber = "230"
+            endingLineNumber = "230">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,11 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Rational Exchange/MainViewController.swift"
-            timestampString = "432351855.808731"
+            timestampString = "432401270.288363"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "212"
-            endingLineNumber = "212">
+            startingLineNumber = "249"
+            endingLineNumber = "249">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
