@@ -40,12 +40,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
         
         self.navigationController?.navigationBarHidden = true
-        
-        // Do any additional setup after loading the view, typically from a nib.
-//        homeSearchBar.delegate = self
-//        homeSearchBar.text = "Portland"
-
-        self.automaticallyAdjustsScrollViewInsets = false
+           self.automaticallyAdjustsScrollViewInsets = false
         
         initUI()
         setupScrollView()
@@ -83,12 +78,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
         self.view.endEditing(true)
     }
     
-    
-    @IBAction func homeCostTapped(sender: AnyObject) {
-  
-    }
-    
-    
    func initUI()
    {
         let keyboardDoneButtonView:UIToolbar = UIToolbar()
@@ -102,52 +91,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
         keyboardDoneButtonView.setItems([doneButton], animated:false)
     
         foreignCostField.inputAccessoryView = keyboardDoneButtonView
-         countryListSingleton.refreshCountries()
+    
+        countryListSingleton.refreshCountries()
     }
-    
-    func searchBarSearchButtonClicked(searchBar: UISearchBar!) {
-        var newCountry = searchBar.text
-        
-        if(exchangeCalc.countryList.getCountry(newCountry).name != "None")
-        {
-            if(searchBar==homeSearchBar)
-            {
-                updateHomeCountry(newCountry)
-            }
-            else if(searchBar==foreignSearchBar)
-            {
-                updateForeignCountry(newCountry)
-            }
-            searchBar.resignFirstResponder()
-        }
-        else
-        {
-            unsupportedCountries()
-        }
-    }
-    
-
-    func searchBarShouldEndEditing(searchBar: UISearchBar!) {
-         searchBarSearchButtonClicked(searchBar)
-    }
-    
-    
-    func unsupportedCountries()
-    {
-        let alert = UIAlertView()
-        alert.title = "Unsupported Country"
-        alert.message = "Try Prague, Norway, USA, Portland, Euro, Magic10 or Magic20"
-        alert.addButtonWithTitle("OK")
-        alert.show()
-    }
-    
-
-    
-    //reference
-    
-    // or you can just access properties and call methods directly
-   
-
     
     func updateUI()   {
         

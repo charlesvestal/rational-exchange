@@ -21,9 +21,6 @@ import UIKit
     
     func updateList() {
         countries = countryListSingleton.list
-        println("number of countries from table view controller")
-        println(countryListSingleton.list.count)
-
     }
     
     var filteredCountries = [Country]()

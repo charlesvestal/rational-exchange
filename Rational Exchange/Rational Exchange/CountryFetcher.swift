@@ -39,7 +39,8 @@ class CountryList {
             .responseJSON { (request, response, data, error) in
                 
                 let jsonData = JSONValue(data!)
-
+                
+                // TODO: this will need to be rebuilt to actually look for existing countries and update the data
                 
                 for resource in jsonData["list"]["resources"].array!{
                     let name = resource["resource"]["fields"]["symbol"].string!
@@ -47,25 +48,14 @@ class CountryList {
                     self.list.append(Country(name: name, taxRate: 0.0, tipRate: 0.0, exchangeRate: price, precision: 0.0, currencyShort: name))
                 }
                 
-                // code for returning keypath error
-                //                let jsonTest = JSONValue(data!)["list"]["resources"][0]["resource"]["fields"]["price"]
-                //                if jsonTest{
-                //                    println(jsonTest)
-                //                } else {
-                //                    println(jsonTest)
-                //                }
-                
-       
+                println("Updated Countries")
         }
-}
+    }
 
 
     func getCountry(countryName: String) -> Country {
-        var i:Int
-        println("number of countries from getcountry")
-        println(self.list.count)
         
-        for(i=0;i<self.list.count; i++)
+        for(var i=0;i<self.list.count; i++)
         {
             if(list[i].name == countryName){
                 return list[i]
