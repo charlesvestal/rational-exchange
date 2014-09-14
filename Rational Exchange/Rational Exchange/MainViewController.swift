@@ -32,8 +32,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var exchangeLabel: UILabel!
     
     var exchangeCalc = exchangeCalculator(foreignTheyWant: 0,
-        foreignCountry:  countryListSingleton.getCountry("Prague"),
-        homeCountry:  countryListSingleton.getCountry("USA")
+        foreignLocale:  localeListSingleton.getLocale("Prague"),
+        homeLocale:  localeListSingleton.getLocale("USA")
     )
     
     override func viewDidLoad() {
@@ -92,7 +92,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
         foreignCostField.inputAccessoryView = keyboardDoneButtonView
     
-        countryListSingleton.refreshCountries()
+        localeListSingleton.refreshLocales()
     }
     
     func updateUI()   {
@@ -107,43 +107,43 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
         exchangeCalc.calcExchangeRate()
 
-        foreignLabel.text = String(format: "Converting from %@", exchangeCalc.foreignCountry.currencyCode)
+        foreignLabel.text = String(format: "Converting from %@", exchangeCalc.foreignLocale.currencyCode)
 
         homeCostField.text = NSString (format: "$%.2f %@",
             exchangeCalc.calcShouldFeelLikeRounded(isTippable),
-            exchangeCalc.homeCountry.currencyCode)
+            exchangeCalc.homeLocale.currencyCode)
         
         homeCostLabel.text = String(format: "it will cost you $%0.2f in %@ total, but think about it like $%0.2f on the menu + you would tip $%0.2f at home at %0.2f + you would pay $%0.2f in tax at %0.4f",
             exchangeCalc.calcTotalAmount(isTippable),
-            exchangeCalc.homeCountry.currencyCode,
+            exchangeCalc.homeLocale.currencyCode,
             exchangeCalc.calcShouldFeelLike(isTippable),
             exchangeCalc.calcShouldTipLike(isTippable),
-            exchangeCalc.homeCountry.tipRate,
+            exchangeCalc.homeLocale.tipRate,
             exchangeCalc.calcShouldTaxLike(isTippable),
-            exchangeCalc.homeCountry.taxRate
+            exchangeCalc.homeLocale.taxRate
         )
         
-        exchangeLabel.text = String(format:"Converting to %@", exchangeCalc.homeCountry.currencyCode) 
+        exchangeLabel.text = String(format:"Converting to %@", exchangeCalc.homeLocale.currencyCode)
         
         
     }
 
-    func updateForeignCountry(newCountryName:String) {
-        let newCountry = exchangeCalc.countryList.getCountry(newCountryName)
-        exchangeCalc.foreignCountry = newCountry
-        exchangeCalc.foreignCountry.taxRate = newCountry.taxRate
-        exchangeCalc.foreignCountry.tipRate = newCountry.tipRate
-        let newCountryCurrency = newCountry.currencyCode
+    func updateForeignLocale(newLocaleName:String) {
+        let newLocale = exchangeCalc.localeList.getLocale(newLocaleName)
+        exchangeCalc.foreignLocale = newLocale
+        exchangeCalc.foreignLocale.taxRate = newLocale.taxRate
+        exchangeCalc.foreignLocale.tipRate = newLocale.tipRate
+        let newLocaleCurrency = newLocale.currencyCode
         updateUI()
     }
     
-    func updateHomeCountry(newCountryName:String) {
-        let newCountry = exchangeCalc.countryList.getCountry(newCountryName)
-        exchangeCalc.homeCountry = newCountry
-        exchangeCalc.homeCountry.taxRate = newCountry.taxRate
-        exchangeCalc.homeCountry.tipRate = newCountry.tipRate
-        exchangeCalc.homeCountry.exchangeRate = newCountry.exchangeRate
-        exchangeCalc.precision = newCountry.precision
+    func updateHomeLocale(newLocaleName:String) {
+        let newLocale = exchangeCalc.localeList.getLocale(newLocaleName)
+        exchangeCalc.homeLocale = newLocale
+        exchangeCalc.homeLocale.taxRate = newLocale.taxRate
+        exchangeCalc.homeLocale.tipRate = newLocale.tipRate
+        exchangeCalc.homeLocale.exchangeRate = newLocale.exchangeRate
+        exchangeCalc.precision = newLocale.precision
         updateUI()
     }
     

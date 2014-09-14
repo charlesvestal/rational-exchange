@@ -1,5 +1,5 @@
 //
-//  CountryTableViewController.swift
+//  LocaleTableViewController.swift
 //  Rational Exchange
 //
 //  Created by Charles Vestal on 9/7/14.
@@ -16,23 +16,23 @@ import UIKit
     @IBOutlet weak var foreignBar: UISearchBar!
     @IBOutlet weak var homeBar: UISearchBar!
     
-    var countries = countryListSingleton.list
+    var locales = localeListSingleton.list
     
     
     func updateList() {
-        countries = countryListSingleton.list
+        locales = localeListSingleton.list
     }
     
-    var filteredCountries = [Country]()
+    var filteredLocales = [Locale]()
    
     
     
     func filterContentForSearchText(searchText: String) {
         
-      self.filteredCountries = self.countries.filter({( country: Country) -> Bool in
+      self.filteredLocales = self.locales.filter({( locale: Locale) -> Bool in
             
-            let nameMatch = country.name.rangeOfString(searchText, options:NSStringCompareOptions(1))
-            let currencyMatch = country.currencyCode.rangeOfString(searchText, options:NSStringCompareOptions(1))
+            let nameMatch = locale.name.rangeOfString(searchText, options:NSStringCompareOptions(1))
+            let currencyMatch = locale.currencyCode.rangeOfString(searchText, options:NSStringCompareOptions(1))
             
             if (currencyMatch != nil)
             {
@@ -88,7 +88,7 @@ import UIKit
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
                 if tableView == self.searchDisplayController!.searchResultsTableView {
-        return self.filteredCountries.count
+        return self.filteredLocales.count
                 } else {
                     return 0
                 }
@@ -101,13 +101,13 @@ import UIKit
         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
         
         
-        var country : Country
+        var locale: Locale
         if tableView == self.searchDisplayController!.searchResultsTableView {
-            country = filteredCountries[indexPath.row]
-            cell.textLabel!.text = country.name
-            cell.detailTextLabel?.text = String(format:"%@",country.currencyCode)
+            locale = filteredLocales[indexPath.row]
+            cell.textLabel!.text = locale.name
+            cell.detailTextLabel?.text = String(format:"%@",locale.currencyCode)
         } else {
-            country = countries[0]
+            locale = locales[0]
         }
         
         return cell
@@ -117,22 +117,22 @@ import UIKit
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
         
-        let selectedCountry = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text
-        let newCountry = countryListSingleton.getCountry(selectedCountry!)
+        let selectedLocale = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text
+        let newLocale = localeListSingleton.getLocale(selectedLocale!)
         
         let viewController = parentViewController as ViewController
         
         if(isForeign)
         {
-            viewController.updateForeignCountry(newCountry.name)
+            viewController.updateForeignLocale(newLocale.name)
         }
         else
         {
-            viewController.updateHomeCountry(newCountry.name)
+            viewController.updateHomeLocale(newLocale.name)
         }
     
         
-     // how do I update home Country?
+     // how do I update home Locale?
         self.searchDisplayController?.setActive(false, animated: true)
         
         }

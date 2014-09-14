@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FE205DC919BD040F00A2ADD8 /* CountryFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE205DC819BD040F00A2ADD8 /* CountryFetcher.swift */; };
-		FE2AFEB819B4C95B0056F0E0 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2AFEB619B4C95B0056F0E0 /* CountryModel.swift */; };
+		FE205DC919BD040F00A2ADD8 /* LocaleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE205DC819BD040F00A2ADD8 /* LocaleFetcher.swift */; };
+		FE2AFEB819B4C95B0056F0E0 /* LocaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2AFEB619B4C95B0056F0E0 /* LocaleModel.swift */; };
 		FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */; };
 		FE5FC41119B299820008333D /* countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE5FC41019B299820008333D /* countries.plist */; };
-		FE891BF019C12C4B008CC947 /* CountryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE891BEF19C12C4B008CC947 /* CountryTableViewController.swift */; };
+		FE891BF019C12C4B008CC947 /* LocaleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */; };
 		FEA302F719C51E6000E0FC4E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE41C7E19C3417C00460538 /* Alamofire.framework */; };
 		FEA302F819C51E6000E0FC4E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FEE41C7E19C3417C00460538 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FEACB10A19C5D3F4006F372D /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB10919C5D3F4006F372D /* CountryModel.swift */; };
 		FEE41C8519C344A500460538 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE41C8419C344A500460538 /* SwiftyJSON.swift */; };
 		FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5319B1767B00852F94 /* AppDelegate.swift */; };
 		FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5519B1767B00852F94 /* MainViewController.swift */; };
@@ -75,11 +76,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		FE205DC819BD040F00A2ADD8 /* CountryFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryFetcher.swift; sourceTree = "<group>"; };
-		FE2AFEB619B4C95B0056F0E0 /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		FE205DC819BD040F00A2ADD8 /* LocaleFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleFetcher.swift; sourceTree = "<group>"; };
+		FE2AFEB619B4C95B0056F0E0 /* LocaleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleModel.swift; sourceTree = "<group>"; };
 		FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeCalculator.swift; sourceTree = "<group>"; };
 		FE5FC41019B299820008333D /* countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = countries.plist; sourceTree = "<group>"; };
-		FE891BEF19C12C4B008CC947 /* CountryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryTableViewController.swift; sourceTree = "<group>"; };
+		FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleTableViewController.swift; sourceTree = "<group>"; };
+		FEACB10919C5D3F4006F372D /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		FEE41C7819C3417C00460538 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		FEE41C8419C344A500460538 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		FEE86B4E19B1767B00852F94 /* RationalEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RationalEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -144,12 +146,13 @@
 			isa = PBXGroup;
 			children = (
 				FEE41C8419C344A500460538 /* SwiftyJSON.swift */,
-				FE2AFEB619B4C95B0056F0E0 /* CountryModel.swift */,
-				FE205DC819BD040F00A2ADD8 /* CountryFetcher.swift */,
+				FE2AFEB619B4C95B0056F0E0 /* LocaleModel.swift */,
+				FEACB10919C5D3F4006F372D /* CountryModel.swift */,
+				FE205DC819BD040F00A2ADD8 /* LocaleFetcher.swift */,
 				FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */,
 				FEE86B5319B1767B00852F94 /* AppDelegate.swift */,
 				FEE86B5519B1767B00852F94 /* MainViewController.swift */,
-				FE891BEF19C12C4B008CC947 /* CountryTableViewController.swift */,
+				FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */,
 				FE5FC41019B299820008333D /* countries.plist */,
 				FEE86B5719B1767B00852F94 /* Main.storyboard */,
 				FEE86B5A19B1767B00852F94 /* Images.xcassets */,
@@ -312,12 +315,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */,
-				FE205DC919BD040F00A2ADD8 /* CountryFetcher.swift in Sources */,
-				FE891BF019C12C4B008CC947 /* CountryTableViewController.swift in Sources */,
+				FE205DC919BD040F00A2ADD8 /* LocaleFetcher.swift in Sources */,
+				FEACB10A19C5D3F4006F372D /* CountryModel.swift in Sources */,
+				FE891BF019C12C4B008CC947 /* LocaleTableViewController.swift in Sources */,
 				FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */,
 				FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */,
 				FEE41C8519C344A500460538 /* SwiftyJSON.swift in Sources */,
-				FE2AFEB819B4C95B0056F0E0 /* CountryModel.swift in Sources */,
+				FE2AFEB819B4C95B0056F0E0 /* LocaleModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
