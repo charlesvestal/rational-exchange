@@ -32,8 +32,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var exchangeLabel: UILabel!
     
     var exchangeCalc = exchangeCalculator(foreignTheyWant: 0,
-        foreignCountry:  countryListSingleton.getCountry("boo"),
-        homeCountry:  countryListSingleton.getCountry("soo")
+        foreignCountry:  countryListSingleton.getCountry("Prague"),
+        homeCountry:  countryListSingleton.getCountry("USA")
     )
     
     override func viewDidLoad() {
@@ -102,7 +102,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         keyboardDoneButtonView.setItems([doneButton], animated:false)
     
         foreignCostField.inputAccessoryView = keyboardDoneButtonView
-
+         countryListSingleton.refreshCountries()
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar!) {
@@ -177,7 +177,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
             exchangeCalc.homeCountry.taxRate
         )
         
-        exchangeLabel.text = String(format:"Converting to %@", exchangeCalc.homeCountry.currencyShort) //String(format: "Converting from %@ to %@ at %0.2f", exchangeCalc.foreignCountry.currencyShort, exchangeCalc.homeCountry.currencyShort,exchangeCalc.exchangeRate)
+        exchangeLabel.text = String(format:"Converting to %@", exchangeCalc.homeCountry.currencyShort) 
         
         
     }

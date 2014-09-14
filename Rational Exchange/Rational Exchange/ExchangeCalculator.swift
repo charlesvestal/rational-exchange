@@ -9,7 +9,6 @@
 import Foundation
 
 
-
 class exchangeCalculator {
     
     var foreignCountry:Country
@@ -18,9 +17,11 @@ class exchangeCalculator {
     var foreignTheyWant:Double
     var precision:Double
 
+    
     var countryList = countryListSingleton
     
     init(foreignTheyWant:Double, foreignCountry:Country, homeCountry:Country) {
+       
         self.foreignTheyWant = foreignTheyWant
         self.exchangeRate = foreignCountry.exchangeRate / homeCountry.exchangeRate
         self.foreignCountry = foreignCountry

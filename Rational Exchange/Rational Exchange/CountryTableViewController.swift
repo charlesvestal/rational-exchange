@@ -17,6 +17,15 @@ import UIKit
     @IBOutlet weak var homeBar: UISearchBar!
     
     var countries = countryListSingleton.list
+    
+    
+    func updateList() {
+        countries = countryListSingleton.list
+        println("number of countries from table view controller")
+        println(countryListSingleton.list.count)
+
+    }
+    
     var filteredCountries = [Country]()
    
     
@@ -41,12 +50,18 @@ import UIKit
         })
     }
     
+    func searchDisplayController(controller: UISearchDisplayController, willShowSearchResultsTableView tableView: UITableView) {
+        updateList()
+        
+    }
+    
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
         self.filterContentForSearchText(searchString)
         return true
     }
     
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchScope searchOption: Int) -> Bool {
+        updateList()
         self.filterContentForSearchText(self.searchDisplayController!.searchBar.text)
         return true
     }
@@ -84,8 +99,9 @@ import UIKit
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-       
-         let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
+        
+        
+        let cell = self.tableView.dequeueReusableCellWithIdentifier("Cell") as UITableViewCell
         
         
         var country : Country
