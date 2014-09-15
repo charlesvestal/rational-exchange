@@ -93,13 +93,13 @@
                                         <rect key="frame" x="0.0" y="568" width="320" height="568"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhc-2m-but" userLabel="topLabelCover">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="284"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="198"/>
                                                 <color key="backgroundColor" red="0.46094965934753418" green="0.60258114337921143" blue="0.7565876841545105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="How much is it?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3w-cw-ums">
-                                                <rect key="frame" x="0.0" y="65" width="320" height="46"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="How much is it?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3w-cw-ums">
+                                                <rect key="frame" x="0.0" y="24" width="320" height="46"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="32"/>
                                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -107,12 +107,8 @@
                                                     <rect key="frame" x="70" y="77" width="182" height="21"/>
                                                 </variation>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LhP-aO-v0h" userLabel="Foreign Amount Field">
-                                                <rect key="frame" x="112" y="138" width="97" height="45"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="45" id="3f4-aY-Igy"/>
-                                                    <constraint firstAttribute="width" constant="97" id="hyv-ih-okB"/>
-                                                </constraints>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LhP-aO-v0h" userLabel="Foreign Amount Field">
+                                                <rect key="frame" x="112" y="78" width="97" height="30"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="21"/>
                                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -122,12 +118,8 @@
                                                     <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="qwH-Pz-VRa"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Are you in a bar or restaurant?" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM1-TV-D0n">
-                                                <rect key="frame" x="36" y="194" width="167" height="55"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="167" id="FsR-gI-k5X"/>
-                                                    <constraint firstAttribute="height" constant="55" id="SbE-WL-BOd"/>
-                                                </constraints>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are you in a bar or restaurant?" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM1-TV-D0n">
+                                                <rect key="frame" x="35" y="131" width="167" height="55"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -135,8 +127,8 @@
                                                     <rect key="frame" x="48" y="169" width="168" height="21"/>
                                                 </variation>
                                             </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L0z-gl-kou">
-                                                <rect key="frame" x="226" y="204" width="51" height="31"/>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L0z-gl-kou">
+                                                <rect key="frame" x="225" y="141" width="51" height="31"/>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="223" y="164" width="51" height="31"/>
                                                 </variation>
@@ -145,13 +137,13 @@
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyN-Cn-voj" userLabel="bottomLabelCover">
-                                                <rect key="frame" x="0.0" y="285" width="320" height="284"/>
+                                                <rect key="frame" x="0.0" y="194" width="320" height="374"/>
                                                 <color key="backgroundColor" red="0.57063102722167969" green="0.80359548330307007" blue="0.80741441249847412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It should feel like:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kx-AV-dEs">
-                                                <rect key="frame" x="0.0" y="309" width="320" height="46"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="It should feel like:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kx-AV-dEs">
+                                                <rect key="frame" x="0.0" y="206" width="320" height="46"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="32"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -159,27 +151,9 @@
                                                     <rect key="frame" x="76" y="250" width="178" height="21"/>
                                                 </variation>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12.50" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jn1-Vc-f0t" userLabel="converted Amount">
-                                                <rect key="frame" x="76" y="369" width="169" height="53"/>
-                                                <accessibility key="accessibilityConfiguration">
-                                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
-                                                </accessibility>
-                                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="35"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                    <rect key="frame" x="112" y="285" width="97" height="30"/>
-                                                </variation>
-                                                <connections>
-                                                    <action selector="homeCostTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="Gxr-wT-DwG"/>
-                                                    <action selector="roughAmountTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FMs-Ne-Teu"/>
-                                                    <action selector="roughAmountTouched:" destination="vXZ-lx-hvc" eventType="touchDown" id="GXd-Yl-gc1"/>
-                                                    <action selector="roughAmountTouched:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Lbu-ba-XjN"/>
-                                                </connections>
-                                            </textField>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="UGW-cI-PP4" userLabel="Longform cost story">
                                                 <rect key="frame" x="0.0" y="441" width="320" height="88"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="88" id="lpf-Oy-g1j"/>
                                                     <constraint firstAttribute="height" constant="88" id="s8M-NQ-Epd"/>
                                                 </constraints>
                                                 <attributedString key="attributedText">
@@ -201,42 +175,36 @@
                                                     <rect key="frame" x="36" y="408" width="250" height="88"/>
                                                 </variation>
                                             </label>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12.50" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jn1-Vc-f0t" userLabel="converted Amount">
+                                                <rect key="frame" x="76" y="257" width="169" height="53"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="35"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="112" y="285" width="97" height="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="homeCostTapped:" destination="vXZ-lx-hvc" eventType="touchDown" id="Gxr-wT-DwG"/>
+                                                    <action selector="roughAmountTouched:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="FMs-Ne-Teu"/>
+                                                    <action selector="roughAmountTouched:" destination="vXZ-lx-hvc" eventType="touchDown" id="GXd-Yl-gc1"/>
+                                                    <action selector="roughAmountTouched:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Lbu-ba-XjN"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
-                                            <constraint firstItem="UGW-cI-PP4" firstAttribute="width" secondItem="lyN-Cn-voj" secondAttribute="width" constant="-20" id="3QR-Bh-f3c"/>
-                                            <constraint firstItem="dhc-2m-but" firstAttribute="bottom" secondItem="S2e-v9-8Zq" secondAttribute="centerY" id="59c-dY-tiM"/>
-                                            <constraint firstItem="5Kx-AV-dEs" firstAttribute="centerX" secondItem="Jn1-Vc-f0t" secondAttribute="centerX" constant="-0.5" id="8uF-OX-lSG"/>
-                                            <constraint firstItem="5Kx-AV-dEs" firstAttribute="centerX" secondItem="lyN-Cn-voj" secondAttribute="centerX" constant="-0.5" id="ANW-Ii-1gN"/>
-                                            <constraint firstItem="UGW-cI-PP4" firstAttribute="top" secondItem="lyN-Cn-voj" secondAttribute="bottom" constant="-128" id="AeE-aA-fJK"/>
-                                            <constraint firstItem="5Kx-AV-dEs" firstAttribute="centerX" secondItem="Jn1-Vc-f0t" secondAttribute="centerX" constant="-0.5" id="C4q-IG-26A"/>
-                                            <constraint firstItem="UGW-cI-PP4" firstAttribute="top" secondItem="Jn1-Vc-f0t" secondAttribute="bottom" constant="19" id="H3w-8T-pRF"/>
-                                            <constraint firstItem="dhc-2m-but" firstAttribute="width" secondItem="S2e-v9-8Zq" secondAttribute="width" id="JSg-rk-GiV"/>
-                                            <constraint firstItem="L0z-gl-kou" firstAttribute="leading" secondItem="HM1-TV-D0n" secondAttribute="trailing" constant="23" id="LXn-ba-GhO"/>
-                                            <constraint firstItem="lyN-Cn-voj" firstAttribute="top" secondItem="S2e-v9-8Zq" secondAttribute="centerY" id="Mll-GS-eVz"/>
-                                            <constraint firstItem="HM1-TV-D0n" firstAttribute="top" secondItem="LhP-aO-v0h" secondAttribute="bottom" constant="26" id="Psm-3V-8wR"/>
-                                            <constraint firstItem="dhc-2m-but" firstAttribute="centerX" secondItem="S2e-v9-8Zq" secondAttribute="centerX" id="Q1S-0g-PoH"/>
-                                            <constraint firstItem="LhP-aO-v0h" firstAttribute="centerX" secondItem="I3w-cw-ums" secondAttribute="centerX" constant="0.5" id="R3A-fN-MHh"/>
-                                            <constraint firstItem="dhc-2m-but" firstAttribute="top" secondItem="S2e-v9-8Zq" secondAttribute="top" id="ReT-RX-Yla"/>
-                                            <constraint firstItem="L0z-gl-kou" firstAttribute="centerY" secondItem="HM1-TV-D0n" secondAttribute="centerY" constant="-2" id="Ukl-57-2N2"/>
-                                            <constraint firstItem="Jn1-Vc-f0t" firstAttribute="top" secondItem="5Kx-AV-dEs" secondAttribute="bottom" constant="14" id="WBa-3o-SvH"/>
-                                            <constraint firstItem="Jn1-Vc-f0t" firstAttribute="centerX" secondItem="UGW-cI-PP4" secondAttribute="centerX" constant="0.5" id="Y6x-kR-Vx4"/>
+                                            <constraint firstItem="dhc-2m-but" firstAttribute="width" secondItem="S2e-v9-8Zq" secondAttribute="width" id="9qH-mY-YP7"/>
+                                            <constraint firstItem="lyN-Cn-voj" firstAttribute="top" secondItem="dhc-2m-but" secondAttribute="bottom" id="Lb0-Ql-vKe"/>
+                                            <constraint firstItem="dhc-2m-but" firstAttribute="centerX" secondItem="S2e-v9-8Zq" secondAttribute="centerX" id="NBw-Wg-a4j"/>
+                                            <constraint firstItem="dhc-2m-but" firstAttribute="bottom" secondItem="S2e-v9-8Zq" secondAttribute="centerY" constant="-85" id="OTn-Nj-Boo"/>
                                             <constraint firstItem="lyN-Cn-voj" firstAttribute="bottom" secondItem="S2e-v9-8Zq" secondAttribute="bottom" id="YIj-TD-Q3t"/>
-                                            <constraint firstItem="UGW-cI-PP4" firstAttribute="centerX" secondItem="lyN-Cn-voj" secondAttribute="centerX" id="aij-gV-SDK"/>
-                                            <constraint firstItem="HM1-TV-D0n" firstAttribute="centerX" secondItem="LhP-aO-v0h" secondAttribute="centerX" constant="-41" id="eht-uV-wA3"/>
-                                            <constraint firstItem="LhP-aO-v0h" firstAttribute="top" secondItem="I3w-cw-ums" secondAttribute="bottom" constant="27" id="eq7-wq-b25"/>
-                                            <constraint firstItem="dhc-2m-but" firstAttribute="centerX" secondItem="I3w-cw-ums" secondAttribute="centerX" constant="0.5" id="mbL-aL-h03"/>
-                                            <constraint firstItem="dhc-2m-but" firstAttribute="top" secondItem="I3w-cw-ums" secondAttribute="bottom" constant="-111" id="scV-ei-RVj"/>
+                                            <constraint firstItem="dhc-2m-but" firstAttribute="top" secondItem="S2e-v9-8Zq" secondAttribute="top" id="Zie-b1-9PH"/>
                                             <constraint firstItem="lyN-Cn-voj" firstAttribute="centerX" secondItem="S2e-v9-8Zq" secondAttribute="centerX" id="tfW-CO-Tlg"/>
-                                            <constraint firstItem="5Kx-AV-dEs" firstAttribute="top" secondItem="lyN-Cn-voj" secondAttribute="top" constant="24" id="uQD-hj-6Uu"/>
                                             <constraint firstItem="lyN-Cn-voj" firstAttribute="width" secondItem="S2e-v9-8Zq" secondAttribute="width" id="wbk-WL-HMR"/>
                                         </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="8uF-OX-lSG"/>
-                                            </mask>
-                                        </variation>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="0.0" y="568" width="320" height="568"/>
                                             <mask key="subviews">
