@@ -38,7 +38,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var exchangeLabel: UILabel!
     
     var exchangeCalc = exchangeCalculator(foreignTheyWant: 0,
-        foreignLocale:  localeListSingleton.getLocale("Prague"),
+        foreignLocale:  localeListSingleton.getLocale("Oslo"),
         homeLocale:  localeListSingleton.getLocale("Texas")
     )
     
@@ -151,23 +151,24 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
         
         
-        foreignLabel.text = String(format: "Converting from %@", exchangeCalc.foreignLocale.currencyCode)
+        //foreignLabel.text = String(format: "Converting from %@", exchangeCalc.foreignLocale.currencyCode)
 
         homeCostField.text = NSString (format: "$%.2f %@",
             exchangeCalc.calcShouldFeelLikeRounded(isTippable),
             exchangeCalc.homeLocale.currencyCode)
         
-        homeCostLabel.text = String(format: "it will cost you $%0.2f in %@ total, but think about it like $%0.2f on the menu + you would tip $%0.2f at home at %0.2f + you would pay $%0.2f in tax at %0.4f",
-            exchangeCalc.calcTotalAmount(isTippable),
-            exchangeCalc.homeLocale.currencyCode,
-            exchangeCalc.calcShouldFeelLike(isTippable),
-            exchangeCalc.calcShouldTipLike(isTippable),
-            exchangeCalc.homeLocale.tipRate,
-            exchangeCalc.calcShouldTaxLike(isTippable),
-            exchangeCalc.homeLocale.taxRate
-        )
+        if(foreignCostField.text != "")
+        {
+            homeCostLabel.text = String(format: "Your total cost is going to be $%0.2f %@. But back home, if it was $%0.2f on the menu you would pay an additional $%0.2f tax, and tip $%0.2f.",
+                exchangeCalc.calcTotalAmount(isTippable),
+                exchangeCalc.homeLocale.currencyCode,
+                exchangeCalc.calcShouldFeelLike(isTippable),
+                exchangeCalc.calcShouldTipLike(isTippable),
+                exchangeCalc.calcShouldTaxLike(isTippable)
+            )
+        }
         
-        exchangeLabel.text = String(format:"Converting to %@", exchangeCalc.homeLocale.currencyCode)
+        // exchangeLabel.text = String(format:"Converting to %@", exchangeCalc.homeLocale.currencyCode)
         
         
     }
