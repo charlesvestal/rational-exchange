@@ -383,6 +383,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cu3-si-2Yb">
+                    <connections>
+                        <action selector="viewTapped:" destination="vXZ-lx-hvc" id="Kba-x9-nBJ"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="951" y="136"/>
         </scene>

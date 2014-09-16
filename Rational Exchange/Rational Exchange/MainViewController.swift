@@ -69,6 +69,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
             setupScrollView()
         }
     }
+    @IBAction func viewTapped(sender: AnyObject) {
+            self.view.endEditing(true)
+        }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
