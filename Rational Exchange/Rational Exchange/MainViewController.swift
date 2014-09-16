@@ -121,7 +121,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
             //nonNumberCharacterSet.invert()
         foreignCurrencySymbol = foreignCurrencySymbol.componentsSeparatedByCharactersInSet(nonNumberCharacterSet)[0]
         
-        println(foreignCurrencySymbol)
         
         foreignCurrencySymbolLabel.text = foreignCurrencySymbol
         
