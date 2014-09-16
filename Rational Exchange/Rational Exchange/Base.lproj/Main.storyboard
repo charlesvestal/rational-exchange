@@ -9,7 +9,7 @@
         <!--Rational Exchange-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController restorationIdentifier="MainViewController" storyboardIdentifier="MainViewController" id="vXZ-lx-hvc" customClass="ViewController" customModule="RationalEx" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="MainViewController" storyboardIdentifier="MainViewController" id="vXZ-lx-hvc" customClass="ViewController" customModule="Rational_Exchange" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -240,6 +240,9 @@
                                                 <include reference="L0z-gl-kou"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="cu3-si-2Yb" appends="YES" id="Pmr-mU-mEh"/>
+                                        </connections>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdr-dH-vph" userLabel="bottomPage">
                                         <rect key="frame" x="0.0" y="1136" width="320" height="568"/>
@@ -394,7 +397,7 @@
         <!--Foreign Table View Controller-->
         <scene sceneID="I2N-vs-nqz">
             <objects>
-                <tableViewController id="bfl-eG-BOs" userLabel="Foreign Table View Controller" customClass="CountryTableViewController" customModule="RationalEx" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bfl-eG-BOs" userLabel="Foreign Table View Controller" customClass="CountryTableViewController" customModule="Rational_Exchange" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="foreignTableView" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f86-vJ-JCJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="573"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -482,7 +485,7 @@
         <!--Home Table View Controller-->
         <scene sceneID="gPV-mb-1sQ">
             <objects>
-                <tableViewController id="YqI-Nt-Sef" userLabel="Home Table View Controller" customClass="CountryTableViewController" customModule="RationalEx" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="YqI-Nt-Sef" userLabel="Home Table View Controller" customClass="CountryTableViewController" customModule="Rational_Exchange" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="homeTableView" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="auY-ab-6uW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="658"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
