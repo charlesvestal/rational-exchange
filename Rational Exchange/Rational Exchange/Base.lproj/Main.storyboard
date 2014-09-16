@@ -9,7 +9,7 @@
         <!--Rational Exchange-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController restorationIdentifier="MainViewController" storyboardIdentifier="MainViewController" id="vXZ-lx-hvc" customClass="ViewController" customModule="Rational_Exchange" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="MainViewController" storyboardIdentifier="MainViewController" id="vXZ-lx-hvc" customClass="ViewController" customModule="RationalEx" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -90,10 +90,10 @@
                                         </variation>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S2e-v9-8Zq" userLabel="middlePage">
-                                        <rect key="frame" x="0.0" y="568" width="320" height="568"/>
+                                        <rect key="frame" x="0.0" y="568" width="321" height="568"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhc-2m-but" userLabel="topLabelCover">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="198"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="321" height="198"/>
                                                 <color key="backgroundColor" red="0.46094965934753418" green="0.60258114337921143" blue="0.7565876841545105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
@@ -145,7 +145,7 @@
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyN-Cn-voj" userLabel="bottomLabelCover">
-                                                <rect key="frame" x="0.0" y="194" width="320" height="374"/>
+                                                <rect key="frame" x="0.0" y="194" width="321" height="374"/>
                                                 <color key="backgroundColor" red="0.57063102722167969" green="0.80359548330307007" blue="0.80741441249847412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
@@ -192,6 +192,12 @@
                                                     <action selector="roughAmountTouched:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Lbu-ba-XjN"/>
                                                 </connections>
                                             </textField>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UPk-bd-No3">
+                                                <rect key="frame" x="94" y="83" width="10" height="21"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
+                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
@@ -205,9 +211,11 @@
                                             <constraint firstItem="lyN-Cn-voj" firstAttribute="top" secondItem="dhc-2m-but" secondAttribute="bottom" id="Lb0-Ql-vKe"/>
                                             <constraint firstItem="dhc-2m-but" firstAttribute="centerX" secondItem="S2e-v9-8Zq" secondAttribute="centerX" id="NBw-Wg-a4j"/>
                                             <constraint firstItem="dhc-2m-but" firstAttribute="bottom" secondItem="S2e-v9-8Zq" secondAttribute="centerY" constant="-95" id="OTn-Nj-Boo"/>
+                                            <constraint firstItem="UPk-bd-No3" firstAttribute="trailing" secondItem="LhP-aO-v0h" secondAttribute="leading" constant="-8" id="Pkw-fM-0ab"/>
                                             <constraint firstItem="LhP-aO-v0h" firstAttribute="centerY" secondItem="dhc-2m-but" secondAttribute="centerY" id="QO9-ll-Toc"/>
                                             <constraint firstItem="5Kx-AV-dEs" firstAttribute="centerX" secondItem="lyN-Cn-voj" secondAttribute="centerX" id="RfO-5k-Nt9"/>
                                             <constraint firstItem="LhP-aO-v0h" firstAttribute="top" secondItem="I3w-cw-ums" secondAttribute="bottom" constant="8" id="Rpw-XL-43s"/>
+                                            <constraint firstItem="LhP-aO-v0h" firstAttribute="centerY" secondItem="UPk-bd-No3" secondAttribute="centerY" constant="-0.5" id="SFf-SM-NIb"/>
                                             <constraint firstItem="HM1-TV-D0n" firstAttribute="centerX" secondItem="dhc-2m-but" secondAttribute="centerX" constant="-41.5" id="StO-aC-RV0"/>
                                             <constraint firstItem="lyN-Cn-voj" firstAttribute="bottom" secondItem="S2e-v9-8Zq" secondAttribute="bottom" id="YIj-TD-Q3t"/>
                                             <constraint firstItem="dhc-2m-but" firstAttribute="top" secondItem="S2e-v9-8Zq" secondAttribute="top" id="Zie-b1-9PH"/>
@@ -373,6 +381,7 @@
                         <outlet property="bottomFrameTaxString" destination="7HM-F9-ivt" id="y7d-Tz-FqT"/>
                         <outlet property="bottomFrameTipString" destination="PBi-8z-z6t" id="3lS-At-Xba"/>
                         <outlet property="foreignCostField" destination="LhP-aO-v0h" id="YaQ-Sa-3dW"/>
+                        <outlet property="foreignCurrencySymbolLabel" destination="UPk-bd-No3" id="pRh-1P-SQy"/>
                         <outlet property="homeCostField" destination="Jn1-Vc-f0t" id="UD1-Dv-uhf"/>
                         <outlet property="homeCostLabel" destination="UGW-cI-PP4" id="iqw-Wo-0O5"/>
                         <outlet property="mainView" destination="kh9-bI-dsS" id="KhZ-CZ-gC9"/>
@@ -397,7 +406,7 @@
         <!--Foreign Table View Controller-->
         <scene sceneID="I2N-vs-nqz">
             <objects>
-                <tableViewController id="bfl-eG-BOs" userLabel="Foreign Table View Controller" customClass="CountryTableViewController" customModule="Rational_Exchange" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="bfl-eG-BOs" userLabel="Foreign Table View Controller" customClass="CountryTableViewController" customModule="RationalEx" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="foreignTableView" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f86-vJ-JCJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="573"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -485,7 +494,7 @@
         <!--Home Table View Controller-->
         <scene sceneID="gPV-mb-1sQ">
             <objects>
-                <tableViewController id="YqI-Nt-Sef" userLabel="Home Table View Controller" customClass="CountryTableViewController" customModule="Rational_Exchange" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="YqI-Nt-Sef" userLabel="Home Table View Controller" customClass="CountryTableViewController" customModule="RationalEx" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="homeTableView" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="auY-ab-6uW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="658"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

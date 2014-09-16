@@ -16,12 +16,13 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var foreignCurrencySymbolLabel: UILabel!
 
     @IBOutlet weak var middlePage: UIView!
     @IBOutlet weak var foreignCostField: UITextField!
     @IBOutlet weak var homeCostField: UILabel!
     @IBOutlet weak var homeCostLabel: UILabel!
-    @IBOutlet weak var foreignLabel: UILabel!
+//    @IBOutlet weak var foreignLabel: UILabel!
     @IBOutlet weak var tipSwitch: UISwitch!
     
   
@@ -35,7 +36,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var bottomFrameTaxString: UILabel!
     @IBOutlet weak var bottomFrameTipString: UILabel!
     
-    @IBOutlet weak var exchangeLabel: UILabel!
+//    @IBOutlet weak var exchangeLabel: UILabel!
     
     var exchangeCalc = exchangeCalculator(foreignTheyWant: 0,
         foreignLocale:  localeListSingleton.getLocale("Oslo"),
@@ -106,6 +107,24 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     func updateUI()   {
         
+        var homeFormatter = NSNumberFormatter()
+        homeFormatter.numberStyle = .CurrencyStyle
+        homeFormatter.currencyCode = exchangeCalc.homeLocale.currencyCode
+
+        var foreignFormatter = NSNumberFormatter()
+        foreignFormatter.numberStyle = .CurrencyStyle
+        foreignFormatter.currencyCode = exchangeCalc.foreignLocale.currencyCode
+
+
+        var foreignCurrencySymbol = foreignFormatter.stringFromNumber(0)
+        var nonNumberCharacterSet = NSMutableCharacterSet.decimalDigitCharacterSet()
+            //nonNumberCharacterSet.invert()
+        foreignCurrencySymbol = foreignCurrencySymbol.componentsSeparatedByCharactersInSet(nonNumberCharacterSet)[0]
+        
+        println(foreignCurrencySymbol)
+        
+        foreignCurrencySymbolLabel.text = foreignCurrencySymbol
+        
         var isTippable:Double
         if tipSwitch.on
         { isTippable = 1.0}
@@ -152,22 +171,21 @@ class ViewController: UIViewController, UISearchBarDelegate {
             bottomFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.homeLocale.tipRate * 100)
         }
         
-        
-        
-        //foreignLabel.text = String(format: "Converting from %@", exchangeCalc.foreignLocale.currencyCode)
-
-        homeCostField.text = NSString (format: "$%.2f %@",
-            exchangeCalc.calcShouldFeelLikeRounded(isTippable),
-            exchangeCalc.homeLocale.currencyCode)
+ 
+        homeCostField.text = NSString (format: "%@",
+            homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLikeRounded(isTippable))
+            )
         
         if(foreignCostField.text != "")
         {
-            homeCostLabel.text = String(format: "Your total cost is going to be $%0.2f %@. But back home, if it was $%0.2f on the menu you would pay an additional $%0.2f tax, and tip $%0.2f.",
-                exchangeCalc.calcTotalAmount(isTippable),
-                exchangeCalc.homeLocale.currencyCode,
-                exchangeCalc.calcShouldFeelLike(isTippable),
-                exchangeCalc.calcShouldTipLike(isTippable),
-                exchangeCalc.calcShouldTaxLike(isTippable)
+                homeFormatter.currencyCode = exchangeCalc.homeLocale.currencyCode
+            
+                homeCostLabel.text = String(format: "Your total cost is going to be %@. But back home, if it was listed as %@, you would pay an additional %@ tax, and tip %@",
+                homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(isTippable)),
+                //exchangeCalc.homeLocale.currencyCode,
+                homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(isTippable)),
+                homeFormatter.stringFromNumber(exchangeCalc.calcShouldTipLike(isTippable)),
+                homeFormatter.stringFromNumber(exchangeCalc.calcShouldTaxLike(isTippable))
             )
         }
         
