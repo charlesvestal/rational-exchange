@@ -12,8 +12,6 @@
 		FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */; };
 		FE5FC41119B299820008333D /* countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE5FC41019B299820008333D /* countries.plist */; };
 		FE891BF019C12C4B008CC947 /* LocaleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */; };
-		FEA302F719C51E6000E0FC4E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE41C7E19C3417C00460538 /* Alamofire.framework */; };
-		FEA302F819C51E6000E0FC4E /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FEE41C7E19C3417C00460538 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FEACB10A19C5D3F4006F372D /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB10919C5D3F4006F372D /* CountryModel.swift */; };
 		FEE41C8519C344A500460538 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE41C8419C344A500460538 /* SwiftyJSON.swift */; };
 		FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5319B1767B00852F94 /* AppDelegate.swift */; };
@@ -24,30 +22,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		FEA302F419C51E1500E0FC4E /* PBXContainerItemProxy */ = {
+		FEE0ECA819CA3692004FB2DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FEE41C7819C3417C00460538 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = Alamofire;
-		};
-		FEA302F919C51E6000E0FC4E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FEE41C7819C3417C00460538 /* Alamofire.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = F8111E3219A95C8B0040E7D1;
-			remoteInfo = Alamofire;
-		};
-		FEE41C7D19C3417C00460538 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FEE41C7819C3417C00460538 /* Alamofire.xcodeproj */;
+			containerPortal = FEE0ECA319CA3691004FB2DF /* Alamofire.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
 			remoteInfo = Alamofire;
 		};
-		FEE41C7F19C3417C00460538 /* PBXContainerItemProxy */ = {
+		FEE0ECAA19CA3692004FB2DF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = FEE41C7819C3417C00460538 /* Alamofire.xcodeproj */;
+			containerPortal = FEE0ECA319CA3691004FB2DF /* Alamofire.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
 			remoteInfo = AlamofireTests;
@@ -68,7 +52,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FEA302F819C51E6000E0FC4E /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -82,7 +65,7 @@
 		FE5FC41019B299820008333D /* countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = countries.plist; sourceTree = "<group>"; };
 		FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleTableViewController.swift; sourceTree = "<group>"; };
 		FEACB10919C5D3F4006F372D /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
-		FEE41C7819C3417C00460538 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		FEE0ECA319CA3691004FB2DF /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Rational Exchange/Alamofire/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		FEE41C8419C344A500460538 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		FEE86B4E19B1767B00852F94 /* RationalEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RationalEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE86B5219B1767B00852F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -100,7 +83,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEA302F719C51E6000E0FC4E /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -114,11 +96,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FEE41C7919C3417C00460538 /* Products */ = {
+		FEE0ECA419CA3691004FB2DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				FEE41C7E19C3417C00460538 /* Alamofire.framework */,
-				FEE41C8019C3417C00460538 /* AlamofireTests.xctest */,
+				FEE0ECA919CA3692004FB2DF /* Alamofire.framework */,
+				FEE0ECAB19CA3692004FB2DF /* AlamofireTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -129,7 +111,7 @@
 				FEE86B5019B1767B00852F94 /* Rational Exchange */,
 				FEE86B6319B1767B00852F94 /* Rational ExchangeTests */,
 				FEE86B4F19B1767B00852F94 /* Products */,
-				FEE41C7819C3417C00460538 /* Alamofire.xcodeproj */,
+				FEE0ECA319CA3691004FB2DF /* Alamofire.xcodeproj */,
 			);
 			sourceTree = "<group>";
 		};
@@ -201,8 +183,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				FEA302F519C51E1500E0FC4E /* PBXTargetDependency */,
-				FEA302FA19C51E6000E0FC4E /* PBXTargetDependency */,
 			);
 			name = "Rational Exchange";
 			productName = "Rational Exchange";
@@ -260,8 +240,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = FEE41C7919C3417C00460538 /* Products */;
-					ProjectRef = FEE41C7819C3417C00460538 /* Alamofire.xcodeproj */;
+					ProductGroup = FEE0ECA419CA3691004FB2DF /* Products */;
+					ProjectRef = FEE0ECA319CA3691004FB2DF /* Alamofire.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -273,18 +253,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		FEE41C7E19C3417C00460538 /* Alamofire.framework */ = {
+		FEE0ECA919CA3692004FB2DF /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = Alamofire.framework;
-			remoteRef = FEE41C7D19C3417C00460538 /* PBXContainerItemProxy */;
+			remoteRef = FEE0ECA819CA3692004FB2DF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		FEE41C8019C3417C00460538 /* AlamofireTests.xctest */ = {
+		FEE0ECAB19CA3692004FB2DF /* AlamofireTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = AlamofireTests.xctest;
-			remoteRef = FEE41C7F19C3417C00460538 /* PBXContainerItemProxy */;
+			remoteRef = FEE0ECAA19CA3692004FB2DF /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -336,16 +316,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		FEA302F519C51E1500E0FC4E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			targetProxy = FEA302F419C51E1500E0FC4E /* PBXContainerItemProxy */;
-		};
-		FEA302FA19C51E6000E0FC4E /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Alamofire;
-			targetProxy = FEA302F919C51E6000E0FC4E /* PBXContainerItemProxy */;
-		};
 		FEE86B6219B1767B00852F94 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = FEE86B4D19B1767B00852F94 /* Rational Exchange */;
@@ -448,7 +418,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Rational Exchange/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -463,8 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				INFOPLIST_FILE = "Rational Exchange/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
