@@ -295,31 +295,17 @@ class LocaleList {
                     {
                         if(countryToIterate.currencyCode == currencyCode)
                         {
-                            countryToIterate.exchangeRate = quote
+                            countryToIterate.exchangeRate = quote // set the country exchange rate
                             
                             self.localeList.append(Locale(name: countryToIterate.countryName, taxRate: 0.0, tipRate: 0.0, precision: 1.0, countryName: countryToIterate))
-                                    
+                                     // create all countries as locales
                         
                             println(String(format: "updating exchange for %@", countryToIterate.currencyCode))
                             
-
-                      
                         }
-                        
-                        
-                   //     self.localeList.append(Locale(name: "Poo", taxRate: 0.0, tipRate: 0.0, precision: 1.0, countryName: self.countryList["USA"]!))
                     }
-
-                   
-//
-//                            self.LocaleList.append(Locale(name: name, country:countryName, taxRate: 0.0, tipRate: 0.0, exchangeRate: quote, precision: 0.5, currencyName: currencyName, currencyCode: currencyCode))
-//                        }
-//                    }
-                    
-                
                 }
-                
-                println("Updated Exchange Rates")
+                        println("Finished Refreshing Exchange Rates")
         }
     }
     
