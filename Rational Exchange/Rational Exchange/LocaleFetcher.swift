@@ -279,37 +279,47 @@ class LocaleList {
         
         Alamofire.request(.GET, url)
             .responseJSON { (request, response, data, error) in
-                let jsonData = JSONValue(data!)
+                 // add error handling
+                if (error != nil)
+                {
+                println(error)
+                }
+                else
+                {
                 
-                
-                for resource in jsonData["list"]["resources"].array! {
+                    let jsonData = JSONValue(data!)
                     
-                    // set the price
-                    let quote = resource["resource"]["fields"]["price"].double!
                     
-                    // get the currency code from the yahoo quote
-                    var currencyCode = resource["resource"]["fields"]["symbol"].string!
-                        let stringLength = countElements(currencyCode) // strip this off for the yahoo finance API
-                        let substringIndex = stringLength - 2
-                        currencyCode = currencyCode.substringToIndex(advance(currencyCode.startIndex, substringIndex))
-                    
-                    for countryToIterate in self.countryList
+                    for resource in jsonData["list"]["resources"].array!
                     {
-                        if(countryToIterate.currencyCode == currencyCode)
-                        {
-                            countryToIterate.exchangeRate = quote // set the country exchange rate
-                            
-                            self.localeList.append(Locale(name: countryToIterate.countryName, taxRate: 0.0, tipRate: 0.0, precision: 1.0, countryName: countryToIterate))
-                                     // create all countries as locales
                         
-                            println(String(format: "updating exchange for %@", countryToIterate.currencyCode))
+                        // set the price
+                        let quote = resource["resource"]["fields"]["price"].double!
+                        
+                        // get the currency code from the yahoo quote
+                        var currencyCode = resource["resource"]["fields"]["symbol"].string!
+                            let stringLength = countElements(currencyCode) // strip this off for the yahoo finance API
+                            let substringIndex = stringLength - 2
+                            currencyCode = currencyCode.substringToIndex(advance(currencyCode.startIndex, substringIndex))
+                        
+                        for countryToIterate in self.countryList
+                        {
+                            if(countryToIterate.currencyCode == currencyCode)
+                            {
+                                countryToIterate.exchangeRate = quote // set the country exchange rate
+                                
+                                self.localeList.append(Locale(name: countryToIterate.countryName, taxRate: 0.0, tipRate: 0.0, precision: 1.0, countryName: countryToIterate))
+                                         // create all countries as locales
                             
+                                println(String(format: "updating exchange for %@", countryToIterate.currencyCode))
+                                
+                            }
                         }
                     }
+                                println("Finished Refreshing Exchange Rates")
                 }
-                        println("Finished Refreshing Exchange Rates")
+            }
         }
-    }
     
 
     func getCountry(countryName:String) -> Country {
