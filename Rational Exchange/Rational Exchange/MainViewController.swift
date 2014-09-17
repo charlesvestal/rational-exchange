@@ -17,19 +17,19 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var foreignCurrencySymbolLabel: UILabel!
-
-    @IBOutlet weak var middlePage: UIView!
-    @IBOutlet weak var foreignCostField: UITextField!
-    @IBOutlet weak var homeCostField: UILabel!
-    @IBOutlet weak var homeCostLabel: UILabel!
-//    @IBOutlet weak var foreignLabel: UILabel!
-    @IBOutlet weak var tipSwitch: UISwitch!
     
-  
     @IBOutlet weak var topFrameLocaleName: UILabel!
     @IBOutlet weak var topFrameCurrencyName: UILabel!
     @IBOutlet weak var topFrameTaxString: UILabel!
     @IBOutlet weak var topFrameTipString: UILabel!
+    
+    @IBOutlet weak var middlePage: UIView!
+    @IBOutlet weak var foreignCostField: UITextField!
+    @IBOutlet weak var homeCostField: UILabel!
+    @IBOutlet weak var homeCostLabel: UILabel!
+    @IBOutlet weak var tipSwitch: UISwitch!
+    
+  
 
     @IBOutlet weak var bottomFrameLocaleName: UILabel!
     @IBOutlet weak var bottomFrameCurrencyName: UILabel!

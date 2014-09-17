@@ -331,7 +331,7 @@
                                 </variation>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="noG-ku-5uo" firstAttribute="height" secondItem="kh9-bI-dsS" secondAttribute="height" id="086-L1-7Oc"/>
@@ -399,6 +399,7 @@
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Where Are You?" id="zq5-5b-0gK" userLabel="foreignBar">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="0.38823533058166504" green="0.52549022436141968" blue="0.70196080207824707" alpha="1" colorSpace="deviceRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="bfl-eG-BOs" id="l3d-uy-vNf"/>
@@ -487,7 +488,13 @@
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Where Are You From?" id="SVE-Kw-tvd" userLabel="homeBar">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="barTintColor" red="0.46961665153503418" green="0.72238665819168091" blue="0.72374153137207031" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <textInputTraits key="textInputTraits"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
+                                    <color key="value" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <outlet property="delegate" destination="YqI-Nt-Sef" id="b80-xH-07f"/>
                             </connections>

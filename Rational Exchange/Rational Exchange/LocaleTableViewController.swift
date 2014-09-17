@@ -33,7 +33,6 @@ import UIKit
             
             let nameMatch = locale.name.rangeOfString(searchText, options:NSStringCompareOptions(1))
             let countryMatch = locale.country.countryName.rangeOfString(searchText, options:NSStringCompareOptions(1))
-        
             let currencyMatch = locale.country.currencyCode.rangeOfString(searchText, options:NSStringCompareOptions(1))
             
             if (currencyMatch != nil)
@@ -55,7 +54,6 @@ import UIKit
     
     func searchDisplayController(controller: UISearchDisplayController, willShowSearchResultsTableView tableView: UITableView) {
         updateList()
-        
     }
     
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
@@ -72,9 +70,6 @@ import UIKit
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //homeBar.delegate = self
-        //foreignBar.delegate = self
-      
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
