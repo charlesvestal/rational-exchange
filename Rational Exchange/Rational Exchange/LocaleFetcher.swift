@@ -282,13 +282,20 @@ class LocaleList {
                  // add error handling
                 if (error != nil)
                 {
-                println(error)
-                }
+                    println(error)
+                    for countryToIterate in self.countryList
+                    {
+                      
+                            self.localeList.append(Locale(name: countryToIterate.countryName, taxRate: 0.0, tipRate: 0.0, precision: 1.0, countryName: countryToIterate))
+                        
+                            println(String(format: "updating exchange from database to %@", countryToIterate.currencyCode))
+                            
+                        }
+                    }
                 else
                 {
                 
                     let jsonData = JSONValue(data!)
-                    
                     
                     for resource in jsonData["list"]["resources"].array!
                     {
