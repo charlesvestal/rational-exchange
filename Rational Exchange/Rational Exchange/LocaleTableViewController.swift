@@ -16,11 +16,11 @@ import UIKit
     @IBOutlet weak var foreignBar: UISearchBar!
     @IBOutlet weak var homeBar: UISearchBar!
     
-    var locales = localeListSingleton.list
+    var locales = localeListSingleton.localeList
     
     
     func updateList() {
-        locales = localeListSingleton.list
+        locales = localeListSingleton.localeList
     }
     
     var filteredLocales = [Locale]()
@@ -32,7 +32,7 @@ import UIKit
       self.filteredLocales = self.locales.filter({( locale: Locale) -> Bool in
             
             let nameMatch = locale.name.rangeOfString(searchText, options:NSStringCompareOptions(1))
-            let currencyMatch = locale.currencyCode.rangeOfString(searchText, options:NSStringCompareOptions(1))
+            let currencyMatch = locale.country.currencyCode.rangeOfString(searchText, options:NSStringCompareOptions(1))
             
             if (currencyMatch != nil)
             {
@@ -105,7 +105,7 @@ import UIKit
         if tableView == self.searchDisplayController!.searchResultsTableView {
             locale = filteredLocales[indexPath.row]
             cell.textLabel!.text = locale.name
-            cell.detailTextLabel?.text = String(format:"%@",locale.currencyCode)
+            cell.detailTextLabel?.text = String(format:"%@",locale.country.currencyCode)
         } else {
             locale = locales[0]
         }

@@ -10,24 +10,22 @@ import Foundation
 
 struct Locale {
     var name:String
-    var country: String
     var taxRate:Double
     var tipRate:Double
-    var exchangeRate:Double
     var precision:Double
-    var currencyName: String
-    var currencyCode:String
+ 
+    var country: Country
     
   
-    init(name:String, country:String, taxRate:Double, tipRate:Double, exchangeRate:Double, precision:Double, currencyName: String, currencyCode:String) {
+    init(name:String, taxRate:Double, tipRate:Double, precision:Double, countryName:Country) {
         self.name = name
-        self.country = country
+        self.country = countryName
         self.taxRate = taxRate
         self.tipRate = tipRate
-        self.exchangeRate = exchangeRate
+ //       self.exchangeRate = countryName.exchangeRate
         self.precision = precision
-        self.currencyName = currencyName
-        self.currencyCode = currencyCode
+//        self.currencyName = countryName.currencyName
+//        self.currencyCode = countryName.currencyCode
          }
     
 }

@@ -23,7 +23,7 @@ class exchangeCalculator {
     init(foreignTheyWant:Double, foreignLocale:Locale, homeLocale:Locale) {
        
         self.foreignTheyWant = foreignTheyWant
-        self.exchangeRate = foreignLocale.exchangeRate / homeLocale.exchangeRate
+        self.exchangeRate = foreignLocale.country.exchangeRate / homeLocale.country.exchangeRate
         self.foreignLocale = foreignLocale
         self.homeLocale = homeLocale
         self.precision = homeLocale.precision
@@ -71,7 +71,7 @@ class exchangeCalculator {
     
     func calcExchangeRate() -> Double {
         //necessary as we need to recalculate whan a Locale pair changes
-        exchangeRate = foreignLocale.exchangeRate / homeLocale.exchangeRate
+        exchangeRate = foreignLocale.country.exchangeRate / homeLocale.country.exchangeRate
         
         return exchangeRate
     }

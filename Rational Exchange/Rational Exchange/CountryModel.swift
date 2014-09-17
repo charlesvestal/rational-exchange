@@ -8,10 +8,15 @@
 
 import Foundation
 
-
-struct Country {
-    var countryName: String
+class Country {
     var currencyName: String
     var currencyCode: String
+    var exchangeRate: Double
     
+    init(currencyName: String, currencyCode: String, exchangeRate: Double)
+    {
+        self.currencyName = currencyName
+        self.currencyCode = currencyCode
+        self.exchangeRate = exchangeRate
+     }
 }

@@ -38,8 +38,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
 //    @IBOutlet weak var exchangeLabel: UILabel!
     
+    
+    
     var exchangeCalc = exchangeCalculator(foreignTheyWant: 0,
-        foreignLocale:  localeListSingleton.getLocale("Oslo"),
+        foreignLocale:  localeListSingleton.getLocale("Prague"),
         homeLocale:  localeListSingleton.getLocale("Texas")
     )
     
@@ -102,18 +104,18 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
         foreignCostField.inputAccessoryView = keyboardDoneButtonView
     
-        localeListSingleton.refreshLocales()
+        localeListSingleton.refreshCountries()
     }
     
     func updateUI()   {
         
         var homeFormatter = NSNumberFormatter()
         homeFormatter.numberStyle = .CurrencyStyle
-        homeFormatter.currencyCode = exchangeCalc.homeLocale.currencyCode
+        homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
 
         var foreignFormatter = NSNumberFormatter()
         foreignFormatter.numberStyle = .CurrencyStyle
-        foreignFormatter.currencyCode = exchangeCalc.foreignLocale.currencyCode
+        foreignFormatter.currencyCode = exchangeCalc.foreignLocale.country.currencyCode
 
 
         var foreignCurrencySymbol = foreignFormatter.stringFromNumber(0)
@@ -136,38 +138,38 @@ class ViewController: UIViewController, UISearchBarDelegate {
 
         // set up foreign labels
         topFrameLocaleName.text = exchangeCalc.foreignLocale.name.uppercaseString
-        topFrameCurrencyName.text = String(format:"%@ (%@)", exchangeCalc.foreignLocale.currencyName, exchangeCalc.foreignLocale.currencyCode)
+        topFrameCurrencyName.text = String(format:"%@ (%@)", exchangeCalc.foreignLocale.country.currencyName, exchangeCalc.foreignLocale.country.currencyCode)
       
             if(exchangeCalc.foreignLocale.taxRate == 0){
                 topFrameTaxString.text = "Nothing! Tax is included."
             }
             else {
-                topFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.foreignLocale.taxRate * 100)
+                topFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.foreignLocale.taxRate)
             }
 
             if (exchangeCalc.foreignLocale.tipRate == 0.0){
                 topFrameTipString.text = "Nada. Don't worry about it."
             }
             else {
-                topFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.foreignLocale.tipRate * 100)
+                topFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.foreignLocale.tipRate)
             }
         
         // set up home labels
         bottomFrameLocaleName.text = exchangeCalc.homeLocale.name.uppercaseString
-        bottomFrameCurrencyName.text = String(format:"%@ (%@)", exchangeCalc.homeLocale.currencyName, exchangeCalc.homeLocale.currencyCode)
+        bottomFrameCurrencyName.text = String(format:"%@ (%@)", exchangeCalc.homeLocale.country.currencyName, exchangeCalc.homeLocale.country.currencyCode)
         
         if(exchangeCalc.homeLocale.taxRate == 0){
             bottomFrameTaxString.text = "Nothing! Tax is included."
         }
         else {
-            bottomFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.homeLocale.taxRate * 100)
+            bottomFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.homeLocale.taxRate)
         }
         
         if (exchangeCalc.homeLocale.tipRate == 0.0){
             bottomFrameTipString.text = "Nada. Don't worry about it."
         }
         else {
-            bottomFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.homeLocale.tipRate * 100)
+            bottomFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.homeLocale.tipRate)
         }
         
  
@@ -177,7 +179,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
         if(foreignCostField.text != "")
         {
-                homeFormatter.currencyCode = exchangeCalc.homeLocale.currencyCode
+                homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
             
                 homeCostLabel.text = String(format: "Your total cost is going to be %@. But back home, if it was listed as %@, you would pay an additional %@ tax, and tip %@",
                 homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(isTippable)),
@@ -198,7 +200,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         exchangeCalc.foreignLocale = newLocale
         exchangeCalc.foreignLocale.taxRate = newLocale.taxRate
         exchangeCalc.foreignLocale.tipRate = newLocale.tipRate
-        let newLocaleCurrency = newLocale.currencyCode
+        let newLocaleCurrency = newLocale.country.currencyCode
         updateUI()
     }
     
@@ -207,7 +209,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         exchangeCalc.homeLocale = newLocale
         exchangeCalc.homeLocale.taxRate = newLocale.taxRate
         exchangeCalc.homeLocale.tipRate = newLocale.tipRate
-        exchangeCalc.homeLocale.exchangeRate = newLocale.exchangeRate
+        exchangeCalc.homeLocale.country.exchangeRate = newLocale.country.exchangeRate
         exchangeCalc.precision = newLocale.precision
         updateUI()
     }
