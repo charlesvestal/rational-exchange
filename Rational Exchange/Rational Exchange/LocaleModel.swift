@@ -16,15 +16,11 @@ struct Locale {
     var country: Country
     
   
-    init(name:String, additionalTaxRate:Double, tipRate:Double, precision:Double, country:Country) {
+    init(name:String, additionalTaxRate:Double, tipRate:Double, country:Country) {
         self.name = name
-        self.country = country
         self.additionalTaxRate = additionalTaxRate
         self.tipRate = tipRate
- //       self.exchangeRate = countryName.exchangeRate
- //       self.precision = precision
-//        self.currencyName = countryName.currencyName
-//        self.currencyCode = countryName.currencyCode
-         }
+        self.country = country
+    }
     
 }
