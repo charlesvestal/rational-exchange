@@ -140,11 +140,11 @@ class ViewController: UIViewController, UISearchBarDelegate {
         topFrameLocaleName.text = exchangeCalc.foreignLocale.name.uppercaseString
         topFrameCurrencyName.text = String(format:"%@ (%@)", exchangeCalc.foreignLocale.country.currencyName, exchangeCalc.foreignLocale.country.currencyCode)
       
-            if(exchangeCalc.foreignLocale.taxRate == 0){
+            if(exchangeCalc.foreignLocale.additionalTaxRate == 0){
                 topFrameTaxString.text = "Nothing! Tax is included."
             }
             else {
-                topFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.foreignLocale.taxRate)
+                topFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.foreignLocale.additionalTaxRate)
             }
 
             if (exchangeCalc.foreignLocale.tipRate == 0.0){
@@ -158,11 +158,11 @@ class ViewController: UIViewController, UISearchBarDelegate {
         bottomFrameLocaleName.text = exchangeCalc.homeLocale.name.uppercaseString
         bottomFrameCurrencyName.text = String(format:"%@ (%@)", exchangeCalc.homeLocale.country.currencyName, exchangeCalc.homeLocale.country.currencyCode)
         
-        if(exchangeCalc.homeLocale.taxRate == 0){
+        if(exchangeCalc.homeLocale.additionalTaxRate == 0){
             bottomFrameTaxString.text = "Nothing! Tax is included."
         }
         else {
-            bottomFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.homeLocale.taxRate)
+            bottomFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.homeLocale.additionalTaxRate)
         }
         
         if (exchangeCalc.homeLocale.tipRate == 0.0){
@@ -198,7 +198,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     func updateForeignLocale(newLocaleName:String) {
         let newLocale = exchangeCalc.localeList.getLocale(newLocaleName)
         exchangeCalc.foreignLocale = newLocale
-        exchangeCalc.foreignLocale.taxRate = newLocale.taxRate
+        exchangeCalc.foreignLocale.additionalTaxRate = newLocale.additionalTaxRate
         exchangeCalc.foreignLocale.tipRate = newLocale.tipRate
         let newLocaleCurrency = newLocale.country.currencyCode
         updateUI()
@@ -207,10 +207,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
     func updateHomeLocale(newLocaleName:String) {
         let newLocale = exchangeCalc.localeList.getLocale(newLocaleName)
         exchangeCalc.homeLocale = newLocale
-        exchangeCalc.homeLocale.taxRate = newLocale.taxRate
+        exchangeCalc.homeLocale.additionalTaxRate = newLocale.additionalTaxRate
         exchangeCalc.homeLocale.tipRate = newLocale.tipRate
         exchangeCalc.homeLocale.country.exchangeRate = newLocale.country.exchangeRate
-        exchangeCalc.precision = newLocale.precision
+        exchangeCalc.precision = newLocale.country.precision
         updateUI()
     }
     

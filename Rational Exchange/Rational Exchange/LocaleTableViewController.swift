@@ -32,7 +32,7 @@ import UIKit
       self.filteredLocales = self.locales.filter({( locale: Locale) -> Bool in
             
             let nameMatch = locale.name.rangeOfString(searchText, options:NSStringCompareOptions(1))
-            let countryMatch = locale.country.countryName.rangeOfString(searchText, options:NSStringCompareOptions(1))
+            let countryMatch = locale.country.name.rangeOfString(searchText, options:NSStringCompareOptions(1))
             let currencyMatch = locale.country.currencyCode.rangeOfString(searchText, options:NSStringCompareOptions(1))
             
             if (currencyMatch != nil)

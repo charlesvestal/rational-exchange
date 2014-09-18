@@ -9,16 +9,23 @@
 import Foundation
 
 class Country {
-    var countryName: String
+    var name: String
     var currencyName: String
     var currencyCode: String
     var exchangeRate: Double
+    var tipRate:Double
+    var additionalTaxRate: Double
+    var precision:Double
     
-    init(countryName: String, currencyName: String, currencyCode: String, exchangeRate: Double)
+    
+    init(name: String, currencyName: String, currencyCode: String, exchangeRate: Double, tipRate: Double, additionalTaxRate:Double, precision:Double)
     {
-        self.countryName = countryName
+        self.name = name
         self.currencyName = currencyName
         self.currencyCode = currencyCode
         self.exchangeRate = exchangeRate
+        self.tipRate = tipRate
+        self.additionalTaxRate = additionalTaxRate
+        self.precision = precision
      }
 }
