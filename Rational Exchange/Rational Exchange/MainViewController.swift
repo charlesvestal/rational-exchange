@@ -41,8 +41,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     
     var exchangeCalc = exchangeCalculator(foreignTheyWant: 0,
-        foreignLocale:  localeListSingleton.getLocale("Prague"),
-        homeLocale:  localeListSingleton.getLocale("Texas")
+        foreignLocale:  localeListSingleton.getLocale("Oslo"),
+        homeLocale:  localeListSingleton.getLocale("United States (USA)")
     )
     
     override func viewDidLoad() {

@@ -248,7 +248,7 @@ class LocaleList {
             Country(name: "United Arab Emirates", currencyName: "Arab Emirates Dirham", currencyCode: "AED", exchangeRate: 3.673, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
             Country(name: "Uruguay", currencyName: "Uruguayan Peso", currencyCode: "UYU", exchangeRate: 24.329999999999998, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
             Country(name: "USA Minor Outlying Islands", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
-            Country(name: "USA", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0, precision:1.0),
+            Country(name: "United States (USA)", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0, precision:1.0),
             Country(name: "Uzbekistan", currencyName: "Uzbekistan Sum", currencyCode: "UZS", exchangeRate: 2359.5600589999999, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
             Country(name: "Vanuatu", currencyName: "Vanuatu Vatu", currencyCode: "VUV", exchangeRate: 96.199996999999996, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
             Country(name: "Vatican", currencyName: "Euro", currencyCode: "EUR", exchangeRate: 0.77190300000000001, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
@@ -267,6 +267,7 @@ class LocaleList {
         localeList = [Locale]()
         
         localeList = [
+            Locale(name: "Oslo", additionalTaxRate: getCountry("Norway").additionalTaxRate, tipRate: getCountry("Norway").tipRate, country: getCountry("Norway")),
             Locale(name: "Alabama", additionalTaxRate: 0.085100000, tipRate: 0.20, country: getCountry("USA")),
             Locale(name: "Alaska", additionalTaxRate: 0.016900000, tipRate: 0.20, country: getCountry("USA")),
             Locale(name: "Arizona", additionalTaxRate: 0.081700000, tipRate: 0.20, country: getCountry("USA")),
@@ -319,6 +320,16 @@ class LocaleList {
             Locale(name: "Wyoming", additionalTaxRate: 0.054900000, tipRate: 0.20, country: getCountry("USA")),
             Locale(name: "D.C.", additionalTaxRate: 0.057500000, tipRate: 0.20, country: getCountry("USA")),
         ]
+        
+        for countryToIterate in self.countryList
+        {
+            
+            self.localeList.append(Locale(name: countryToIterate.name, additionalTaxRate: countryToIterate.additionalTaxRate, tipRate: countryToIterate.tipRate, country: countryToIterate))
+            
+            println(String(format: "Created locale from database for %@", countryToIterate.name))
+            
+        }
+
     }
     
     
@@ -332,15 +343,7 @@ class LocaleList {
                 if (error != nil)
                 {
                     println(error)
-                    for countryToIterate in self.countryList
-                    {
-                      
-                            self.localeList.append(Locale(name: countryToIterate.name, additionalTaxRate: 0.0, tipRate: 0.0, country: countryToIterate))
-                        
-                            println(String(format: "Created locale from database for %@", countryToIterate.name))
-                            
-                        }
-                    }
+                }
                 else
                 {
                 
@@ -365,13 +368,6 @@ class LocaleList {
                                 countryToIterate.exchangeRate = quote // set the country exchange rate
                                 
                                 println(String(format: "updating exchange for %@ in %@ : %f", countryToIterate.currencyCode, countryToIterate.name, countryToIterate.exchangeRate))
-                                
-                                self.localeList.append(Locale(name: countryToIterate.name, additionalTaxRate: countryToIterate.additionalTaxRate, tipRate: countryToIterate.tipRate, country: countryToIterate))
-                                    
-                                    // create all countries as locales
-                            
-                                println(String(format: "Created locale for %@", countryToIterate.name))
-                                
                             }
                         }
                     }
@@ -401,7 +397,7 @@ class LocaleList {
                 return localeList[i]
             }
         }
-        return  Locale(name: "Prague", additionalTaxRate: 0.825, tipRate: 0.0, country: getCountry("Czech Rep."))
+        return  Locale(name: "burp", additionalTaxRate: 0.825, tipRate: 0.0, country: getCountry("Czech Rep."))
 
     }
     
