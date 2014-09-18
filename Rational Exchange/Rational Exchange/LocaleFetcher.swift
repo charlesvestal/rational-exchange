@@ -248,7 +248,7 @@ class LocaleList {
             Country(name: "United Arab Emirates", currencyName: "Arab Emirates Dirham", currencyCode: "AED", exchangeRate: 3.673, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
             Country(name: "Uruguay", currencyName: "Uruguayan Peso", currencyCode: "UYU", exchangeRate: 24.329999999999998, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
             Country(name: "USA Minor Outlying Islands", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
-            Country(name: "USA", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate:15.0, additionalTaxRate:0.0, precision:1.0),
+            Country(name: "USA", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0, precision:1.0),
             Country(name: "Uzbekistan", currencyName: "Uzbekistan Sum", currencyCode: "UZS", exchangeRate: 2359.5600589999999, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
             Country(name: "Vanuatu", currencyName: "Vanuatu Vatu", currencyCode: "VUV", exchangeRate: 96.199996999999996, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
             Country(name: "Vatican", currencyName: "Euro", currencyCode: "EUR", exchangeRate: 0.77190300000000001, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
@@ -267,8 +267,8 @@ class LocaleList {
         localeList = [Locale]()
         
         localeList = [
-            Locale(name: "Oslo", additionalTaxRate: getCountry("Norway").additionalTaxRate, tipRate: getCountry("Norway").tipRate, country: getCountry("Norway")),
-            Locale(name: "Texas", additionalTaxRate: 0.825, tipRate: 0.20, country: getCountry("USA"))
+            Locale(name: "Oslo", additionalTaxRate: getCountry("Norway").additionalTaxRate, tipRate: 0.1, country: getCountry("Norway")),
+            Locale(name: "Texas", additionalTaxRate: 0.0825, tipRate: 0.20, country: getCountry("USA"))
         ]
     }
     

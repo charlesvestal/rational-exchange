@@ -144,14 +144,14 @@ class ViewController: UIViewController, UISearchBarDelegate {
                 topFrameTaxString.text = "Nothing! Tax is included."
             }
             else {
-                topFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.foreignLocale.additionalTaxRate)
+                topFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.foreignLocale.additionalTaxRate * 100)
             }
 
             if (exchangeCalc.foreignLocale.tipRate == 0.0){
                 topFrameTipString.text = "Nada. Don't worry about it."
             }
             else {
-                topFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.foreignLocale.tipRate)
+                topFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.foreignLocale.tipRate * 100)
             }
         
         // set up home labels
@@ -162,14 +162,14 @@ class ViewController: UIViewController, UISearchBarDelegate {
             bottomFrameTaxString.text = "Nothing! Tax is included."
         }
         else {
-            bottomFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.homeLocale.additionalTaxRate)
+            bottomFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.homeLocale.additionalTaxRate * 100)
         }
         
         if (exchangeCalc.homeLocale.tipRate == 0.0){
             bottomFrameTipString.text = "Nada. Don't worry about it."
         }
         else {
-            bottomFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.homeLocale.tipRate)
+            bottomFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.homeLocale.tipRate * 100)
         }
         
  
@@ -185,8 +185,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
                 homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(isTippable)),
                 //exchangeCalc.homeLocale.currencyCode,
                 homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(isTippable)),
-                homeFormatter.stringFromNumber(exchangeCalc.calcShouldTipLike(isTippable)),
-                homeFormatter.stringFromNumber(exchangeCalc.calcShouldTaxLike(isTippable))
+                homeFormatter.stringFromNumber(exchangeCalc.calcShouldTaxLike(isTippable)),
+                homeFormatter.stringFromNumber(exchangeCalc.calcShouldTipLike(isTippable))
             )
         }
         
