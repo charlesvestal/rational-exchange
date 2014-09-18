@@ -24,8 +24,6 @@ import UIKit
     }
     
     var filteredLocales = [Locale]()
-   
-    
     
     func filterContentForSearchText(searchText: String) {
         
