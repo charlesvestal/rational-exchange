@@ -19,7 +19,6 @@
 		FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5519B1767B00852F94 /* MainViewController.swift */; };
 		FEE86B5919B1767B00852F94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE86B5719B1767B00852F94 /* Main.storyboard */; };
 		FEE86B5B19B1767B00852F94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE86B5A19B1767B00852F94 /* Images.xcassets */; };
-		FEE86B6719B1767B00852F94 /* Rational_ExchangeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B6619B1767B00852F94 /* Rational_ExchangeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,13 +35,6 @@
 			proxyType = 2;
 			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
 			remoteInfo = AlamofireTests;
-		};
-		FEE86B6119B1767B00852F94 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = FEE86B4619B1767B00852F94 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = FEE86B4D19B1767B00852F94;
-			remoteInfo = "Rational Exchange";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -74,7 +66,6 @@
 		FEE86B5519B1767B00852F94 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FEE86B5819B1767B00852F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEE86B5A19B1767B00852F94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		FEE86B6019B1767B00852F94 /* Rational ExchangeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Rational ExchangeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE86B6519B1767B00852F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEE86B6619B1767B00852F94 /* Rational_ExchangeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rational_ExchangeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,13 +76,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE612C7719CB338200417A34 /* Alamofire.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		FEE86B5D19B1767B00852F94 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,7 +105,6 @@
 			isa = PBXGroup;
 			children = (
 				FEE86B4E19B1767B00852F94 /* RationalEx.app */,
-				FEE86B6019B1767B00852F94 /* Rational ExchangeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,24 +174,6 @@
 			productReference = FEE86B4E19B1767B00852F94 /* RationalEx.app */;
 			productType = "com.apple.product-type.application";
 		};
-		FEE86B5F19B1767B00852F94 /* Rational ExchangeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FEE86B6D19B1767B00852F94 /* Build configuration list for PBXNativeTarget "Rational ExchangeTests" */;
-			buildPhases = (
-				FEE86B5C19B1767B00852F94 /* Sources */,
-				FEE86B5D19B1767B00852F94 /* Frameworks */,
-				FEE86B5E19B1767B00852F94 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				FEE86B6219B1767B00852F94 /* PBXTargetDependency */,
-			);
-			name = "Rational ExchangeTests";
-			productName = "Rational ExchangeTests";
-			productReference = FEE86B6019B1767B00852F94 /* Rational ExchangeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -221,11 +186,6 @@
 					FEE86B4D19B1767B00852F94 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = X5Z48TUF78;
-					};
-					FEE86B5F19B1767B00852F94 = {
-						CreatedOnToolsVersion = 6.0;
-						DevelopmentTeam = X5Z48TUF78;
-						TestTargetID = FEE86B4D19B1767B00852F94;
 					};
 				};
 			};
@@ -249,7 +209,6 @@
 			projectRoot = "";
 			targets = (
 				FEE86B4D19B1767B00852F94 /* Rational Exchange */,
-				FEE86B5F19B1767B00852F94 /* Rational ExchangeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -282,13 +241,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FEE86B5E19B1767B00852F94 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -307,23 +259,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FEE86B5C19B1767B00852F94 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FEE86B6719B1767B00852F94 /* Rational_ExchangeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		FEE86B6219B1767B00852F94 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = FEE86B4D19B1767B00852F94 /* Rational Exchange */;
-			targetProxy = FEE86B6119B1767B00852F94 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FEE86B5719B1767B00852F94 /* Main.storyboard */ = {
@@ -444,46 +380,6 @@
 			};
 			name = Release;
 		};
-		FEE86B6E19B1767B00852F94 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Rational ExchangeTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rational Exchange.app/Rational Exchange";
-			};
-			name = Debug;
-		};
-		FEE86B6F19B1767B00852F94 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "Rational ExchangeTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Rational Exchange.app/Rational Exchange";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -501,15 +397,6 @@
 			buildConfigurations = (
 				FEE86B6B19B1767B00852F94 /* Debug */,
 				FEE86B6C19B1767B00852F94 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FEE86B6D19B1767B00852F94 /* Build configuration list for PBXNativeTarget "Rational ExchangeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				FEE86B6E19B1767B00852F94 /* Debug */,
-				FEE86B6F19B1767B00852F94 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
