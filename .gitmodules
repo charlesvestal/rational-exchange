@@ -4,6 +4,3 @@
 [submodule "Rational Exchange/SwiftyJSON"]
 	path = Rational Exchange/SwiftyJSON
 	url = https://github.com/lingoer/SwiftyJSON
-[submodule "Rational Exchange/Rational Exchange/Alamofire"]
-	path = Rational Exchange/Rational Exchange/Alamofire
-	url = https://github.com/Alamofire/Alamofire
