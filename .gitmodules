@@ -1,1 +1,4 @@
 
+[submodule "dependencies/Alamofire"]
+	path = dependencies/Alamofire
+	url = https://github.com/Alamofire/Alamofire
