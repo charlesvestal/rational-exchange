@@ -114,7 +114,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LhP-aO-v0h" userLabel="Foreign Amount Field">
-                                                <rect key="frame" x="112" y="78" width="97" height="30"/>
+                                                <rect key="frame" x="112" y="78" width="97" height="31"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="97" id="ZP1-A8-qoK"/>
                                                     <constraint firstAttribute="height" constant="30" id="mwC-jB-tmY"/>
@@ -282,8 +282,8 @@
                                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="bottomContainerView" translatesAutoresizingMaskIntoConstraints="NO" id="vn2-gD-LoP" userLabel="bottomContainerView">
-                                                <rect key="frame" x="0.0" y="20" width="320" height="658"/>
+                                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" restorationIdentifier="bottomContainerView" translatesAutoresizingMaskIntoConstraints="NO" id="vn2-gD-LoP" userLabel="bottomContainerView">
+                                                <rect key="frame" x="0.0" y="20" width="320" height="568"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <segue destination="YqI-Nt-Sef" kind="embed" id="HTj-Vi-tfh"/>
@@ -291,6 +291,20 @@
                                             </containerView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.57143098115921021" green="0.80299067497253418" blue="0.80930042266845703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="vn2-gD-LoP" firstAttribute="top" secondItem="wdr-dH-vph" secondAttribute="top" constant="20" id="F1Y-FJ-QLQ"/>
+                                            <constraint firstItem="vn2-gD-LoP" firstAttribute="bottom" secondItem="wdr-dH-vph" secondAttribute="bottom" id="X84-nW-f0d"/>
+                                            <constraint firstItem="vn2-gD-LoP" firstAttribute="centerY" secondItem="wdr-dH-vph" secondAttribute="centerY" id="YgN-HZ-xnT"/>
+                                            <constraint firstItem="vn2-gD-LoP" firstAttribute="width" secondItem="wdr-dH-vph" secondAttribute="width" id="c2D-vc-0jg"/>
+                                            <constraint firstItem="vn2-gD-LoP" firstAttribute="height" secondItem="wdr-dH-vph" secondAttribute="height" constant="-20" id="gEJ-UD-nEG"/>
+                                            <constraint firstItem="vn2-gD-LoP" firstAttribute="centerX" secondItem="wdr-dH-vph" secondAttribute="centerX" id="mH5-85-Usi"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="YgN-HZ-xnT"/>
+                                                <exclude reference="gEJ-UD-nEG"/>
+                                            </mask>
+                                        </variation>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="0.0" y="1136" width="320" height="568"/>
                                         </variation>
@@ -480,7 +494,7 @@
             <objects>
                 <tableViewController id="YqI-Nt-Sef" userLabel="Home Table View Controller" customClass="CountryTableViewController" customModule="RationalEx" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="homeTableView" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="auY-ab-6uW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="658"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
