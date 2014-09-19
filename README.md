@@ -5,6 +5,10 @@ Giving context to currency exchange
 
 When traveling abroad, sometimes a straight currency exchange doesn't tell the whole story. Your home's tipping and tax-adding customs may differ from where you currently are, and the price tag you see may "feel like" something entirely different.
 
+If you're running this for the first time, note the main UI is a paging scrollview. Scroll! Will add indicators and/or onboarding in the future, or rethink this whole thing.
+
+
+
 An example:
 
 In Norway, a beer might cost NOK 96. That price, however, includes any tax, and tipping is not expected in Norway as it is in some other places. As a straight exchange conversion, that could work out to USD $16.00.
