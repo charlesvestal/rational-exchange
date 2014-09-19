@@ -40,13 +40,46 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     
     
+    var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
+    
     var exchangeCalc = exchangeCalculator(foreignTheyWant: 0,
         foreignLocale:  localeListSingleton.getLocale("Oslo"),
         homeLocale:  localeListSingleton.getLocale("United States (USA)")
     )
+
+    func setDefaults() {
+      //  defaults.setObject(localeListSingleton, forKey: "localeListSingleton")
+        defaults.setObject(exchangeCalc.homeLocale.name, forKey: "homeLocaleName")
+        defaults.setObject(exchangeCalc.foreignLocale.name, forKey: "foreignLocaleName")
+        defaults.setObject(foreignCostField.text, forKey: "foreignCostField")
+        defaults.synchronize()
+    }
+    
+    func readDefaults()
+    {
+//        if let localeListisNotNil = defaults.objectForKey("localeListSingleton") as? LocaleList {
+//            localeListSingleton = defaults.objectForKey("localeListSingleton") as LocaleList
+//        }
+        
+        if let homeLocaleisNotNil = defaults.objectForKey("homeLocaleName") as? String {
+            exchangeCalc.homeLocale = localeListSingleton.getLocale(defaults.objectForKey("homeLocaleName") as String)
+        }
+  
+        if let foreignLocaleisNotNil = defaults.objectForKey("foreignLocaleName") as? String {
+            exchangeCalc.foreignLocale = localeListSingleton.getLocale(defaults.objectForKey("foreignLocaleName") as String)
+        }
+        
+        if let foreignCostisNotNil = defaults.objectForKey("foreignCostField") as? String {
+            foreignCostField.text = defaults.objectForKey("foreignCostField") as String
+        }
+        
+        
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        readDefaults()
         
         self.navigationController?.navigationBarHidden = true
            self.automaticallyAdjustsScrollViewInsets = false
@@ -54,7 +87,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
         initUI()
         setupScrollView()
         updateUI()
-    }
+        
+         }
     
     func setupScrollView ()
     {
@@ -108,7 +142,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     
     func updateUI()   {
-        
         var homeFormatter = NSNumberFormatter()
         homeFormatter.numberStyle = .CurrencyStyle
         homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
@@ -214,11 +247,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
                 homeFormatter.stringFromNumber(exchangeCalc.calcShouldTipLike(isTippable))
             )
         }
-        
-        // exchangeLabel.text = String(format:"Converting to %@", exchangeCalc.homeLocale.currencyCode)
-        
-        
+      setDefaults()
     }
+    
+
 
     func updateForeignLocale(newLocaleName:String) {
         let newLocale = exchangeCalc.localeList.getLocale(newLocaleName)
