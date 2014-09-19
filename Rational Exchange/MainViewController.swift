@@ -57,10 +57,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     func readDefaults()
     {
-//        if let localeListisNotNil = defaults.objectForKey("localeListSingleton") as? LocaleList {
-//            localeListSingleton = defaults.objectForKey("localeListSingleton") as LocaleList
-//        }
-        
+ 
         if let homeLocaleisNotNil = defaults.objectForKey("homeLocaleName") as? String {
             exchangeCalc.homeLocale = localeListSingleton.getLocale(defaults.objectForKey("homeLocaleName") as String)
         }
