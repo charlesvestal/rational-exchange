@@ -10,13 +10,13 @@ import Foundation
 
 struct Locale {
     var name:String
-    var additionalTaxRate:Double
-    var tipRate:Double
+    var additionalTaxRate:Double?
+    var tipRate:Double?
     
     var country: Country
     
   
-    init(name:String, additionalTaxRate:Double, tipRate:Double, country:Country) {
+    init(name:String, additionalTaxRate:Double?, tipRate:Double?, country:Country) {
         self.name = name
         self.additionalTaxRate = additionalTaxRate
         self.tipRate = tipRate

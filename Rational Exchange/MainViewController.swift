@@ -143,15 +143,21 @@ class ViewController: UIViewController, UISearchBarDelegate {
             if(exchangeCalc.foreignLocale.additionalTaxRate == 0){
                 topFrameTaxString.text = "Nothing! Tax is included."
             }
+            else if(exchangeCalc.foreignLocale.additionalTaxRate == nil) {
+                topFrameTaxString.text = "We don't know about tax."
+            }
             else {
-                topFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.foreignLocale.additionalTaxRate * 100)
+                topFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.foreignLocale.additionalTaxRate! * 100)
             }
 
             if (exchangeCalc.foreignLocale.tipRate == 0.0){
                 topFrameTipString.text = "Nada. Don't worry about it."
             }
+            else if(exchangeCalc.foreignLocale.tipRate == nil) {
+                topFrameTaxString.text = "We don't know about tip."
+            }
             else {
-                topFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.foreignLocale.tipRate * 100)
+                topFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.foreignLocale.tipRate! * 100)
             }
         
         // set up home labels
@@ -161,15 +167,21 @@ class ViewController: UIViewController, UISearchBarDelegate {
         if(exchangeCalc.homeLocale.additionalTaxRate == 0){
             bottomFrameTaxString.text = "Nothing! Tax is included."
         }
+        else if(exchangeCalc.homeLocale.additionalTaxRate == nil) {
+            bottomFrameTaxString.text = "We don't know about tax."
+        }
         else {
-            bottomFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.homeLocale.additionalTaxRate * 100)
+            bottomFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.homeLocale.additionalTaxRate! * 100)
         }
         
         if (exchangeCalc.homeLocale.tipRate == 0.0){
             bottomFrameTipString.text = "Nada. Don't worry about it."
         }
+        else if(exchangeCalc.homeLocale.tipRate == nil) {
+            bottomFrameTaxString.text = "We don't know about tip."
+        }
         else {
-            bottomFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.homeLocale.tipRate * 100)
+            bottomFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.homeLocale.tipRate! * 100)
         }
         
  

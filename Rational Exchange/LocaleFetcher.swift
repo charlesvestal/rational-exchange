@@ -19,7 +19,7 @@ class LocaleList {
     
     init() {
         countryList = [
-            Country(name: "Afghanistan", currencyName: "Afghanistan Afghani", currencyCode: "AFN", exchangeRate: 56.68, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
+            Country(name: "Afghanistan", currencyName: "Afghanistan Afghani", currencyCode: "AFN", exchangeRate: 56.68, tipRate:nil, additionalTaxRate:0.0, precision:1.0),
             Country(name: "Albania", currencyName: "Albanian Lek", currencyCode: "ALL", exchangeRate: 108.175003, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
             Country(name: "Algeria", currencyName: "Algerian Dinar", currencyCode: "DZD", exchangeRate: 81.324996999999996, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
             Country(name: "American Samoa", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate:0.0, additionalTaxRate:0.0, precision:1.0),
