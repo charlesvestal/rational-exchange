@@ -164,26 +164,33 @@ class ViewController: UIViewController, UISearchBarDelegate {
         bottomFrameLocaleName.text = exchangeCalc.homeLocale.name.uppercaseString
         bottomFrameCurrencyName.text = String(format:"%@ (%@)", exchangeCalc.homeLocale.country.currencyName, exchangeCalc.homeLocale.country.currencyCode)
         
-        if(exchangeCalc.homeLocale.additionalTaxRate == 0){
-            bottomFrameTaxString.text = "Nothing! Tax is included."
+        if (exchangeCalc.homeLocale.additionalTaxRate == 0.0){
+            bottomFrameTaxString.text = "No tax is added."
         }
         else if(exchangeCalc.homeLocale.additionalTaxRate == nil) {
-            bottomFrameTaxString.text = "We don't know about tax."
+            if(exchangeCalc.homeLocale.country.taxString == nil){
+                bottomFrameTaxString.text = "We don't know about tax."
+            }
+            else {
+                bottomFrameTaxString.text = exchangeCalc.homeLocale.country.taxString
+            }
         }
         else {
             bottomFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.homeLocale.additionalTaxRate! * 100)
         }
         
         
+        
+        
         if (exchangeCalc.homeLocale.tipRate == 0.0){
-            bottomFrameTipString.text = "Nada. Don't worry about it."
+            bottomFrameTipString.text = "No tip necessary."
         }
         else if(exchangeCalc.homeLocale.tipRate == nil) {
             if(exchangeCalc.homeLocale.country.tipString == nil){
-                bottomFrameTaxString.text = "We don't know about tip."
+                bottomFrameTipString.text = "We don't know about tip."
             }
             else {
-                bottomFrameTaxString.text = exchangeCalc.homeLocale.country.tipString
+                bottomFrameTipString.text = exchangeCalc.homeLocale.country.tipString
             }
         }
         else {
