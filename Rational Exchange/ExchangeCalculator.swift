@@ -34,16 +34,51 @@ class exchangeCalculator {
     }
     
     func calcTotalAmount (tippable:Double) -> Double {
+
+        var foreignTaxRate:Double
+        var foreignTipRate: Double
+        
+        if(foreignLocale.additionalTaxRate == nil) {
+            foreignTaxRate = 0.0
+        } else {
+            foreignTaxRate = foreignLocale.additionalTaxRate!
+        }
+        
+        if(foreignLocale.tipRate == nil) {
+            foreignTipRate = 0.0
+        } else {
+            foreignTipRate = foreignLocale.tipRate!
+        }
+
+        
         // this should be the total cost all inclusive of what you'll end up paying
-        var foreignTotalAmount:Double = (foreignTheyWant + (foreignTheyWant * foreignLocale.additionalTaxRate) + (foreignTheyWant * (tippable * foreignLocale.tipRate)))/exchangeRate
+        var foreignTotalAmount:Double = (foreignTheyWant + (foreignTheyWant * foreignTaxRate) + (foreignTheyWant * (tippable * foreignTipRate)))/exchangeRate
         
         return foreignTotalAmount
     }
 
     func calcShouldFeelLike(tippable:Double) -> Double
     {
+       
+        var homeTaxRate:Double
+        var homeTipRate: Double
+        
+        if(homeLocale.additionalTaxRate == nil) {
+            homeTaxRate = 0.0
+        } else {
+            homeTaxRate = homeLocale.additionalTaxRate!
+        }
+        
+        if(homeLocale.tipRate == nil) {
+            homeTipRate = 0.0
+        } else {
+            homeTipRate = homeLocale.tipRate!
+        }
+        
+        
+        
         // this is what, given the foreign and local customs, you would see on a menu back home, but end up paying the same amount
-        var shouldFeelLike = calcTotalAmount(tippable)/(1 + (tippable * homeLocale.tipRate) + homeLocale.additionalTaxRate)
+        var shouldFeelLike = calcTotalAmount(tippable)/(1 + (tippable * homeTipRate) + homeTaxRate)
         return shouldFeelLike
     }
     
@@ -56,15 +91,33 @@ class exchangeCalculator {
     
     func calcShouldTipLike(tippable:Double) -> Double
     {
+        var homeTipRate: Double
+        
+        if(homeLocale.tipRate == nil) {
+            homeTipRate = 0.0
+        } else {
+            homeTipRate = homeLocale.tipRate!
+        }
+        
+        
         // this is how much you'd tip back home
-        var shouldTipLike = (tippable * homeLocale.tipRate) * calcShouldFeelLike(tippable)
+        var shouldTipLike = (tippable * homeTipRate) * calcShouldFeelLike(tippable)
         
         return shouldTipLike
     }
     
     func calcShouldTaxLike(tippable:Double) -> Double {
+        var homeTaxRate:Double
+
+        
+        if(homeLocale.additionalTaxRate == nil) {
+            homeTaxRate = 0.0
+        } else {
+            homeTaxRate = homeLocale.additionalTaxRate!
+        }
+        
         // this is how much you'd pay in tax back home
-        var shouldTaxLike = homeLocale.additionalTaxRate * calcShouldFeelLike(tippable)
+        var shouldTaxLike = homeTaxRate * calcShouldFeelLike(tippable)
         
         return shouldTaxLike
     }

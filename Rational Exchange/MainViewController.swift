@@ -174,11 +174,17 @@ class ViewController: UIViewController, UISearchBarDelegate {
             bottomFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.homeLocale.additionalTaxRate! * 100)
         }
         
+        
         if (exchangeCalc.homeLocale.tipRate == 0.0){
             bottomFrameTipString.text = "Nada. Don't worry about it."
         }
         else if(exchangeCalc.homeLocale.tipRate == nil) {
-            bottomFrameTaxString.text = "We don't know about tip."
+            if(exchangeCalc.homeLocale.country.tipString == nil){
+                bottomFrameTaxString.text = "We don't know about tip."
+            }
+            else {
+                bottomFrameTaxString.text = exchangeCalc.homeLocale.country.tipString
+            }
         }
         else {
             bottomFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.homeLocale.tipRate! * 100)
