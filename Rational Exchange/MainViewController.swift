@@ -10,8 +10,6 @@ import UIKit
 
 class ViewController: UIViewController, UISearchBarDelegate {
     let currentVersion:NSString = UIDevice.currentDevice().systemVersion
-
-
     
     @IBOutlet var mainView: UIView!
     @IBOutlet weak var scrollView: UIScrollView!

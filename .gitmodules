@@ -2,3 +2,6 @@
 [submodule "dependencies/Alamofire"]
 	path = dependencies/Alamofire
 	url = https://github.com/Alamofire/Alamofire
+[submodule "dependencies/AweomeCache"]
+	path = dependencies/AweomeCache
+	url = https://github.com/aschuch/AwesomeCache
