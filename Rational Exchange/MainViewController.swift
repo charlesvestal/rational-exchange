@@ -182,11 +182,12 @@ class ViewController: UIViewController, UISearchBarDelegate {
                 topFrameTipString.text = "Nada. Don't worry about it."
             }
             else if(exchangeCalc.foreignLocale.tipRate == nil) {
-                topFrameTaxString.text = "We don't know about tip."
+                topFrameTipString.text = "We don't know about tip."
             }
             else {
                 topFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.foreignLocale.tipRate! * 100)
             }
+        
         
         // set up home labels
         bottomFrameLocaleName.text = exchangeCalc.homeLocale.name.uppercaseString
