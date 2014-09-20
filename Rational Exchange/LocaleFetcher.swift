@@ -431,7 +431,7 @@ class LocaleList {
                 return localeList[i]
             }
         }
-        return  Locale(name: "burp", additionalTaxRate: 0.825, tipRate: 0.0, country: getCountry("Czech Rep."))
+        return  Locale(name: "Choose a Location", additionalTaxRate: nil, tipRate: nil, country: getCountry("United States (USA)"))
 
     }
     
