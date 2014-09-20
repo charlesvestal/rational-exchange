@@ -41,7 +41,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
     
     var exchangeCalc = exchangeCalculator(foreignTheyWant: 0,
-        foreignLocale:  localeListSingleton.getLocale("Oslo"),
+        foreignLocale:  localeListSingleton.getLocale("Prague"),
         homeLocale:  localeListSingleton.getLocale("United States (USA)")
     )
 

@@ -432,7 +432,7 @@ class LocaleList {
             }
         }
         return  Locale(name: "Choose a Location", additionalTaxRate: nil, tipRate: nil, country: getCountry("United States (USA)"))
-
+        // figure out a better default state
     }
     
 
