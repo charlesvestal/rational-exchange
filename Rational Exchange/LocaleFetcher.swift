@@ -339,9 +339,11 @@ class LocaleList {
         
         for countryToIterate in self.countryList
         {
-            self.localeList.append(Locale(name: countryToIterate.name, additionalTaxRate: countryToIterate.additionalTaxRate, tipRate: countryToIterate.tipRate, country: countryToIterate))
+            if(countryToIterate.exchangeRate != 0) {
+                self.localeList.append(Locale(name: countryToIterate.name, additionalTaxRate: countryToIterate.additionalTaxRate, tipRate: countryToIterate.tipRate, country: countryToIterate))                
+            }
             
-            println(String(format: "Created locale from database for %@", countryToIterate.name))
+            // println(String(format: "Created locale from database for %@", countryToIterate.name))
             
         }
     }
@@ -399,11 +401,11 @@ class LocaleList {
                             {
                                 countryToIterate.exchangeRate = quote // set the country exchange rate
                                 
-                                println(String(format: "updating exchange for %@ in %@ : %f", countryToIterate.currencyCode, countryToIterate.name, countryToIterate.exchangeRate))
+                                // println(String(format: "updating exchange for %@ in %@ : %f", countryToIterate.currencyCode, countryToIterate.name, countryToIterate.exchangeRate))
                             }
                         }
                     }
-                                println("Finished Refreshing Exchange Rates")
+                                // println("Finished Refreshing Exchange Rates")
                                 self.cacheCountries()
                                 
                 }
