@@ -50,6 +50,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         defaults.setObject(exchangeCalc.homeLocale.name, forKey: "homeLocaleName")
         defaults.setObject(exchangeCalc.foreignLocale.name, forKey: "foreignLocaleName")
         defaults.setObject(foreignCostField.text, forKey: "foreignCostField")
+        defaults.setBool(tipSwitch.on, forKey: "tipSwitch") 
         defaults.synchronize()
     }
     
@@ -66,6 +67,10 @@ class ViewController: UIViewController, UISearchBarDelegate {
         
         if let foreignCostisNotNil = defaults.objectForKey("foreignCostField") as? String {
             foreignCostField.text = defaults.objectForKey("foreignCostField") as String
+        }
+        
+        if let tipSwitchIsNotNil = defaults.objectForKey("tipSwitch") as? Bool {
+            tipSwitch.on = defaults.objectForKey("tipSwitch") as Bool
         }
         
         
@@ -172,7 +177,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
                 topFrameTaxString.text = "Nothing! Tax is included."
             }
             else if(exchangeCalc.foreignLocale.additionalTaxRate == nil) {
-                topFrameTaxString.text = "We don't know about tax."
+                topFrameTaxString.text = "We're assuming tax is included."
             }
             else {
                 topFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.foreignLocale.additionalTaxRate! * 100)
