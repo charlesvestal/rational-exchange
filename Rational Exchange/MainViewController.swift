@@ -9,7 +9,7 @@
 import UIKit
 import CoreLocation
 
-class ViewController: UIViewController, UISearchBarDelegate, C {
+class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDelegate {
     let currentVersion:NSString = UIDevice.currentDevice().systemVersion
     
     @IBOutlet var mainView: UIView!
@@ -36,9 +36,11 @@ class ViewController: UIViewController, UISearchBarDelegate, C {
     @IBOutlet weak var bottomFrameTaxString: UILabel!
     @IBOutlet weak var bottomFrameTipString: UILabel!
     
-//    @IBOutlet weak var exchangeLabel: UILabel!
-    
-    
+    @IBAction func findMeHome(sender: AnyObject) {
+        setupLocationManager()
+        let buttonTitle = (sender as UIButton).currentTitle
+        }
+
     
     
     let locationManager = CLLocationManager()
@@ -46,12 +48,13 @@ class ViewController: UIViewController, UISearchBarDelegate, C {
     func setupLocationManager() {
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: {(placemarks, error)->Void in
-            
+           
             if (error != nil) {
                 println("Reverse geocoder failed with error" + error.localizedDescription)
                 return
@@ -59,20 +62,62 @@ class ViewController: UIViewController, UISearchBarDelegate, C {
             
             if placemarks.count > 0 {
                 let pm = placemarks[0] as CLPlacemark
-                self.displayLocationInfo(pm)
+                self.updateLocationInfo(pm, localeDomain: "home")
             } else {
                 println("Problem with the data received from geocoder")
             }
         })
     }
-    func displayLocationInfo(placemark: CLPlacemark) {
+    
+    func updateLocationInfo(placemark: CLPlacemark, localeDomain:String) {
+                
         if placemark.description != nil {
-            //stop updating location to save battery life
             locationManager.stopUpdatingLocation()
-            println(placemark.locality)
-            println(placemark.postalCode)
-            println(placemark.administrativeArea)
-            println(placemark.country)
+            
+//            var locale:Locale
+//            
+//            if (localeDomain == "home") {
+//                locale = exchangeCalc.homeLocale
+//            }
+//            
+            var locality = placemark.locality
+            
+            var stateName:String? = localeListSingleton.states[placemark.administrativeArea]
+
+            var state = placemark.administrativeArea
+            var country = placemark.country
+            
+            if ((locality != nil) && (localeListSingleton.getLocale(locality).name != "Choose a Location")) {
+                println("we found a locale!")
+                println(locality)
+                exchangeCalc.homeLocale = localeListSingleton.getLocale(locality)
+                println(exchangeCalc.homeLocale.name)
+            }
+            else if ((state != nil) && (localeListSingleton.getLocale(state).name != "Choose a Location")) {
+                println("we found a state!")
+                println(state)
+                exchangeCalc.homeLocale = localeListSingleton.getLocale(state)
+                println(exchangeCalc.homeLocale.name)
+            }
+            else if ((state != nil) && (stateName != nil) && (localeListSingleton.getLocale(stateName!).name != "Choose a Location")) {
+                println("we found a stateName!")
+                println(stateName)
+                exchangeCalc.homeLocale = localeListSingleton.getLocale(stateName!)
+                println(exchangeCalc.homeLocale.name)
+                
+            }else if ((country != nil) && (localeListSingleton.getLocale(country).name != "Choose a Location")) {
+                println("we found a country!")
+                println(country)
+                exchangeCalc.homeLocale = localeListSingleton.getLocale(country)
+                println(exchangeCalc.homeLocale.name)
+                
+            } else {
+                println("we didn't find anything")
+                println(locality)
+                println(state)
+                println(country)
+            }
+            updateUI()
         }
     }
     
@@ -182,6 +227,7 @@ class ViewController: UIViewController, UISearchBarDelegate, C {
     }
     
     func updateUI()   {
+      
         var homeFormatter = NSNumberFormatter()
         homeFormatter.numberStyle = .CurrencyStyle
         homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode

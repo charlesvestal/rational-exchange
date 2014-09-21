@@ -348,6 +348,18 @@
                                                     <segue destination="YqI-Nt-Sef" kind="embed" id="71z-nD-OCp"/>
                                                 </connections>
                                             </containerView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-lQ-xrG" userLabel="FindMe">
+                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <state key="normal" title="Find Me">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="126" y="145" width="69" height="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="findMeHome:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xK5-e0-dTf"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.57143098115921021" green="0.80299067497253418" blue="0.80930042266845703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -379,15 +391,24 @@
                                             <constraint firstItem="tuM-hK-rj2" firstAttribute="top" secondItem="c6x-S4-wTT" secondAttribute="bottom" id="iTc-Ue-PbW"/>
                                             <constraint firstItem="ydQ-Qc-Aw4" firstAttribute="trailing" secondItem="Iro-4f-shX" secondAttribute="trailing" id="nyi-sb-3PC"/>
                                             <constraint firstItem="tuM-hK-rj2" firstAttribute="centerX" secondItem="c6x-S4-wTT" secondAttribute="centerX" id="pOt-g2-3Xm"/>
+                                            <constraint firstAttribute="centerX" secondItem="h2U-lQ-xrG" secondAttribute="centerX" constant="-0.5" id="qeu-WT-nEp"/>
                                             <constraint firstItem="M68-UT-LfY" firstAttribute="leading" secondItem="GiK-Dm-osW" secondAttribute="leading" id="tti-aY-HVr"/>
                                             <constraint firstItem="GiK-Dm-osW" firstAttribute="leading" secondItem="ydQ-Qc-Aw4" secondAttribute="leading" id="uJb-26-vKb"/>
+                                            <constraint firstItem="h2U-lQ-xrG" firstAttribute="bottom" secondItem="c6x-S4-wTT" secondAttribute="top" id="wAd-Vz-Cti">
+                                                <variation key="widthClass=compact" constant="0.0"/>
+                                            </constraint>
                                             <constraint firstItem="T8X-eX-9SX" firstAttribute="top" secondItem="tuM-hK-rj2" secondAttribute="bottom" constant="106" id="yEw-To-Bmt"/>
                                             <constraint firstItem="M68-UT-LfY" firstAttribute="top" secondItem="GiK-Dm-osW" secondAttribute="bottom" constant="45" id="yHW-o1-B0W"/>
                                             <constraint firstItem="T8X-eX-9SX" firstAttribute="leading" secondItem="GiK-Dm-osW" secondAttribute="leading" id="yuR-vU-tuC"/>
                                             <constraint firstItem="ydQ-Qc-Aw4" firstAttribute="top" secondItem="T8X-eX-9SX" secondAttribute="bottom" constant="10" id="zyD-p1-yCs"/>
                                         </constraints>
                                         <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="h2U-lQ-xrG"/>
+                                            </mask>
                                             <mask key="constraints">
+                                                <exclude reference="qeu-WT-nEp"/>
+                                                <exclude reference="wAd-Vz-Cti"/>
                                                 <exclude reference="yEw-To-Bmt"/>
                                                 <exclude reference="JGU-zA-txz"/>
                                                 <exclude reference="NFD-1f-6Nt"/>
@@ -400,6 +421,13 @@
                                         </variation>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="0.0" y="1136" width="320" height="568"/>
+                                            <mask key="subviews">
+                                                <include reference="h2U-lQ-xrG"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="qeu-WT-nEp"/>
+                                                <include reference="wAd-Vz-Cti"/>
+                                            </mask>
                                         </variation>
                                     </view>
                                 </subviews>
@@ -497,7 +525,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="951" y="136"/>
+            <point key="canvasLocation" x="950.25" y="135.5"/>
         </scene>
         <!--Foreign Table View Controller-->
         <scene sceneID="I2N-vs-nqz">
