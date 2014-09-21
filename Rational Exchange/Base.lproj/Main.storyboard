@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3DH-9s-nSH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Rational Exchange-->
@@ -240,6 +240,7 @@
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
+                                            <constraint firstItem="dhc-2m-but" firstAttribute="top" secondItem="S2e-v9-8Zq" secondAttribute="top" id="5tV-Jj-Nsa"/>
                                             <constraint firstItem="dhc-2m-but" firstAttribute="width" secondItem="S2e-v9-8Zq" secondAttribute="width" id="9qH-mY-YP7"/>
                                             <constraint firstItem="L0z-gl-kou" firstAttribute="centerY" secondItem="HM1-TV-D0n" secondAttribute="centerY" id="AVh-WF-mCV"/>
                                             <constraint firstItem="UGW-cI-PP4" firstAttribute="width" secondItem="lyN-Cn-voj" secondAttribute="width" constant="-35" id="AYy-iO-Ih1"/>
@@ -252,7 +253,7 @@
                                             <constraint firstItem="lyN-Cn-voj" firstAttribute="top" secondItem="dhc-2m-but" secondAttribute="bottom" id="Lb0-Ql-vKe"/>
                                             <constraint firstItem="UPk-bd-No3" firstAttribute="trailing" secondItem="LhP-aO-v0h" secondAttribute="leading" constant="-8" id="Mwz-dc-fXF"/>
                                             <constraint firstItem="dhc-2m-but" firstAttribute="centerX" secondItem="S2e-v9-8Zq" secondAttribute="centerX" id="NBw-Wg-a4j"/>
-                                            <constraint firstItem="dhc-2m-but" firstAttribute="bottom" secondItem="S2e-v9-8Zq" secondAttribute="centerY" constant="-95" id="OTn-Nj-Boo"/>
+                                            <constraint firstItem="dhc-2m-but" firstAttribute="bottom" secondItem="S2e-v9-8Zq" secondAttribute="centerY" multiplier="0.8" constant="-10" id="OTn-Nj-Boo"/>
                                             <constraint firstItem="I3w-cw-ums" firstAttribute="bottom" secondItem="LhP-aO-v0h" secondAttribute="top" constant="-8" id="Rec-JM-3Ur"/>
                                             <constraint firstItem="Jn1-Vc-f0t" firstAttribute="width" secondItem="lyN-Cn-voj" secondAttribute="width" constant="-40" id="S98-5k-sRj"/>
                                             <constraint firstItem="5Kx-AV-dEs" firstAttribute="bottom" secondItem="lyN-Cn-voj" secondAttribute="top" constant="58" id="TRd-Vl-klT"/>
@@ -267,6 +268,11 @@
                                             <constraint firstItem="lyN-Cn-voj" firstAttribute="width" secondItem="S2e-v9-8Zq" secondAttribute="width" id="wbk-WL-HMR"/>
                                             <constraint firstItem="I3w-cw-ums" firstAttribute="centerX" secondItem="LhP-aO-v0h" secondAttribute="centerX" constant="-0.5" id="xD9-hJ-HEQ"/>
                                         </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="5tV-Jj-Nsa"/>
+                                            </mask>
+                                        </variation>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="0.0" y="568" width="320" height="568"/>
                                             <mask key="subviews">
@@ -274,6 +280,9 @@
                                                 <include reference="LhP-aO-v0h"/>
                                                 <include reference="HM1-TV-D0n"/>
                                                 <include reference="L0z-gl-kou"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="5tV-Jj-Nsa"/>
                                             </mask>
                                         </variation>
                                         <connections>
