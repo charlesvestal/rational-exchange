@@ -241,13 +241,36 @@ class ViewController: UIViewController, UISearchBarDelegate {
         {
                 homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
             
-                homeCostLabel.text = String(format: "Your total cost is going to be %@. But back home, if it was listed as %@, you would pay an additional %@ tax, and tip %@",
-                homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(isTippable)),
-                //exchangeCalc.homeLocale.currencyCode,
-                homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(isTippable)),
-                homeFormatter.stringFromNumber(exchangeCalc.calcShouldTaxLike(isTippable)),
-                homeFormatter.stringFromNumber(exchangeCalc.calcShouldTipLike(isTippable))
-            )
+            var andString:String = ""
+            var backHomeString:String = ""
+            var homeCostTipString = ""
+            var homeCostTaxString = ""
+
+            var totalCostString = String(format:"Your total cost is going to be %@", homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(isTippable)))
+        
+            if(exchangeCalc.calcShouldTaxLike(isTippable) != 0) || (exchangeCalc.calcShouldTipLike(isTippable) != 0) {
+                backHomeString = String(format:". But back home, if it was listed as %@, you would pay an additional ", homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(isTippable)))
+            }
+            
+            if(exchangeCalc.calcShouldTaxLike(isTippable) != 0){
+                homeCostTaxString = String(format:"%@ tax", homeFormatter.stringFromNumber(exchangeCalc.calcShouldTaxLike(isTippable)))
+            }
+            
+            
+            if(exchangeCalc.calcShouldTaxLike(isTippable) != 0) && (exchangeCalc.calcShouldTipLike(isTippable) != 0) {
+                andString = " and "
+            }
+            
+            if (exchangeCalc.calcShouldTipLike(isTippable) != 0){
+               homeCostTipString = String(format:"%@ tip", homeFormatter.stringFromNumber(exchangeCalc.calcShouldTipLike(isTippable)))
+            }
+            
+            var totalString:String = totalCostString + backHomeString + homeCostTaxString + andString + homeCostTipString + "."
+
+            println(totalString)
+
+
+                homeCostLabel.text = totalString
         }
       setDefaults()
     }
