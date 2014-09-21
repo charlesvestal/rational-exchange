@@ -178,7 +178,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
                 topFrameTaxString.text = "Nothing! Tax is included."
             }
             else if(exchangeCalc.foreignLocale.additionalTaxRate == nil) {
-                topFrameTaxString.text = "Usually tax is included."
+                topFrameTaxString.text = "Usually tax is included, but you should check."
             }
             else {
                 topFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.foreignLocale.additionalTaxRate! * 100)
@@ -200,11 +200,11 @@ class ViewController: UIViewController, UISearchBarDelegate {
         bottomFrameCurrencyName.text = String(format:"%@ (%@)", exchangeCalc.homeLocale.country.currencyName, exchangeCalc.homeLocale.country.currencyCode)
         
         if (exchangeCalc.homeLocale.additionalTaxRate == 0.0){
-            bottomFrameTaxString.text = "Nothing! Tax is included."
+            bottomFrameTaxString.text = "Nothing! Your prices include tax."
         }
         else if(exchangeCalc.homeLocale.additionalTaxRate == nil) {
             if(exchangeCalc.homeLocale.country.taxString == nil){
-                bottomFrameTaxString.text = "Usually tax is included, but you should check."
+                bottomFrameTaxString.text = "We think tax is normally included for you."
             }
             else {
                 bottomFrameTaxString.text = exchangeCalc.homeLocale.country.taxString
