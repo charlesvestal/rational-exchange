@@ -363,7 +363,6 @@ class LocaleList {
         for Country in countryList{
             cache[Country.name] = Country.exchangeRate
             }
-        println(cache["Afghanistan"])
         }
     
     func refreshCountries() {

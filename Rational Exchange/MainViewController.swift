@@ -267,8 +267,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
             
             var totalString:String = totalCostString + backHomeString + homeCostTaxString + andString + homeCostTipString + "."
 
-            println(totalString)
-
 
                 homeCostLabel.text = totalString
         }
