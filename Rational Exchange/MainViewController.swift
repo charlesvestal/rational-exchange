@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import CoreLocation
 
-class ViewController: UIViewController, UISearchBarDelegate {
+class ViewController: UIViewController, UISearchBarDelegate, C {
     let currentVersion:NSString = UIDevice.currentDevice().systemVersion
     
     @IBOutlet var mainView: UIView!
@@ -36,6 +37,44 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var bottomFrameTipString: UILabel!
     
 //    @IBOutlet weak var exchangeLabel: UILabel!
+    
+    
+    
+    
+    let locationManager = CLLocationManager()
+    
+    func setupLocationManager() {
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+    }
+    
+    func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
+        CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: {(placemarks, error)->Void in
+            
+            if (error != nil) {
+                println("Reverse geocoder failed with error" + error.localizedDescription)
+                return
+            }
+            
+            if placemarks.count > 0 {
+                let pm = placemarks[0] as CLPlacemark
+                self.displayLocationInfo(pm)
+            } else {
+                println("Problem with the data received from geocoder")
+            }
+        })
+    }
+    func displayLocationInfo(placemark: CLPlacemark) {
+        if placemark.description != nil {
+            //stop updating location to save battery life
+            locationManager.stopUpdatingLocation()
+            println(placemark.locality)
+            println(placemark.postalCode)
+            println(placemark.administrativeArea)
+            println(placemark.country)
+        }
+    }
     
     
     
