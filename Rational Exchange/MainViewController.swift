@@ -30,6 +30,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
   
 
     @IBOutlet weak var bottomFrameLocaleName: UILabel!
+  
     @IBOutlet weak var bottomFrameCurrencyName: UILabel!
     @IBOutlet weak var bottomFrameTaxString: UILabel!
     @IBOutlet weak var bottomFrameTipString: UILabel!
