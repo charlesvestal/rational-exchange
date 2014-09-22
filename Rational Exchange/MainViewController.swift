@@ -36,6 +36,7 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
     @IBOutlet weak var bottomFrameTaxString: UILabel!
     @IBOutlet weak var bottomFrameTipString: UILabel!
     
+    @IBOutlet weak var findeMeHomeButton: UIButton!
     @IBAction func findMeHome(sender: AnyObject) {
         setupLocationManager()
         let buttonTitle = (sender as UIButton).currentTitle
@@ -165,7 +166,7 @@ class ViewController: UIViewController, UISearchBarDelegate, CLLocationManagerDe
     override func viewDidLoad() {
         super.viewDidLoad()
         readDefaults()
-        
+        println("we're connected at least")
         self.navigationController?.navigationBarHidden = true
            self.automaticallyAdjustsScrollViewInsets = false
         

@@ -51,8 +51,22 @@ import UIKit
     }
     
     func searchDisplayController(controller: UISearchDisplayController, willShowSearchResultsTableView tableView: UITableView) {
+        
         updateList()
     }
+    
+    func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+        let viewController = parentViewController as ViewController
+        viewController.findeMeHomeButton.hidden = true
+        return true
+    }
+    
+    func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
+        let viewController = parentViewController as ViewController
+        viewController.findeMeHomeButton.hidden = false
+        return true
+    }
+    
     
     func searchDisplayController(controller: UISearchDisplayController!, shouldReloadTableForSearchString searchString: String!) -> Bool {
         self.filterContentForSearchText(searchString)

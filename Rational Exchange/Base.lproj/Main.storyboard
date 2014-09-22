@@ -504,6 +504,7 @@
                         <outlet property="bottomFrameLocaleName" destination="tuM-hK-rj2" id="t1L-Te-fYr"/>
                         <outlet property="bottomFrameTaxString" destination="Iro-4f-shX" id="Whz-Fe-ClD"/>
                         <outlet property="bottomFrameTipString" destination="oF5-og-cgu" id="sgK-Jz-5uV"/>
+                        <outlet property="findeMeHomeButton" destination="h2U-lQ-xrG" id="Iu4-HF-9UT"/>
                         <outlet property="foreignCostField" destination="LhP-aO-v0h" id="YaQ-Sa-3dW"/>
                         <outlet property="foreignCurrencySymbolLabel" destination="UPk-bd-No3" id="pRh-1P-SQy"/>
                         <outlet property="homeCostField" destination="Jn1-Vc-f0t" id="UD1-Dv-uhf"/>
