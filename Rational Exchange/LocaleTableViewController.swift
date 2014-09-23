@@ -67,6 +67,8 @@ import UIKit
         let viewController = parentViewController as ViewController
         viewController.findMeHomeButton.enabled = false
         viewController.findMeForeignButton.enabled = false
+        viewController.notRightForeignButton.enabled = false
+        viewController.notRightHomeButton.enabled = false
         return true
     }
     
@@ -74,6 +76,8 @@ import UIKit
         let viewController = parentViewController as ViewController
         viewController.findMeHomeButton.enabled = true
         viewController.findMeForeignButton.enabled = true
+        viewController.notRightForeignButton.enabled = true
+        viewController.notRightHomeButton.enabled = true
         return true
     }
     

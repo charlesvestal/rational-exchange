@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreLocation
+import MessageUI
 
-class ViewController: UIViewController, UISearchBarDelegate {
+class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewControllerDelegate {
     
     
     
@@ -41,6 +42,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var bottomFrameTaxString: UILabel!
     @IBOutlet weak var bottomFrameTipString: UILabel!
     
+    @IBOutlet weak var notRightForeignButton: UIButton!
+    @IBOutlet weak var notRightHomeButton: UIButton!
     @IBOutlet weak var findMeForeignButton: UIButton!
     @IBOutlet weak var findMeHomeButton: UIButton!
     
@@ -57,9 +60,58 @@ class ViewController: UIViewController, UISearchBarDelegate {
         MyCLController.setupLocationManager()
         MyCLController.delegate = self
     }
+
+    
+    @IBAction func notRightForeignButtonPressed(sender: AnyObject) {
+        var emailTitle = String(format:"Updating You on RationalEx - Foreign Location of %@", exchangeCalc.foreignLocale.name)
+        var messageBody1 = String(format:"<p>I noticed your information for %@ is incorrect.</p> <p>There should actually this much tax added to prices: </p> <p>And tipping should be:</p>", exchangeCalc.foreignLocale.name)
+        
+        var messageBody2 = String(format:"</br></br></br></br></br></br>Debug info: name: %@, tax: %@, tip: %@", exchangeCalc.foreignLocale.name, topFrameTaxString.text!, topFrameTipString.text!)
+        
+        var messageBody = messageBody1 + messageBody2
+        var toRecipents = ["charlesv@gmail.com"]
+        var mc: MFMailComposeViewController = MFMailComposeViewController()
+        mc.mailComposeDelegate = self
+        mc.setSubject(emailTitle)
+        mc.setMessageBody(messageBody, isHTML: true)
+        mc.setToRecipients(toRecipents)
+        
+        self.presentViewController(mc, animated: true, completion: nil)
+    }
+    
+    @IBAction func notRightHomeButtonPressed(sender: AnyObject) {
+        var emailTitle = String(format:"Updating You on RationalEx - Home Location of %@", exchangeCalc.homeLocale.name)
+        var messageBody1 = String(format:"<p>I noticed your information for %@ is incorrect.</p> <p>There should actually this much tax added to prices: </p> <p>And tipping should be:</p>", exchangeCalc.homeLocale.name)
+        
+        var messageBody2 = String(format:"</br></br></br></br></br></br>Debug info: name: %@, tax: %@, tip: %@", exchangeCalc.homeLocale.name, bottomFrameTaxString.text!, bottomFrameTipString.text!)
+        
+        var messageBody = messageBody1 + messageBody2
+        var toRecipents = ["charlesv@gmail.com"]
+        var mc: MFMailComposeViewController = MFMailComposeViewController()
+        mc.mailComposeDelegate = self
+        mc.setSubject(emailTitle)
+        mc.setMessageBody(messageBody, isHTML: true)
+        mc.setToRecipients(toRecipents)
+        
+        self.presentViewController(mc, animated: true, completion: nil)
+    }
     
     
-    
+    func mailComposeController(controller:MFMailComposeViewController, didFinishWithResult result:MFMailComposeResult, error:NSError) {
+        switch result.value {
+        case MFMailComposeResultCancelled.value:
+            NSLog("Mail cancelled")
+        case MFMailComposeResultSaved.value:
+            NSLog("Mail saved")
+        case MFMailComposeResultSent.value:
+            NSLog("Mail sent")
+        case MFMailComposeResultFailed.value:
+            NSLog("Mail sent failure: %@", [error.localizedDescription])
+        default:
+            break
+        }
+        self.dismissViewControllerAnimated(false, completion: nil)
+    }
     
     var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
 
@@ -97,6 +149,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         readDefaults()
         self.navigationController?.navigationBarHidden = true
         self.automaticallyAdjustsScrollViewInsets = false
