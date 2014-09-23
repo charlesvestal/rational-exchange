@@ -65,15 +65,15 @@ import UIKit
     func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
         
         let viewController = parentViewController as ViewController
-        viewController.findeMeHomeButton.enabled = false
-        viewController.findeMeForeignButton.enabled = false
+        viewController.findMeHomeButton.enabled = false
+        viewController.findMeForeignButton.enabled = false
         return true
     }
     
     func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
         let viewController = parentViewController as ViewController
-        viewController.findeMeHomeButton.enabled = true
-        viewController.findeMeForeignButton.enabled = true
+        viewController.findMeHomeButton.enabled = true
+        viewController.findMeForeignButton.enabled = true
         return true
     }
     

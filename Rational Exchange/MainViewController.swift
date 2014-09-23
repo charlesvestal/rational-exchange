@@ -33,7 +33,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var homeCostLabel: UILabel!
     @IBOutlet weak var tipSwitch: UISwitch!
     
-  
+    
 
     @IBOutlet weak var bottomFrameLocaleName: UILabel!
   
@@ -41,8 +41,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var bottomFrameTaxString: UILabel!
     @IBOutlet weak var bottomFrameTipString: UILabel!
     
-    @IBOutlet weak var findeMeForeignButton: UIButton!
-    @IBOutlet weak var findeMeHomeButton: UIButton!
+    @IBOutlet weak var findMeForeignButton: UIButton!
+    @IBOutlet weak var findMeHomeButton: UIButton!
     
     var MyCLController = locationHelper(domain: "home")
     
@@ -99,7 +99,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
         super.viewDidLoad()
         readDefaults()
         self.navigationController?.navigationBarHidden = true
-           self.automaticallyAdjustsScrollViewInsets = false
+        self.automaticallyAdjustsScrollViewInsets = false
         
         initUI()
         setupScrollView()

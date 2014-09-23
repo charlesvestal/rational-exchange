@@ -79,11 +79,10 @@
                                                     <segue destination="bfl-eG-BOs" kind="embed" identifier="home" id="SO4-nA-btb"/>
                                                 </connections>
                                             </containerView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryb-Di-xnA">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryb-Di-xnA" userLabel="findMeForeignButton">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                <state key="normal" image="LocationImage">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
+                                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <state key="normal" image="LocationImage"/>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="296" y="74" width="99" height="44"/>
                                                 </variation>
@@ -382,10 +381,11 @@
                                                     <segue destination="YqI-Nt-Sef" kind="embed" id="71z-nD-OCp"/>
                                                 </connections>
                                             </containerView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-lQ-xrG" userLabel="FindMe">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-lQ-xrG" userLabel="findMeHomeButton">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <state key="normal" image="LocationImage">
-                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="titleColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="126" y="145" width="44" height="44"/>
@@ -550,8 +550,8 @@
                         <outlet property="bottomFrameLocaleName" destination="tuM-hK-rj2" id="t1L-Te-fYr"/>
                         <outlet property="bottomFrameTaxString" destination="Iro-4f-shX" id="Whz-Fe-ClD"/>
                         <outlet property="bottomFrameTipString" destination="oF5-og-cgu" id="sgK-Jz-5uV"/>
-                        <outlet property="findeMeForeignButton" destination="Ryb-Di-xnA" id="6mf-Je-rPJ"/>
-                        <outlet property="findeMeHomeButton" destination="h2U-lQ-xrG" id="Iu4-HF-9UT"/>
+                        <outlet property="findMeForeignButton" destination="Ryb-Di-xnA" id="I8G-JI-UBK"/>
+                        <outlet property="findMeHomeButton" destination="h2U-lQ-xrG" id="f4X-KJ-und"/>
                         <outlet property="foreignCostField" destination="LhP-aO-v0h" id="YaQ-Sa-3dW"/>
                         <outlet property="foreignCurrencySymbolLabel" destination="UPk-bd-No3" id="pRh-1P-SQy"/>
                         <outlet property="homeCostField" destination="Jn1-Vc-f0t" id="UD1-Dv-uhf"/>
