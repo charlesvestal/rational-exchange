@@ -72,6 +72,7 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
             var country = placemark.country
 
             if (localeDomain == "home"){
+                // change to searchLocaleTree and move somewher else
                 if ((locality != nil) && (localeListSingleton.getLocale(locality).name != "Choose a Location")) {
                     exchangeCalc.homeLocale = localeListSingleton.getLocale(locality)
                 }

@@ -72,20 +72,20 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9wv-ny-PzC" userLabel="topContainerView" colorLabel="IBBuiltInLabel-Orange">
+                                            <containerView hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9wv-ny-PzC" userLabel="topContainerView" colorLabel="IBBuiltInLabel-Orange">
                                                 <rect key="frame" x="-1" y="-1" width="375" height="573"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <connections>
                                                     <segue destination="bfl-eG-BOs" kind="embed" identifier="home" id="SO4-nA-btb"/>
                                                 </connections>
                                             </containerView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryb-Di-xnA">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryb-Di-xnA">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                <state key="normal" title="Button">
+                                                <state key="normal" image="LocationImage">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
-                                                <variation key="widthClass=compact" fixedFrame="YES">
-                                                    <rect key="frame" x="137" y="74" width="46" height="30"/>
+                                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="296" y="74" width="99" height="44"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="findMeForeign:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZDO-Q1-y1m"/>
@@ -104,7 +104,11 @@
                                             <constraint firstItem="Led-6q-01d" firstAttribute="top" secondItem="9wv-ny-PzC" secondAttribute="top" constant="84" id="QbY-Hl-lRk"/>
                                             <constraint firstItem="rs2-AT-Ez7" firstAttribute="leading" secondItem="Uh1-bI-dyJ" secondAttribute="leading" id="Sck-fr-3tU"/>
                                             <constraint firstItem="qVG-F9-mJd" firstAttribute="bottom" secondItem="O5z-qD-2iS" secondAttribute="top" constant="20" id="UcD-4m-XLl"/>
+                                            <constraint firstItem="Ryb-Di-xnA" firstAttribute="leading" secondItem="Led-6q-01d" secondAttribute="trailing" id="Ukl-WK-UOl"/>
                                             <constraint firstItem="rs2-AT-Ez7" firstAttribute="leading" secondItem="qVG-F9-mJd" secondAttribute="leading" id="Y3A-SQ-tqD"/>
+                                            <constraint firstItem="Ryb-Di-xnA" firstAttribute="centerY" secondItem="Led-6q-01d" secondAttribute="centerY" id="YEj-sZ-UsP">
+                                                <variation key="widthClass=compact" constant="0.0"/>
+                                            </constraint>
                                             <constraint firstItem="O5z-qD-2iS" firstAttribute="trailing" secondItem="H8Q-Nc-Wxc" secondAttribute="trailing" id="YzG-cE-NXz"/>
                                             <constraint firstItem="a0k-Sk-XzM" firstAttribute="top" secondItem="qVG-F9-mJd" secondAttribute="bottom" constant="10" id="ZjZ-QW-aOq"/>
                                             <constraint firstItem="H8Q-Nc-Wxc" firstAttribute="top" secondItem="Uh1-bI-dyJ" secondAttribute="bottom" constant="10" id="boa-3L-63y"/>
@@ -133,9 +137,11 @@
                                                 <exclude reference="Ryb-Di-xnA"/>
                                             </mask>
                                             <mask key="constraints">
+                                                <exclude reference="YEj-sZ-UsP"/>
                                                 <exclude reference="qm1-fE-3eY"/>
                                                 <exclude reference="y3Z-Li-2P8"/>
                                                 <exclude reference="boa-3L-63y"/>
+                                                <exclude reference="Ukl-WK-UOl"/>
                                                 <exclude reference="qpe-B4-bhX"/>
                                                 <exclude reference="obd-gj-Kyv"/>
                                                 <exclude reference="UcD-4m-XLl"/>
@@ -149,6 +155,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                             <mask key="subviews">
                                                 <include reference="Ryb-Di-xnA"/>
+                                            </mask>
+                                            <mask key="constraints">
+                                                <include reference="YEj-sZ-UsP"/>
+                                                <include reference="Ukl-WK-UOl"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -366,13 +376,13 @@
                                                     <segue destination="YqI-Nt-Sef" kind="embed" id="71z-nD-OCp"/>
                                                 </connections>
                                             </containerView>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-lQ-xrG" userLabel="FindMe">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h2U-lQ-xrG" userLabel="FindMe">
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                <state key="normal" title="Find Me">
+                                                <state key="normal" image="LocationImage">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                    <rect key="frame" x="126" y="145" width="69" height="30"/>
+                                                    <rect key="frame" x="126" y="145" width="44" height="44"/>
                                                 </variation>
                                                 <connections>
                                                     <action selector="findMeHome:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xK5-e0-dTf"/>
@@ -407,6 +417,12 @@
                                             <constraint firstItem="9qB-rk-wZV" firstAttribute="centerX" secondItem="wdr-dH-vph" secondAttribute="centerX" id="gNi-dM-XjH"/>
                                             <constraint firstItem="oF5-og-cgu" firstAttribute="bottom" relation="lessThanOrEqual" secondItem="wdr-dH-vph" secondAttribute="bottom" constant="-40" id="hjh-s6-e4I"/>
                                             <constraint firstItem="tuM-hK-rj2" firstAttribute="top" secondItem="c6x-S4-wTT" secondAttribute="bottom" id="iTc-Ue-PbW"/>
+                                            <constraint firstItem="h2U-lQ-xrG" firstAttribute="centerY" secondItem="c6x-S4-wTT" secondAttribute="centerY" id="kf1-D5-v7u">
+                                                <variation key="widthClass=compact" constant="0.0"/>
+                                            </constraint>
+                                            <constraint firstItem="h2U-lQ-xrG" firstAttribute="leading" secondItem="c6x-S4-wTT" secondAttribute="trailing" id="mwq-du-rL3">
+                                                <variation key="widthClass=compact" constant="0.0"/>
+                                            </constraint>
                                             <constraint firstItem="ydQ-Qc-Aw4" firstAttribute="trailing" secondItem="Iro-4f-shX" secondAttribute="trailing" id="nyi-sb-3PC"/>
                                             <constraint firstItem="tuM-hK-rj2" firstAttribute="centerX" secondItem="c6x-S4-wTT" secondAttribute="centerX" id="pOt-g2-3Xm"/>
                                             <constraint firstAttribute="centerX" secondItem="h2U-lQ-xrG" secondAttribute="centerX" constant="-0.5" id="qeu-WT-nEp"/>
@@ -425,6 +441,8 @@
                                                 <exclude reference="h2U-lQ-xrG"/>
                                             </mask>
                                             <mask key="constraints">
+                                                <exclude reference="kf1-D5-v7u"/>
+                                                <exclude reference="mwq-du-rL3"/>
                                                 <exclude reference="qeu-WT-nEp"/>
                                                 <exclude reference="wAd-Vz-Cti"/>
                                                 <exclude reference="yEw-To-Bmt"/>
@@ -443,8 +461,10 @@
                                                 <include reference="h2U-lQ-xrG"/>
                                             </mask>
                                             <mask key="constraints">
-                                                <include reference="qeu-WT-nEp"/>
-                                                <include reference="wAd-Vz-Cti"/>
+                                                <include reference="kf1-D5-v7u"/>
+                                                <include reference="mwq-du-rL3"/>
+                                                <exclude reference="qeu-WT-nEp"/>
+                                                <exclude reference="wAd-Vz-Cti"/>
                                             </mask>
                                         </variation>
                                     </view>
@@ -708,4 +728,7 @@
             <point key="canvasLocation" x="1505" y="297"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="LocationImage" width="44" height="44"/>
+    </resources>
 </document>
