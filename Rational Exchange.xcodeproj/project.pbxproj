@@ -16,6 +16,7 @@
 		FE9692CE19CE08C1002554A9 /* AwesomeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9692CC19CE08C1002554A9 /* AwesomeCache.swift */; };
 		FE9692CF19CE08C1002554A9 /* AwesomeCacheObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9692CD19CE08C1002554A9 /* AwesomeCacheObject.swift */; };
 		FEACB10A19C5D3F4006F372D /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB10919C5D3F4006F372D /* CountryModel.swift */; };
+		FEC792DD19D102FC006A45A2 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC792DC19D102FC006A45A2 /* LocationHelper.swift */; };
 		FEE41C8519C344A500460538 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE41C8419C344A500460538 /* SwiftyJSON.swift */; };
 		FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5319B1767B00852F94 /* AppDelegate.swift */; };
 		FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5519B1767B00852F94 /* MainViewController.swift */; };
@@ -65,6 +66,7 @@
 		FE9692CD19CE08C1002554A9 /* AwesomeCacheObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwesomeCacheObject.swift; path = dependencies/AweomeCache/Source/AwesomeCacheObject.swift; sourceTree = SOURCE_ROOT; };
 		FEA2B9A919CF726400455670 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		FEACB10919C5D3F4006F372D /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		FEC792DC19D102FC006A45A2 /* LocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		FEE41C8419C344A500460538 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		FEE86B4E19B1767B00852F94 /* RationalEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RationalEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE86B5219B1767B00852F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */,
 				FEE86B5319B1767B00852F94 /* AppDelegate.swift */,
 				FEE86B5519B1767B00852F94 /* MainViewController.swift */,
+				FEC792DC19D102FC006A45A2 /* LocationHelper.swift */,
 				FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */,
 				FE5FC41019B299820008333D /* countries.plist */,
 				FEE86B5719B1767B00852F94 /* Main.storyboard */,
@@ -240,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */,
+				FEC792DD19D102FC006A45A2 /* LocationHelper.swift in Sources */,
 				FE205DC919BD040F00A2ADD8 /* LocaleFetcher.swift in Sources */,
 				FEACB10A19C5D3F4006F372D /* CountryModel.swift in Sources */,
 				FE9692CF19CE08C1002554A9 /* AwesomeCacheObject.swift in Sources */,

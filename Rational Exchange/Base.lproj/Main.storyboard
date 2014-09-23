@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3DH-9s-nSH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3DH-9s-nSH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -79,6 +79,19 @@
                                                     <segue destination="bfl-eG-BOs" kind="embed" identifier="home" id="SO4-nA-btb"/>
                                                 </connections>
                                             </containerView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ryb-Di-xnA">
+                                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                <state key="normal" title="Button">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <variation key="widthClass=compact" fixedFrame="YES">
+                                                    <rect key="frame" x="137" y="269" width="46" height="30"/>
+                                                </variation>
+                                                <connections>
+                                                    <action selector="findMeForeign:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ZDO-Q1-y1m"/>
+                                                    <action selector="findMeHome:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="7Rn-BB-OiD"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.46094965934753418" green="0.60258114337921143" blue="0.7565876841545105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
@@ -117,6 +130,9 @@
                                             <constraint firstItem="9wv-ny-PzC" firstAttribute="centerX" secondItem="mqe-kK-qGj" secondAttribute="centerX" id="zNf-7a-TA4"/>
                                         </constraints>
                                         <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="Ryb-Di-xnA"/>
+                                            </mask>
                                             <mask key="constraints">
                                                 <exclude reference="qm1-fE-3eY"/>
                                                 <exclude reference="y3Z-Li-2P8"/>
@@ -132,6 +148,9 @@
                                         </variation>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                            <mask key="subviews">
+                                                <include reference="Ryb-Di-xnA"/>
+                                            </mask>
                                         </variation>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S2e-v9-8Zq" userLabel="middlePage">
@@ -504,6 +523,7 @@
                         <outlet property="bottomFrameLocaleName" destination="tuM-hK-rj2" id="t1L-Te-fYr"/>
                         <outlet property="bottomFrameTaxString" destination="Iro-4f-shX" id="Whz-Fe-ClD"/>
                         <outlet property="bottomFrameTipString" destination="oF5-og-cgu" id="sgK-Jz-5uV"/>
+                        <outlet property="findeMeForeignButton" destination="Ryb-Di-xnA" id="6mf-Je-rPJ"/>
                         <outlet property="findeMeHomeButton" destination="h2U-lQ-xrG" id="Iu4-HF-9UT"/>
                         <outlet property="foreignCostField" destination="LhP-aO-v0h" id="YaQ-Sa-3dW"/>
                         <outlet property="foreignCurrencySymbolLabel" destination="UPk-bd-No3" id="pRh-1P-SQy"/>
