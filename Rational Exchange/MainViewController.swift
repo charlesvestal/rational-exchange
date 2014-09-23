@@ -12,8 +12,6 @@ import CoreLocation
 class ViewController: UIViewController, UISearchBarDelegate {
     
     
-    var MyCLController = locationHelper(domain:"home")
-    var MyCLController2 = locationHelper(domain:"foreign")
     
 
     
@@ -46,6 +44,8 @@ class ViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var findeMeForeignButton: UIButton!
     @IBOutlet weak var findeMeHomeButton: UIButton!
     
+    var MyCLController = locationHelper(domain: "home")
+    
     @IBAction func findMeHome(sender: AnyObject) {
         MyCLController.setDomain("home")
         MyCLController.setupLocationManager()
@@ -53,9 +53,9 @@ class ViewController: UIViewController, UISearchBarDelegate {
         }
 
     @IBAction func findMeForeign(sender: AnyObject) {
-        MyCLController2.setDomain("foreign")
-        MyCLController2.setupLocationManager()
-        MyCLController2.delegate = self
+        MyCLController.setDomain("foreign")
+        MyCLController.setupLocationManager()
+        MyCLController.delegate = self
     }
     
     

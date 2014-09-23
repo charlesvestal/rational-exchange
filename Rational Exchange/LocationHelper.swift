@@ -102,35 +102,35 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
                 } else {
                     println("we didn't find anything")
                     println(locality)
+               
                     println(state)
                     println(country)
                 }
-            }
-            
-            if (localeDomain == "foreign"){
+            } else if
+            (localeDomain == "foreign"){
                 if ((locality != nil) && (localeListSingleton.getLocale(locality).name != "Choose a Location")) {
                     println("we found a locale!")
                     println(locality)
                     exchangeCalc.foreignLocale = localeListSingleton.getLocale(locality)
-                    println(exchangeCalc.homeLocale.name)
+                    println(exchangeCalc.foreignLocale.name)
                 }
                 else if ((state != nil) && (localeListSingleton.getLocale(state).name != "Choose a Location")) {
                     println("we found a state!")
                     println(state)
                     exchangeCalc.foreignLocale = localeListSingleton.getLocale(state)
-                    println(exchangeCalc.homeLocale.name)
+                    println(exchangeCalc.foreignLocale.name)
                 }
                 else if ((state != nil) && (stateName != nil) && (localeListSingleton.getLocale(stateName!).name != "Choose a Location")) {
                     println("we found a stateName!")
                     println(stateName)
                     exchangeCalc.foreignLocale = localeListSingleton.getLocale(stateName!)
-                    println(exchangeCalc.homeLocale.name)
+                    println(exchangeCalc.foreignLocale.name)
                     
                 }else if ((country != nil) && (localeListSingleton.getLocale(country).name != "Choose a Location")) {
                     println("we found a country!")
                     println(country)
                     exchangeCalc.foreignLocale = localeListSingleton.getLocale(country)
-                    println(exchangeCalc.homeLocale.name)
+                    println(exchangeCalc.foreignLocale.name)
                     
                 } else {
                     println("we didn't find anything")
@@ -141,6 +141,7 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
             }
             println("update the ui now")
             delegate?.updateUI()
+           
         }
     }
 
