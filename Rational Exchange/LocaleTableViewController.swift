@@ -51,14 +51,18 @@ import UIKit
     }
     
     func searchDisplayController(controller: UISearchDisplayController, willShowSearchResultsTableView tableView: UITableView) {
-        
-        
+        let viewController = parentViewController as ViewController
+        viewController.notRightForeignButton.hidden = true
+        viewController.notRightHomeButton.hidden = true
         
         updateList()
     }
     
     func searchDisplayController(controller: UISearchDisplayController, willHideSearchResultsTableView tableView: UITableView) {
         let viewController = parentViewController as ViewController
+        viewController.notRightForeignButton.hidden = false
+        viewController.notRightHomeButton.hidden = false
+        
         updateList()
     }
     
