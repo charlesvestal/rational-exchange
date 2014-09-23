@@ -52,18 +52,28 @@ import UIKit
     
     func searchDisplayController(controller: UISearchDisplayController, willShowSearchResultsTableView tableView: UITableView) {
         
+        
+        
+        updateList()
+    }
+    
+    func searchDisplayController(controller: UISearchDisplayController, willHideSearchResultsTableView tableView: UITableView) {
+        let viewController = parentViewController as ViewController
         updateList()
     }
     
     func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
+        
         let viewController = parentViewController as ViewController
-        viewController.findeMeHomeButton.hidden = true
+        viewController.findeMeHomeButton.enabled = false
+        viewController.findeMeForeignButton.enabled = false
         return true
     }
     
     func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
         let viewController = parentViewController as ViewController
-        viewController.findeMeHomeButton.hidden = false
+        viewController.findeMeHomeButton.enabled = true
+        viewController.findeMeForeignButton.enabled = true
         return true
     }
     
