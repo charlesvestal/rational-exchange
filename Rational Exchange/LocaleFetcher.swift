@@ -336,7 +336,7 @@ class LocaleList {
         localeList = [Locale]()
         
         localeList = [
-            Locale(name: "Prague", additionalTaxRate: getCountry("Czech Republic").additionalTaxRate, tipRate: 0.1, country: getCountry("Czech Rep.")),
+            Locale(name: "Prague", additionalTaxRate: getCountry("Czech Republic").additionalTaxRate, tipRate: 0.1, country: getCountry("Czech Republic")),
             
             Locale(name:"Alberta", additionalTaxRate: 0.05, tipRate: getCountry("Canada").tipRate, country:getCountry("Canada")),
             Locale(name:"British Columbia", additionalTaxRate: 0.12, tipRate: getCountry("Canada").tipRate, country:getCountry("Canada")),
