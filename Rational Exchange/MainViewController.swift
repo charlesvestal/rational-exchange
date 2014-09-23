@@ -98,7 +98,6 @@ class ViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         readDefaults()
-        println("we're connected at least")
         self.navigationController?.navigationBarHidden = true
            self.automaticallyAdjustsScrollViewInsets = false
         

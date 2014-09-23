@@ -16,14 +16,14 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
     var delegate:ViewController?
     
     override init(){
-        println("init")
+   //     println("init")
     }
 
     let locationManager = CLLocationManager()
 
     init(domain: String) {
         setDomainer = domain
-        println("init with string")
+  //      println("init with string")
     }
     
     func setDomain(domain:String) {
@@ -70,67 +70,39 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
             
             var state = placemark.administrativeArea
             var country = placemark.country
-            println("localeDomain")
-            println(localeDomain)
-            
+
             if (localeDomain == "home"){
                 if ((locality != nil) && (localeListSingleton.getLocale(locality).name != "Choose a Location")) {
-                    println("we found a locale!")
-                    println(locality)
-                    
                     exchangeCalc.homeLocale = localeListSingleton.getLocale(locality)
-                    println(exchangeCalc.homeLocale.name)
                 }
                 else if ((state != nil) && (localeListSingleton.getLocale(state).name != "Choose a Location")) {
-                    println("we found a state!")
-                    println(state)
                     exchangeCalc.homeLocale = localeListSingleton.getLocale(state)
-                    println(exchangeCalc.homeLocale.name)
                 }
                 else if ((state != nil) && (stateName != nil) && (localeListSingleton.getLocale(stateName!).name != "Choose a Location")) {
-                    println("we found a stateName!")
-                    println(stateName)
                     exchangeCalc.homeLocale = localeListSingleton.getLocale(stateName!)
-                    println(exchangeCalc.homeLocale.name)
                     
                 }else if ((country != nil) && (localeListSingleton.getLocale(country).name != "Choose a Location")) {
-                    println("we found a country!")
-                    println(country)
                     exchangeCalc.homeLocale = localeListSingleton.getLocale(country)
-                    println(exchangeCalc.homeLocale.name)
                     
                 } else {
                     println("we didn't find anything")
                     println(locality)
-               
                     println(state)
                     println(country)
                 }
             } else if
             (localeDomain == "foreign"){
                 if ((locality != nil) && (localeListSingleton.getLocale(locality).name != "Choose a Location")) {
-                    println("we found a locale!")
-                    println(locality)
                     exchangeCalc.foreignLocale = localeListSingleton.getLocale(locality)
-                    println(exchangeCalc.foreignLocale.name)
                 }
                 else if ((state != nil) && (localeListSingleton.getLocale(state).name != "Choose a Location")) {
-                    println("we found a state!")
-                    println(state)
                     exchangeCalc.foreignLocale = localeListSingleton.getLocale(state)
-                    println(exchangeCalc.foreignLocale.name)
                 }
                 else if ((state != nil) && (stateName != nil) && (localeListSingleton.getLocale(stateName!).name != "Choose a Location")) {
-                    println("we found a stateName!")
-                    println(stateName)
                     exchangeCalc.foreignLocale = localeListSingleton.getLocale(stateName!)
-                    println(exchangeCalc.foreignLocale.name)
                     
                 }else if ((country != nil) && (localeListSingleton.getLocale(country).name != "Choose a Location")) {
-                    println("we found a country!")
-                    println(country)
                     exchangeCalc.foreignLocale = localeListSingleton.getLocale(country)
-                    println(exchangeCalc.foreignLocale.name)
                     
                 } else {
                     println("we didn't find anything")
