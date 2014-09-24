@@ -152,16 +152,10 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     @IBOutlet weak var topItLooksLike: UILabel!
     @IBOutlet weak var topContainerView: UIView!
     @IBOutlet weak var topCountryFlag: UIImageView!
+    @IBOutlet weak var bottomCountryFlag: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        topCountryFlag.alpha = 0.2
-        topCountryFlag.image = topCountryFlag.image?.applyBlurWithRadius(0.76, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
-        topCountryFlag.parallaxIntensity = -50
-        
-        
-        
         
         readDefaults()
         self.navigationController?.navigationBarHidden = true
@@ -222,6 +216,16 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         keyboardDoneButtonView.setItems([doneButton], animated:false)
     
         foreignCostField.inputAccessoryView = keyboardDoneButtonView
+    
+    
+    topCountryFlag.alpha = 0.2
+    topCountryFlag.image = topCountryFlag.image?.applyBlurWithRadius(0.76, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
+    topCountryFlag.parallaxIntensity = -50
+    
+    bottomCountryFlag.alpha = 0.2
+    bottomCountryFlag.image = topCountryFlag.image?.applyBlurWithRadius(0.76, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
+    bottomCountryFlag.parallaxIntensity = -50
+
     
         localeListSingleton.refreshCountries()
     }
@@ -355,7 +359,10 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
 
                 homeCostLabel.text = totalString
         }
-      setDefaults()
+        
+        self.topCountryFlag.image = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
+        self.bottomCountryFlag.image = UIImage(named:exchangeCalc.homeLocale.country.ISOAbbreviation)
+        setDefaults()
     }
     
 
