@@ -218,15 +218,14 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         foreignCostField.inputAccessoryView = keyboardDoneButtonView
     
     
-    topCountryFlag.alpha = 0.2
-    topCountryFlag.image = topCountryFlag.image?.applyBlurWithRadius(0.76, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
+    topCountryFlag.alpha = 0.4
+    topCountryFlag.image = topCountryFlag.image?.applyBlurWithRadius(4.0, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
     topCountryFlag.parallaxIntensity = -50
     
-    bottomCountryFlag.alpha = 0.2
-    bottomCountryFlag.image = topCountryFlag.image?.applyBlurWithRadius(0.76, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
+    bottomCountryFlag.alpha = 0.4
+    bottomCountryFlag.image = topCountryFlag.image?.applyBlurWithRadius(4.0, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
     bottomCountryFlag.parallaxIntensity = -50
 
-    
         localeListSingleton.refreshCountries()
     }
     
@@ -361,7 +360,19 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         }
         
         self.topCountryFlag.image = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
+        if(self.topCountryFlag.image == nil)
+        {
+            println(String(format:"no flag for %@", exchangeCalc.foreignLocale.country.name))
+        }
         self.bottomCountryFlag.image = UIImage(named:exchangeCalc.homeLocale.country.ISOAbbreviation)
+       
+        topCountryFlag.image = topCountryFlag.image?.applyBlurWithRadius(4.0, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
+        topCountryFlag.parallaxIntensity = -50
+        
+        bottomCountryFlag.image = bottomCountryFlag.image?.applyBlurWithRadius(4.0, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
+        bottomCountryFlag.parallaxIntensity = -50
+
+        
         setDefaults()
     }
     
