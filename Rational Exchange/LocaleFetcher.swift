@@ -414,8 +414,6 @@ class LocaleList {
                 self.localeList.append(Locale(name: countryToIterate.name, additionalTaxRate: countryToIterate.additionalTaxRate, tipRate: countryToIterate.tipRate, country: countryToIterate))                
             }
             
-            // println(String(format: "Created locale from database for %@", countryToIterate.name))
-            
         }
     }
     

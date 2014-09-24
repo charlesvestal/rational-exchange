@@ -47,6 +47,8 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     @IBOutlet weak var findMeForeignButton: UIButton!
     @IBOutlet weak var findMeHomeButton: UIButton!
     
+    @IBOutlet weak var topTopLayout: NSLayoutConstraint!
+
     var MyCLController = locationHelper(domain: "home")
     
     @IBAction func findMeHome(sender: AnyObject) {
@@ -78,6 +80,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         
         self.presentViewController(mc, animated: true, completion: nil)
     }
+    
     
     @IBAction func notRightHomeButtonPressed(sender: AnyObject) {
         var emailTitle = String(format:"Updating You on RationalEx - Home Location of %@", exchangeCalc.homeLocale.name)
@@ -146,9 +149,18 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         
     }
     
+    @IBOutlet weak var topItLooksLike: UILabel!
+    @IBOutlet weak var topContainerView: UIView!
+    @IBOutlet weak var topCountryFlag: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        topCountryFlag.alpha = 0.2
+        topCountryFlag.image = topCountryFlag.image?.applyBlurWithRadius(0.76, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
+        topCountryFlag.parallaxIntensity = -50
+        
+        
         
         
         readDefaults()

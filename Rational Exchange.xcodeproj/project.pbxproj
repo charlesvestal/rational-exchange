@@ -24,6 +24,8 @@
 		FEE86B5B19B1767B00852F94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE86B5A19B1767B00852F94 /* Images.xcassets */; };
 		FEFCEB8219CE23A000F0FC61 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE9588819CC66CE00D59C2D /* Alamofire.framework */; };
 		FEFCEB8419CE23EC00F0FC61 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEE9588819CC66CE00D59C2D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FEFD6C0D19D25C7700EBA2EF /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD6C0C19D25C7700EBA2EF /* UIImage+ImageEffects.m */; };
+		FEFD6C1019D2601900EBA2EF /* NGAParallaxMotion.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD6C0F19D2601900EBA2EF /* NGAParallaxMotion.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +78,9 @@
 		FEE86B5819B1767B00852F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEE86B5A19B1767B00852F94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FEE9588219CC66CE00D59C2D /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = dependencies/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		FEFD6C0C19D25C7700EBA2EF /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		FEFD6C0F19D2601900EBA2EF /* NGAParallaxMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGAParallaxMotion.m; sourceTree = "<group>"; };
+		FEFD6C1119D2602D00EBA2EF /* NGAParallaxMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGAParallaxMotion.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +128,9 @@
 				FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */,
 				FE5FC41019B299820008333D /* countries.plist */,
 				FEE86B5719B1767B00852F94 /* Main.storyboard */,
+				FEFD6C0C19D25C7700EBA2EF /* UIImage+ImageEffects.m */,
+				FEFD6C1119D2602D00EBA2EF /* NGAParallaxMotion.h */,
+				FEFD6C0F19D2601900EBA2EF /* NGAParallaxMotion.m */,
 				FEE86B5A19B1767B00852F94 /* Images.xcassets */,
 				FEE86B5119B1767B00852F94 /* Supporting Files */,
 				FEC792E019D1A6E6006A45A2 /* Rational Exchange-Bridging-Header.h */,
@@ -245,12 +253,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */,
+				FEFD6C0D19D25C7700EBA2EF /* UIImage+ImageEffects.m in Sources */,
 				FEC792DD19D102FC006A45A2 /* LocationHelper.swift in Sources */,
 				FE205DC919BD040F00A2ADD8 /* LocaleFetcher.swift in Sources */,
 				FEACB10A19C5D3F4006F372D /* CountryModel.swift in Sources */,
 				FE9692CF19CE08C1002554A9 /* AwesomeCacheObject.swift in Sources */,
 				FE891BF019C12C4B008CC947 /* LocaleTableViewController.swift in Sources */,
 				FE9692CE19CE08C1002554A9 /* AwesomeCache.swift in Sources */,
+				FEFD6C1019D2601900EBA2EF /* NGAParallaxMotion.m in Sources */,
 				FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */,
 				FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */,
 				FEE41C8519C344A500460538 /* SwiftyJSON.swift in Sources */,
