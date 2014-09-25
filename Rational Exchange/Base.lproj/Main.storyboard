@@ -849,7 +849,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="GB" width="64" height="64"/>
+        <image name="GB" width="512" height="512"/>
         <image name="LocationImage" width="44" height="44"/>
     </resources>
 </document>

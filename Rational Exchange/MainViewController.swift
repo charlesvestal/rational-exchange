@@ -369,7 +369,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         topCountryFlag.image = topCountryFlag.image?.applyBlurWithRadius(4.0, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
         topCountryFlag.parallaxIntensity = -50
         
-        bottomCountryFlag.image = bottomCountryFlag.image?.applyBlurWithRadius(4.0, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
+        bottomCountryFlag.image?.applyBlurWithRadius(4.0, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
         bottomCountryFlag.parallaxIntensity = -50
 
         
