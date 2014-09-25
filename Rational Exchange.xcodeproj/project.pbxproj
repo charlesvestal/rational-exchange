@@ -11,7 +11,6 @@
 		FE205DC919BD040F00A2ADD8 /* LocaleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE205DC819BD040F00A2ADD8 /* LocaleFetcher.swift */; };
 		FE2AFEB819B4C95B0056F0E0 /* LocaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2AFEB619B4C95B0056F0E0 /* LocaleModel.swift */; };
 		FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */; };
-		FE5FC41119B299820008333D /* countries.plist in Resources */ = {isa = PBXBuildFile; fileRef = FE5FC41019B299820008333D /* countries.plist */; };
 		FE891BF019C12C4B008CC947 /* LocaleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */; };
 		FE9692CE19CE08C1002554A9 /* AwesomeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9692CC19CE08C1002554A9 /* AwesomeCache.swift */; };
 		FE9692CF19CE08C1002554A9 /* AwesomeCacheObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9692CD19CE08C1002554A9 /* AwesomeCacheObject.swift */; };
@@ -62,7 +61,6 @@
 		FE205DC819BD040F00A2ADD8 /* LocaleFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleFetcher.swift; sourceTree = "<group>"; };
 		FE2AFEB619B4C95B0056F0E0 /* LocaleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleModel.swift; sourceTree = "<group>"; };
 		FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeCalculator.swift; sourceTree = "<group>"; };
-		FE5FC41019B299820008333D /* countries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = countries.plist; sourceTree = "<group>"; };
 		FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleTableViewController.swift; sourceTree = "<group>"; };
 		FE9692CC19CE08C1002554A9 /* AwesomeCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwesomeCache.swift; path = dependencies/AweomeCache/Source/AwesomeCache.swift; sourceTree = SOURCE_ROOT; };
 		FE9692CD19CE08C1002554A9 /* AwesomeCacheObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwesomeCacheObject.swift; path = dependencies/AweomeCache/Source/AwesomeCacheObject.swift; sourceTree = SOURCE_ROOT; };
@@ -126,7 +124,6 @@
 				FEE86B5519B1767B00852F94 /* MainViewController.swift */,
 				FEC792DC19D102FC006A45A2 /* LocationHelper.swift */,
 				FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */,
-				FE5FC41019B299820008333D /* countries.plist */,
 				FEE86B5719B1767B00852F94 /* Main.storyboard */,
 				FEFD6C0C19D25C7700EBA2EF /* UIImage+ImageEffects.m */,
 				FEFD6C1119D2602D00EBA2EF /* NGAParallaxMotion.h */,
@@ -241,7 +238,6 @@
 			files = (
 				FEE86B5919B1767B00852F94 /* Main.storyboard in Resources */,
 				FEE86B5B19B1767B00852F94 /* Images.xcassets in Resources */,
-				FE5FC41119B299820008333D /* countries.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
