@@ -3,4 +3,4 @@
 //
 
 #import "UIImage+ImageEffects.h"
-#import "NGAParallaxMotion.h"#import "NGAParallaxMotion.h"
+#import "NGAParallaxMotion.h"
