@@ -261,7 +261,10 @@ class LocaleList {
             Country(name: "Western Sahara", currencyName: "Moroccan Dirham", currencyCode: "MAD", exchangeRate: 8.5734999999999992, tipRate:nil, additionalTaxRate:nil, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"EH"),
             Country(name: "Yemen", currencyName: "Yemeni Rial", currencyCode: "YER", exchangeRate: 214.904999, tipRate:nil, additionalTaxRate:nil, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"YE"),
             Country(name: "Zambia", currencyName: "Zambian Kwacha", currencyCode: "ZMW", exchangeRate: 6.1600000000000001, tipRate:nil, additionalTaxRate:nil, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"ZM"),
-            Country(name: "Zimbabwe", currencyName: "Zimbabwe Dollar", currencyCode: "ZWD", exchangeRate: 0, tipRate:nil, additionalTaxRate:nil, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"ZW")
+            Country(name: "Zimbabwe", currencyName: "Zimbabwe Dollar", currencyCode: "ZWD", exchangeRate: 0, tipRate:nil, additionalTaxRate:nil, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"ZW"),
+            
+            
+            Country(name: "Choose a Country", currencyName: "Money? Stone tablets?", currencyCode: "USD", exchangeRate: 1, tipRate:nil, additionalTaxRate:nil, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"C1")
                     ]
         
         states = [
