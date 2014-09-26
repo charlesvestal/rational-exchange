@@ -511,12 +511,7 @@ class LocaleList { //:NSObject {
         {
             if(localeList[i].name == localeName)
             {
-                println(localeList[i].name)
-                println(localeList[i].tipRate)
-                println(localeList[i].additionalTaxRate)
                 return localeList[i]
-                
-                
             }
         }
         return  Locale(name: "Choose a Locale", additionalTaxRate: nil, tipRate: nil, country: getCountry("United States"))

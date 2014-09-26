@@ -154,7 +154,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         super.viewDidLoad()
         
         readDefaults()
-        exchangeCalc.parseHelperInstance.parseInit()
+        parseInit()
         self.navigationController?.navigationBarHidden = true
         self.automaticallyAdjustsScrollViewInsets = false
         
@@ -376,10 +376,11 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     
     
     func refreshUI () {
-        let currentForeignName = "Germany"
-        let currentHomeName = "USA"
-        updateForeignLocale("Germany")
-        
+        let currentForeignName = exchangeCalc.foreignLocale.name
+        let currentHomeName = exchangeCalc.homeLocale.name
+        updateForeignLocale(currentForeignName)
+        updateHomeLocale(currentHomeName)
+
     }
     
     func updateForeignLocale(newLocaleName:String) {
@@ -399,6 +400,54 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         exchangeCalc.homeLocale.country.exchangeRate = newLocale.country.exchangeRate
         exchangeCalc.precision = newLocale.country.precision
         updateUI()
+    }
+    
+    
+    func parseInit() {
+        
+        PFConfig.getConfigInBackgroundWithBlock {
+            (var config: PFConfig!, error) -> Void in
+            if (error == nil) {
+            } else {
+                println("Failed to fetch. Using Cached Config.")
+                config = PFConfig.currentConfig()
+            }
+            
+            if let localeInfo = config["localeInfo"] as? PFFile {
+                println("locale info found")
+                
+                let jsonData = JSONValue(localeInfo.getData())
+                self.parseLocaleJSON(jsonData)
+            }
+            self.refreshUI()
+          
+        }
+        
+    }
+    
+    func parseLocaleJSON(jsonData:JSONValue) {
+        
+        for resource in jsonData["array"].array! {
+            var localeName = resource["name"].string!
+            var newTax:Double? = resource["additionalTaxRate"].number
+            var newTip:Double? = resource["tipRate"].number
+            var newCountryName = resource["country"].string!
+            
+            updateLocales(localeName, additionalTaxRate: newTax, tipRate: newTip, country: localeListSingleton.getCountry(newCountryName))
+        }
+    }
+    
+    func updateLocales(localeName: String, additionalTaxRate: Double?, tipRate: Double?, country: Country) {
+        
+        for(var i=0;i < localeListSingleton.localeList.count; i++)
+        {
+            if(localeListSingleton.localeList[i].name == localeName)
+            {
+                localeListSingleton.localeList[i].tipRate = tipRate
+                localeListSingleton.localeList[i].additionalTaxRate = additionalTaxRate
+                localeListSingleton.localeList[i].country = country
+            }
+        }
     }
     
 
