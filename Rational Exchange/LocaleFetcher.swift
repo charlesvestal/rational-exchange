@@ -447,15 +447,15 @@ class LocaleList {
     
     func parseLocaleJSON(jsonData:JSONValue) {
        
-        println(jsonData)
         for resource in jsonData["array"].array! {
-            let localeName = resource["name"].string!
-            if(getLocale(localeName).name == "Choose a Locale") {
-                println("found a new locale")
-            }
-            else {
-                println(String(format:"found locale to update, %@", getLocale(localeName).name))
-            }
+            var localeName = resource["name"].string!
+            var newTax:Double? = resource["additionalTax"].number
+            var newTip:Double? = resource["tipRate"].number
+            var newCountryName = resource["country"].string!
+            
+    
+            updateLocales(localeName, additionalTaxRate: newTax, tipRate: newTip, country: getCountry(newCountryName))
+            
             
         }
     }
@@ -546,6 +546,21 @@ class LocaleList {
         }
         return  Locale(name: "Choose a Locale", additionalTaxRate: nil, tipRate: nil, country: getCountry("United States"))
         // figure out a better default state
+    }
+    
+    
+    func updateLocales(localeName: String, additionalTaxRate: Double?, tipRate: Double?, country: Country) {
+        
+        for(var i=0;i < localeList.count; i++)
+        {
+            if(localeList[i].name == localeName)
+            {
+             localeList[i].tipRate = tipRate
+             localeList[i].additionalTaxRate = additionalTaxRate
+             localeList[i].country = country
+            println(String(format:"updated locale %@", localeName))
+            }
+        }
     }
     
 
