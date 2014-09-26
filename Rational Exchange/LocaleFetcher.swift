@@ -429,40 +429,7 @@ class LocaleList { //:NSObject {
         
         
     }
-    
-    
-    func parseInit() {
-        println("Getting the latest config...");
-        PFConfig.getConfigInBackgroundWithBlock {
-            (var config: PFConfig!, error) -> Void in
-            if (error == nil) {
-                println("Yay! Config was fetched from the server.")
-            } else {
-                println("Failed to fetch. Using Cached Config.")
-                config = PFConfig.currentConfig()
-            }
-            
-            if let localeInfo = config["localeInfo"] as? PFFile {
-                            println("locale info found")
-                
-                            let jsonData = JSONValue(localeInfo.getData())
-                            self.parseLocaleJSON(jsonData)
-                        }
-        }
-    }
-    
-    func parseLocaleJSON(jsonData:JSONValue) {
-       
-        for resource in jsonData["array"].array! {
-            var localeName = resource["name"].string!
-            var newTax:Double? = resource["additionalTaxRate"].number
-            var newTip:Double? = resource["tipRate"].number
-            var newCountryName = resource["country"].string!
-            updateLocales(localeName, additionalTaxRate: newTax, tipRate: newTip, country: getCountry(newCountryName))
-        }
-       // delegate?.updateUI()
-    }
-    
+        
     let cache = AwesomeCache<NSNumber>(name: "awesomeCache")
     
     func readCachedCountries () {
@@ -555,20 +522,6 @@ class LocaleList { //:NSObject {
         return  Locale(name: "Choose a Locale", additionalTaxRate: nil, tipRate: nil, country: getCountry("United States"))
         // figure out a better default state
     }
-    
-    
-    func updateLocales(localeName: String, additionalTaxRate: Double?, tipRate: Double?, country: Country) {
         
-        for(var i=0;i < localeList.count; i++)
-        {
-            if(localeList[i].name == localeName)
-            {
-             localeList[i].tipRate = tipRate
-             localeList[i].additionalTaxRate = additionalTaxRate
-             localeList[i].country = country
-            }
-        }
-    }
-    
 
 }

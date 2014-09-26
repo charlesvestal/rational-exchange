@@ -127,11 +127,11 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     {
  
         if let homeLocaleisNotNil = defaults.objectForKey("homeLocaleName") as? String {
-            exchangeCalc.homeLocale = localeListSingleton.getLocale(defaults.objectForKey("homeLocaleName") as String)
+            exchangeCalc.homeLocale = exchangeCalc.localeList.getLocale(defaults.objectForKey("homeLocaleName") as String)
         }
   
         if let foreignLocaleisNotNil = defaults.objectForKey("foreignLocaleName") as? String {
-            exchangeCalc.foreignLocale = localeListSingleton.getLocale(defaults.objectForKey("foreignLocaleName") as String)
+            exchangeCalc.foreignLocale = exchangeCalc.localeList.getLocale(defaults.objectForKey("foreignLocaleName") as String)
         }
         
         if let foreignCostisNotNil = defaults.objectForKey("foreignCostField") as? String {
@@ -154,13 +154,13 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         super.viewDidLoad()
         
         readDefaults()
+        exchangeCalc.parseHelperInstance.parseInit()
         self.navigationController?.navigationBarHidden = true
         self.automaticallyAdjustsScrollViewInsets = false
         
         initUI()
         setupScrollView()
         updateUI()
-        localeListSingleton.parseInit()
         
         var delegate:locationHelper?
         
@@ -224,7 +224,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     bottomCountryFlag.image = bottomCountryFlag.image?.applyBlurWithRadius(4.0, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
     bottomCountryFlag.parallaxIntensity = -50
    
-        localeListSingleton.refreshCountries()
+        exchangeCalc.localeList.refreshCountries()
     }
     
     func updateUI()   {
@@ -373,7 +373,15 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         
         setDefaults()
     }
+    
+    
+    func refreshUI () {
+        let currentForeignName = "Germany"
+        let currentHomeName = "USA"
+        updateForeignLocale("Germany")
         
+    }
+    
     func updateForeignLocale(newLocaleName:String) {
         let newLocale = exchangeCalc.localeList.getLocale(newLocaleName)
         exchangeCalc.foreignLocale = newLocale

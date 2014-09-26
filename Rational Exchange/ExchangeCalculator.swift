@@ -21,6 +21,7 @@ class exchangeCalculator {
     var exchangeRate:Double
     var foreignTheyWant:Double
     var precision:Double
+    var parseHelperInstance = parseHelper()
 
     
     var localeList = localeListSingleton

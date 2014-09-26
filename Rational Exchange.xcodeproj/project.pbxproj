@@ -20,6 +20,7 @@
 		FEA9EF1B19D4E6CD0031AD70 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA9EF1A19D4E6CD0031AD70 /* StoreKit.framework */; };
 		FEA9EF1D19D4E6D30031AD70 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA9EF1C19D4E6D30031AD70 /* SystemConfiguration.framework */; };
 		FEACB10A19C5D3F4006F372D /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB10919C5D3F4006F372D /* CountryModel.swift */; };
+		FEB6953C19D6003400300BFD /* parseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEB6953B19D6003400300BFD /* parseHelper.swift */; };
 		FEC792DD19D102FC006A45A2 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC792DC19D102FC006A45A2 /* LocationHelper.swift */; };
 		FEC9F31A19D4E62900831E98 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F31919D4E62900831E98 /* AudioToolbox.framework */; };
 		FEC9F31C19D4E63100831E98 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F31B19D4E63100831E98 /* CFNetwork.framework */; };
@@ -82,6 +83,7 @@
 		FEA9EF1A19D4E6CD0031AD70 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FEA9EF1C19D4E6D30031AD70 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FEACB10919C5D3F4006F372D /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		FEB6953B19D6003400300BFD /* parseHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parseHelper.swift; sourceTree = "<group>"; };
 		FEC792DC19D102FC006A45A2 /* LocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		FEC792E019D1A6E6006A45A2 /* Rational Exchange-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rational Exchange-Bridging-Header.h"; sourceTree = "<group>"; };
 		FEC9F31919D4E62900831E98 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -151,6 +153,7 @@
 				FE2AFEB619B4C95B0056F0E0 /* LocaleModel.swift */,
 				FEACB10919C5D3F4006F372D /* CountryModel.swift */,
 				FE205DC819BD040F00A2ADD8 /* LocaleFetcher.swift */,
+				FEB6953B19D6003400300BFD /* parseHelper.swift */,
 				FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */,
 				FEE86B5319B1767B00852F94 /* AppDelegate.swift */,
 				FEE86B5519B1767B00852F94 /* MainViewController.swift */,
@@ -303,6 +306,7 @@
 				FEFD6C1019D2601900EBA2EF /* NGAParallaxMotion.m in Sources */,
 				FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */,
 				FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */,
+				FEB6953C19D6003400300BFD /* parseHelper.swift in Sources */,
 				FEE41C8519C344A500460538 /* SwiftyJSON.swift in Sources */,
 				FE2AFEB819B4C95B0056F0E0 /* LocaleModel.swift in Sources */,
 			);
