@@ -14,8 +14,17 @@
 		FE891BF019C12C4B008CC947 /* LocaleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */; };
 		FE9692CE19CE08C1002554A9 /* AwesomeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9692CC19CE08C1002554A9 /* AwesomeCache.swift */; };
 		FE9692CF19CE08C1002554A9 /* AwesomeCacheObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9692CD19CE08C1002554A9 /* AwesomeCacheObject.swift */; };
+		FEA9EF1919D4E6C40031AD70 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA9EF1819D4E6C40031AD70 /* Security.framework */; };
+		FEA9EF1B19D4E6CD0031AD70 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA9EF1A19D4E6CD0031AD70 /* StoreKit.framework */; };
+		FEA9EF1D19D4E6D30031AD70 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA9EF1C19D4E6D30031AD70 /* SystemConfiguration.framework */; };
 		FEACB10A19C5D3F4006F372D /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB10919C5D3F4006F372D /* CountryModel.swift */; };
 		FEC792DD19D102FC006A45A2 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC792DC19D102FC006A45A2 /* LocationHelper.swift */; };
+		FEC9F31A19D4E62900831E98 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F31919D4E62900831E98 /* AudioToolbox.framework */; };
+		FEC9F31C19D4E63100831E98 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F31B19D4E63100831E98 /* CFNetwork.framework */; };
+		FEC9F31E19D4E63800831E98 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F31D19D4E63800831E98 /* CoreGraphics.framework */; };
+		FEC9F32019D4E64300831E98 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F31F19D4E64300831E98 /* libz.dylib */; };
+		FEC9F32219D4E64C00831E98 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F32119D4E64C00831E98 /* MobileCoreServices.framework */; };
+		FEC9F32419D4E65200831E98 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F32319D4E65200831E98 /* QuartzCore.framework */; };
 		FEE41C8519C344A500460538 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE41C8419C344A500460538 /* SwiftyJSON.swift */; };
 		FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5319B1767B00852F94 /* AppDelegate.swift */; };
 		FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5519B1767B00852F94 /* MainViewController.swift */; };
@@ -65,9 +74,18 @@
 		FE9692CC19CE08C1002554A9 /* AwesomeCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwesomeCache.swift; path = dependencies/AweomeCache/Source/AwesomeCache.swift; sourceTree = SOURCE_ROOT; };
 		FE9692CD19CE08C1002554A9 /* AwesomeCacheObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwesomeCacheObject.swift; path = dependencies/AweomeCache/Source/AwesomeCacheObject.swift; sourceTree = SOURCE_ROOT; };
 		FEA2B9A919CF726400455670 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FEA9EF1819D4E6C40031AD70 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FEA9EF1A19D4E6CD0031AD70 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		FEA9EF1C19D4E6D30031AD70 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FEACB10919C5D3F4006F372D /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		FEC792DC19D102FC006A45A2 /* LocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		FEC792E019D1A6E6006A45A2 /* Rational Exchange-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rational Exchange-Bridging-Header.h"; sourceTree = "<group>"; };
+		FEC9F31919D4E62900831E98 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FEC9F31B19D4E63100831E98 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		FEC9F31D19D4E63800831E98 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		FEC9F31F19D4E64300831E98 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		FEC9F32119D4E64C00831E98 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		FEC9F32319D4E65200831E98 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FEE41C8419C344A500460538 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		FEE86B4E19B1767B00852F94 /* RationalEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RationalEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE86B5219B1767B00852F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,7 +104,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA9EF1D19D4E6D30031AD70 /* SystemConfiguration.framework in Frameworks */,
+				FEA9EF1B19D4E6CD0031AD70 /* StoreKit.framework in Frameworks */,
+				FEA9EF1919D4E6C40031AD70 /* Security.framework in Frameworks */,
+				FEC9F32419D4E65200831E98 /* QuartzCore.framework in Frameworks */,
+				FEC9F32219D4E64C00831E98 /* MobileCoreServices.framework in Frameworks */,
+				FEC9F32019D4E64300831E98 /* libz.dylib in Frameworks */,
 				FE1022F419CF76E7005B0485 /* CoreLocation.framework in Frameworks */,
+				FEC9F31E19D4E63800831E98 /* CoreGraphics.framework in Frameworks */,
+				FEC9F31C19D4E63100831E98 /* CFNetwork.framework in Frameworks */,
+				FEC9F31A19D4E62900831E98 /* AudioToolbox.framework in Frameworks */,
 				FEFCEB8219CE23A000F0FC61 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,7 +124,6 @@
 		FEE86B4519B1767B00852F94 = {
 			isa = PBXGroup;
 			children = (
-				FEA2B9A919CF726400455670 /* CoreLocation.framework */,
 				FEE86B5019B1767B00852F94 /* Rational Exchange */,
 				FEE86B4F19B1767B00852F94 /* Products */,
 				FEE9588219CC66CE00D59C2D /* Alamofire.xcodeproj */,
@@ -138,6 +164,16 @@
 		FEE86B5119B1767B00852F94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FEA9EF1C19D4E6D30031AD70 /* SystemConfiguration.framework */,
+				FEA9EF1A19D4E6CD0031AD70 /* StoreKit.framework */,
+				FEA9EF1819D4E6C40031AD70 /* Security.framework */,
+				FEC9F32319D4E65200831E98 /* QuartzCore.framework */,
+				FEC9F32119D4E64C00831E98 /* MobileCoreServices.framework */,
+				FEC9F31F19D4E64300831E98 /* libz.dylib */,
+				FEC9F31D19D4E63800831E98 /* CoreGraphics.framework */,
+				FEC9F31B19D4E63100831E98 /* CFNetwork.framework */,
+				FEC9F31919D4E62900831E98 /* AudioToolbox.framework */,
+				FEA2B9A919CF726400455670 /* CoreLocation.framework */,
 				FE9692CC19CE08C1002554A9 /* AwesomeCache.swift */,
 				FE9692CD19CE08C1002554A9 /* AwesomeCacheObject.swift */,
 				FEE86B5219B1767B00852F94 /* Info.plist */,
@@ -362,6 +398,17 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Rational",
+					Exchange,
+					"$(PROJECT_DIR)/Rational",
+					Exchange,
+					"$(PROJECT_DIR)/Rational",
+					Exchange,
+					"$(PROJECT_DIR)/Rational",
+					Exchange,
+				);
 				INFOPLIST_FILE = "Rational Exchange/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -380,6 +427,17 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Rational",
+					Exchange,
+					"$(PROJECT_DIR)/Rational",
+					Exchange,
+					"$(PROJECT_DIR)/Rational",
+					Exchange,
+					"$(PROJECT_DIR)/Rational",
+					Exchange,
+				);
 				INFOPLIST_FILE = "Rational Exchange/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

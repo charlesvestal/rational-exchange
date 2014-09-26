@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -16,8 +17,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication!, didFinishLaunchingWithOptions launchOptions: NSDictionary!) -> Bool {
         // Override point for customization after application launch.
+        Parse.setApplicationId("37b5nCCzv1CXDFpymf5OaeQJh30EXaejHgmqUdEa", clientKey: "lGHpg5dziNdXKejHinb7ozJheVzHaK0KbRVdRb4e")
+        PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        
+        
+    
         return true
     }
+            
+    
+        
+    
 
     func applicationWillResignActive(application: UIApplication!) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

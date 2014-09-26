@@ -416,6 +416,46 @@ class LocaleList {
             if(countryToIterate.exchangeRate != 0) {
                 self.localeList.append(Locale(name: countryToIterate.name, additionalTaxRate: countryToIterate.additionalTaxRate, tipRate: countryToIterate.tipRate, country: countryToIterate))                
             }
+        }
+    
+      // Parse Retreival
+        parseInit()
+        
+        
+    }
+    
+    
+    func parseInit() {
+        println("Getting the latest config...");
+        PFConfig.getConfigInBackgroundWithBlock {
+            (var config: PFConfig!, error) -> Void in
+            if (error == nil) {
+                println("Yay! Config was fetched from the server.")
+            } else {
+                println("Failed to fetch. Using Cached Config.")
+                config = PFConfig.currentConfig()
+            }
+            
+            if let localeInfo = config["localeInfo"] as? PFFile {
+                            println("locale info found")
+                
+                            let jsonData = JSONValue(localeInfo.getData())
+                            self.parseLocaleJSON(jsonData)
+                        }
+        }
+    }
+    
+    func parseLocaleJSON(jsonData:JSONValue) {
+       
+        println(jsonData)
+        for resource in jsonData["array"].array! {
+            let localeName = resource["name"].string!
+            if(getLocale(localeName).name == "Choose a Locale") {
+                println("found a new locale")
+            }
+            else {
+                println(String(format:"found locale to update, %@", getLocale(localeName).name))
+            }
             
         }
     }
@@ -504,7 +544,7 @@ class LocaleList {
                 return localeList[i]
             }
         }
-        return  Locale(name: "Choose a Location", additionalTaxRate: nil, tipRate: nil, country: getCountry("United States"))
+        return  Locale(name: "Choose a Locale", additionalTaxRate: nil, tipRate: nil, country: getCountry("United States"))
         // figure out a better default state
     }
     
