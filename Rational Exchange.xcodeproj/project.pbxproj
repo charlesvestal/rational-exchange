@@ -11,6 +11,8 @@
 		FE205DC919BD040F00A2ADD8 /* LocaleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE205DC819BD040F00A2ADD8 /* LocaleFetcher.swift */; };
 		FE2AFEB819B4C95B0056F0E0 /* LocaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2AFEB619B4C95B0056F0E0 /* LocaleModel.swift */; };
 		FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */; };
+		FE39C49C19D4FE1F00D5F4FD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE39C49A19D4FE1F00D5F4FD /* Bolts.framework */; };
+		FE39C49D19D4FE1F00D5F4FD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE39C49B19D4FE1F00D5F4FD /* Parse.framework */; };
 		FE891BF019C12C4B008CC947 /* LocaleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */; };
 		FE9692CE19CE08C1002554A9 /* AwesomeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9692CC19CE08C1002554A9 /* AwesomeCache.swift */; };
 		FE9692CF19CE08C1002554A9 /* AwesomeCacheObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9692CD19CE08C1002554A9 /* AwesomeCacheObject.swift */; };
@@ -70,6 +72,8 @@
 		FE205DC819BD040F00A2ADD8 /* LocaleFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleFetcher.swift; sourceTree = "<group>"; };
 		FE2AFEB619B4C95B0056F0E0 /* LocaleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleModel.swift; sourceTree = "<group>"; };
 		FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeCalculator.swift; sourceTree = "<group>"; };
+		FE39C49A19D4FE1F00D5F4FD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		FE39C49B19D4FE1F00D5F4FD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleTableViewController.swift; sourceTree = "<group>"; };
 		FE9692CC19CE08C1002554A9 /* AwesomeCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwesomeCache.swift; path = dependencies/AweomeCache/Source/AwesomeCache.swift; sourceTree = SOURCE_ROOT; };
 		FE9692CD19CE08C1002554A9 /* AwesomeCacheObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwesomeCacheObject.swift; path = dependencies/AweomeCache/Source/AwesomeCacheObject.swift; sourceTree = SOURCE_ROOT; };
@@ -107,8 +111,10 @@
 				FEA9EF1D19D4E6D30031AD70 /* SystemConfiguration.framework in Frameworks */,
 				FEA9EF1B19D4E6CD0031AD70 /* StoreKit.framework in Frameworks */,
 				FEA9EF1919D4E6C40031AD70 /* Security.framework in Frameworks */,
+				FE39C49C19D4FE1F00D5F4FD /* Bolts.framework in Frameworks */,
 				FEC9F32419D4E65200831E98 /* QuartzCore.framework in Frameworks */,
 				FEC9F32219D4E64C00831E98 /* MobileCoreServices.framework in Frameworks */,
+				FE39C49D19D4FE1F00D5F4FD /* Parse.framework in Frameworks */,
 				FEC9F32019D4E64300831E98 /* libz.dylib in Frameworks */,
 				FE1022F419CF76E7005B0485 /* CoreLocation.framework in Frameworks */,
 				FEC9F31E19D4E63800831E98 /* CoreGraphics.framework in Frameworks */,
@@ -164,6 +170,8 @@
 		FEE86B5119B1767B00852F94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FE39C49A19D4FE1F00D5F4FD /* Bolts.framework */,
+				FE39C49B19D4FE1F00D5F4FD /* Parse.framework */,
 				FEA9EF1C19D4E6D30031AD70 /* SystemConfiguration.framework */,
 				FEA9EF1A19D4E6CD0031AD70 /* StoreKit.framework */,
 				FEA9EF1819D4E6C40031AD70 /* Security.framework */,
@@ -400,14 +408,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Rational",
-					Exchange,
-					"$(PROJECT_DIR)/Rational",
-					Exchange,
-					"$(PROJECT_DIR)/Rational",
-					Exchange,
-					"$(PROJECT_DIR)/Rational",
-					Exchange,
+					"$(PROJECT_DIR)/$(PROJECT_NAME)",
 				);
 				INFOPLIST_FILE = "Rational Exchange/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -429,14 +430,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/Rational",
-					Exchange,
-					"$(PROJECT_DIR)/Rational",
-					Exchange,
-					"$(PROJECT_DIR)/Rational",
-					Exchange,
-					"$(PROJECT_DIR)/Rational",
-					Exchange,
+					"$(PROJECT_DIR)/$(PROJECT_NAME)",
 				);
 				INFOPLIST_FILE = "Rational Exchange/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
