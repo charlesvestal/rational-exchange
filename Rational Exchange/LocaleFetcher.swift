@@ -12,13 +12,19 @@ import Alamofire
 
 var localeListSingleton = LocaleList()
 
-class LocaleList {
+class LocaleList { //:NSObject {
     
     var localeList:[Locale]
     var countryList: [Country]
     var states: [String: String]
     
-    init() {
+   // var delegate:ViewController?
+    
+    init () {//override init() {
+        localeList = [Locale]()
+//        countryList = [Country]()
+//        states = [String: String]()
+//        super.init()
         countryList = [
             Country(name: "Afghanistan", currencyName: "Afghanistan Afghani", currencyCode: "AFN", exchangeRate: 1.0, tipRate:nil, additionalTaxRate:nil, precision:1.0, tipString:"Round up.", taxString:"Tax varies.", ISOAbbreviation:"AF"), // just a test 56.68
             Country(name: "Albania", currencyName: "Albanian Lek", currencyCode: "ALL", exchangeRate: 108.175003, tipRate:nil, additionalTaxRate:nil, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"AL"),
@@ -336,7 +342,7 @@ class LocaleList {
         ]
         
 
-        localeList = [Locale]()
+        
         
         localeList = [
             Locale(name: "Prague", additionalTaxRate: getCountry("Czech Republic").additionalTaxRate, tipRate: 0.1, country: getCountry("Czech Republic")),
@@ -419,7 +425,7 @@ class LocaleList {
         }
     
       // Parse Retreival
-        parseInit()
+       
         
         
     }
@@ -449,15 +455,12 @@ class LocaleList {
        
         for resource in jsonData["array"].array! {
             var localeName = resource["name"].string!
-            var newTax:Double? = resource["additionalTax"].number
+            var newTax:Double? = resource["additionalTaxRate"].number
             var newTip:Double? = resource["tipRate"].number
             var newCountryName = resource["country"].string!
-            
-    
             updateLocales(localeName, additionalTaxRate: newTax, tipRate: newTip, country: getCountry(newCountryName))
-            
-            
         }
+       // delegate?.updateUI()
     }
     
     let cache = AwesomeCache<NSNumber>(name: "awesomeCache")
@@ -541,7 +544,12 @@ class LocaleList {
         {
             if(localeList[i].name == localeName)
             {
+                println(localeList[i].name)
+                println(localeList[i].tipRate)
+                println(localeList[i].additionalTaxRate)
                 return localeList[i]
+                
+                
             }
         }
         return  Locale(name: "Choose a Locale", additionalTaxRate: nil, tipRate: nil, country: getCountry("United States"))
@@ -558,7 +566,6 @@ class LocaleList {
              localeList[i].tipRate = tipRate
              localeList[i].additionalTaxRate = additionalTaxRate
              localeList[i].country = country
-            println(String(format:"updated locale %@", localeName))
             }
         }
     }

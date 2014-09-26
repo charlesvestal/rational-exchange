@@ -11,11 +11,7 @@ import CoreLocation
 import MessageUI
 
 class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewControllerDelegate {
-    
-    
-    
 
-    
     let currentVersion:NSString = UIDevice.currentDevice().systemVersion
     
     @IBOutlet var mainView: UIView!
@@ -164,6 +160,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         initUI()
         setupScrollView()
         updateUI()
+        localeListSingleton.parseInit()
         
         var delegate:locationHelper?
         
@@ -376,9 +373,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         
         setDefaults()
     }
-    
-
-
+        
     func updateForeignLocale(newLocaleName:String) {
         let newLocale = exchangeCalc.localeList.getLocale(newLocaleName)
         exchangeCalc.foreignLocale = newLocale
