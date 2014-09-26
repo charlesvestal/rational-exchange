@@ -426,15 +426,19 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     }
     
     func parseLocaleJSON(jsonData:JSONValue) {
+        exchangeCalc.localeList.localeList = [Locale]()
+        println(exchangeCalc.localeList.localeList.count)
         
         for resource in jsonData["array"].array! {
             var localeName = resource["name"].string!
             var newTax:Double? = resource["additionalTaxRate"].number
             var newTip:Double? = resource["tipRate"].number
             var newCountryName = resource["country"].string!
-            
-            updateLocales(localeName, additionalTaxRate: newTax, tipRate: newTip, country: localeListSingleton.getCountry(newCountryName))
+           
+            exchangeCalc.localeList.localeList.append(Locale(name: localeName, additionalTaxRate: newTax, tipRate: newTip, country: exchangeCalc.localeList.getCountry(newCountryName)))
         }
+        println(exchangeCalc.localeList.localeList.count)
+        
     }
     
     func updateLocales(localeName: String, additionalTaxRate: Double?, tipRate: Double?, country: Country) {

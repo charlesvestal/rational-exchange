@@ -843,7 +843,7 @@
     {
       "name": "Germany",
       "additionalTaxRate": null,
-      "tipRate": 0.0500000000,
+      "tipRate": 0.05,
       "country": "Germany"
     },
     {
