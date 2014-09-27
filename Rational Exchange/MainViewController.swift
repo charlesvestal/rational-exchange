@@ -297,7 +297,6 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         
     }
     func updateUI()   {
-        println("updating")
         var tippable = isTippable()
         
         var homeFormatter = NSNumberFormatter()
@@ -401,7 +400,6 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     
     
     func refreshUI () {
-        println("refreshing")
         let currentForeignName = exchangeCalc.foreignLocale.name
         let currentHomeName = exchangeCalc.homeLocale.name
         updateForeignLocale(currentForeignName)
@@ -441,9 +439,6 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         hud.dimBackground = true
         hud.hide(true, afterDelay:6.0)
         
-        //        MPProgressHUD showHUDAddedTo:self.view animated:YES
-        // activityMonitor.startAnimating()
-    
        
         let config = PFConfig.currentConfig()
                 if let localeInfo = config["localeInfo"] as? PFFile {
