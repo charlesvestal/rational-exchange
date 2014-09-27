@@ -43,6 +43,8 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     @IBOutlet weak var findMeForeignButton: UIButton!
     @IBOutlet weak var findMeHomeButton: UIButton!
     
+    @IBOutlet weak var activityMonitor: UIActivityIndicatorView!
+    
     @IBOutlet weak var topTopLayout: NSLayoutConstraint!
 
     var MyCLController = locationHelper(domain: "home")
@@ -280,9 +282,9 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             
             homeCostLabel.text = totalString
         }
-
-        
     }
+    
+    
     
     func isTippable() -> Double {
         var isTippable:Double
@@ -295,7 +297,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         
     }
     func updateUI()   {
-
+        println("updating")
         var tippable = isTippable()
         
         var homeFormatter = NSNumberFormatter()
@@ -399,6 +401,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     
     
     func refreshUI () {
+        println("refreshing")
         let currentForeignName = exchangeCalc.foreignLocale.name
         let currentHomeName = exchangeCalc.homeLocale.name
         updateForeignLocale(currentForeignName)
@@ -414,7 +417,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         let newLocaleCurrency = newLocale.country.currencyCode
         
         setDefaults()
-        updateUI()
+       
     }
     
     func updateHomeLocale(newLocaleName:String) {
@@ -426,34 +429,55 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         exchangeCalc.precision = newLocale.country.precision
         
         setDefaults()
-        updateUI()
+
     }
     
     
     func parseInit() {
+       
+        var hud =  MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.labelText = "Loading"
+        hud.detailsLabelText = "Updating Exchange Rates\n and Data"
+        hud.dimBackground = true
+        hud.hide(true, afterDelay:.0)
         
-        PFConfig.getConfigInBackgroundWithBlock {
+        //        MPProgressHUD showHUDAddedTo:self.view animated:YES
+        // activityMonitor.startAnimating()
+    
+       
+        let config = PFConfig.currentConfig()
+                if let localeInfo = config["localeInfo"] as? PFFile {
+                println("Loading from defaults. Processing config.")
+                let jsonData = JSONValue(localeInfo.getData())
+                self.parseLocaleJSON(jsonData)
+                self.readDefaults()
+                println("Finished processing config from defaults.")
+            }
+        
+            PFConfig.getConfigInBackgroundWithBlock {
             (var config: PFConfig!, error) -> Void in
             if (error == nil) {
-            } else {
-                println("Failed to fetch. Using Cached Config.")
-                config = PFConfig.currentConfig()
-                self.readDefaults()
-            }
-            
-            if let localeInfo = config["localeInfo"] as? PFFile {
-                println("Fetch successful. Processing config.")
+                if let localeInfo = config["localeInfo"] as? PFFile {
+                    println("Fetch successful. Processing config.")
                     let jsonData = JSONValue(localeInfo.getData())
                     self.parseLocaleJSON(jsonData)
                     self.readDefaults()
                     println("Finished processing config.")
-            }
-            self.refreshUI()
-            self.updateUI()
-            }
-        
-        
-        
+                }
+                self.refreshUI()
+                self.updateUI()
+                hud.hide(true)
+            } else {
+                hud.hide(true)
+                println("Failed to fetch. Using Cached Config.")
+                config = PFConfig.currentConfig()
+                self.refreshUI()
+                self.updateUI()
+                self.readDefaults()
+                }
+                
+        }
+    
     }
     
     func parseLocaleJSON(jsonData:JSONValue) {
@@ -462,6 +486,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         
         var resources = jsonData["array"].array!
       
+        
         for resource in resources {
             let localeName =     resource["name"].string!
             let newTax:Double? = resource["additionalTaxRate"].number

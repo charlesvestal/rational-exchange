@@ -156,10 +156,12 @@ import UIKit
         if(isForeign)
         {
             viewController.updateForeignLocale(newLocale.name)
+            viewController.updateUI()
         }
         else
         {
             viewController.updateHomeLocale(newLocale.name)
+            viewController.updateUI()
         }
     
         

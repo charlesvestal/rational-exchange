@@ -4,6 +4,7 @@
 
 #import "UIImage+ImageEffects.h"
 #import "NGAParallaxMotion.h"
+#import "MBProgressHUD.h"
 
 #import <Foundation/Foundation.h>
 

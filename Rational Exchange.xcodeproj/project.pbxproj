@@ -20,6 +20,7 @@
 		FEA9EF1B19D4E6CD0031AD70 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA9EF1A19D4E6CD0031AD70 /* StoreKit.framework */; };
 		FEA9EF1D19D4E6D30031AD70 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA9EF1C19D4E6D30031AD70 /* SystemConfiguration.framework */; };
 		FEACB10A19C5D3F4006F372D /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB10919C5D3F4006F372D /* CountryModel.swift */; };
+		FEB3667419D72F4400E82527 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB3667319D72F4400E82527 /* MBProgressHUD.m */; };
 		FEC792DD19D102FC006A45A2 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC792DC19D102FC006A45A2 /* LocationHelper.swift */; };
 		FEC9F31A19D4E62900831E98 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F31919D4E62900831E98 /* AudioToolbox.framework */; };
 		FEC9F31C19D4E63100831E98 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F31B19D4E63100831E98 /* CFNetwork.framework */; };
@@ -83,6 +84,8 @@
 		FEA9EF1A19D4E6CD0031AD70 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FEA9EF1C19D4E6D30031AD70 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FEACB10919C5D3F4006F372D /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		FEB3667219D72F4400E82527 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		FEB3667319D72F4400E82527 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		FEC792DC19D102FC006A45A2 /* LocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		FEC792E019D1A6E6006A45A2 /* Rational Exchange-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rational Exchange-Bridging-Header.h"; sourceTree = "<group>"; };
 		FEC9F31919D4E62900831E98 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -160,9 +163,6 @@
 				FEC792DC19D102FC006A45A2 /* LocationHelper.swift */,
 				FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */,
 				FEE86B5719B1767B00852F94 /* Main.storyboard */,
-				FEFD6C0C19D25C7700EBA2EF /* UIImage+ImageEffects.m */,
-				FEFD6C1119D2602D00EBA2EF /* NGAParallaxMotion.h */,
-				FEFD6C0F19D2601900EBA2EF /* NGAParallaxMotion.m */,
 				FEE86B5A19B1767B00852F94 /* Images.xcassets */,
 				FEE86B5119B1767B00852F94 /* Supporting Files */,
 				FEC792E019D1A6E6006A45A2 /* Rational Exchange-Bridging-Header.h */,
@@ -173,6 +173,11 @@
 		FEE86B5119B1767B00852F94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FEB3667219D72F4400E82527 /* MBProgressHUD.h */,
+				FEB3667319D72F4400E82527 /* MBProgressHUD.m */,
+				FEFD6C0C19D25C7700EBA2EF /* UIImage+ImageEffects.m */,
+				FEFD6C1119D2602D00EBA2EF /* NGAParallaxMotion.h */,
+				FEFD6C0F19D2601900EBA2EF /* NGAParallaxMotion.m */,
 				FE39C49A19D4FE1F00D5F4FD /* Bolts.framework */,
 				FE39C49B19D4FE1F00D5F4FD /* Parse.framework */,
 				FEA9EF1C19D4E6D30031AD70 /* SystemConfiguration.framework */,
@@ -302,6 +307,7 @@
 				FEACB10A19C5D3F4006F372D /* CountryModel.swift in Sources */,
 				FE9692CF19CE08C1002554A9 /* AwesomeCacheObject.swift in Sources */,
 				FE891BF019C12C4B008CC947 /* LocaleTableViewController.swift in Sources */,
+				FEB3667419D72F4400E82527 /* MBProgressHUD.m in Sources */,
 				FE9692CE19CE08C1002554A9 /* AwesomeCache.swift in Sources */,
 				FEFD6C1019D2601900EBA2EF /* NGAParallaxMotion.m in Sources */,
 				FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */,
