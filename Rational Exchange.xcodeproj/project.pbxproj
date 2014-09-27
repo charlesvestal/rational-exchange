@@ -32,6 +32,7 @@
 		FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5519B1767B00852F94 /* MainViewController.swift */; };
 		FEE86B5919B1767B00852F94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE86B5719B1767B00852F94 /* Main.storyboard */; };
 		FEE86B5B19B1767B00852F94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE86B5A19B1767B00852F94 /* Images.xcassets */; };
+		FEF4E83119D6366900DD27B2 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF4E83019D6366900DD27B2 /* Async.swift */; };
 		FEFCEB8219CE23A000F0FC61 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEE9588819CC66CE00D59C2D /* Alamofire.framework */; };
 		FEFCEB8419CE23EC00F0FC61 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = FEE9588819CC66CE00D59C2D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FEFD6C0D19D25C7700EBA2EF /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = FEFD6C0C19D25C7700EBA2EF /* UIImage+ImageEffects.m */; };
@@ -98,6 +99,7 @@
 		FEE86B5819B1767B00852F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEE86B5A19B1767B00852F94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FEE9588219CC66CE00D59C2D /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = dependencies/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
+		FEF4E83019D6366900DD27B2 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		FEFD6C0C19D25C7700EBA2EF /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
 		FEFD6C0F19D2601900EBA2EF /* NGAParallaxMotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NGAParallaxMotion.m; sourceTree = "<group>"; };
 		FEFD6C1119D2602D00EBA2EF /* NGAParallaxMotion.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NGAParallaxMotion.h; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		FEE86B5019B1767B00852F94 /* Rational Exchange */ = {
 			isa = PBXGroup;
 			children = (
+				FEF4E83019D6366900DD27B2 /* Async.swift */,
 				FEE41C8419C344A500460538 /* SwiftyJSON.swift */,
 				FE2AFEB619B4C95B0056F0E0 /* LocaleModel.swift */,
 				FEACB10919C5D3F4006F372D /* CountryModel.swift */,
@@ -302,6 +305,7 @@
 				FE9692CE19CE08C1002554A9 /* AwesomeCache.swift in Sources */,
 				FEFD6C1019D2601900EBA2EF /* NGAParallaxMotion.m in Sources */,
 				FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */,
+				FEF4E83119D6366900DD27B2 /* Async.swift in Sources */,
 				FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */,
 				FEE41C8519C344A500460538 /* SwiftyJSON.swift in Sources */,
 				FE2AFEB819B4C95B0056F0E0 /* LocaleModel.swift in Sources */,

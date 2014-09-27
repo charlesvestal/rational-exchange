@@ -152,7 +152,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let now = NSDate()
         readDefaults()
         parseInit()
         self.navigationController?.navigationBarHidden = true
@@ -161,6 +161,9 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         initUI()
         setupScrollView()
         updateUI()
+        
+        println(now.timeIntervalSinceNow)
+        
         
         var delegate:locationHelper?
         
@@ -416,8 +419,9 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             if let localeInfo = config["localeInfo"] as? PFFile {
                 println("locale info found")
                 
-                let jsonData = JSONValue(localeInfo.getData())
+              let jsonData = JSONValue(localeInfo.getData())
                 self.parseLocaleJSON(jsonData)
+                
             }
             self.refreshUI()
           
@@ -426,18 +430,24 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     }
     
     func parseLocaleJSON(jsonData:JSONValue) {
+    
         exchangeCalc.localeList.localeList = [Locale]()
         println(exchangeCalc.localeList.localeList.count)
         
-        for resource in jsonData["array"].array! {
-            var localeName = resource["name"].string!
-            var newTax:Double? = resource["additionalTaxRate"].number
-            var newTip:Double? = resource["tipRate"].number
-            var newCountryName = resource["country"].string!
+        var resources = jsonData["array"].array!
+      
+        for resource in resources {
+            let localeName = resource["name"].string!
+            let newTax:Double? = resource["additionalTaxRate"].number
+            let newTip:Double? = resource["tipRate"].number
+            let newCountryName = resource["country"].string!
            
             exchangeCalc.localeList.localeList.append(Locale(name: localeName, additionalTaxRate: newTax, tipRate: newTip, country: exchangeCalc.localeList.getCountry(newCountryName)))
-        }
-        println(exchangeCalc.localeList.localeList.count)
+        
+           
+            }
+        
+        
         
     }
     
