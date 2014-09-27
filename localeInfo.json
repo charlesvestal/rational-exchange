@@ -8,133 +8,133 @@
     },
     {
       "name": "Alberta",
-      "additionalTaxRate": "0.0500000000",
+      "additionalTaxRate": 0.0500000000,
       "tipRate": 0.2000000000,
       "country": "Canada"
     },
     {
       "name": "British Columbia",
-      "additionalTaxRate": "0.1200000000",
+      "additionalTaxRate": 0.1200000000,
       "tipRate": 0.2000000000,
       "country": "Canada"
     },
     {
       "name": "Manitoba",
-      "additionalTaxRate": "0.1300000000",
+      "additionalTaxRate": 0.1300000000,
       "tipRate": 0.2000000000,
       "country": "Canada"
     },
     {
       "name": "New Brunswick",
-      "additionalTaxRate": "0.1300000000",
+      "additionalTaxRate": 0.1300000000,
       "tipRate": 0.2000000000,
       "country": "Canada"
     },
     {
       "name": "Newfoundland and Labrador",
-      "additionalTaxRate": "0.1300000000",
+      "additionalTaxRate": 0.1300000000,
       "tipRate": 0.2000000000,
       "country": "Canada"
     },
     {
       "name": "Northwest Territories",
-      "additionalTaxRate": "0.0500000000",
+      "additionalTaxRate": 0.0500000000,
       "tipRate": 0.2000000000,
       "country": "Canada"
     },
     {
       "name": "Nova Scotia",
-      "additionalTaxRate": "0.1500000000",
+      "additionalTaxRate": 0.1500000000,
       "tipRate": 0.2000000000,
       "country": "Canada"
     },
     {
       "name": "Nunavut",
-      "additionalTaxRate": "0.0500000000",
+      "additionalTaxRate": 0.0500000000,
       "tipRate": 0.2000000000,
       "country": "Canada"
     },
     {
       "name": "Ontario",
-      "additionalTaxRate": "0.1300000000",
+      "additionalTaxRate": 0.1300000000,
       "tipRate": 0.2000000000,
       "country": "Canada"
     },
     {
       "name": "Prince Edward Island",
-      "additionalTaxRate": "0.1400000000",
+      "additionalTaxRate": 0.1400000000,
       "tipRate": 0.2000000000,
       "country": "Canada"
     },
     {
       "name": "Quebec",
-      "additionalTaxRate": "0.1497500000",
+      "additionalTaxRate": 0.1497500000,
       "tipRate": 0.2000000000,
       "country": "Canada"
     },
     {
       "name": "Saskatchewan",
-      "additionalTaxRate": "0.1000000000",
+      "additionalTaxRate": 0.1000000000,
       "tipRate": 0.2000000000,
       "country": "Canada"
     },
     {
       "name": "Yukon",
-      "additionalTaxRate": "0.0500000000",
+      "additionalTaxRate": 0.0500000000,
       "tipRate": 0.2000000000,
       "country": "Canada"
     },
     {
       "name": "Alabama",
-      "additionalTaxRate": "0.0851000000",
+      "additionalTaxRate": 0.0851000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Alaska",
-      "additionalTaxRate": "0.0169000000",
+      "additionalTaxRate": 0.0169000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Arizona",
-      "additionalTaxRate": "0.0817000000",
+      "additionalTaxRate": 0.0817000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Arkansas",
-      "additionalTaxRate": "0.0919000000",
+      "additionalTaxRate": 0.0919000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "California",
-      "additionalTaxRate": "0.0841000000",
+      "additionalTaxRate": 0.0841000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Colorado",
-      "additionalTaxRate": "0.0739000000",
+      "additionalTaxRate": 0.0739000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Connecticut",
-      "additionalTaxRate": "0.0635000000",
+      "additionalTaxRate": 0.0635000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Delaware",
-      "additionalTaxRate": "0.0000000000",
+      "additionalTaxRate": 0.0000000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Florida",
-      "additionalTaxRate": "0.0662000000",
+      "additionalTaxRate": 0.0662000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
@@ -146,247 +146,247 @@
     },
     {
       "name": "Hawaii",
-      "additionalTaxRate": "0.0435000000",
+      "additionalTaxRate": 0.0435000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Idaho",
-      "additionalTaxRate": "0.0603000000",
+      "additionalTaxRate": 0.0603000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Illinois",
-      "additionalTaxRate": "0.0816000000",
+      "additionalTaxRate": 0.0816000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Indiana",
-      "additionalTaxRate": "0.0700000000",
+      "additionalTaxRate": 0.0700000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Iowa",
-      "additionalTaxRate": "0.0678000000",
+      "additionalTaxRate": 0.0678000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Kansas",
-      "additionalTaxRate": "0.0815000000",
+      "additionalTaxRate": 0.0815000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Kentucky",
-      "additionalTaxRate": "0.0600000000",
+      "additionalTaxRate": 0.0600000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Louisiana",
-      "additionalTaxRate": "0.0889000000",
+      "additionalTaxRate": 0.0889000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Maine",
-      "additionalTaxRate": "0.0550000000",
+      "additionalTaxRate": 0.0550000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Maryland",
-      "additionalTaxRate": "0.0600000000",
+      "additionalTaxRate": 0.0600000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Massachusetts",
-      "additionalTaxRate": "0.0625000000",
+      "additionalTaxRate": 0.0625000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Michigan",
-      "additionalTaxRate": "0.0600000000",
+      "additionalTaxRate": 0.0600000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Minnesota",
-      "additionalTaxRate": "0.0719000000",
+      "additionalTaxRate": 0.0719000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Mississippi",
-      "additionalTaxRate": "0.0700000000",
+      "additionalTaxRate": 0.0700000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Missouri",
-      "additionalTaxRate": "0.0758000000",
+      "additionalTaxRate": 0.0758000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Montana",
-      "additionalTaxRate": "0.0000000000",
+      "additionalTaxRate": 0.0000000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Nebraska",
-      "additionalTaxRate": "0.0679000000",
+      "additionalTaxRate": 0.0679000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Nevada",
-      "additionalTaxRate": "0.0793000000",
+      "additionalTaxRate": 0.0793000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "New Hampshire",
-      "additionalTaxRate": "0.0000000000",
+      "additionalTaxRate": 0.0000000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "New Jersey",
-      "additionalTaxRate": "0.0697000000",
+      "additionalTaxRate": 0.0697000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "New Mexico",
-      "additionalTaxRate": "0.0726000000",
+      "additionalTaxRate": 0.0726000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "New York",
-      "additionalTaxRate": "0.0847000000",
+      "additionalTaxRate": 0.0847000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "North Carolina",
-      "additionalTaxRate": "0.0690000000",
+      "additionalTaxRate": 0.0690000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "North Dakota",
-      "additionalTaxRate": "0.0655000000",
+      "additionalTaxRate": 0.0655000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Ohio",
-      "additionalTaxRate": "0.0711000000",
+      "additionalTaxRate": 0.0711000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Oklahoma",
-      "additionalTaxRate": "0.0872000000",
+      "additionalTaxRate": 0.0872000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Oregon",
-      "additionalTaxRate": "0.0000000000",
+      "additionalTaxRate": 0.0000000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Pennsylvania",
-      "additionalTaxRate": "0.0634000000",
+      "additionalTaxRate": 0.0634000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Rhode Island",
-      "additionalTaxRate": "0.0700000000",
+      "additionalTaxRate": 0.0700000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "South Carolina",
-      "additionalTaxRate": "0.0719000000",
+      "additionalTaxRate": 0.0719000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "South Dakota",
-      "additionalTaxRate": "0.0583000000",
+      "additionalTaxRate": 0.0583000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Tennessee",
-      "additionalTaxRate": "0.0945000000",
+      "additionalTaxRate": 0.0945000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Texas",
-      "additionalTaxRate": "0.0815000000",
+      "additionalTaxRate": 0.0815000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Utah",
-      "additionalTaxRate": "0.0668000000",
+      "additionalTaxRate": 0.0668000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Vermont",
-      "additionalTaxRate": "0.0614000000",
+      "additionalTaxRate": 0.0614000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Virginia",
-      "additionalTaxRate": "0.0563000000",
+      "additionalTaxRate": 0.0563000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Washington",
-      "additionalTaxRate": "0.0888000000",
+      "additionalTaxRate": 0.0888000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "West Virginia",
-      "additionalTaxRate": "0.0607000000",
+      "additionalTaxRate": 0.0607000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Wisconsin",
-      "additionalTaxRate": "0.0543000000",
+      "additionalTaxRate": 0.0543000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "Wyoming",
-      "additionalTaxRate": "0.0549000000",
+      "additionalTaxRate": 0.0549000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
     {
       "name": "District of Columbia",
-      "additionalTaxRate": "0.0575000000",
+      "additionalTaxRate": 0.0575000000,
       "tipRate": 0.2000000000,
       "country": "United States"
     },
@@ -614,7 +614,7 @@
     },
     {
       "name": "Canada",
-      "additionalTaxRate": "0.0875000000",
+      "additionalTaxRate": 0.0875000000,
       "tipRate": 0.2000000000,
       "country": "Canada"
     },
@@ -1328,13 +1328,13 @@
     },
     {
       "name": "Norway",
-      "additionalTaxRate": "0.0000000000",
+      "additionalTaxRate": 0.0000000000,
       "tipRate": 0.0000000000,
       "country": "Norway"
     },
     {
       "name": "Oman",
-      "additionalTaxRate": "0.0000000000",
+      "additionalTaxRate": 0.0000000000,
       "tipRate": 0.0000000000,
       "country": "Oman"
     },
@@ -1730,7 +1730,7 @@
     },
     {
       "name": "United States",
-      "additionalTaxRate": "0.0964000000",
+      "additionalTaxRate": 0.0964000000,
       "tipRate": 0.1500000000,
       "country": "United States"
     },
@@ -1808,7 +1808,7 @@
     },
     {
       "name": "New Place in Yemen",
-      "additionalTaxRate": "0.2",
+      "additionalTaxRate": 0.2,
       "tipRate": null,
       "country": "Yemen"
     }

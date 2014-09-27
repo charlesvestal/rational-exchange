@@ -195,7 +195,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     }
 
     @IBAction func fieldChanged(sender : AnyObject) {
-        updateUI()
+         updateCenterScreen()
     }
     
     func doneClicked()
@@ -230,8 +230,75 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         exchangeCalc.localeList.refreshCountries()
     }
     
+    
+    func updateCenterScreen(){
+       
+        exchangeCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
+        
+        var homeFormatter = NSNumberFormatter()
+        homeFormatter.numberStyle = .CurrencyStyle
+        homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
+
+        var tippable = isTippable()
+        println(exchangeCalc.calcShouldFeelLikeRounded(tippable))
+        
+        homeCostField.text = NSString (format: "%@",
+            homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLikeRounded(tippable))
+        )
+        
+        if(foreignCostField.text != "")
+        {
+            homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
+            
+            var andString:String = ""
+            var backHomeString:String = ""
+            var homeCostTipString = ""
+            var homeCostTaxString = ""
+            
+            let tippable = isTippable()
+            
+            var totalCostString = String(format:"Your total cost is going to be %@", homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(tippable)))
+            
+            if(exchangeCalc.calcShouldTaxLike(tippable) != 0) || (exchangeCalc.calcShouldTipLike(tippable) != 0) {
+                backHomeString = String(format:". But back home, if it was listed as %@, you would pay an additional ", homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(tippable)))
+            }
+            
+            if(exchangeCalc.calcShouldTaxLike(tippable) != 0){
+                homeCostTaxString = String(format:"%@ tax", homeFormatter.stringFromNumber(exchangeCalc.calcShouldTaxLike(tippable)))
+            }
+            
+            
+            if(exchangeCalc.calcShouldTaxLike(tippable) != 0) && (exchangeCalc.calcShouldTipLike(tippable) != 0) {
+                andString = " and "
+            }
+            
+            if (exchangeCalc.calcShouldTipLike(tippable) != 0){
+                homeCostTipString = String(format:"%@ tip", homeFormatter.stringFromNumber(exchangeCalc.calcShouldTipLike(tippable)))
+            }
+            
+            var totalString:String = totalCostString + backHomeString + homeCostTaxString + andString + homeCostTipString + "."
+            
+            
+            homeCostLabel.text = totalString
+        }
+
+        
+    }
+    
+    func isTippable() -> Double {
+        var isTippable:Double
+        if tipSwitch.on
+        { isTippable = 1.0}
+        else
+        { isTippable = 0.0}
+
+        return isTippable
+        
+    }
     func updateUI()   {
-      
+
+        var tippable = isTippable()
+        
         var homeFormatter = NSNumberFormatter()
         homeFormatter.numberStyle = .CurrencyStyle
         homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
@@ -248,12 +315,6 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         
         
         foreignCurrencySymbolLabel.text = foreignCurrencySymbol
-        
-        var isTippable:Double
-        if tipSwitch.on
-        { isTippable = 1.0}
-        else
-        { isTippable = 0.0}
         
         exchangeCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
         
@@ -303,9 +364,6 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             bottomFrameTaxString.text = String(format: "%.2f%% in Sales Tax", exchangeCalc.homeLocale.additionalTaxRate! * 100)
         }
         
-        
-        
-        
         if (exchangeCalc.homeLocale.tipRate == 0.0){
             bottomFrameTipString.text = "Tipping isn't the custom here."
         }
@@ -321,44 +379,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             bottomFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.homeLocale.tipRate! * 100)
         }
         
- 
-        homeCostField.text = NSString (format: "%@",
-            homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLikeRounded(isTippable))
-            )
-        
-        if(foreignCostField.text != "")
-        {
-                homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
-            
-            var andString:String = ""
-            var backHomeString:String = ""
-            var homeCostTipString = ""
-            var homeCostTaxString = ""
 
-            var totalCostString = String(format:"Your total cost is going to be %@", homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(isTippable)))
-        
-            if(exchangeCalc.calcShouldTaxLike(isTippable) != 0) || (exchangeCalc.calcShouldTipLike(isTippable) != 0) {
-                backHomeString = String(format:". But back home, if it was listed as %@, you would pay an additional ", homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(isTippable)))
-            }
-            
-            if(exchangeCalc.calcShouldTaxLike(isTippable) != 0){
-                homeCostTaxString = String(format:"%@ tax", homeFormatter.stringFromNumber(exchangeCalc.calcShouldTaxLike(isTippable)))
-            }
-            
-            
-            if(exchangeCalc.calcShouldTaxLike(isTippable) != 0) && (exchangeCalc.calcShouldTipLike(isTippable) != 0) {
-                andString = " and "
-            }
-            
-            if (exchangeCalc.calcShouldTipLike(isTippable) != 0){
-               homeCostTipString = String(format:"%@ tip", homeFormatter.stringFromNumber(exchangeCalc.calcShouldTipLike(isTippable)))
-            }
-            
-            var totalString:String = totalCostString + backHomeString + homeCostTaxString + andString + homeCostTipString + "."
-
-
-                homeCostLabel.text = totalString
-        }
         
         self.topCountryFlag.image = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
         if(self.topCountryFlag.image == nil)
@@ -373,6 +394,9 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         bottomCountryFlag.image = bottomCountryFlag.image?.applyBlurWithRadius(4.0, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
         bottomCountryFlag.parallaxIntensity = -50
 
+        
+       updateCenterScreen()
+        
         
         setDefaults()
     }
@@ -419,7 +443,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             if let localeInfo = config["localeInfo"] as? PFFile {
                 println("locale info found")
                 
-              let jsonData = JSONValue(localeInfo.getData())
+                let jsonData = JSONValue(localeInfo.getData())
                 self.parseLocaleJSON(jsonData)
                 
             }
@@ -442,13 +466,15 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             let newTip:Double? = resource["tipRate"].number
             let newCountryName = resource["country"].string!
            
+            if (localeName == "Texas")
+            {
+                println(newTax)
+                
+            }
             exchangeCalc.localeList.localeList.append(Locale(name: localeName, additionalTaxRate: newTax, tipRate: newTip, country: exchangeCalc.localeList.getCountry(newCountryName)))
-        
-           
             }
         
-        
-        
+        println(exchangeCalc.localeList.localeList.count)
     }
     
     func updateLocales(localeName: String, additionalTaxRate: Double?, tipRate: Double?, country: Country) {
