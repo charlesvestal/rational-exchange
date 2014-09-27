@@ -495,14 +495,18 @@ class LocaleList { //:NSObject {
     
 
     func getCountry(countryName:String) -> Country {
-        for(var i=0; i < countryList.count; i++)
-        {
-            if(countryList[i].name == countryName)
-            {
-                return countryList[i]
+        var returnCountry = Country(name: "far", currencyName: "USD", currencyCode: "USD", exchangeRate: 2.0, tipRate: 0.2, additionalTaxRate: 0.2, precision: 1.0, tipString: "no way", taxString: "no fart", ISOAbbreviation: "UK")
+        
+        
+        for Country in countryList {
+            if (Country.name == countryName) {
+                returnCountry = Country
             }
         }
-        return countryList[0]
+        
+        
+        return returnCountry
+        
     }
     
     func getLocale(localeName: String) -> Locale {
