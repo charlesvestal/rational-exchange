@@ -140,9 +140,9 @@
     },
     {
       "name": "Georgia",
-      "additionalTaxRate": null,
-      "tipRate": null,
-      "country": "Georgia"
+      "additionalTaxRate": 0.069700000,
+      "tipRate": 0.2,
+      "country": "United States"
     },
     {
       "name": "Hawaii",
@@ -863,6 +863,12 @@
       "additionalTaxRate": null,
       "tipRate": 0.1000000000,
       "country": "England"
+    },    
+	{
+      "name": "Georgia (Country)",
+      "additionalTaxRate": null,
+      "tipRate": null,
+      "country": "Georgia (Country)"
     },
     {
       "name": "Greece",
