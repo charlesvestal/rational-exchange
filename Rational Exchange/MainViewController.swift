@@ -115,7 +115,6 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
 
     func setDefaults() {
-      //  defaults.setObject(localeListSingleton, forKey: "localeListSingleton")
         defaults.setObject(exchangeCalc.homeLocale.name, forKey: "homeLocaleName")
         defaults.setObject(exchangeCalc.foreignLocale.name, forKey: "foreignLocaleName")
         defaults.setObject(foreignCostField.text, forKey: "foreignCostField")
@@ -196,6 +195,8 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
 
     @IBAction func fieldChanged(sender : AnyObject) {
          updateCenterScreen()
+         defaults.setBool(tipSwitch.on, forKey: "tipSwitch")
+         defaults.synchronize()
     }
     
     func doneClicked()
