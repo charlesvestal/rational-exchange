@@ -439,7 +439,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         hud.labelText = "Loading"
         hud.detailsLabelText = "Updating Exchange Rates\n and Data"
         hud.dimBackground = true
-        hud.hide(true, afterDelay:.0)
+        hud.hide(true, afterDelay:6.0)
         
         //        MPProgressHUD showHUDAddedTo:self.view animated:YES
         // activityMonitor.startAnimating()

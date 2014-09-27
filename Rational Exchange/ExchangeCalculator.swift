@@ -10,8 +10,8 @@ import Foundation
 
 
 var exchangeCalc = exchangeCalculator(foreignTheyWant: 0,
-    foreignLocale:  localeListSingleton.getLocale("Prague"),
-    homeLocale:  localeListSingleton.getLocale("United States (USA)")
+    foreignLocale:  localeListSingleton.getLocale("Choose a Locale"),
+    homeLocale:  localeListSingleton.getLocale("Choose a Locale")
 )
 
 class exchangeCalculator {

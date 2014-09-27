@@ -518,7 +518,7 @@ class LocaleList { //:NSObject {
     
     func getLocale(localeName: String) -> Locale {
         
-        var returnLocale = Locale(name: "Choose a Locale", additionalTaxRate: nil, tipRate: nil, country: getCountry("United States"))
+        var returnLocale = Locale(name: "Choose a Locale", additionalTaxRate: nil, tipRate: nil, country: getCountry("Choose a Country"))
         
         for Locale in localeList {
             if (Locale.name == localeName) {
