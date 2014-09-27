@@ -71,18 +71,23 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
             var state = placemark.administrativeArea
             var country = placemark.country
 
+            
+            println(locality)
+            println(state)
+            println(country)
+            
             if (localeDomain == "home"){
                 // change to searchLocaleTree and move somewher else
-                if ((locality != nil) && (exchangeCalc.localeList.getLocale(locality).name != "Choose a Location")) {
+                if ((locality != nil) && (exchangeCalc.localeList.getLocale(locality).name != "Choose a Locale")) {
                     exchangeCalc.homeLocale = exchangeCalc.localeList.getLocale(locality)
                 }
-                else if ((state != nil) && (exchangeCalc.localeList.getLocale(state).name != "Choose a Location")) {
+                else if ((state != nil) && (exchangeCalc.localeList.getLocale(state).name != "Choose a Locale")) {
                     exchangeCalc.homeLocale = localeListSingleton.getLocale(state)
                 }
-                else if ((state != nil) && (stateName != nil) && (exchangeCalc.localeList.getLocale(stateName!).name != "Choose a Location")) {
+                else if ((state != nil) && (stateName != nil) && (exchangeCalc.localeList.getLocale(stateName!).name != "Choose a Locale")) {
                     exchangeCalc.homeLocale = exchangeCalc.localeList.getLocale(stateName!)
                     
-                }else if ((country != nil) && (exchangeCalc.localeList.getLocale(country).name != "Choose a Location")) {
+                }else if ((country != nil) && (exchangeCalc.localeList.getLocale(country).name != "Choose a Locale")) {
                     exchangeCalc.homeLocale = exchangeCalc.localeList.getLocale(country)
                     
                 } else {
@@ -93,16 +98,16 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
                 }
             } else if
             (localeDomain == "foreign"){
-                if ((locality != nil) && (exchangeCalc.localeList.getLocale(locality).name != "Choose a Location")) {
+                if ((locality != nil) && (exchangeCalc.localeList.getLocale(locality).name != "Choose a Locale")) {
                     exchangeCalc.foreignLocale = exchangeCalc.localeList.getLocale(locality)
                 }
-                else if ((state != nil) && (exchangeCalc.localeList.getLocale(state).name != "Choose a Location")) {
+                else if ((state != nil) && (exchangeCalc.localeList.getLocale(state).name != "Choose a Locale")) {
                     exchangeCalc.foreignLocale = exchangeCalc.localeList.getLocale(state)
                 }
-                else if ((state != nil) && (stateName != nil) && (exchangeCalc.localeList.getLocale(stateName!).name != "Choose a Location")) {
+                else if ((state != nil) && (stateName != nil) && (exchangeCalc.localeList.getLocale(stateName!).name != "Choose a Locale")) {
                     exchangeCalc.foreignLocale = exchangeCalc.localeList.getLocale(stateName!)
                     
-                }else if ((country != nil) && (exchangeCalc.localeList.getLocale(country).name != "Choose a Location")) {
+                }else if ((country != nil) && (exchangeCalc.localeList.getLocale(country).name != "Choose a Locale")) {
                     exchangeCalc.foreignLocale = exchangeCalc.localeList.getLocale(country)
                     
                 } else {
