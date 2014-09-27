@@ -124,7 +124,6 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     
     func readDefaults()
     {
- 
         if let homeLocaleisNotNil = defaults.objectForKey("homeLocaleName") as? String {
             exchangeCalc.homeLocale = exchangeCalc.localeList.getLocale(defaults.objectForKey("homeLocaleName") as String)
         }
@@ -154,6 +153,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         let now = NSDate()
         readDefaults()
         parseInit()
+        
         self.navigationController?.navigationBarHidden = true
         self.automaticallyAdjustsScrollViewInsets = false
         
@@ -395,9 +395,6 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
 
         
        updateCenterScreen()
-        
-        
-        setDefaults()
     }
     
     
@@ -415,6 +412,8 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         exchangeCalc.foreignLocale.additionalTaxRate = newLocale.additionalTaxRate
         exchangeCalc.foreignLocale.tipRate = newLocale.tipRate
         let newLocaleCurrency = newLocale.country.currencyCode
+        
+        setDefaults()
         updateUI()
     }
     
@@ -425,6 +424,8 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         exchangeCalc.homeLocale.tipRate = newLocale.tipRate
         exchangeCalc.homeLocale.country.exchangeRate = newLocale.country.exchangeRate
         exchangeCalc.precision = newLocale.country.precision
+        
+        setDefaults()
         updateUI()
     }
     
@@ -437,20 +438,21 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             } else {
                 println("Failed to fetch. Using Cached Config.")
                 config = PFConfig.currentConfig()
+                self.readDefaults()
             }
             
             if let localeInfo = config["localeInfo"] as? PFFile {
                 println("Fetch successful. Processing config.")
-                
-                Async.background {
                     let jsonData = JSONValue(localeInfo.getData())
                     self.parseLocaleJSON(jsonData)
+                    self.readDefaults()
                     println("Finished processing config.")
-                }
             }
             self.refreshUI()
-          
-        }
+            self.updateUI()
+            }
+        
+        
         
     }
     
@@ -461,19 +463,14 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         var resources = jsonData["array"].array!
       
         for resource in resources {
-            let localeName = resource["name"].string!
+            let localeName =     resource["name"].string!
             let newTax:Double? = resource["additionalTaxRate"].number
             let newTip:Double? = resource["tipRate"].number
             let newCountryName = resource["country"].string!
-       //     let newCountry = Country(name: "far", currencyName: "USD", currencyCode: "USD", exchangeRate: 2.0, tipRate: 0.2, additionalTaxRate: 0.2, precision: 1.0, tipString: "no way", taxString: "no fart", ISOAbbreviation: "UK")
-            
-            
-//            exchangeCalc.localeList.localeList.append(Locale(name: localeName, additionalTaxRate: newTax, tipRate: newTip, country: newCountry))
             
             exchangeCalc.localeList.localeList.append(Locale(name: localeName, additionalTaxRate: newTax, tipRate: newTip, country: exchangeCalc.localeList.getCountry(newCountryName)))
             }
-        
-        println(exchangeCalc.localeList.localeList.count)
+   
     }
     
     func updateLocales(localeName: String, additionalTaxRate: Double?, tipRate: Double?, country: Country) {

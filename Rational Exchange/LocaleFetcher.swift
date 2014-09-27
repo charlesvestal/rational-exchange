@@ -345,75 +345,75 @@ class LocaleList { //:NSObject {
         
         
         localeList = [
-            Locale(name: "Prague", additionalTaxRate: getCountry("Czech Republic").additionalTaxRate, tipRate: 0.1, country: getCountry("Czech Republic")),
+            Locale(name: "Prague", additionalTaxRate: getCountry("Czech Republic").additionalTaxRate, tipRate: 0.1, country: Country(name: "Czech Republic", currencyName: "Czech Koruna", currencyCode: "CZK", exchangeRate: 21.247999, tipRate:nil, additionalTaxRate:nil, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"CZ")),
             
-            Locale(name:"Alberta", additionalTaxRate: 0.05, tipRate: getCountry("Canada").tipRate, country:getCountry("Canada")),
-            Locale(name:"British Columbia", additionalTaxRate: 0.12, tipRate: getCountry("Canada").tipRate, country:getCountry("Canada")),
-            Locale(name:"Manitoba", additionalTaxRate: 0.13, tipRate: getCountry("Canada").tipRate, country:getCountry("Canada")),
-            Locale(name:"New Brunswick", additionalTaxRate: 0.13, tipRate: getCountry("Canada").tipRate, country:getCountry("Canada")),
-            Locale(name:"Newfoundland and Labrador", additionalTaxRate: 0.13, tipRate: getCountry("Canada").tipRate, country:getCountry("Canada")),
-            Locale(name:"Northwest Territories", additionalTaxRate: 0.05, tipRate: getCountry("Canada").tipRate, country:getCountry("Canada")),
-            Locale(name:"Nova Scotia", additionalTaxRate: 0.15, tipRate: getCountry("Canada").tipRate, country:getCountry("Canada")),
-            Locale(name:"Nunavut", additionalTaxRate: 0.05, tipRate: getCountry("Canada").tipRate, country:getCountry("Canada")),
-            Locale(name:"Ontario", additionalTaxRate: 0.13, tipRate: getCountry("Canada").tipRate, country:getCountry("Canada")),
-            Locale(name:"Prince Edward Island", additionalTaxRate: 0.14, tipRate: getCountry("Canada").tipRate, country:getCountry("Canada")),
-            Locale(name:"Quebec", additionalTaxRate: 0.14975, tipRate: getCountry("Canada").tipRate, country:getCountry("Canada")),
-            Locale(name:"Saskatchewan", additionalTaxRate: 0.10, tipRate: getCountry("Canada").tipRate, country:getCountry("Canada")),
-            Locale(name:"Yukon", additionalTaxRate: 0.05, tipRate: getCountry("Canada").tipRate, country:getCountry("Canada")),
+            Locale(name:"Alberta", additionalTaxRate: 0.05, tipRate: 0.20, country: Country(name: "Canada", currencyName: "Canadian Dollar", currencyCode: "CAD", exchangeRate: 1.0979099999999999, tipRate:0.2, additionalTaxRate:0.0875, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"CA")),
+            Locale(name:"British Columbia", additionalTaxRate: 0.12, tipRate: 0.20, country: Country(name: "Canada", currencyName: "Canadian Dollar", currencyCode: "CAD", exchangeRate: 1.0979099999999999, tipRate:0.2, additionalTaxRate:0.0875, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"CA")),
+            Locale(name:"Manitoba", additionalTaxRate: 0.13, tipRate: 0.20, country: Country(name: "Canada", currencyName: "Canadian Dollar", currencyCode: "CAD", exchangeRate: 1.0979099999999999, tipRate:0.2, additionalTaxRate:0.0875, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"CA")),
+            Locale(name:"New Brunswick", additionalTaxRate: 0.13, tipRate: 0.20, country: Country(name: "Canada", currencyName: "Canadian Dollar", currencyCode: "CAD", exchangeRate: 1.0979099999999999, tipRate:0.2, additionalTaxRate:0.0875, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"CA")),
+            Locale(name:"Newfoundland and Labrador", additionalTaxRate: 0.13, tipRate: 0.20, country: Country(name: "Canada", currencyName: "Canadian Dollar", currencyCode: "CAD", exchangeRate: 1.0979099999999999, tipRate:0.2, additionalTaxRate:0.0875, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"CA")),
+            Locale(name:"Northwest Territories", additionalTaxRate: 0.05, tipRate: 0.20, country: Country(name: "Canada", currencyName: "Canadian Dollar", currencyCode: "CAD", exchangeRate: 1.0979099999999999, tipRate:0.2, additionalTaxRate:0.0875, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"CA")),
+            Locale(name:"Nova Scotia", additionalTaxRate: 0.15, tipRate: 0.20, country: Country(name: "Canada", currencyName: "Canadian Dollar", currencyCode: "CAD", exchangeRate: 1.0979099999999999, tipRate:0.2, additionalTaxRate:0.0875, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"CA")),
+            Locale(name:"Nunavut", additionalTaxRate: 0.05, tipRate: 0.20, country: Country(name: "Canada", currencyName: "Canadian Dollar", currencyCode: "CAD", exchangeRate: 1.0979099999999999, tipRate:0.2, additionalTaxRate:0.0875, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"CA")),
+            Locale(name:"Ontario", additionalTaxRate: 0.13, tipRate: 0.20, country: Country(name: "Canada", currencyName: "Canadian Dollar", currencyCode: "CAD", exchangeRate: 1.0979099999999999, tipRate:0.2, additionalTaxRate:0.0875, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"CA")),
+            Locale(name:"Prince Edward Island", additionalTaxRate: 0.14, tipRate: 0.20, country: Country(name: "Canada", currencyName: "Canadian Dollar", currencyCode: "CAD", exchangeRate: 1.0979099999999999, tipRate:0.2, additionalTaxRate:0.0875, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"CA")),
+            Locale(name:"Quebec", additionalTaxRate: 0.14975, tipRate: 0.20, country: Country(name: "Canada", currencyName: "Canadian Dollar", currencyCode: "CAD", exchangeRate: 1.0979099999999999, tipRate:0.2, additionalTaxRate:0.0875, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"CA")),
+            Locale(name:"Saskatchewan", additionalTaxRate: 0.10, tipRate: 0.20, country: Country(name: "Canada", currencyName: "Canadian Dollar", currencyCode: "CAD", exchangeRate: 1.0979099999999999, tipRate:0.2, additionalTaxRate:0.0875, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"CA")),
+            Locale(name:"Yukon", additionalTaxRate: 0.05, tipRate: 0.20, country: Country(name: "Canada", currencyName: "Canadian Dollar", currencyCode: "CAD", exchangeRate: 1.0979099999999999, tipRate:0.2, additionalTaxRate:0.0875, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"CA")),
             
-            Locale(name: "Alabama", additionalTaxRate: 0.085100000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Alaska", additionalTaxRate: 0.016900000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Arizona", additionalTaxRate: 0.081700000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Arkansas", additionalTaxRate: 0.091900000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "California", additionalTaxRate: 0.084100000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Colorado", additionalTaxRate: 0.073900000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Connecticut", additionalTaxRate: 0.063500000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Delaware", additionalTaxRate: 0.000000000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Florida", additionalTaxRate: 0.066200000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Georgia", additionalTaxRate: 0.069700000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Hawaii", additionalTaxRate: 0.043500000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Idaho", additionalTaxRate: 0.060300000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Illinois", additionalTaxRate: 0.081600000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Indiana", additionalTaxRate: 0.070000000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Iowa", additionalTaxRate: 0.067800000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Kansas", additionalTaxRate: 0.081500000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Kentucky", additionalTaxRate: 0.060000000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Louisiana", additionalTaxRate: 0.088900000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Maine", additionalTaxRate: 0.055000000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Maryland", additionalTaxRate: 0.060000000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Massachusetts", additionalTaxRate: 0.062500000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Michigan", additionalTaxRate: 0.060000000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Minnesota", additionalTaxRate: 0.071900000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Mississippi", additionalTaxRate: 0.070000000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Missouri", additionalTaxRate: 0.075800000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Montana", additionalTaxRate: 0.000000000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Nebraska", additionalTaxRate: 0.067900000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Nevada", additionalTaxRate: 0.079300000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "New Hampshire", additionalTaxRate: 0.000000000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "New Jersey", additionalTaxRate: 0.069700000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "New Mexico", additionalTaxRate: 0.072600000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "New York", additionalTaxRate: 0.084700000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "North Carolina", additionalTaxRate: 0.069000000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "North Dakota", additionalTaxRate: 0.065500000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Ohio", additionalTaxRate: 0.071100000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Oklahoma", additionalTaxRate: 0.087200000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Oregon", additionalTaxRate: 0.000000000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Pennsylvania", additionalTaxRate: 0.063400000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Rhode Island", additionalTaxRate: 0.070000000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "South Carolina", additionalTaxRate: 0.071900000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "South Dakota", additionalTaxRate: 0.058300000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Tennessee", additionalTaxRate: 0.094500000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Texas", additionalTaxRate: 0.081500000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Utah", additionalTaxRate: 0.066800000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Vermont", additionalTaxRate: 0.061400000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Virginia", additionalTaxRate: 0.056300000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Washington", additionalTaxRate: 0.088800000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "West Virginia", additionalTaxRate: 0.060700000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Wisconsin", additionalTaxRate: 0.054300000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "Wyoming", additionalTaxRate: 0.054900000, tipRate: 0.20, country: getCountry("United States")),
-            Locale(name: "District of Columbia", additionalTaxRate: 0.057500000, tipRate: 0.20, country: getCountry("United States"))
-            ]
-            
+            Locale(name: "Alabama", additionalTaxRate: 0.085100000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Alaska", additionalTaxRate: 0.016900000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Arizona", additionalTaxRate: 0.081700000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Arkansas", additionalTaxRate: 0.091900000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "California", additionalTaxRate: 0.084100000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Colorado", additionalTaxRate: 0.073900000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Connecticut", additionalTaxRate: 0.063500000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Delaware", additionalTaxRate: 0.000000000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Florida", additionalTaxRate: 0.066200000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Georgia", additionalTaxRate: 0.069700000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Hawaii", additionalTaxRate: 0.043500000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Idaho", additionalTaxRate: 0.060300000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Illinois", additionalTaxRate: 0.081600000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Indiana", additionalTaxRate: 0.070000000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Iowa", additionalTaxRate: 0.067800000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Kansas", additionalTaxRate: 0.081500000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Kentucky", additionalTaxRate: 0.060000000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Louisiana", additionalTaxRate: 0.088900000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Maine", additionalTaxRate: 0.055000000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Maryland", additionalTaxRate: 0.060000000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Massachusetts", additionalTaxRate: 0.062500000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Michigan", additionalTaxRate: 0.060000000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Minnesota", additionalTaxRate: 0.071900000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Mississippi", additionalTaxRate: 0.070000000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Missouri", additionalTaxRate: 0.075800000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Montana", additionalTaxRate: 0.000000000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Nebraska", additionalTaxRate: 0.067900000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Nevada", additionalTaxRate: 0.079300000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "New Hampshire", additionalTaxRate: 0.000000000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "New Jersey", additionalTaxRate: 0.069700000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "New Mexico", additionalTaxRate: 0.072600000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "New York", additionalTaxRate: 0.084700000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "North Carolina", additionalTaxRate: 0.069000000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "North Dakota", additionalTaxRate: 0.065500000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Ohio", additionalTaxRate: 0.071100000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Oklahoma", additionalTaxRate: 0.087200000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Oregon", additionalTaxRate: 0.000000000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Pennsylvania", additionalTaxRate: 0.063400000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Rhode Island", additionalTaxRate: 0.070000000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "South Carolina", additionalTaxRate: 0.071900000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "South Dakota", additionalTaxRate: 0.058300000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Tennessee", additionalTaxRate: 0.094500000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Texas", additionalTaxRate: 0.081500000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Utah", additionalTaxRate: 0.066800000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Vermont", additionalTaxRate: 0.061400000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Virginia", additionalTaxRate: 0.056300000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Washington", additionalTaxRate: 0.088800000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "West Virginia", additionalTaxRate: 0.060700000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Wisconsin", additionalTaxRate: 0.054300000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "Wyoming", additionalTaxRate: 0.054900000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+            Locale(name: "District of Columbia", additionalTaxRate: 0.057500000, tipRate: 0.20, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")
+            )
+        ]
         
         readCachedCountries()
         
@@ -497,16 +497,23 @@ class LocaleList { //:NSObject {
     func getCountry(countryName:String) -> Country {
         var returnCountry = Country(name: "far", currencyName: "USD", currencyCode: "USD", exchangeRate: 2.0, tipRate: 0.2, additionalTaxRate: 0.2, precision: 1.0, tipString: "no way", taxString: "no fart", ISOAbbreviation: "UK")
         
-        
         for Country in countryList {
             if (Country.name == countryName) {
                 returnCountry = Country
             }
         }
+//
+//        for(var i=0; i < countryList.count; i++)
+//        {
+//            if(countryList[i].name == countryName)
+//            {
+//                returnCountry = countryList[i]
+//
+//            }
+//        }
         
         
         return returnCountry
-        
     }
     
     func getLocale(localeName: String) -> Locale {
