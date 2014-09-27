@@ -203,12 +203,7 @@ import UIKit
     return true
     }
     */
-    
-    override func prepareForSegue(segue: UIStoryboardSegue,
-        sender: AnyObject!){
-         println("segue")
-    }
-    
+        
     
 }
 

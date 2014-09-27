@@ -161,7 +161,6 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         setupScrollView()
         updateUI()
         
-        println(now.timeIntervalSinceNow)
         
         
         var delegate:locationHelper?
@@ -241,7 +240,6 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
 
         var tippable = isTippable()
-        println(exchangeCalc.calcShouldFeelLikeRounded(tippable))
         
         homeCostField.text = NSString (format: "%@",
             homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLikeRounded(tippable))
@@ -442,11 +440,13 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             }
             
             if let localeInfo = config["localeInfo"] as? PFFile {
-                println("locale info found")
+                println("Fetch successful. Processing config.")
                 
-                let jsonData = JSONValue(localeInfo.getData())
-                self.parseLocaleJSON(jsonData)
-                
+                Async.background {
+                    let jsonData = JSONValue(localeInfo.getData())
+                    self.parseLocaleJSON(jsonData)
+                    println("Finished processing config.")
+                }
             }
             self.refreshUI()
           
@@ -457,7 +457,6 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     func parseLocaleJSON(jsonData:JSONValue) {
     
         exchangeCalc.localeList.localeList = [Locale]()
-        println(exchangeCalc.localeList.localeList.count)
         
         var resources = jsonData["array"].array!
       
@@ -466,12 +465,11 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             let newTax:Double? = resource["additionalTaxRate"].number
             let newTip:Double? = resource["tipRate"].number
             let newCountryName = resource["country"].string!
-           
-            if (localeName == "Texas")
-            {
-                println(newTax)
-                
-            }
+       //     let newCountry = Country(name: "far", currencyName: "USD", currencyCode: "USD", exchangeRate: 2.0, tipRate: 0.2, additionalTaxRate: 0.2, precision: 1.0, tipString: "no way", taxString: "no fart", ISOAbbreviation: "UK")
+            
+            
+//            exchangeCalc.localeList.localeList.append(Locale(name: localeName, additionalTaxRate: newTax, tipRate: newTip, country: newCountry))
+            
             exchangeCalc.localeList.localeList.append(Locale(name: localeName, additionalTaxRate: newTax, tipRate: newTip, country: exchangeCalc.localeList.getCountry(newCountryName)))
             }
         
