@@ -38,6 +38,12 @@ class exchangeCalculator {
         self.foreignLocale = newLocale
     }
     
+    
+    func calcTotalAmountForeign(tippable:Double) -> Double {
+        var foreignTotalAmount = calcTotalAmount(tippable) * exchangeRate
+        return foreignTotalAmount
+    }
+    
     func calcTotalAmount (tippable:Double) -> Double {
 
         var foreignTaxRate:Double

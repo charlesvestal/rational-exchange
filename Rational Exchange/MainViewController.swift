@@ -240,6 +240,10 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         var homeFormatter = NSNumberFormatter()
         homeFormatter.numberStyle = .CurrencyStyle
         homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
+        
+        var foreignFormatter = NSNumberFormatter()
+        foreignFormatter.numberStyle = .CurrencyStyle
+        foreignFormatter.currencyCode = exchangeCalc.foreignLocale.country.currencyCode
 
         var tippable = isTippable()
         
@@ -250,6 +254,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         if(foreignCostField.text != "")
         {
             homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
+            foreignFormatter.currencyCode = exchangeCalc.foreignLocale.country.currencyCode
             
             var andString:String = ""
             var backHomeString:String = ""
@@ -258,10 +263,12 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             
             let tippable = isTippable()
             
-            var totalCostString = String(format:"Your total cost is going to be %@", homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(tippable)))
+            
+            
+            var totalCostString = String(format:"With tax and tip, your total cost is going to be %@, or %@", foreignFormatter.stringFromNumber(exchangeCalc.calcTotalAmountForeign(tippable)), homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(tippable)))
             
             if(exchangeCalc.calcShouldTaxLike(tippable) != 0) || (exchangeCalc.calcShouldTipLike(tippable) != 0) {
-                backHomeString = String(format:". But back home, if it was listed as %@, you would pay an additional ", homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(tippable)))
+                backHomeString = String(format:". At home, they would charge %@, and you would pay ", homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(tippable)))
             }
             
             if(exchangeCalc.calcShouldTaxLike(tippable) != 0){
@@ -277,7 +284,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
                 homeCostTipString = String(format:"%@ tip", homeFormatter.stringFromNumber(exchangeCalc.calcShouldTipLike(tippable)))
             }
             
-            var totalString:String = totalCostString + backHomeString + homeCostTaxString + andString + homeCostTipString + "."
+            var totalString:String = totalCostString + backHomeString + homeCostTaxString + andString + homeCostTipString + " for the same total cost."
             
             
             homeCostLabel.text = totalString
