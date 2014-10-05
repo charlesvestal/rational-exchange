@@ -247,13 +247,24 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
 
         var tippable = isTippable()
         
-        homeCostField.text = NSString (format: "%@",
-            homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLikeRounded(tippable))
-        )
+        var homeShouldFeelLikeFormated = homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLikeRounded(tippable))
         
-        if(foreignCostField.text != "")
-        {
+        var homeTotalAmount:String! = homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(tippable))
+        
+        var foreignShouldFeelLikeFormatted = foreignFormatter.stringFromNumber(exchangeCalc.calcTotalAmountForeign(tippable))
+        
+        var homeShouldTaxLikeFormatted = homeFormatter.stringFromNumber(exchangeCalc.calcShouldTaxLike(tippable))
+        var homeShouldFeelLikeSpecific = homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(tippable))
+        
+        var homeShouldTipLikeFormatted = homeFormatter.stringFromNumber(exchangeCalc.calcShouldTipLike(tippable))
+        
+        homeCostField.text = homeShouldFeelLikeFormated
+            
+        
+    
+        if(foreignCostField.text != "") {
             homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
+            
             foreignFormatter.currencyCode = exchangeCalc.foreignLocale.country.currencyCode
             
             var andString:String = ""
@@ -266,14 +277,14 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             
             
             
-            var totalCostString = String(format:"With any tax and tip, your total is going to be %@, or %@", foreignFormatter.stringFromNumber(exchangeCalc.calcTotalAmountForeign(tippable)), homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(tippable)))
+            var totalCostString = String(format:"With any tax and tip, your total is going to be %@, or %@", foreignShouldFeelLikeFormatted!, homeShouldTaxLikeFormatted!)
             
             if(exchangeCalc.calcShouldTaxLike(tippable) != 0) || (exchangeCalc.calcShouldTipLike(tippable) != 0) {
-                backHomeString = String(format:".\n\nBack home in %@, you'd see a price of %@, ", exchangeCalc.homeLocale.name, homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(tippable))!)
+                backHomeString = String(format:".\n\nBack home in %@, you'd see a price of %@, ", exchangeCalc.homeLocale.name, homeShouldFeelLikeSpecific!)
             }
             
             if(exchangeCalc.calcShouldTaxLike(tippable) != 0){
-                homeCostTaxString = String(format:"plus %@ tax", homeFormatter.stringFromNumber(exchangeCalc.calcShouldTaxLike(tippable)))
+                homeCostTaxString = String(format:"plus %@ tax", homeShouldTaxLikeFormatted!)
             }
             
             
@@ -282,11 +293,11 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             }
             
             if (exchangeCalc.calcShouldTipLike(tippable) != 0){
-                homeCostTipString = String(format:" add %@ tip", homeFormatter.stringFromNumber(exchangeCalc.calcShouldTipLike(tippable)))
+                homeCostTipString = String(format:" add %@ tip", homeShouldTipLikeFormatted!)
             }
             
             if(exchangeCalc.calcShouldTaxLike(tippable) != 0) || (exchangeCalc.calcShouldTipLike(tippable) != 0) {
-                 homeTotalString = String(format:", for the same total cost of %@.", homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(tippable)))
+                 homeTotalString = String(format:", for the same total cost of %@.", homeShouldFeelLikeSpecific!)
             } else {
                     homeTotalString = "."
             }
@@ -325,7 +336,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         var foreignCurrencySymbol = foreignFormatter.stringFromNumber(0)
         var nonNumberCharacterSet = NSMutableCharacterSet.decimalDigitCharacterSet()
             //nonNumberCharacterSet.invert()
-        foreignCurrencySymbol = foreignCurrencySymbol.componentsSeparatedByCharactersInSet(nonNumberCharacterSet)[0]
+        foreignCurrencySymbol = "USD" //foreignCurrencySymbol.componentsSeparatedByCharactersInSet(nonNumberCharacterSet)[0]
         
         
         foreignCurrencySymbolLabel.text = foreignCurrencySymbol
@@ -498,8 +509,8 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         
         for resource in resources {
             let localeName =     resource["name"].string!
-            let newTax:Double? = resource["additionalTaxRate"].number
-            let newTip:Double? = resource["tipRate"].number
+            let newTax:Double? = resource["additionalTaxRate"].number! as Double
+            let newTip:Double? = resource["tipRate"].number! as Double
             let newCountryName = resource["country"].string!
             
             exchangeCalc.localeList.localeList.append(Locale(name: localeName, additionalTaxRate: newTax, tipRate: newTip, country: exchangeCalc.localeList.getCountry(newCountryName)))

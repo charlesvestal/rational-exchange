@@ -435,7 +435,7 @@ class LocaleList { //:NSObject {
     func readCachedCountries () {
         for country in countryList {
             if((cache[country.name]) != nil) {
-            country.exchangeRate = cache[country.name]!
+            country.exchangeRate = cache[country.name]! as Double
             }
             
         }

@@ -58,7 +58,7 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
     
     func updateLocationInfo(placemark: CLPlacemark, localeDomain:String) {
         
-        if placemark.description != nil {
+        if (!placemark.description.isEmpty) {
             locationManager.stopUpdatingLocation()
             
             

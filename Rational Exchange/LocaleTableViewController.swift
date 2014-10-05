@@ -46,7 +46,7 @@ import UIKit
                 return countryMatch != nil
             }
         
-            return 0
+            return false
         })
     }
     
