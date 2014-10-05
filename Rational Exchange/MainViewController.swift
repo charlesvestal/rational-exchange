@@ -508,18 +508,18 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             var newTax:Double?
             var newTip:Double?
             
-            if (resource["additionalTaxRate"].number != nil) {
-                 newTax = resource["additionalTaxRate"].number as Double
-            }else {
-                 newTax = nil
-            }
-        
-            if (resource["tipRate"].number != nil) {
-                 newTip = resource["tipRate"].number as Double
-            }else {
-                newTip = nil
-            }
-            
+//            if (resource["additionalTaxRate"].number != nil) {
+                 newTax = resource["additionalTaxRate"].number as? Double
+//            }else {
+//                 newTax = nil
+//            }
+//        
+//            if (resource["tipRate"].number != nil) {
+                 newTip = resource["tipRate"].number as? Double
+//            }else {
+//                newTip = nil
+//            }
+//            
             
             
             let newCountryName = resource["country"].string
