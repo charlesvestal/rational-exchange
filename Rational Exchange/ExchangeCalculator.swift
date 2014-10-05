@@ -117,9 +117,10 @@ class exchangeCalculator {
         return shouldTipLike
     }
     
+    
     func calcShouldTaxLike(tippable:Double) -> Double {
         var homeTaxRate:Double
-
+        
         
         if(homeLocale.additionalTaxRate == nil) {
             homeTaxRate = 0.0
@@ -129,6 +130,39 @@ class exchangeCalculator {
         
         // this is how much you'd pay in tax back home
         var shouldTaxLike = homeTaxRate * calcShouldFeelLike(tippable)
+        
+        return shouldTaxLike
+    }
+    
+    func calcForeignTip(tippable:Double) -> Double {
+       
+        var foreignTipRate:Double
+        
+        if(foreignLocale.tipRate == nil) {
+            foreignTipRate = 0.0
+        } else {
+            foreignTipRate = foreignLocale.tipRate!
+        }
+        
+        var shouldTipLike = (foreignTipRate * tippable) * foreignTheyWant
+        
+        return shouldTipLike
+
+        
+        
+    }
+    
+    func calcForeignTax() -> Double? {
+   
+        var foreignTaxRate:Double
+        
+        if(foreignLocale.additionalTaxRate == nil) {
+            foreignTaxRate = 0.0
+        } else {
+            foreignTaxRate = foreignLocale.additionalTaxRate!
+        }
+        
+        var shouldTaxLike = foreignTaxRate * foreignTheyWant
         
         return shouldTaxLike
     }

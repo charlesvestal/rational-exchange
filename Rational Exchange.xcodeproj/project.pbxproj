@@ -16,6 +16,7 @@
 		FE891BF019C12C4B008CC947 /* LocaleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */; };
 		FE9692CE19CE08C1002554A9 /* AwesomeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9692CC19CE08C1002554A9 /* AwesomeCache.swift */; };
 		FE9692CF19CE08C1002554A9 /* AwesomeCacheObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9692CD19CE08C1002554A9 /* AwesomeCacheObject.swift */; };
+		FEA5629C19E1781900EDF4DD /* LaunchImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA5629B19E1781900EDF4DD /* LaunchImage.storyboard */; };
 		FEA9EF1919D4E6C40031AD70 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA9EF1819D4E6C40031AD70 /* Security.framework */; };
 		FEA9EF1B19D4E6CD0031AD70 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA9EF1A19D4E6CD0031AD70 /* StoreKit.framework */; };
 		FEA9EF1D19D4E6D30031AD70 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA9EF1C19D4E6D30031AD70 /* SystemConfiguration.framework */; };
@@ -80,6 +81,7 @@
 		FE9692CC19CE08C1002554A9 /* AwesomeCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwesomeCache.swift; path = dependencies/AweomeCache/Source/AwesomeCache.swift; sourceTree = SOURCE_ROOT; };
 		FE9692CD19CE08C1002554A9 /* AwesomeCacheObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwesomeCacheObject.swift; path = dependencies/AweomeCache/Source/AwesomeCacheObject.swift; sourceTree = SOURCE_ROOT; };
 		FEA2B9A919CF726400455670 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		FEA5629B19E1781900EDF4DD /* LaunchImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchImage.storyboard; sourceTree = "<group>"; };
 		FEA9EF1819D4E6C40031AD70 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FEA9EF1A19D4E6CD0031AD70 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FEA9EF1C19D4E6D30031AD70 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -164,6 +166,7 @@
 				FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */,
 				FEE86B5719B1767B00852F94 /* Main.storyboard */,
 				FEE86B5A19B1767B00852F94 /* Images.xcassets */,
+				FEA5629B19E1781900EDF4DD /* LaunchImage.storyboard */,
 				FEE86B5119B1767B00852F94 /* Supporting Files */,
 				FEC792E019D1A6E6006A45A2 /* Rational Exchange-Bridging-Header.h */,
 			);
@@ -288,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEA5629C19E1781900EDF4DD /* LaunchImage.storyboard in Resources */,
 				FEE86B5919B1767B00852F94 /* Main.storyboard in Resources */,
 				FEE86B5B19B1767B00852F94 /* Images.xcassets in Resources */,
 			);

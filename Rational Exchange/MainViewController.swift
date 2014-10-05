@@ -252,6 +252,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         var homeTotalAmount = homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(tippable))
         
         var foreignShouldFeelLikeFormatted = foreignFormatter.stringFromNumber(exchangeCalc.calcTotalAmountForeign(tippable))
+        
         var homeShouldTaxLikeFormatted = homeFormatter.stringFromNumber(exchangeCalc.calcShouldTaxLike(tippable))
         
         
@@ -271,9 +272,29 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             var homeTotalString = ""
             let tippable = isTippable()
             
+            var foreignTax = ""
+            var foreignTip = ""
+            
+            if(exchangeCalc.calcForeignTax()! == 0){
+                foreignTax = "no"
+            }
+            else {
+                foreignTax = foreignFormatter.stringFromNumber(exchangeCalc.calcForeignTax()!)!
+            }
             
             
-            var totalCostString = String(format:"With any tax and tip, your total is going to be %@, or %@", foreignShouldFeelLikeFormatted!, homeShouldTaxLikeFormatted!)
+            if(exchangeCalc.calcForeignTip(tippable) == 0){
+                foreignTip = "no"
+            }
+            else {
+                foreignTip = foreignFormatter.stringFromNumber(exchangeCalc.calcForeignTip(tippable))!
+            }
+            
+            
+            
+            var startString = String(format:"With %@ tax and %@ tip, y", foreignTax, foreignTip)
+            
+            var totalCostString = String(format:"our total is going to be %@, or %@", foreignShouldFeelLikeFormatted!, homeTotalAmount!)
             
             if(exchangeCalc.calcShouldTaxLike(tippable) != 0) || (exchangeCalc.calcShouldTipLike(tippable) != 0) {
                 backHomeString = String(format:".\n\nBack home in %@, you'd see a price of %@, ", exchangeCalc.homeLocale.name, homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(tippable))!)
@@ -298,7 +319,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
                     homeTotalString = "."
             }
             
-            var totalString:String = totalCostString + backHomeString + homeCostTaxString + andString + homeCostTipString + homeTotalString
+            var totalString:String = startString + totalCostString + backHomeString + homeCostTaxString + andString + homeCostTipString + homeTotalString
             
             
             homeCostLabel.text = totalString
@@ -508,18 +529,8 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             var newTax:Double?
             var newTip:Double?
             
-//            if (resource["additionalTaxRate"].number != nil) {
                  newTax = resource["additionalTaxRate"].number as? Double
-//            }else {
-//                 newTax = nil
-//            }
-//        
-//            if (resource["tipRate"].number != nil) {
                  newTip = resource["tipRate"].number as? Double
-//            }else {
-//                newTip = nil
-//            }
-//            
             
             
             let newCountryName = resource["country"].string
