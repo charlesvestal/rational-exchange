@@ -149,6 +149,9 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     @IBOutlet weak var topContainerView: UIView!
     @IBOutlet weak var topCountryFlag: UIImageView!
     @IBOutlet weak var bottomCountryFlag: UIImageView!
+    @IBOutlet weak var gotoTopButtonButton: UIButton!
+
+    @IBOutlet weak var gotoBottomButtonButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -158,6 +161,13 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         
         self.navigationController?.navigationBarHidden = true
         self.automaticallyAdjustsScrollViewInsets = false
+        
+        
+        gotoTopButtonButton.layer.cornerRadius = 0.5 * gotoTopButtonButton.bounds.size.width
+        gotoTopButtonButton.layer.masksToBounds = true
+        
+        gotoBottomButtonButton.layer.cornerRadius = 0.5 * gotoBottomButtonButton.bounds.size.width
+        gotoBottomButtonButton.layer.masksToBounds = true
         
         initUI()
         setupScrollView()
@@ -179,12 +189,27 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             scrollView.contentOffset = CGPointMake(0,(mainView.bounds.height * startingPage))
     }
     
+    
+    @IBAction func gotoButtomButton(sender: AnyObject) {
+        
+        let pageNumber:CGFloat = 2
+        var thirdPageStart =
+        CGPointMake(0,(mainView.bounds.height * pageNumber))
+        
+        scrollView.setContentOffset(thirdPageStart, animated: true)
+    }
+    
+    @IBAction func gotoTopButton(sender: AnyObject) {
+        scrollView.setContentOffset(CGPointMake(0,0), animated: true)
+    }
+    
     override func viewDidLayoutSubviews() {
         if (currentVersion.doubleValue < 8.0)
         {
             setupScrollView()
         }
     }
+    
     @IBAction func viewTapped(sender: AnyObject) {
             self.view.endEditing(true)
         }
@@ -223,6 +248,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     topCountryFlag.alpha = 0.4
     bottomCountryFlag.alpha = 0.4
 
+    
     topCountryFlag.image = topCountryFlag.image?.applyBlurWithRadius(4.0, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
     topCountryFlag.parallaxIntensity = -50
     
@@ -423,13 +449,22 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         
 
         
-        self.topCountryFlag.image = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
+        var homeFlag = UIImage(named:exchangeCalc.homeLocale.country.ISOAbbreviation)
+        var foreignFlag = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
+
+        
+        self.topCountryFlag.image = foreignFlag
+        self.gotoTopButtonButton.setBackgroundImage(foreignFlag, forState: .Normal)
+
+        
+        
         if(self.topCountryFlag.image == nil)
         {
             println(String(format:"no flag for %@", exchangeCalc.foreignLocale.country.name))
         }
-        self.bottomCountryFlag.image = UIImage(named:exchangeCalc.homeLocale.country.ISOAbbreviation)
-       
+        self.bottomCountryFlag.image = homeFlag
+        self.gotoBottomButtonButton.setBackgroundImage(homeFlag, forState: .Normal)
+        
         topCountryFlag.image = topCountryFlag.image?.applyBlurWithRadius(4.0, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
         topCountryFlag.parallaxIntensity = -50
         

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3DH-9s-nSH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3DH-9s-nSH">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -221,10 +221,10 @@
                                         </variation>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S2e-v9-8Zq" userLabel="middlePage">
-                                        <rect key="frame" x="0.0" y="568" width="376" height="568"/>
+                                        <rect key="frame" x="0.0" y="568" width="375" height="568"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhc-2m-but" userLabel="topLabelCover">
-                                                <rect key="frame" x="0.0" y="0.0" width="376" height="198"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="198"/>
                                                 <color key="backgroundColor" red="0.26003539562225342" green="0.52061372995376587" blue="0.74229294061660767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
@@ -262,6 +262,19 @@
                                                     <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="qwH-Pz-VRa"/>
                                                 </connections>
                                             </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ffa-JD-EhK" userLabel="foreignButton">
+                                                <rect key="frame" x="227" y="70" width="45" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="J7h-Ar-YlZ"/>
+                                                    <constraint firstAttribute="height" constant="45" id="QYO-VC-IkE"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="awayButton" backgroundImage="AD">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="gotoTopButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="JWc-ge-APp"/>
+                                                </connections>
+                                            </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Are you in a bar or restaurant?" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HM1-TV-D0n">
                                                 <rect key="frame" x="35" y="131" width="168" height="55"/>
                                                 <constraints>
@@ -285,7 +298,7 @@
                                                 </connections>
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyN-Cn-voj" userLabel="bottomLabelCover">
-                                                <rect key="frame" x="0.0" y="194" width="375" height="374"/>
+                                                <rect key="frame" x="0.0" y="194" width="376" height="374"/>
                                                 <color key="backgroundColor" red="0.30914759635925293" green="0.72359037399291992" blue="0.89625716209411621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
@@ -329,10 +342,24 @@
                                                     <rect key="frame" x="36" y="408" width="250" height="88"/>
                                                 </variation>
                                             </label>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYa-Wc-sKp" userLabel="homeButton">
+                                                <rect key="frame" x="137" y="530" width="45" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="IoR-Jz-VCh"/>
+                                                    <constraint firstAttribute="height" constant="45" id="yPK-rU-fmw"/>
+                                                </constraints>
+                                                <state key="normal" title="Button" image="homeButton" backgroundImage="AU">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="gotoButtomButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="UsX-2W-ISD"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <gestureRecognizers/>
                                         <constraints>
+                                            <constraint firstItem="ffa-JD-EhK" firstAttribute="centerX" secondItem="L0z-gl-kou" secondAttribute="centerX" id="5M8-r6-EFJ"/>
                                             <constraint firstItem="dhc-2m-but" firstAttribute="top" secondItem="S2e-v9-8Zq" secondAttribute="top" id="5tV-Jj-Nsa"/>
                                             <constraint firstItem="dhc-2m-but" firstAttribute="width" secondItem="S2e-v9-8Zq" secondAttribute="width" id="9qH-mY-YP7"/>
                                             <constraint firstItem="L0z-gl-kou" firstAttribute="centerY" secondItem="HM1-TV-D0n" secondAttribute="centerY" id="AVh-WF-mCV"/>
@@ -354,19 +381,25 @@
                                             <constraint firstItem="dhc-2m-but" firstAttribute="top" secondItem="S2e-v9-8Zq" secondAttribute="top" id="Zie-b1-9PH"/>
                                             <constraint firstItem="I3w-cw-ums" firstAttribute="centerX" secondItem="dhc-2m-but" secondAttribute="centerX" id="bE7-DG-REq"/>
                                             <constraint firstItem="UPk-bd-No3" firstAttribute="centerY" secondItem="LhP-aO-v0h" secondAttribute="centerY" id="ccK-S2-M2U"/>
+                                            <constraint firstItem="ffa-JD-EhK" firstAttribute="centerY" secondItem="LhP-aO-v0h" secondAttribute="centerY" id="dbi-m6-mr1"/>
                                             <constraint firstItem="5Kx-AV-dEs" firstAttribute="width" secondItem="S2e-v9-8Zq" secondAttribute="width" constant="-20" id="kpD-Ao-f9f"/>
                                             <constraint firstItem="HM1-TV-D0n" firstAttribute="centerX" secondItem="S2e-v9-8Zq" secondAttribute="centerX" constant="-41" id="ldr-Pp-c4X"/>
+                                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MYa-Wc-sKp" secondAttribute="bottom" constant="-7" id="nA1-jt-eud"/>
                                             <constraint firstItem="UGW-cI-PP4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Jn1-Vc-f0t" secondAttribute="bottom" constant="25" id="nB5-t8-gHX"/>
                                             <constraint firstItem="HM1-TV-D0n" firstAttribute="top" secondItem="LhP-aO-v0h" secondAttribute="bottom" constant="15" id="qaD-rZ-4lo"/>
                                             <constraint firstItem="5Kx-AV-dEs" firstAttribute="centerX" secondItem="lyN-Cn-voj" secondAttribute="centerX" id="sWo-6U-ZXW"/>
                                             <constraint firstItem="lyN-Cn-voj" firstAttribute="centerX" secondItem="S2e-v9-8Zq" secondAttribute="centerX" id="tfW-CO-Tlg"/>
+                                            <constraint firstItem="ffa-JD-EhK" firstAttribute="leading" secondItem="LhP-aO-v0h" secondAttribute="trailing" constant="18" id="u7G-Xd-WzQ"/>
                                             <constraint firstItem="lyN-Cn-voj" firstAttribute="width" secondItem="S2e-v9-8Zq" secondAttribute="width" id="wbk-WL-HMR"/>
+                                            <constraint firstAttribute="bottom" secondItem="MYa-Wc-sKp" secondAttribute="bottom" constant="8" id="wq6-Fm-njZ"/>
                                             <constraint firstItem="I3w-cw-ums" firstAttribute="centerX" secondItem="LhP-aO-v0h" secondAttribute="centerX" constant="-0.5" id="xD9-hJ-HEQ"/>
+                                            <constraint firstItem="MYa-Wc-sKp" firstAttribute="centerX" secondItem="lyN-Cn-voj" secondAttribute="centerX" id="z1C-57-W2N"/>
                                             <constraint firstItem="UGW-cI-PP4" firstAttribute="top" secondItem="Jn1-Vc-f0t" secondAttribute="bottom" constant="25" id="zYI-r2-mN4"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="5tV-Jj-Nsa"/>
+                                                <exclude reference="5M8-r6-EFJ"/>
                                                 <exclude reference="nB5-t8-gHX"/>
                                             </mask>
                                         </variation>
@@ -669,6 +702,8 @@
                         <outlet property="findMeHomeButton" destination="h2U-lQ-xrG" id="f4X-KJ-und"/>
                         <outlet property="foreignCostField" destination="LhP-aO-v0h" id="YaQ-Sa-3dW"/>
                         <outlet property="foreignCurrencySymbolLabel" destination="UPk-bd-No3" id="pRh-1P-SQy"/>
+                        <outlet property="gotoBottomButtonButton" destination="MYa-Wc-sKp" id="5yC-Me-bir"/>
+                        <outlet property="gotoTopButtonButton" destination="ffa-JD-EhK" id="mmv-aU-MJT"/>
                         <outlet property="homeCostField" destination="Jn1-Vc-f0t" id="UD1-Dv-uhf"/>
                         <outlet property="homeCostLabel" destination="UGW-cI-PP4" id="iqw-Wo-0O5"/>
                         <outlet property="mainView" destination="kh9-bI-dsS" id="KhZ-CZ-gC9"/>
@@ -858,7 +893,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AD" width="512" height="512"/>
+        <image name="AU" width="512" height="512"/>
         <image name="GB" width="512" height="512"/>
         <image name="LocationImage" width="44" height="44"/>
+        <image name="awayButton" width="45" height="45"/>
+        <image name="homeButton" width="45" height="45"/>
     </resources>
 </document>
