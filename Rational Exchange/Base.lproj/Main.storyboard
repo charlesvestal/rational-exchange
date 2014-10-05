@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3DH-9s-nSH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3DH-9s-nSH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -92,7 +92,9 @@
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="12"/>
                                                 <color key="tintColor" red="0.75294125080108643" green="0.81176477670669556" blue="0.88235300779342651" alpha="1" colorSpace="deviceRGB"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="NOT RIGHT? LET US KNOW.">
+                                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -114,7 +116,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.46094965934753418" green="0.60258114337921143" blue="0.7565876841545105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.26003539562225342" green="0.52061372995376587" blue="0.74229294061660767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="ef2-Q4-6ob" firstAttribute="centerX" secondItem="a0k-Sk-XzM" secondAttribute="centerX" id="13k-x9-Lqi"/>
                                             <constraint firstItem="O5z-qD-2iS" firstAttribute="top" secondItem="rs2-AT-Ez7" secondAttribute="bottom" constant="10" id="30B-yf-5Q6"/>
@@ -219,21 +221,21 @@
                                         </variation>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S2e-v9-8Zq" userLabel="middlePage">
-                                        <rect key="frame" x="0.0" y="568" width="375" height="568"/>
+                                        <rect key="frame" x="0.0" y="568" width="376" height="568"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhc-2m-but" userLabel="topLabelCover">
-                                                <rect key="frame" x="0.0" y="0.0" width="375" height="198"/>
-                                                <color key="backgroundColor" red="0.46094965934753418" green="0.60258114337921143" blue="0.7565876841545105" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="376" height="198"/>
+                                                <color key="backgroundColor" red="0.26003539562225342" green="0.52061372995376587" blue="0.74229294061660767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="198"/>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="How much is it?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3w-cw-ums">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="The price tag says:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I3w-cw-ums">
                                                 <rect key="frame" x="0.0" y="24" width="320" height="46"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="32"/>
-                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="70" y="77" width="182" height="21"/>
@@ -284,17 +286,17 @@
                                             </switch>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyN-Cn-voj" userLabel="bottomLabelCover">
                                                 <rect key="frame" x="0.0" y="194" width="375" height="374"/>
-                                                <color key="backgroundColor" red="0.57063102722167969" green="0.80359548330307007" blue="0.80741441249847412" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="backgroundColor" red="0.30914759635925293" green="0.72359037399291992" blue="0.89625716209411621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="0.0" y="194" width="375" height="374"/>
                                                 </variation>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="It should feel like:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Kx-AV-dEs">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Back home they'd charge:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5Kx-AV-dEs">
                                                 <rect key="frame" x="0.0" y="206" width="320" height="46"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="32"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="76" y="250" width="178" height="21"/>
@@ -305,6 +307,7 @@
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                                 </accessibility>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="35"/>
                                                 <textInputTraits key="textInputTraits"/>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -317,10 +320,10 @@
                                                     <action selector="roughAmountTouched:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Lbu-ba-XjN"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter an amount above to see what it would cost you back home." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="UGW-cI-PP4" userLabel="Longform cost story">
-                                                <rect key="frame" x="0.0" y="441" width="320" height="88"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter an amount above to see what it would cost you back home." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="UGW-cI-PP4" userLabel="Longform cost story">
+                                                <rect key="frame" x="0.0" y="335" width="320" height="194"/>
                                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="36" y="408" width="250" height="88"/>
@@ -351,16 +354,20 @@
                                             <constraint firstItem="dhc-2m-but" firstAttribute="top" secondItem="S2e-v9-8Zq" secondAttribute="top" id="Zie-b1-9PH"/>
                                             <constraint firstItem="I3w-cw-ums" firstAttribute="centerX" secondItem="dhc-2m-but" secondAttribute="centerX" id="bE7-DG-REq"/>
                                             <constraint firstItem="UPk-bd-No3" firstAttribute="centerY" secondItem="LhP-aO-v0h" secondAttribute="centerY" id="ccK-S2-M2U"/>
+                                            <constraint firstItem="5Kx-AV-dEs" firstAttribute="width" secondItem="S2e-v9-8Zq" secondAttribute="width" constant="-20" id="kpD-Ao-f9f"/>
                                             <constraint firstItem="HM1-TV-D0n" firstAttribute="centerX" secondItem="S2e-v9-8Zq" secondAttribute="centerX" constant="-41" id="ldr-Pp-c4X"/>
+                                            <constraint firstItem="UGW-cI-PP4" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Jn1-Vc-f0t" secondAttribute="bottom" constant="25" id="nB5-t8-gHX"/>
                                             <constraint firstItem="HM1-TV-D0n" firstAttribute="top" secondItem="LhP-aO-v0h" secondAttribute="bottom" constant="15" id="qaD-rZ-4lo"/>
                                             <constraint firstItem="5Kx-AV-dEs" firstAttribute="centerX" secondItem="lyN-Cn-voj" secondAttribute="centerX" id="sWo-6U-ZXW"/>
                                             <constraint firstItem="lyN-Cn-voj" firstAttribute="centerX" secondItem="S2e-v9-8Zq" secondAttribute="centerX" id="tfW-CO-Tlg"/>
                                             <constraint firstItem="lyN-Cn-voj" firstAttribute="width" secondItem="S2e-v9-8Zq" secondAttribute="width" id="wbk-WL-HMR"/>
                                             <constraint firstItem="I3w-cw-ums" firstAttribute="centerX" secondItem="LhP-aO-v0h" secondAttribute="centerX" constant="-0.5" id="xD9-hJ-HEQ"/>
+                                            <constraint firstItem="UGW-cI-PP4" firstAttribute="top" secondItem="Jn1-Vc-f0t" secondAttribute="bottom" constant="25" id="zYI-r2-mN4"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="5tV-Jj-Nsa"/>
+                                                <exclude reference="nB5-t8-gHX"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -380,7 +387,7 @@
                                         </connections>
                                     </view>
                                     <view clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wdr-dH-vph" userLabel="bottomPage">
-                                        <rect key="frame" x="0.0" y="1136" width="375" height="568"/>
+                                        <rect key="frame" x="0.0" y="1136" width="376" height="568"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GB" translatesAutoresizingMaskIntoConstraints="NO" id="VFK-6A-l3E">
                                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
@@ -438,7 +445,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9qB-rk-wZV" userLabel="bottomContainerView" colorLabel="IBBuiltInLabel-Orange">
-                                                <rect key="frame" x="0.0" y="-11" width="375" height="573"/>
+                                                <rect key="frame" x="0.0" y="-11" width="376" height="573"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                                     <rect key="frame" x="120" y="-5" width="376" height="573"/>
@@ -451,7 +458,9 @@
                                                 <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                                 <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="12"/>
                                                 <color key="tintColor" red="0.80000007152557373" green="0.90588241815567017" blue="0.90588241815567017" alpha="1" colorSpace="deviceRGB"/>
+                                                <size key="titleShadowOffset" width="1" height="1"/>
                                                 <state key="normal" title="NOT RIGHT? LET US KNOW.">
+                                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                 </state>
                                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -475,7 +484,7 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <color key="backgroundColor" red="0.57143098115921021" green="0.80299067497253418" blue="0.80930042266845703" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.30914759635925293" green="0.72359037399291992" blue="0.89625716209411621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="9qB-rk-wZV" firstAttribute="height" secondItem="wdr-dH-vph" secondAttribute="height" constant="-20" id="3aY-Fs-A1W"/>
                                             <constraint firstItem="GiK-Dm-osW" firstAttribute="leading" secondItem="Iro-4f-shX" secondAttribute="leading" id="6De-5t-ShO"/>
@@ -700,7 +709,7 @@
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Where Are You?" id="zq5-5b-0gK" userLabel="foreignBar">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="barTintColor" red="0.38823533058166504" green="0.52549022436141968" blue="0.70196080207824707" alpha="1" colorSpace="deviceRGB"/>
+                            <color key="barTintColor" red="0.26003539562225342" green="0.52061372995376587" blue="0.74229294061660767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="bfl-eG-BOs" id="l3d-uy-vNf"/>
@@ -781,15 +790,15 @@
             <objects>
                 <tableViewController id="YqI-Nt-Sef" userLabel="Home Table View Controller" customClass="CountryTableViewController" customModule="RationalEx" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="homeTableView" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="auY-ab-6uW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="573"/>
+                        <rect key="frame" x="0.0" y="0.0" width="376" height="573"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Where Are You From?" id="SVE-Kw-tvd" userLabel="homeBar">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="376" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="barTintColor" red="0.46961665153503418" green="0.72238665819168091" blue="0.72374153137207031" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="barTintColor" red="0.30914759635925293" green="0.72359037399291992" blue="0.89625716209411621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="YqI-Nt-Sef" id="b80-xH-07f"/>

@@ -261,18 +261,20 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             var homeCostTipString = ""
             var homeCostTaxString = ""
             
+            var homeTotalString = ""
             let tippable = isTippable()
             
             
             
             var totalCostString = String(format:"With tax and tip, your total cost is going to be %@, or %@", foreignFormatter.stringFromNumber(exchangeCalc.calcTotalAmountForeign(tippable)), homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(tippable)))
+            var totalCostString = String(format:"With any tax and tip, your total is going to be %@, or %@", foreignFormatter.stringFromNumber(exchangeCalc.calcTotalAmountForeign(tippable)), homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(tippable)))
             
             if(exchangeCalc.calcShouldTaxLike(tippable) != 0) || (exchangeCalc.calcShouldTipLike(tippable) != 0) {
-                backHomeString = String(format:". At home, they would charge %@, and you would pay ", homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(tippable)))
+                backHomeString = String(format:".\n\nBack home in %@, you'd see a price of %@, ", exchangeCalc.homeLocale.name, homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(tippable))!)
             }
             
             if(exchangeCalc.calcShouldTaxLike(tippable) != 0){
-                homeCostTaxString = String(format:"%@ tax", homeFormatter.stringFromNumber(exchangeCalc.calcShouldTaxLike(tippable)))
+                homeCostTaxString = String(format:"plus %@ tax", homeFormatter.stringFromNumber(exchangeCalc.calcShouldTaxLike(tippable)))
             }
             
             
@@ -281,10 +283,16 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             }
             
             if (exchangeCalc.calcShouldTipLike(tippable) != 0){
-                homeCostTipString = String(format:"%@ tip", homeFormatter.stringFromNumber(exchangeCalc.calcShouldTipLike(tippable)))
+                homeCostTipString = String(format:" add %@ tip", homeFormatter.stringFromNumber(exchangeCalc.calcShouldTipLike(tippable)))
             }
             
-            var totalString:String = totalCostString + backHomeString + homeCostTaxString + andString + homeCostTipString + " for the same total cost."
+            if(exchangeCalc.calcShouldTaxLike(tippable) != 0) || (exchangeCalc.calcShouldTipLike(tippable) != 0) {
+                 homeTotalString = String(format:", for the same total cost of %@.", homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(tippable)))
+            } else {
+                    homeTotalString = "."
+            }
+            
+            var totalString:String = totalCostString + backHomeString + homeCostTaxString + andString + homeCostTipString + homeTotalString
             
             
             homeCostLabel.text = totalString
