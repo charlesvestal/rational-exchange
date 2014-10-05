@@ -266,7 +266,6 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             
             
             
-            var totalCostString = String(format:"With tax and tip, your total cost is going to be %@, or %@", foreignFormatter.stringFromNumber(exchangeCalc.calcTotalAmountForeign(tippable)), homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(tippable)))
             var totalCostString = String(format:"With any tax and tip, your total is going to be %@, or %@", foreignFormatter.stringFromNumber(exchangeCalc.calcTotalAmountForeign(tippable)), homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(tippable)))
             
             if(exchangeCalc.calcShouldTaxLike(tippable) != 0) || (exchangeCalc.calcShouldTipLike(tippable) != 0) {
