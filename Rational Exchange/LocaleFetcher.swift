@@ -494,7 +494,7 @@ class LocaleList { //:NSObject {
         }
     
 
-    func getCountry(countryName:String) -> Country {
+    func getCountry(countryName:String!) -> Country {
         var returnCountry = Country(name: "far", currencyName: "USD", currencyCode: "USD", exchangeRate: 2.0, tipRate: 0.2, additionalTaxRate: 0.2, precision: 1.0, tipString: "no way", taxString: "no fart", ISOAbbreviation: "UK")
         
         for Country in countryList {
