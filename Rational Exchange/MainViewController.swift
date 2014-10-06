@@ -300,6 +300,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             
             var foreignTax = ""
             var foreignTip = ""
+            var totalCostString = ""
             
             if(exchangeCalc.calcForeignTax()! == 0){
                 foreignTax = "no"
@@ -320,14 +321,19 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             
             var startString = String(format:"With %@ tax and %@ tip, y", foreignTax, foreignTip)
             
-            var totalCostString = String(format:"our total is going to be %@, or %@", foreignShouldFeelLikeFormatted!, homeTotalAmount!)
+            if (foreignShouldFeelLikeFormatted! != homeTotalAmount){
+                   totalCostString = String(format:"our total is going to be %@, or %@", foreignShouldFeelLikeFormatted!, homeTotalAmount!)
+            }else {
+                 totalCostString = String(format:"our total is going to be %@", foreignShouldFeelLikeFormatted!)
+            }
+          
             
-            if(exchangeCalc.calcShouldTaxLike(tippable) != 0) || (exchangeCalc.calcShouldTipLike(tippable) != 0) {
-                backHomeString = String(format:".\n\nBack home in %@, you'd see a price of %@, ", exchangeCalc.homeLocale.name, homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(tippable))!)
+            if(exchangeCalc.homeLocale.tipRate != 0) || (exchangeCalc.homeLocale.additionalTaxRate != 0) {
+                backHomeString = String(format:".\n\nBack home in %@, you'd see a price of %@", exchangeCalc.homeLocale.name, homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(tippable))!)
             }
             
             if(exchangeCalc.calcShouldTaxLike(tippable) != 0){
-                homeCostTaxString = String(format:"plus %@ tax", homeShouldTaxLikeFormatted!)
+                homeCostTaxString = String(format:" plus %@ tax", homeShouldTaxLikeFormatted!)
             }
             
             
