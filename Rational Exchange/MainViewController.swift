@@ -168,6 +168,8 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         
         gotoBottomButtonButton.layer.cornerRadius = 0.5 * gotoBottomButtonButton.bounds.size.width
         gotoBottomButtonButton.layer.masksToBounds = true
+
+        
         
         initUI()
         setupScrollView()
@@ -460,7 +462,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
 
         
         self.topCountryFlag.image = foreignFlag
-        self.gotoTopButtonButton.setBackgroundImage(foreignFlag, forState: .Normal)
+        self.gotoTopButtonButton.setBackgroundImage(foreignFlag?.applyDarkEffect(), forState: .Normal)
 
         
         
@@ -469,7 +471,8 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
             println(String(format:"no flag for %@", exchangeCalc.foreignLocale.country.name))
         }
         self.bottomCountryFlag.image = homeFlag
-        self.gotoBottomButtonButton.setBackgroundImage(homeFlag, forState: .Normal)
+        self.gotoBottomButtonButton.setBackgroundImage(homeFlag?.applyDarkEffect(), forState: .Normal)
+        
         
         topCountryFlag.image = topCountryFlag.image?.applyBlurWithRadius(4.0, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
         topCountryFlag.parallaxIntensity = -50
