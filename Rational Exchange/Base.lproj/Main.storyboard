@@ -383,6 +383,7 @@
                                             <constraint firstItem="I3w-cw-ums" firstAttribute="centerX" secondItem="dhc-2m-but" secondAttribute="centerX" id="bE7-DG-REq"/>
                                             <constraint firstItem="UPk-bd-No3" firstAttribute="centerY" secondItem="LhP-aO-v0h" secondAttribute="centerY" id="ccK-S2-M2U"/>
                                             <constraint firstItem="ffa-JD-EhK" firstAttribute="centerY" secondItem="LhP-aO-v0h" secondAttribute="centerY" id="dbi-m6-mr1"/>
+                                            <constraint firstItem="Jn1-Vc-f0t" firstAttribute="top" secondItem="5Kx-AV-dEs" secondAttribute="bottom" constant="3" id="iUj-rG-8hE"/>
                                             <constraint firstItem="5Kx-AV-dEs" firstAttribute="width" secondItem="S2e-v9-8Zq" secondAttribute="width" constant="-20" id="kpD-Ao-f9f"/>
                                             <constraint firstItem="HM1-TV-D0n" firstAttribute="centerX" secondItem="S2e-v9-8Zq" secondAttribute="centerX" constant="-41" id="ldr-Pp-c4X"/>
                                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="MYa-Wc-sKp" secondAttribute="bottom" constant="-7" id="nA1-jt-eud"/>
@@ -395,12 +396,13 @@
                                             <constraint firstAttribute="bottom" secondItem="MYa-Wc-sKp" secondAttribute="bottom" constant="8" id="wq6-Fm-njZ"/>
                                             <constraint firstItem="I3w-cw-ums" firstAttribute="centerX" secondItem="LhP-aO-v0h" secondAttribute="centerX" constant="-0.5" id="xD9-hJ-HEQ"/>
                                             <constraint firstItem="MYa-Wc-sKp" firstAttribute="centerX" secondItem="lyN-Cn-voj" secondAttribute="centerX" id="z1C-57-W2N"/>
-                                            <constraint firstItem="UGW-cI-PP4" firstAttribute="top" secondItem="Jn1-Vc-f0t" secondAttribute="bottom" id="zYI-r2-mN4"/>
+                                            <constraint firstItem="UGW-cI-PP4" firstAttribute="top" secondItem="Jn1-Vc-f0t" secondAttribute="top" priority="750" id="zYI-r2-mN4"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="5tV-Jj-Nsa"/>
                                                 <exclude reference="5M8-r6-EFJ"/>
+                                                <exclude reference="I4y-xq-2pt"/>
                                                 <exclude reference="nB5-t8-gHX"/>
                                             </mask>
                                         </variation>
