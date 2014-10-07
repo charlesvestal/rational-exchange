@@ -315,7 +315,16 @@
                                                     <rect key="frame" x="76" y="250" width="178" height="21"/>
                                                 </variation>
                                             </label>
-                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12.50" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jn1-Vc-f0t" userLabel="converted Amount">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter an amount above to see what it would cost you back home." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="UGW-cI-PP4" userLabel="Longform cost story">
+                                                <rect key="frame" x="0.0" y="355" width="320" height="154"/>
+                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                                    <rect key="frame" x="36" y="408" width="250" height="88"/>
+                                                </variation>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12.50" textAlignment="center" minimumFontSize="2" translatesAutoresizingMaskIntoConstraints="NO" id="Jn1-Vc-f0t" userLabel="converted Amount">
                                                 <rect key="frame" x="76" y="257" width="169" height="53"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
@@ -333,15 +342,6 @@
                                                     <action selector="roughAmountTouched:" destination="vXZ-lx-hvc" eventType="editingChanged" id="Lbu-ba-XjN"/>
                                                 </connections>
                                             </textField>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Enter an amount above to see what it would cost you back home." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="UGW-cI-PP4" userLabel="Longform cost story">
-                                                <rect key="frame" x="0.0" y="335" width="320" height="194"/>
-                                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
-                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <nil key="highlightedColor"/>
-                                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                                    <rect key="frame" x="36" y="408" width="250" height="88"/>
-                                                </variation>
-                                            </label>
                                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MYa-Wc-sKp" userLabel="homeButton">
                                                 <rect key="frame" x="137" y="530" width="45" height="45"/>
                                                 <constraints>
@@ -377,6 +377,7 @@
                                             <constraint firstItem="I3w-cw-ums" firstAttribute="bottom" secondItem="LhP-aO-v0h" secondAttribute="top" constant="-8" id="Rec-JM-3Ur"/>
                                             <constraint firstItem="Jn1-Vc-f0t" firstAttribute="width" secondItem="lyN-Cn-voj" secondAttribute="width" constant="-40" id="S98-5k-sRj"/>
                                             <constraint firstItem="5Kx-AV-dEs" firstAttribute="bottom" secondItem="lyN-Cn-voj" secondAttribute="top" constant="58" id="TRd-Vl-klT"/>
+                                            <constraint firstItem="UGW-cI-PP4" firstAttribute="bottom" secondItem="MYa-Wc-sKp" secondAttribute="bottom" constant="-66" id="UJA-av-oQb"/>
                                             <constraint firstItem="lyN-Cn-voj" firstAttribute="bottom" secondItem="S2e-v9-8Zq" secondAttribute="bottom" id="YIj-TD-Q3t"/>
                                             <constraint firstItem="dhc-2m-but" firstAttribute="top" secondItem="S2e-v9-8Zq" secondAttribute="top" id="Zie-b1-9PH"/>
                                             <constraint firstItem="I3w-cw-ums" firstAttribute="centerX" secondItem="dhc-2m-but" secondAttribute="centerX" id="bE7-DG-REq"/>
@@ -394,7 +395,7 @@
                                             <constraint firstAttribute="bottom" secondItem="MYa-Wc-sKp" secondAttribute="bottom" constant="8" id="wq6-Fm-njZ"/>
                                             <constraint firstItem="I3w-cw-ums" firstAttribute="centerX" secondItem="LhP-aO-v0h" secondAttribute="centerX" constant="-0.5" id="xD9-hJ-HEQ"/>
                                             <constraint firstItem="MYa-Wc-sKp" firstAttribute="centerX" secondItem="lyN-Cn-voj" secondAttribute="centerX" id="z1C-57-W2N"/>
-                                            <constraint firstItem="UGW-cI-PP4" firstAttribute="top" secondItem="Jn1-Vc-f0t" secondAttribute="bottom" constant="25" id="zYI-r2-mN4"/>
+                                            <constraint firstItem="UGW-cI-PP4" firstAttribute="top" secondItem="Jn1-Vc-f0t" secondAttribute="bottom" id="zYI-r2-mN4"/>
                                         </constraints>
                                         <variation key="default">
                                             <mask key="constraints">
