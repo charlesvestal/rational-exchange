@@ -878,7 +878,10 @@
                                     <rect key="frame" x="352" y="13" width="97" height="30"/>
                                 </variation>
                                 <connections>
-                                    <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="editingChanged" id="6Yy-fz-WC4"/>
+                                    <action selector="fieldChanged:" destination="p1u-ni-V8n" eventType="editingChanged" id="1dm-qL-m7B"/>
+                                    <action selector="fieldChanged:" destination="p1u-ni-V8n" eventType="editingDidBegin" id="RMk-L9-4HA"/>
+                                    <action selector="fieldChanged:" destination="p1u-ni-V8n" eventType="valueChanged" id="fFT-Ci-cAJ"/>
+                                    <action selector="fieldChanged:" destination="p1u-ni-V8n" eventType="editingDidEnd" id="xAp-AK-65h"/>
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjd-JL-O8L" userLabel="foreignButton">
@@ -920,6 +923,7 @@
                                 </variation>
                                 <connections>
                                     <action selector="fieldChanged:" destination="vXZ-lx-hvc" eventType="valueChanged" id="IvY-kP-NEH"/>
+                                    <action selector="fieldChanged:" destination="p1u-ni-V8n" eventType="valueChanged" id="eVT-xL-08A"/>
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="500" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="FCz-8K-TVU" userLabel="Longform cost story">
@@ -1040,8 +1044,12 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="foreignCostField" destination="MSd-om-yLk" id="h0C-Cl-mVk"/>
+                        <outlet property="foreignCurrencySymbol" destination="7I5-MG-AHL" id="Dgs-eF-Meg"/>
                         <outlet property="gotoBottomButton" destination="3Un-lc-8lx" id="R2Y-AZ-zce"/>
                         <outlet property="gotoTopButton" destination="qjd-JL-O8L" id="7dQ-Az-IJa"/>
+                        <outlet property="homeCostField" destination="6X7-tr-Odi" id="VqJ-0v-pCr"/>
+                        <outlet property="homeCostLabel" destination="FCz-8K-TVU" id="BZk-6K-9t7"/>
+                        <outlet property="tipSwitch" destination="z4s-Li-EnN" id="10O-Ne-yB2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uwe-Rb-X1v" userLabel="First Responder" sceneMemberID="firstResponder"/>

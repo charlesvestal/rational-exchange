@@ -369,6 +369,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
         return isTippable
         
     }
+    
     func updateUI()   {
         var tippable = isTippable()
         
