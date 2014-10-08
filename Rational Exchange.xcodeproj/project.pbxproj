@@ -11,6 +11,8 @@
 		FE205DC919BD040F00A2ADD8 /* LocaleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE205DC819BD040F00A2ADD8 /* LocaleFetcher.swift */; };
 		FE2AFEB819B4C95B0056F0E0 /* LocaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2AFEB619B4C95B0056F0E0 /* LocaleModel.swift */; };
 		FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */; };
+		FE38F53C19E57DC400EE66C0 /* MiddleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38F53B19E57DC400EE66C0 /* MiddleViewController.swift */; };
+		FE38F53E19E57E5200EE66C0 /* ScrollViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE38F53D19E57E5200EE66C0 /* ScrollViewViewController.swift */; };
 		FE39C49C19D4FE1F00D5F4FD /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE39C49A19D4FE1F00D5F4FD /* Bolts.framework */; };
 		FE39C49D19D4FE1F00D5F4FD /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE39C49B19D4FE1F00D5F4FD /* Parse.framework */; };
 		FE891BF019C12C4B008CC947 /* LocaleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */; };
@@ -75,6 +77,8 @@
 		FE205DC819BD040F00A2ADD8 /* LocaleFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleFetcher.swift; sourceTree = "<group>"; };
 		FE2AFEB619B4C95B0056F0E0 /* LocaleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleModel.swift; sourceTree = "<group>"; };
 		FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeCalculator.swift; sourceTree = "<group>"; };
+		FE38F53B19E57DC400EE66C0 /* MiddleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MiddleViewController.swift; sourceTree = "<group>"; };
+		FE38F53D19E57E5200EE66C0 /* ScrollViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewViewController.swift; sourceTree = "<group>"; };
 		FE39C49A19D4FE1F00D5F4FD /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		FE39C49B19D4FE1F00D5F4FD /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleTableViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +138,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE38F53F19E57E5C00EE66C0 /* Refactor */ = {
+			isa = PBXGroup;
+			children = (
+				FE38F53B19E57DC400EE66C0 /* MiddleViewController.swift */,
+				FE38F53D19E57E5200EE66C0 /* ScrollViewViewController.swift */,
+			);
+			name = Refactor;
+			sourceTree = "<group>";
+		};
 		FEE86B4519B1767B00852F94 = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +175,7 @@
 				FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */,
 				FEE86B5319B1767B00852F94 /* AppDelegate.swift */,
 				FEE86B5519B1767B00852F94 /* MainViewController.swift */,
+				FE38F53F19E57E5C00EE66C0 /* Refactor */,
 				FEC792DC19D102FC006A45A2 /* LocationHelper.swift */,
 				FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */,
 				FEE86B5719B1767B00852F94 /* Main.storyboard */,
@@ -307,6 +321,7 @@
 				FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */,
 				FEFD6C0D19D25C7700EBA2EF /* UIImage+ImageEffects.m in Sources */,
 				FEC792DD19D102FC006A45A2 /* LocationHelper.swift in Sources */,
+				FE38F53C19E57DC400EE66C0 /* MiddleViewController.swift in Sources */,
 				FE205DC919BD040F00A2ADD8 /* LocaleFetcher.swift in Sources */,
 				FEACB10A19C5D3F4006F372D /* CountryModel.swift in Sources */,
 				FE9692CF19CE08C1002554A9 /* AwesomeCacheObject.swift in Sources */,
@@ -317,6 +332,7 @@
 				FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */,
 				FEF4E83119D6366900DD27B2 /* Async.swift in Sources */,
 				FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */,
+				FE38F53E19E57E5200EE66C0 /* ScrollViewViewController.swift in Sources */,
 				FEE41C8519C344A500460538 /* SwiftyJSON.swift in Sources */,
 				FE2AFEB819B4C95B0056F0E0 /* LocaleModel.swift in Sources */,
 			);

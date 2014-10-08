@@ -227,10 +227,7 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
          defaults.synchronize()
     }
     
-    func doneClicked()
-    {
-        self.view.endEditing(true)
-    }
+
     
    func initUI()
    {
