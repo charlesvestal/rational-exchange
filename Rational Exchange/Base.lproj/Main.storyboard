@@ -21,8 +21,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lV2-Qm-ySP">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfj-GU-4ig" userLabel="top">
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfj-GU-4ig" userLabel="top" customClass="CVUIContainerView" customModule="RationalEx" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isForeign" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="mPx-Hu-dt9" kind="embed" id="1Ab-so-sDK"/>
                                         </connections>
@@ -33,8 +36,11 @@
                                             <segue destination="p1u-ni-V8n" kind="embed" id="EHg-7M-Xgc"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXv-1r-sfc" userLabel="bottom">
+                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXv-1r-sfc" userLabel="bottom" customClass="CVUIContainerView" customModule="RationalEx" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1200" width="600" height="600"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="isForeign" value="NO"/>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <segue destination="mPx-Hu-dt9" kind="embed" id="xqS-FG-khC"/>
                                         </connections>
@@ -1061,13 +1067,13 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
             <objects>
                 <tableViewController id="bfl-eG-BOs" userLabel="Foreign Table View Controller" customClass="CountryTableViewController" customModule="RationalEx" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="foreignTableView" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f86-vJ-JCJ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="560"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="440"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Where Are You?" id="zq5-5b-0gK" userLabel="foreignBar">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="barTintColor" red="0.26003539562225342" green="0.52061372995376587" blue="0.74229294061660767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <textInputTraits key="textInputTraits"/>
@@ -1125,34 +1131,34 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="3082" y="-1834"/>
+            <point key="canvasLocation" x="3006" y="-2275"/>
         </scene>
         <!--Foreign Country Autolayout Scene-->
         <scene sceneID="UJW-KQ-hFi">
             <objects>
-                <viewController id="mPx-Hu-dt9" userLabel="Foreign Country Autolayout Scene" sceneMemberID="viewController">
+                <viewController id="mPx-Hu-dt9" userLabel="Foreign Country Autolayout Scene" customClass="CVCountrySummaryViewController" customModule="RationalEx" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="oAv-8y-yzA"/>
                         <viewControllerLayoutGuide type="bottom" id="Jw5-by-r0o"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fcc-FU-WgL">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GB" translatesAutoresizingMaskIntoConstraints="NO" id="Qrt-Hu-ahS">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <rect key="frame" x="-96" y="-16" width="512" height="512"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="40" y="220" width="240" height="128"/>
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IT LOOKS LIKE YOU'RE IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wv-Kc-OMk">
-                                <rect key="frame" x="180" y="100" width="241" height="26"/>
+                                <rect key="frame" x="40" y="100" width="241" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5t-hr-6OV" userLabel="findMeForeignButton">
-                                <rect key="frame" x="528" y="187" width="44" height="44"/>
+                                <rect key="frame" x="276" y="187" width="44" height="44"/>
                                 <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <state key="normal" image="LocationImage"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -1163,7 +1169,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHERE THEY SPEND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="4LU-Wx-rD3">
-                                <rect key="frame" x="50" y="346" width="500" height="26"/>
+                                <rect key="frame" x="20" y="226" width="280" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="WPB-fe-VLl"/>
                                 </constraints>
@@ -1172,37 +1178,37 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Norwegian Kroner" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTb-zy-q5M">
-                                <rect key="frame" x="50" y="380" width="500" height="26"/>
+                                <rect key="frame" x="20" y="260" width="280" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AND THEY ADD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="ojQ-gl-DCw">
-                                <rect key="frame" x="50" y="412" width="500" height="26"/>
+                                <rect key="frame" x="20" y="292" width="280" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.25% Sales Tax" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42k-4m-ZJV">
-                                <rect key="frame" x="50" y="446" width="500" height="26"/>
+                                <rect key="frame" x="20" y="326" width="280" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLUS THEY TIP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="XlW-dl-76c">
-                                <rect key="frame" x="50" y="486" width="500" height="26"/>
+                                <rect key="frame" x="20" y="366" width="280" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20% in Gratuity" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbv-KQ-bt2">
-                                <rect key="frame" x="50" y="520" width="500" height="26"/>
+                                <rect key="frame" x="20" y="400" width="280" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-8S-ogi" userLabel="notRightForeign">
-                                <rect key="frame" x="221" y="551" width="159" height="29"/>
+                                <rect key="frame" x="81" y="431" width="159" height="29"/>
                                 <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="12"/>
                                 <color key="tintColor" red="0.75294125079999996" green="0.81176477670000002" blue="0.88235300780000003" alpha="1" colorSpace="deviceRGB"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
@@ -1214,19 +1220,20 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                     <rect key="frame" x="52" y="457" width="212" height="30"/>
                                 </variation>
                                 <connections>
+                                    <action selector="notRightButton:" destination="mPx-Hu-dt9" eventType="touchUpInside" id="tOV-fB-Ylx"/>
                                     <action selector="notRightForeignButtonPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="GwX-bk-Seh"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ah2-Ug-q1T">
-                                <rect key="frame" x="0.0" y="40" width="600" height="560"/>
+                            <containerView hidden="YES" opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ah2-Ug-q1T">
+                                <rect key="frame" x="0.0" y="40" width="320" height="440"/>
                                 <connections>
                                     <segue destination="bfl-eG-BOs" kind="embed" id="4Hb-Rv-q26"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Australia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="3" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-Im-xuh">
-                                <rect key="frame" x="45" y="134" width="480" height="150"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="500" text="Australia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="3" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-Im-xuh">
+                                <rect key="frame" x="17" y="134" width="256" height="150"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="150" id="CBh-ok-NPk"/>
+                                    <constraint firstAttribute="height" priority="750" constant="150" id="CBh-ok-NPk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="300"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1284,6 +1291,14 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                     </view>
                     <navigationItem key="navigationItem" id="j1U-f5-qLC"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="countryFlag" destination="Qrt-Hu-ahS" id="T5C-dm-J3d"/>
+                        <outlet property="currencyName" destination="JTb-zy-q5M" id="DLQ-7q-hxp"/>
+                        <outlet property="localeName" destination="q0b-Im-xuh" id="ydQ-56-Qt8"/>
+                        <outlet property="taxString" destination="42k-4m-ZJV" id="pMd-92-68f"/>
+                        <outlet property="tipString" destination="xbv-KQ-bt2" id="Fwj-zK-oel"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7tJ-uJ-BIx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

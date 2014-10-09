@@ -1,5 +1,5 @@
 //
-//  ScrollViewViewController.swift
+//  CVScrollViewViewController.swift
 //  Rational Exchange
 //
 //  Created by Charles Vestal on 10/8/14.

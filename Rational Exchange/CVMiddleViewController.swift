@@ -1,5 +1,5 @@
 //
-//  MiddleViewController.swift
+//  CVMiddleViewController.swift
 //  Rational Exchange
 //
 //  Created by Charles Vestal on 10/8/14.
@@ -144,9 +144,10 @@ class CVMiddleViewController: UIViewController {
             
             
             homeCostLabel.text = totalString
+        }else {
+            homeCostLabel.text = "Enter an amount above in order to see what it would cost back home."
         }
     }
-    
     
     // start return tippable
     func isTippable() -> Double {
