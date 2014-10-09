@@ -163,7 +163,7 @@ import UIKit
 //        
 //        if(self.isForeign)
 //        {
-           self.updateLocale(newLocale.name)
+        exchangeCalc.updateLocale(newLocale.name, isForeign: isForeign)
 //            viewController.updateUI()
 //            viewController.refreshUI()
 //        }

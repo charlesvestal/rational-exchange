@@ -10,7 +10,7 @@ import UIKit
 import CoreLocation
 import MessageUI
 
-class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewControllerDelegate {
+class MainViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewControllerDelegate {
 
     let currentVersion:NSString = UIDevice.currentDevice().systemVersion
     
@@ -483,34 +483,11 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
     }
     
     
-    func refreshUI () {
+    func refreshCountries () {
         let currentForeignName = exchangeCalc.foreignLocale.name
         let currentHomeName = exchangeCalc.homeLocale.name
-        updateForeignLocale(currentForeignName)
-        updateHomeLocale(currentHomeName)
-
-    }
-    
-    func updateForeignLocale(newLocaleName:String) {
-        let newLocale = exchangeCalc.localeList.getLocale(newLocaleName)
-        exchangeCalc.foreignLocale = newLocale
-        exchangeCalc.foreignLocale.additionalTaxRate = newLocale.additionalTaxRate
-        exchangeCalc.foreignLocale.tipRate = newLocale.tipRate
-        let newLocaleCurrency = newLocale.country.currencyCode
-        
-        setDefaults()
-       
-    }
-    
-    func updateHomeLocale(newLocaleName:String) {
-        let newLocale = exchangeCalc.localeList.getLocale(newLocaleName)
-        exchangeCalc.homeLocale = newLocale
-        exchangeCalc.homeLocale.additionalTaxRate = newLocale.additionalTaxRate
-        exchangeCalc.homeLocale.tipRate = newLocale.tipRate
-        exchangeCalc.homeLocale.country.exchangeRate = newLocale.country.exchangeRate
-        exchangeCalc.precision = newLocale.country.precision
-        
-        setDefaults()
+        exchangeCalc.updateLocale(currentForeignName, isForeign:true)
+        exchangeCalc.updateLocale(currentHomeName, isForeign:false)
 
     }
     
@@ -543,14 +520,14 @@ class ViewController: UIViewController, UISearchBarDelegate, MFMailComposeViewCo
                     self.readDefaults()
                     println("Finished processing config.")
                 }
-                self.refreshUI()
+                self.refreshCountries()
                 self.updateUI()
                 hud.hide(true)
             } else {
                 hud.hide(true)
                 println("Failed to fetch. Using Cached Config.")
                 config = PFConfig.currentConfig()
-                self.refreshUI()
+                self.refreshCountries()
                 self.updateUI()
                 self.readDefaults()
                 }

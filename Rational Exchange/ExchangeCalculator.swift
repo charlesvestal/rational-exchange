@@ -44,6 +44,28 @@ class exchangeCalculator {
         return foreignTotalAmount
     }
     
+    func updateLocale(newLocaleName:String, isForeign:Bool) {
+        
+        let newLocale = exchangeCalc.localeList.getLocale(newLocaleName)
+       
+        if(isForeign){
+            exchangeCalc.foreignLocale = newLocale
+            exchangeCalc.foreignLocale.additionalTaxRate = newLocale.additionalTaxRate
+            exchangeCalc.foreignLocale.tipRate = newLocale.tipRate
+            exchangeCalc.foreignLocale.country.exchangeRate = newLocale.country.exchangeRate
+        }else {
+            exchangeCalc.homeLocale = newLocale
+            exchangeCalc.homeLocale.additionalTaxRate = newLocale.additionalTaxRate
+            exchangeCalc.homeLocale.tipRate = newLocale.tipRate
+            exchangeCalc.homeLocale.country.exchangeRate = newLocale.country.exchangeRate
+            exchangeCalc.precision = newLocale.country.precision
+        }
+
+        //    setDefaults()
+    
+    }
+
+    
     func calcTotalAmount (tippable:Double) -> Double {
 
         var foreignTaxRate:Double

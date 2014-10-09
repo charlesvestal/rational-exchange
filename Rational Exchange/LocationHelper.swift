@@ -13,7 +13,7 @@ import CoreLocation
 class locationHelper:NSObject, CLLocationManagerDelegate {
 
     var setDomainer:String = ""
-    var delegate:ViewController?
+    var delegate:MainViewController?
     
     override init(){
    //     println("init")
