@@ -11,11 +11,10 @@ import UIKit
 @IBDesignable class CountryTableViewController : UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
     
 
-    @IBInspectable var isForeign: Bool = false
-
-    @IBOutlet weak var foreignBar: UISearchBar!
-    @IBOutlet weak var homeBar: UISearchBar!
+   
+    @IBOutlet weak var searchBar: UISearchBar!
     
+    var isForeign:Bool = false
     var locales = localeListSingleton.localeList
     
     
@@ -51,37 +50,37 @@ import UIKit
     }
     
     func searchDisplayController(controller: UISearchDisplayController, willShowSearchResultsTableView tableView: UITableView) {
-        let viewController = parentViewController as ViewController
-        viewController.notRightForeignButton.hidden = true
-        viewController.notRightHomeButton.hidden = true
+//        let viewController = parentViewController as ViewController
+//        viewController.notRightForeignButton.hidden = true
+//        viewController.notRightHomeButton.hidden = true
         
         updateList()
     }
     
     func searchDisplayController(controller: UISearchDisplayController, willHideSearchResultsTableView tableView: UITableView) {
-        let viewController = parentViewController as ViewController
-        viewController.notRightForeignButton.hidden = false
-        viewController.notRightHomeButton.hidden = false
+//        let viewController = parentViewController as ViewController
+//        viewController.notRightForeignButton.hidden = false
+//        viewController.notRightHomeButton.hidden = false
         
         updateList()
     }
     
     func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
         
-        let viewController = parentViewController as ViewController
-        viewController.findMeHomeButton.enabled = false
-        viewController.findMeForeignButton.enabled = false
-        viewController.notRightForeignButton.enabled = false
-        viewController.notRightHomeButton.enabled = false
+//        let viewController = parentViewController as ViewController
+//        viewController.findMeHomeButton.enabled = false
+//        viewController.findMeForeignButton.enabled = false
+//        viewController.notRightForeignButton.enabled = false
+//        viewController.notRightHomeButton.enabled = false
         return true
     }
     
     func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
-        let viewController = parentViewController as ViewController
-        viewController.findMeHomeButton.enabled = true
-        viewController.findMeForeignButton.enabled = true
-        viewController.notRightForeignButton.enabled = true
-        viewController.notRightHomeButton.enabled = true
+//        let viewController = parentViewController as ViewController
+//        viewController.findMeHomeButton.enabled = true
+//        viewController.findMeForeignButton.enabled = true
+//        viewController.notRightForeignButton.enabled = true
+//        viewController.notRightHomeButton.enabled = true
         return true
     }
     
@@ -104,6 +103,15 @@ import UIKit
         self.tableView.dataSource = self
         
         self.tableView.reloadData()
+    }
+    
+    
+    override func viewDidAppear(animated:Bool){
+        super.viewDidAppear(true)
+        var containerView = super.view.superview?.superview?.superview as CVUIContainerView
+        self.isForeign = containerView.isForeign
+     
+        println(self.isForeign)
     }
     
     override func didReceiveMemoryWarning() {
@@ -151,20 +159,20 @@ import UIKit
         let selectedLocale = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text
         let newLocale = localeListSingleton.getLocale(selectedLocale!)
         
-        let viewController = parentViewController as ViewController
-        
-        if(isForeign)
-        {
-            viewController.updateForeignLocale(newLocale.name)
-            viewController.updateUI()
-            viewController.refreshUI()
-        }
-        else
-        {
-            viewController.updateHomeLocale(newLocale.name)
-            viewController.updateUI()
-            viewController.refreshUI()
-        }
+//        let middleViewController = parentViewController as CVMiddleViewController
+//        
+//        if(self.isForeign)
+//        {
+           self.updateLocale(newLocale.name)
+//            viewController.updateUI()
+//            viewController.refreshUI()
+//        }
+//        else
+//        {
+//            viewController.updateHomeLocale(newLocale.name)
+//            viewController.updateUI()
+//            viewController.refreshUI()
+//        }
     
         
      // how do I update home Locale?
@@ -172,6 +180,25 @@ import UIKit
         
         }
 
+    
+    func updateLocale (newLocaleName:String) {
+        
+        var locale:Locale
+        
+        if(isForeign){
+            locale = exchangeCalc.foreignLocale
+        }
+        else {
+            locale = exchangeCalc.homeLocale
+        }
+        
+        let newLocale = exchangeCalc.localeList.getLocale(newLocaleName)
+        locale = newLocale
+        locale.additionalTaxRate = newLocale.additionalTaxRate
+        locale.tipRate = newLocale.tipRate
+        let newLocaleCurrency = newLocale.country.currencyCode
+    }
+    
     
     /*
     // Override to support conditional editing of the table view.
