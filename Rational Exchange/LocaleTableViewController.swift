@@ -8,15 +8,18 @@
 
 import UIKit
 
-@IBDesignable class CountryTableViewController : UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
-    
+protocol CountrySelectedDelegate {
+    func UserDidSelectLocale(selectedLocale:Locale, isForeign:Bool)
+}
 
+@IBDesignable class CountryTableViewController : UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
    
     @IBOutlet weak var searchBar: UISearchBar!
     
     var isForeign:Bool = false
     var locales = localeListSingleton.localeList
     
+    var delegate:CountrySelectedDelegate? = nil
     
     func updateList() {
         locales = localeListSingleton.localeList
@@ -111,7 +114,7 @@ import UIKit
         var containerView = super.view.superview?.superview?.superview as CVUIContainerView
         self.isForeign = containerView.isForeign
      
-        println(self.isForeign)
+      
     }
     
     override func didReceiveMemoryWarning() {
@@ -158,9 +161,13 @@ import UIKit
         
         let selectedLocale = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text
         let newLocale = localeListSingleton.getLocale(selectedLocale!)
-        
-//        let middleViewController = parentViewController as CVMiddleViewController
-//        
+        var pvc = self.parentViewController
+        println(pvc)
+        var ppvc = pvc?.parentViewController
+        println(ppvc)
+
+
+//
 //        if(self.isForeign)
 //        {
         exchangeCalc.updateLocale(newLocale.name, isForeign: isForeign)
@@ -174,6 +181,9 @@ import UIKit
 //            viewController.refreshUI()
 //        }
     
+        if((delegate) != nil){
+            delegate?.UserDidSelectLocale(newLocale, isForeign: isForeign)
+        }
         
      // how do I update home Locale?
         self.searchDisplayController?.setActive(false, animated: true)

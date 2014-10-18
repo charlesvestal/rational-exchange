@@ -61,8 +61,6 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
         if (!placemark.description.isEmpty) {
             locationManager.stopUpdatingLocation()
             
-            
-            
             var locality = placemark.locality
             
             var currentLocale:Locale

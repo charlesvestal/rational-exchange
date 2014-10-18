@@ -9,7 +9,7 @@
 import Foundation
 import MessageUI
 
-class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControllerDelegate {
+class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControllerDelegate, CountrySelectedDelegate {
  
     @IBOutlet weak var countryFlag: UIImageView!
     
@@ -38,10 +38,23 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
         setupFlag(locale)
     }
     
+    func UserDidSelectLocale(selectedLocale:Locale, isForeign:Bool)
+    {
+        setupFlag(selectedLocale)
+        setupLabels(selectedLocale)
+    }
+    
     func setupFlag (locale:Locale) {
         countryFlag.image = UIImage(named:locale.country.ISOAbbreviation)
         countryFlag.image = countryFlag.image?.applyBlurWithRadius(4.0, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
         countryFlag.parallaxIntensity = -50
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "embedTableView" {
+        let secondVC:CountryTableViewController = segue.destinationViewController as CountryTableViewController
+            secondVC.delegate = self
+        }
     }
     
     func setupLabels(locale:Locale) {
