@@ -26,6 +26,7 @@
 		FEA9EF1D19D4E6D30031AD70 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA9EF1C19D4E6D30031AD70 /* SystemConfiguration.framework */; };
 		FEACB10A19C5D3F4006F372D /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEACB10919C5D3F4006F372D /* CountryModel.swift */; };
 		FEB3667419D72F4400E82527 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = FEB3667319D72F4400E82527 /* MBProgressHUD.m */; };
+		FEBC8AAD19F32CA500B49D9E /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBC8AAC19F32CA500B49D9E /* NotificationManager.swift */; };
 		FEC792DD19D102FC006A45A2 /* LocationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC792DC19D102FC006A45A2 /* LocationHelper.swift */; };
 		FEC9F31A19D4E62900831E98 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F31919D4E62900831E98 /* AudioToolbox.framework */; };
 		FEC9F31C19D4E63100831E98 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F31B19D4E63100831E98 /* CFNetwork.framework */; };
@@ -96,6 +97,7 @@
 		FEACB10919C5D3F4006F372D /* CountryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
 		FEB3667219D72F4400E82527 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		FEB3667319D72F4400E82527 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		FEBC8AAC19F32CA500B49D9E /* NotificationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		FEC792DC19D102FC006A45A2 /* LocationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationHelper.swift; sourceTree = "<group>"; };
 		FEC792E019D1A6E6006A45A2 /* Rational Exchange-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Rational Exchange-Bridging-Header.h"; sourceTree = "<group>"; };
 		FEC9F31919D4E62900831E98 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -146,9 +148,10 @@
 			isa = PBXGroup;
 			children = (
 				FE799BA019E6034700ACE2D0 /* CVUIContainerView.swift */,
-				FE38F53B19E57DC400EE66C0 /* CVMiddleViewController.swift */,
 				FE38F53D19E57E5200EE66C0 /* CVScrollViewViewController.swift */,
+				FE38F53B19E57DC400EE66C0 /* CVMiddleViewController.swift */,
 				FE799B9C19E5FE4B00ACE2D0 /* CVCountrySummaryViewController.swift */,
+				FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */,
 			);
 			name = Refactor;
 			sourceTree = "<group>";
@@ -181,9 +184,9 @@
 				FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */,
 				FEE86B5319B1767B00852F94 /* AppDelegate.swift */,
 				FEE86B5519B1767B00852F94 /* MainViewController.swift */,
+				FEBC8AAC19F32CA500B49D9E /* NotificationManager.swift */,
 				FE38F53F19E57E5C00EE66C0 /* Refactor */,
 				FEC792DC19D102FC006A45A2 /* LocationHelper.swift */,
-				FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */,
 				FEE86B5719B1767B00852F94 /* Main.storyboard */,
 				FEE86B5A19B1767B00852F94 /* Images.xcassets */,
 				FEA5629B19E1781900EDF4DD /* LaunchImage.storyboard */,
@@ -326,6 +329,7 @@
 			files = (
 				FE799BA119E6034700ACE2D0 /* CVUIContainerView.swift in Sources */,
 				FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */,
+				FEBC8AAD19F32CA500B49D9E /* NotificationManager.swift in Sources */,
 				FEFD6C0D19D25C7700EBA2EF /* UIImage+ImageEffects.m in Sources */,
 				FEC792DD19D102FC006A45A2 /* LocationHelper.swift in Sources */,
 				FE38F53C19E57DC400EE66C0 /* CVMiddleViewController.swift in Sources */,

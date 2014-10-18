@@ -8,12 +8,16 @@
 
 import UIKit
 
+let mySpecialNotificationKey = "com.andrewcbancroft.specialNotificationKey"
+
 protocol CountrySelectedDelegate {
     func UserDidSelectLocale(selectedLocale:Locale, isForeign:Bool)
 }
 
 @IBDesignable class CountryTableViewController : UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
-   
+  
+    
+    
     @IBOutlet weak var searchBar: UISearchBar!
     
     var isForeign:Bool = false
@@ -101,7 +105,7 @@ protocol CountrySelectedDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
         self.tableView.delegate = self
         self.tableView.dataSource = self
         
@@ -179,6 +183,8 @@ protocol CountrySelectedDelegate {
         
      // how do I update home Locale?
         self.searchDisplayController?.setActive(false, animated: true)
+        
+        NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: self)
         
         }
 

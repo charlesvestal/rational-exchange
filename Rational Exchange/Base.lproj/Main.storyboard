@@ -33,7 +33,7 @@
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpT-yS-Xcz" userLabel="middle">
                                         <rect key="frame" x="0.0" y="600" width="600" height="600"/>
                                         <connections>
-                                            <segue destination="p1u-ni-V8n" kind="embed" id="EHg-7M-Xgc"/>
+                                            <segue destination="p1u-ni-V8n" kind="embed" identifier="embedMiddleView" id="EHg-7M-Xgc"/>
                                         </connections>
                                     </containerView>
                                     <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXv-1r-sfc" userLabel="bottom" customClass="CVUIContainerView" customModule="RationalEx" customModuleProvider="target">

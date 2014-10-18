@@ -8,8 +8,9 @@
 
 import Foundation
 
+
 class CVMiddleViewController: UIViewController {
-    
+
     @IBOutlet weak var gotoTopButton: UIButton!
     @IBOutlet weak var gotoBottomButton: UIButton!
     
@@ -29,7 +30,10 @@ class CVMiddleViewController: UIViewController {
     @IBOutlet weak var homeCostLabel: UILabel!
     
     
+    
+  
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         keyboardSetup()
         roundTheButtons()
@@ -37,8 +41,14 @@ class CVMiddleViewController: UIViewController {
         updateCenterScreen()
 
         exchangeCalc.localeList.refreshCountries()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "actOnSpecialNotification", name: mySpecialNotificationKey, object: nil)
     }
     
+    
+    func actOnSpecialNotification() {
+        updateCenterScreen()
+    }
     
     func updateCenterScreen(){
         // set the exchangeCalc singleton value to the foreign Cost lable
@@ -72,6 +82,7 @@ class CVMiddleViewController: UIViewController {
         
         
 //        if(foreignCostField.text != "" && exchangeCalc.homeLocale.name != "Choose a Locale" && exchangeCalc.foreignLocale.name != "Choose a Locale") {
+
         if(foreignCostField.text != "") {
             homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
             foreignFormatter.currencyCode = exchangeCalc.foreignLocale.country.currencyCode
@@ -149,7 +160,6 @@ class CVMiddleViewController: UIViewController {
         }
     }
     
-    // start return tippable
     func isTippable() -> Double {
         var isTippable:Double
         if tipSwitch.on
@@ -159,7 +169,6 @@ class CVMiddleViewController: UIViewController {
         
         return isTippable
     }
-    // end return tippable
     
     
     

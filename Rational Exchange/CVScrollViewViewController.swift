@@ -17,7 +17,8 @@ class CVScrollViewViewController: UIViewController {
         super.viewDidLoad()
         setupScrollView()
         }
-
+    
+    
     
     func setupScrollView ()
     {
