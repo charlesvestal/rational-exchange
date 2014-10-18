@@ -220,7 +220,7 @@ class MainViewController: UIViewController, UISearchBarDelegate, MFMailComposeVi
     }
 
     @IBAction func fieldChanged(sender : AnyObject) {
-    //     updateCenterScreen()
+         updateCenterScreen()
          defaults.setBool(tipSwitch.on, forKey: "tipSwitch")
          defaults.synchronize()
     }
@@ -241,7 +241,108 @@ class MainViewController: UIViewController, UISearchBarDelegate, MFMailComposeVi
     
         foreignCostField.inputAccessoryView = keyboardDoneButtonView
     
+    
         exchangeCalc.localeList.refreshCountries()
+    }
+    
+    
+    func updateCenterScreen(){
+       
+        exchangeCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
+        
+        var homeFormatter = NSNumberFormatter()
+        homeFormatter.numberStyle = .CurrencyStyle
+        homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
+        
+        var foreignFormatter = NSNumberFormatter()
+        foreignFormatter.numberStyle = .CurrencyStyle
+        foreignFormatter.currencyCode = exchangeCalc.foreignLocale.country.currencyCode
+
+        var tippable = isTippable()
+        
+        var homeShouldFeelLikeFormated = homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLikeRounded(tippable))
+        
+        var homeTotalAmount = homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(tippable))
+        
+        var foreignShouldFeelLikeFormatted = foreignFormatter.stringFromNumber(exchangeCalc.calcTotalAmountForeign(tippable))
+        
+        var homeShouldTaxLikeFormatted = homeFormatter.stringFromNumber(exchangeCalc.calcShouldTaxLike(tippable))
+        
+        
+        homeCostField.text = homeShouldFeelLikeFormated
+            
+        
+    
+        if(foreignCostField.text != "") {
+            homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
+            foreignFormatter.currencyCode = exchangeCalc.foreignLocale.country.currencyCode
+            
+            var andString:String = ""
+            var backHomeString:String = ""
+            var homeCostTipString = ""
+            var homeCostTaxString = ""
+            
+            var homeTotalString = ""
+            let tippable = isTippable()
+            
+            var foreignTax = ""
+            var foreignTip = ""
+            var totalCostString = ""
+            
+            if(exchangeCalc.calcForeignTax()! == 0){
+                foreignTax = "no"
+            }
+            else {
+                foreignTax = foreignFormatter.stringFromNumber(exchangeCalc.calcForeignTax()!)!
+            }
+            
+            
+            if(exchangeCalc.calcForeignTip(tippable) == 0){
+                foreignTip = "no"
+            }
+            else {
+                foreignTip = foreignFormatter.stringFromNumber(exchangeCalc.calcForeignTip(tippable))!
+            }
+            
+            
+            
+            var startString = String(format:"With %@ tax and %@ tip, y", foreignTax, foreignTip)
+            
+            if (foreignShouldFeelLikeFormatted! != homeTotalAmount){
+                   totalCostString = String(format:"our total is going to be %@, or %@", foreignShouldFeelLikeFormatted!, homeTotalAmount!)
+            }else {
+                 totalCostString = String(format:"our total is going to be %@", foreignShouldFeelLikeFormatted!)
+            }
+          
+            
+            if(exchangeCalc.homeLocale.tipRate != 0) || (exchangeCalc.homeLocale.additionalTaxRate != 0) {
+                backHomeString = String(format:".\n\nBack home in %@, you'd see a price of %@", exchangeCalc.homeLocale.name, homeFormatter.stringFromNumber(exchangeCalc.calcShouldFeelLike(tippable))!)
+            }
+            
+            if(exchangeCalc.calcShouldTaxLike(tippable) != 0){
+                homeCostTaxString = String(format:" plus %@ tax", homeShouldTaxLikeFormatted!)
+            }
+            
+            
+            if(exchangeCalc.calcShouldTaxLike(tippable) != 0) && (exchangeCalc.calcShouldTipLike(tippable) != 0) {
+                andString = " and "
+            }
+            
+            if (exchangeCalc.calcShouldTipLike(tippable) != 0){
+                homeCostTipString = String(format:" add %@ tip", homeFormatter.stringFromNumber(exchangeCalc.calcShouldTipLike(tippable))!)
+            }
+            
+            if(exchangeCalc.calcShouldTaxLike(tippable) != 0) || (exchangeCalc.calcShouldTipLike(tippable) != 0) {
+                 homeTotalString = String(format:", for the same total cost of %@.", homeFormatter.stringFromNumber(exchangeCalc.calcTotalAmount(tippable))!)
+            } else {
+                    homeTotalString = "."
+            }
+            
+            var totalString:String = startString + totalCostString + backHomeString + homeCostTaxString + andString + homeCostTipString + homeTotalString
+            
+            
+            homeCostLabel.text = totalString
+        }
     }
     
     
@@ -342,7 +443,14 @@ class MainViewController: UIViewController, UISearchBarDelegate, MFMailComposeVi
         
 
         
-         }
+        var homeFlag = UIImage(named:exchangeCalc.homeLocale.country.ISOAbbreviation)
+        var foreignFlag = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
+
+        
+     
+        
+       updateCenterScreen()
+    }
     
     
     func refreshCountries () {

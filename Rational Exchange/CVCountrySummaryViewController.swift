@@ -34,8 +34,9 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
                 locale = exchangeCalc.homeLocale
         }
         
-        setupLabels(locale)
         setupFlag(locale)
+        setupLabels(locale)
+        
     }
     
     func UserDidSelectLocale(selectedLocale:Locale, isForeign:Bool)
@@ -46,7 +47,7 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
     
     func setupFlag (locale:Locale) {
         countryFlag.image = UIImage(named:locale.country.ISOAbbreviation)
-        countryFlag.image = countryFlag.image?.applyBlurWithRadius(4.0, tintColor: UIColor.clearColor(), saturationDeltaFactor: 1.0, maskImage: nil)
+        countryFlag.image = countryFlag.image?.applyDarkEffect()
         countryFlag.parallaxIntensity = -50
     }
     

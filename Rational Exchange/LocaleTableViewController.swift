@@ -161,15 +161,7 @@ protocol CountrySelectedDelegate {
         
         let selectedLocale = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text
         let newLocale = localeListSingleton.getLocale(selectedLocale!)
-        var pvc = self.parentViewController
-        println(pvc)
-        var ppvc = pvc?.parentViewController
-        println(ppvc)
-
-
-//
-//        if(self.isForeign)
-//        {
+       
         exchangeCalc.updateLocale(newLocale.name, isForeign: isForeign)
 //            viewController.updateUI()
 //            viewController.refreshUI()
@@ -190,25 +182,6 @@ protocol CountrySelectedDelegate {
         
         }
 
-    
-    func updateLocale (newLocaleName:String) {
-        
-        var locale:Locale
-        
-        if(isForeign){
-            locale = exchangeCalc.foreignLocale
-        }
-        else {
-            locale = exchangeCalc.homeLocale
-        }
-        
-        let newLocale = exchangeCalc.localeList.getLocale(newLocaleName)
-        locale = newLocale
-        locale.additionalTaxRate = newLocale.additionalTaxRate
-        locale.tipRate = newLocale.tipRate
-        let newLocaleCurrency = newLocale.country.currencyCode
-    }
-    
     
     /*
     // Override to support conditional editing of the table view.
