@@ -13,7 +13,7 @@ import CoreLocation
 class locationHelper:NSObject, CLLocationManagerDelegate {
 
     var setDomainer:String = ""
-    var delegate:MainViewController?
+    var delegate:CVCountrySummaryViewController?
     
     override init(){
    //     println("init")
@@ -73,20 +73,25 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
             println(locality)
             println(state)
             println(country)
+            var newLocale:Locale = localeListSingleton.getLocale("Oregon")
             
             if (localeDomain == "home"){
                 // change to searchLocaleTree and move somewher else
                 if ((locality != nil) && (exchangeCalc.localeList.getLocale(locality).name != "Choose a Locale")) {
-                    exchangeCalc.homeLocale = exchangeCalc.localeList.getLocale(locality)
-                }
+                    newLocale = exchangeCalc.localeList.getLocale(locality)
+                    exchangeCalc.updateLocale(newLocale.name, isForeign: false)             }
                 else if ((state != nil) && (exchangeCalc.localeList.getLocale(state).name != "Choose a Locale")) {
-                    exchangeCalc.homeLocale = localeListSingleton.getLocale(state)
+                    newLocale = localeListSingleton.getLocale(state)
+                      exchangeCalc.updateLocale(newLocale.name, isForeign: false)
                 }
                 else if ((state != nil) && (stateName != nil) && (exchangeCalc.localeList.getLocale(stateName!).name != "Choose a Locale")) {
-                    exchangeCalc.homeLocale = exchangeCalc.localeList.getLocale(stateName!)
+                    
+                    newLocale = exchangeCalc.localeList.getLocale(stateName!)
+                      exchangeCalc.updateLocale(newLocale.name, isForeign: false)
                     
                 }else if ((country != nil) && (exchangeCalc.localeList.getLocale(country).name != "Choose a Locale")) {
-                    exchangeCalc.homeLocale = exchangeCalc.localeList.getLocale(country)
+                    newLocale = exchangeCalc.localeList.getLocale(country)
+                      exchangeCalc.updateLocale(newLocale.name, isForeign: false)
                     
                 } else {
                     println("we didn't find anything")
@@ -97,16 +102,20 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
             } else if
             (localeDomain == "foreign"){
                 if ((locality != nil) && (exchangeCalc.localeList.getLocale(locality).name != "Choose a Locale")) {
-                    exchangeCalc.foreignLocale = exchangeCalc.localeList.getLocale(locality)
+                    newLocale = exchangeCalc.localeList.getLocale(locality)
+                      exchangeCalc.updateLocale(newLocale.name, isForeign: true)
                 }
                 else if ((state != nil) && (exchangeCalc.localeList.getLocale(state).name != "Choose a Locale")) {
-                    exchangeCalc.foreignLocale = exchangeCalc.localeList.getLocale(state)
+                    newLocale = exchangeCalc.localeList.getLocale(state)
+                   exchangeCalc.updateLocale(newLocale.name, isForeign: true)
                 }
                 else if ((state != nil) && (stateName != nil) && (exchangeCalc.localeList.getLocale(stateName!).name != "Choose a Locale")) {
-                    exchangeCalc.foreignLocale = exchangeCalc.localeList.getLocale(stateName!)
+                    newLocale = exchangeCalc.localeList.getLocale(stateName!)
+                    exchangeCalc.updateLocale(newLocale.name, isForeign: true)
                     
                 }else if ((country != nil) && (exchangeCalc.localeList.getLocale(country).name != "Choose a Locale")) {
-                    exchangeCalc.foreignLocale = exchangeCalc.localeList.getLocale(country)
+                    newLocale = exchangeCalc.localeList.getLocale(country)
+                    exchangeCalc.updateLocale(newLocale.name, isForeign: true)
                     
                 } else {
                     println("we didn't find anything")
@@ -116,7 +125,12 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
                 }
             }
             println("update the ui now")
-            delegate?.updateUI()
+            
+            delegate?.setupFlag(newLocale)
+            delegate?.setupLabels(newLocale)
+           
+            NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: self)
+            
            
         }
     }

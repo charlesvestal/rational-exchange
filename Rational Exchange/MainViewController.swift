@@ -49,17 +49,17 @@ class MainViewController: UIViewController, UISearchBarDelegate, MFMailComposeVi
 
     var MyCLController = locationHelper(domain: "home")
     
-    @IBAction func findMeHome(sender: AnyObject) {
-        MyCLController.setDomain("home")
-        MyCLController.setupLocationManager()
-        MyCLController.delegate = self
-        }
-
-    @IBAction func findMeForeign(sender: AnyObject) {
-        MyCLController.setDomain("foreign")
-        MyCLController.setupLocationManager()
-        MyCLController.delegate = self
-    }
+//    @IBAction func findMeHome(sender: AnyObject) {
+//        MyCLController.setDomain("home")
+//        MyCLController.setupLocationManager()
+//        MyCLController.delegate = self
+//        }
+//
+//    @IBAction func findMeForeign(sender: AnyObject) {
+//        MyCLController.setDomain("foreign")
+//        MyCLController.setupLocationManager()
+//        MyCLController.delegate = self
+//    }
 
     
     @IBAction func notRightForeignButtonPressed(sender: AnyObject) {
@@ -441,13 +441,8 @@ class MainViewController: UIViewController, UISearchBarDelegate, MFMailComposeVi
             bottomFrameTipString.text = String(format: "%.2f%% for Gratiuity", exchangeCalc.homeLocale.tipRate! * 100)
         }
         
-
-        
         var homeFlag = UIImage(named:exchangeCalc.homeLocale.country.ISOAbbreviation)
         var foreignFlag = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
-
-        
-     
         
        updateCenterScreen()
     }

@@ -382,14 +382,6 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5t-hr-6OV" userLabel="findMeForeignButton">
-                                <rect key="frame" x="276" y="187" width="44" height="44"/>
-                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
-                                <state key="normal" image="LocationImage"/>
-                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="296" y="74" width="99" height="44"/>
-                                </variation>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHERE THEY SPEND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="4LU-Wx-rD3">
                                 <rect key="frame" x="20" y="226" width="280" height="26"/>
                                 <constraints>
@@ -429,6 +421,33 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="500" text="Australia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="3" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-Im-xuh">
+                                <rect key="frame" x="17" y="134" width="256" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="750" constant="150" id="CBh-ok-NPk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="300"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ah2-Ug-q1T">
+                                <rect key="frame" x="0.0" y="40" width="320" height="440"/>
+                                <connections>
+                                    <segue destination="bfl-eG-BOs" kind="embed" identifier="embedTableView" id="4Hb-Rv-q26"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5t-hr-6OV" userLabel="findMeButton">
+                                <rect key="frame" x="276" y="187" width="44" height="44"/>
+                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <state key="normal" image="LocationImage"/>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="296" y="74" width="99" height="44"/>
+                                </variation>
+                                <connections>
+                                    <action selector="findMe:" destination="mPx-Hu-dt9" eventType="touchUpInside" id="Jj7-9F-pi1"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-8S-ogi" userLabel="notRightForeign">
                                 <rect key="frame" x="81" y="431" width="159" height="29"/>
                                 <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="12"/>
@@ -445,22 +464,6 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                     <action selector="notRightButton:" destination="mPx-Hu-dt9" eventType="touchUpInside" id="tOV-fB-Ylx"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ah2-Ug-q1T">
-                                <rect key="frame" x="0.0" y="40" width="320" height="440"/>
-                                <connections>
-                                    <segue destination="bfl-eG-BOs" kind="embed" identifier="embedTableView" id="4Hb-Rv-q26"/>
-                                </connections>
-                            </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="500" text="Australia" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="3" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-Im-xuh">
-                                <rect key="frame" x="17" y="134" width="256" height="150"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" priority="750" constant="150" id="CBh-ok-NPk"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="300"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <size key="shadowOffset" width="0.0" height="0.0"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -516,7 +519,9 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                     <connections>
                         <outlet property="countryFlag" destination="Qrt-Hu-ahS" id="T5C-dm-J3d"/>
                         <outlet property="currencyName" destination="JTb-zy-q5M" id="DLQ-7q-hxp"/>
+                        <outlet property="findMeButton" destination="X5t-hr-6OV" id="QK2-I5-I4P"/>
                         <outlet property="localeName" destination="q0b-Im-xuh" id="ydQ-56-Qt8"/>
+                        <outlet property="notRightButtonButton" destination="2oz-8S-ogi" id="vHZ-iU-ZMd"/>
                         <outlet property="taxString" destination="42k-4m-ZJV" id="pMd-92-68f"/>
                         <outlet property="tipString" destination="xbv-KQ-bt2" id="Fwj-zK-oel"/>
                     </connections>

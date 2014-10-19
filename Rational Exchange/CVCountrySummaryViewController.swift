@@ -8,18 +8,36 @@
 
 import Foundation
 import MessageUI
+import CoreLocation
 
 class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControllerDelegate, CountrySelectedDelegate {
  
     @IBOutlet weak var countryFlag: UIImageView!
     
+    @IBOutlet weak var notRightButtonButton: UIButton!
+    @IBOutlet weak var findMeButton: UIButton!
     @IBOutlet weak var localeName: UILabel!
     @IBOutlet weak var currencyName: UILabel!
     @IBOutlet weak var taxString: UILabel!
     @IBOutlet weak var tipString: UILabel!
     
+    var MyCLController = locationHelper(domain: "home")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    
+    @IBAction func findMe(sender: AnyObject) {
+        let containerView = self.view.superview as CVUIContainerView
+       
+        if(containerView.isForeign == true){
+             MyCLController.setDomain("foreign")
+            }else {
+             MyCLController.setDomain("home")
+            }
+        MyCLController.setupLocationManager()
+        MyCLController.delegate = self
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -103,5 +121,27 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
         self.presentViewController(mc, animated: true, completion: nil)
     }
     
+    func hideThings(){
+     println("hide")
+        notRightButtonButton.hidden = true
+
+    }
+    
+    func showThings(){
+        println("show")
+        notRightButtonButton.hidden = false
+
+    }
+    func enableThings(){
+        println("enable")
+                self.findMeButton.enabled = true
+                self.notRightButtonButton.enabled = true
+    }
+    
+    func disableThings(){
+        println("disable")
+                self.findMeButton.enabled = false
+                self.notRightButtonButton.enabled = false
+    }
     
 }

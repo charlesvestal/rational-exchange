@@ -40,7 +40,6 @@ class CVMiddleViewController: UIViewController {
         
         updateCenterScreen()
 
-        exchangeCalc.localeList.refreshCountries()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "actOnSpecialNotification", name: mySpecialNotificationKey, object: nil)
     }
@@ -50,7 +49,15 @@ class CVMiddleViewController: UIViewController {
         updateCenterScreen()
     }
     
+   
+    
     func updateCenterScreen(){
+        
+        let currentForeignName = exchangeCalc.foreignLocale.name
+        let currentHomeName = exchangeCalc.homeLocale.name
+        exchangeCalc.updateLocale(currentForeignName, isForeign:true)
+        exchangeCalc.updateLocale(currentHomeName, isForeign:false)
+        
         // set the exchangeCalc singleton value to the foreign Cost lable
         exchangeCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
         

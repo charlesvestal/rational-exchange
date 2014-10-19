@@ -12,6 +12,10 @@ let mySpecialNotificationKey = "com.andrewcbancroft.specialNotificationKey"
 
 protocol CountrySelectedDelegate {
     func UserDidSelectLocale(selectedLocale:Locale, isForeign:Bool)
+    func hideThings()
+    func showThings()
+    func enableThings()
+    func disableThings()
 }
 
 @IBDesignable class CountryTableViewController : UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
@@ -57,37 +61,26 @@ protocol CountrySelectedDelegate {
     }
     
     func searchDisplayController(controller: UISearchDisplayController, willShowSearchResultsTableView tableView: UITableView) {
-//        let viewController = parentViewController as ViewController
-//        viewController.notRightForeignButton.hidden = true
-//        viewController.notRightHomeButton.hidden = true
         
+        delegate?.hideThings()
         updateList()
     }
     
     func searchDisplayController(controller: UISearchDisplayController, willHideSearchResultsTableView tableView: UITableView) {
-//        let viewController = parentViewController as ViewController
-//        viewController.notRightForeignButton.hidden = false
-//        viewController.notRightHomeButton.hidden = false
         
+        delegate?.showThings()
         updateList()
     }
     
     func searchBarShouldBeginEditing(searchBar: UISearchBar) -> Bool {
         
-//        let viewController = parentViewController as ViewController
-//        viewController.findMeHomeButton.enabled = false
-//        viewController.findMeForeignButton.enabled = false
-//        viewController.notRightForeignButton.enabled = false
-//        viewController.notRightHomeButton.enabled = false
+        delegate?.disableThings()
         return true
     }
     
     func searchBarShouldEndEditing(searchBar: UISearchBar) -> Bool {
-//        let viewController = parentViewController as ViewController
-//        viewController.findMeHomeButton.enabled = true
-//        viewController.findMeForeignButton.enabled = true
-//        viewController.notRightForeignButton.enabled = true
-//        viewController.notRightHomeButton.enabled = true
+        
+        delegate?.enableThings()
         return true
     }
     
@@ -167,24 +160,16 @@ protocol CountrySelectedDelegate {
         let newLocale = localeListSingleton.getLocale(selectedLocale!)
        
         exchangeCalc.updateLocale(newLocale.name, isForeign: isForeign)
-//            viewController.updateUI()
-//            viewController.refreshUI()
-//        }
-//        else
-//        {
-//            viewController.updateHomeLocale(newLocale.name)
-//            viewController.updateUI()
-//            viewController.refreshUI()
-//        }
     
         if((delegate) != nil){
             delegate?.UserDidSelectLocale(newLocale, isForeign: isForeign)
         }
         
-     // how do I update home Locale?
+ NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: self)
+        
         self.searchDisplayController?.setActive(false, animated: true)
         
-        NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: self)
+       
         
         }
 
