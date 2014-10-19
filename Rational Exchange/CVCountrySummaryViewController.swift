@@ -64,7 +64,13 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
     
     func setupFlag (locale:Locale) {
         countryFlag.image = UIImage(named:locale.country.ISOAbbreviation)
-        countryFlag.image = countryFlag.image?.applyDarkEffect()
+        
+        let tintColor = UIColor(white:0.2, alpha:0.5)
+       
+        countryFlag.image = countryFlag.image?.applyBlurWithRadius(5, tintColor: tintColor, saturationDeltaFactor: 1.8, maskImage: nil)
+        
+        
+        
         countryFlag.parallaxIntensity = -50
     }
     
