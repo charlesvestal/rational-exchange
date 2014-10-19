@@ -58,7 +58,6 @@ class CVMiddleViewController: UIViewController {
         defaults.setObject(exchangeCalc.foreignLocale.name, forKey: "foreignLocaleName")
         defaults.setObject(foreignCostField.text, forKey: "foreignCostField")
         defaults.setBool(tipSwitch.on, forKey: "tipSwitch")
-        println("set defaults")
         defaults.synchronize()
     }
     

@@ -68,7 +68,6 @@ class exchangeCalculator {
     func setDefaults() {
         defaults.setObject(exchangeCalc.homeLocale.name, forKey: "homeLocaleName")
         defaults.setObject(exchangeCalc.foreignLocale.name, forKey: "foreignLocaleName")
-        println("set defaults")
         defaults.synchronize()
     }
 
