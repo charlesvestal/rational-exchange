@@ -98,7 +98,16 @@ protocol CountrySelectedDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+
+        // Get the instance of the UITextField of the search bar
+        
+        var searchField = searchBar.valueForKey("searchField") as UITextField
+        searchField.setValue(UIColor.whiteColor(), forKeyPath:"_placeholderLabel.textColor")
+//        searchField.setValue(nil, forKeyPath:"_leftView")
+        
+        searchBar.setImage(UIImage(named:"searchIcon"), forSearchBarIcon: UISearchBarIcon.Search, state: UIControlState.Normal)
+    
+        
         self.tableView.delegate = self
         self.tableView.dataSource = self
         

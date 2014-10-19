@@ -300,10 +300,9 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Where Are You?" id="zq5-5b-0gK" userLabel="searchBar">
+                        <searchBar key="tableHeaderView" opaque="NO" contentMode="redraw" searchBarStyle="minimal" placeholder="Where Are You?" id="zq5-5b-0gK" userLabel="searchBar">
                             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="barTintColor" red="0.26003539562225342" green="0.52061372995376587" blue="0.74229294061660767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="bfl-eG-BOs" id="l3d-uy-vNf"/>
