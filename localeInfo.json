@@ -1813,10 +1813,10 @@
       "country": "Choose a Country"
     },
     {
-      "name": "New Place in Yemen",
-      "additionalTaxRate": 0.2,
+      "name": "Great Britain",
+      "additionalTaxRate": 0.0,
       "tipRate": null,
-      "country": "Yemen"
+      "country": "England"
     }
   ]
 }

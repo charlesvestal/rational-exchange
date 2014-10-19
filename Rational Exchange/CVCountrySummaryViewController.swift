@@ -80,7 +80,9 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
         localeName.text = locale.name.uppercaseString
         currencyName.text = String(format:"%@ (%@)", locale.country.currencyName, locale.country.currencyCode)
         
-        if(locale.additionalTaxRate == 0){
+        if (locale.country.taxString != nil) {
+            taxString.text = locale.country.taxString
+        } else if(locale.additionalTaxRate == 0){
             taxString.text = "Nothing! Tax is included."
         }
         else if(locale.additionalTaxRate == nil) {
@@ -90,7 +92,9 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
             taxString.text = String(format: "%.2f%% in Sales Tax", locale.additionalTaxRate! * 100)
         }
         
-        if (locale.tipRate == 0.0){
+        if (locale.country.tipString != nil) {
+            tipString.text = locale.country.tipString
+        } else if (locale.tipRate == 0.0){
             tipString.text = "Tipping isn't the custom here."
         }
         else if(locale.tipRate == nil) {
