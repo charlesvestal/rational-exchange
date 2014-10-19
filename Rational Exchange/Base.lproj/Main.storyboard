@@ -21,7 +21,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lV2-Qm-ySP">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfj-GU-4ig" userLabel="top" customClass="CVUIContainerView" customModule="RationalEx" customModuleProvider="target">
+                                    <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfj-GU-4ig" userLabel="top" customClass="CVUIContainerView" customModule="RationalEx" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isForeign" value="YES"/>
@@ -30,13 +30,13 @@
                                             <segue destination="mPx-Hu-dt9" kind="embed" id="1Ab-so-sDK"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpT-yS-Xcz" userLabel="middle">
+                                    <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpT-yS-Xcz" userLabel="middle">
                                         <rect key="frame" x="0.0" y="600" width="600" height="600"/>
                                         <connections>
                                             <segue destination="p1u-ni-V8n" kind="embed" identifier="embedMiddleView" id="EHg-7M-Xgc"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXv-1r-sfc" userLabel="bottom" customClass="CVUIContainerView" customModule="RationalEx" customModuleProvider="target">
+                                    <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXv-1r-sfc" userLabel="bottom" customClass="CVUIContainerView" customModule="RationalEx" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1200" width="600" height="600"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isForeign" value="NO"/>
@@ -286,7 +286,6 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="9BC-yf-evc"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
@@ -350,7 +349,6 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         </connections>
                     </tableView>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="searchBar" destination="zq5-5b-0gK" id="7AI-nX-G42"/>
@@ -383,7 +381,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GB" translatesAutoresizingMaskIntoConstraints="NO" id="Qrt-Hu-ahS">
-                                <rect key="frame" x="-96" y="0.0" width="512" height="568"/>
+                                <rect key="frame" x="-100" y="-100" width="520" height="768"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="40" y="220" width="240" height="128"/>
                                 </variation>
@@ -486,7 +484,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         <constraints>
                             <constraint firstItem="ah2-Ug-q1T" firstAttribute="leading" secondItem="fcc-FU-WgL" secondAttribute="leading" id="0Hf-6a-wrX"/>
                             <constraint firstItem="X5t-hr-6OV" firstAttribute="centerY" secondItem="q0b-Im-xuh" secondAttribute="centerY" id="0j5-0p-A0v"/>
-                            <constraint firstAttribute="height" secondItem="Qrt-Hu-ahS" secondAttribute="height" priority="750" id="3CW-Nx-Jds"/>
+                            <constraint firstItem="Qrt-Hu-ahS" firstAttribute="height" secondItem="fcc-FU-WgL" secondAttribute="height" constant="200" id="3CW-Nx-Jds"/>
                             <constraint firstItem="ojQ-gl-DCw" firstAttribute="top" secondItem="4LU-Wx-rD3" secondAttribute="bottom" priority="750" constant="40" id="4A4-Uv-kF4"/>
                             <constraint firstItem="q0b-Im-xuh" firstAttribute="width" secondItem="fcc-FU-WgL" secondAttribute="width" multiplier="0.8" id="6X3-6y-lEL"/>
                             <constraint firstItem="Jw5-by-r0o" firstAttribute="top" secondItem="2oz-8S-ogi" secondAttribute="bottom" constant="20" id="9HE-N4-MOM"/>
@@ -505,7 +503,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstAttribute="centerY" secondItem="Qrt-Hu-ahS" secondAttribute="centerY" id="WSg-BJ-U4Q"/>
                             <constraint firstItem="4LU-Wx-rD3" firstAttribute="width" secondItem="fcc-FU-WgL" secondAttribute="width" priority="750" constant="-40" id="Wyx-Ra-Lwp"/>
                             <constraint firstItem="ojQ-gl-DCw" firstAttribute="width" secondItem="XlW-dl-76c" secondAttribute="width" priority="750" id="ZoS-4Q-Nmb"/>
-                            <constraint firstAttribute="width" secondItem="Qrt-Hu-ahS" secondAttribute="width" priority="750" id="bGw-qw-0IC"/>
+                            <constraint firstItem="Qrt-Hu-ahS" firstAttribute="width" secondItem="fcc-FU-WgL" secondAttribute="width" constant="200" id="bGw-qw-0IC"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="trailing" secondItem="42k-4m-ZJV" secondAttribute="trailing" priority="750" id="bNy-Ct-lth"/>
                             <constraint firstItem="XlW-dl-76c" firstAttribute="leading" secondItem="4LU-Wx-rD3" secondAttribute="leading" priority="750" id="bWH-Si-R5o"/>
                             <constraint firstAttribute="centerX" secondItem="0Wv-Kc-OMk" secondAttribute="centerX" priority="750" id="biA-mT-zPj"/>
@@ -534,7 +532,6 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="j1U-f5-qLC"/>
-                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="countryFlag" destination="Qrt-Hu-ahS" id="T5C-dm-J3d"/>

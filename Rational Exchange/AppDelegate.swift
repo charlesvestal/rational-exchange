@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("37b5nCCzv1CXDFpymf5OaeQJh30EXaejHgmqUdEa", clientKey: "lGHpg5dziNdXKejHinb7ozJheVzHaK0KbRVdRb4e")
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         
-        
+        UIApplication.sharedApplication().setStatusBarStyle(UIStatusBarStyle.LightContent, animated: false)
     
         return true
     }
