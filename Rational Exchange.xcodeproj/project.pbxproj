@@ -21,7 +21,6 @@
 		FE799B9D19E5FE4B00ACE2D0 /* CVCountrySummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE799B9C19E5FE4B00ACE2D0 /* CVCountrySummaryViewController.swift */; };
 		FE799BA119E6034700ACE2D0 /* CVUIContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE799BA019E6034700ACE2D0 /* CVUIContainerView.swift */; };
 		FE891BF019C12C4B008CC947 /* LocaleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */; };
-		FE8A3A1A19F4278B0070D5AA /* CVUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE8A3A1919F4278B0070D5AA /* CVUILabel.swift */; };
 		FE9692CE19CE08C1002554A9 /* AwesomeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9692CC19CE08C1002554A9 /* AwesomeCache.swift */; };
 		FE9692CF19CE08C1002554A9 /* AwesomeCacheObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9692CD19CE08C1002554A9 /* AwesomeCacheObject.swift */; };
 		FEA5629C19E1781900EDF4DD /* LaunchImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA5629B19E1781900EDF4DD /* LaunchImage.storyboard */; };
@@ -94,7 +93,6 @@
 		FE799B9C19E5FE4B00ACE2D0 /* CVCountrySummaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCountrySummaryViewController.swift; sourceTree = "<group>"; };
 		FE799BA019E6034700ACE2D0 /* CVUIContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVUIContainerView.swift; sourceTree = "<group>"; };
 		FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleTableViewController.swift; sourceTree = "<group>"; };
-		FE8A3A1919F4278B0070D5AA /* CVUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVUILabel.swift; sourceTree = "<group>"; };
 		FE9692CC19CE08C1002554A9 /* AwesomeCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwesomeCache.swift; path = dependencies/AweomeCache/Source/AwesomeCache.swift; sourceTree = SOURCE_ROOT; };
 		FE9692CD19CE08C1002554A9 /* AwesomeCacheObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwesomeCacheObject.swift; path = dependencies/AweomeCache/Source/AwesomeCacheObject.swift; sourceTree = SOURCE_ROOT; };
 		FEA2B9A919CF726400455670 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -176,7 +174,6 @@
 			isa = PBXGroup;
 			children = (
 				FE799BA019E6034700ACE2D0 /* CVUIContainerView.swift */,
-				FE8A3A1919F4278B0070D5AA /* CVUILabel.swift */,
 				FE38F53D19E57E5200EE66C0 /* CVScrollViewViewController.swift */,
 				FE38F53B19E57DC400EE66C0 /* CVMiddleViewController.swift */,
 				FE799B9C19E5FE4B00ACE2D0 /* CVCountrySummaryViewController.swift */,
@@ -409,7 +406,6 @@
 			files = (
 				FE799BA119E6034700ACE2D0 /* CVUIContainerView.swift in Sources */,
 				FEFD6C0D19D25C7700EBA2EF /* UIImage+ImageEffects.m in Sources */,
-				FE8A3A1A19F4278B0070D5AA /* CVUILabel.swift in Sources */,
 				FEC792DD19D102FC006A45A2 /* LocationHelper.swift in Sources */,
 				FE38F53C19E57DC400EE66C0 /* CVMiddleViewController.swift in Sources */,
 				FE205DC919BD040F00A2ADD8 /* LocaleFetcher.swift in Sources */,

@@ -395,7 +395,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHERE THEY SPEND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="4LU-Wx-rD3">
-                                <rect key="frame" x="20" y="314" width="280" height="26"/>
+                                <rect key="frame" x="20" y="287" width="280" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="WPB-fe-VLl"/>
                                 </constraints>
@@ -404,44 +404,49 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Norwegian Kroner" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTb-zy-q5M">
-                                <rect key="frame" x="20" y="348" width="280" height="26"/>
+                                <rect key="frame" x="20" y="321" width="280" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AND THEY ADD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="ojQ-gl-DCw">
-                                <rect key="frame" x="20" y="380" width="280" height="26"/>
+                                <rect key="frame" x="20" y="353" width="280" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.25% Sales Tax" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42k-4m-ZJV">
-                                <rect key="frame" x="20" y="414" width="280" height="26"/>
+                                <rect key="frame" x="20" y="387" width="280" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLUS THEY TIP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="XlW-dl-76c">
-                                <rect key="frame" x="20" y="454" width="280" height="26"/>
+                                <rect key="frame" x="20" y="427" width="280" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20% in Gratuity" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbv-KQ-bt2">
-                                <rect key="frame" x="20" y="488" width="280" height="26"/>
+                                <rect key="frame" x="20" y="461" width="280" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="500" text="CALIFORNIA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumScaleFactor="0.01" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-Im-xuh" customClass="BCBalancedMultilineLabel">
-                                <rect key="frame" x="17" y="134" width="256" height="150"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="500" text="CALIFORNIA AND" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="1" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-Im-xuh" customClass="CVUILabel">
+                                <rect key="frame" x="17" y="134" width="256" height="110"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="750" constant="150" id="CBh-ok-NPk"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="300"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="40"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CBh-ok-NPk"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ah2-Ug-q1T">
                                 <rect key="frame" x="0.0" y="40" width="320" height="528"/>
@@ -449,8 +454,8 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                     <segue destination="bfl-eG-BOs" kind="embed" identifier="embedTableView" id="4Hb-Rv-q26"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5t-hr-6OV" userLabel="findMeButton">
-                                <rect key="frame" x="276" y="187" width="44" height="44"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5t-hr-6OV" userLabel="findMeButton">
+                                <rect key="frame" x="276" y="168" width="44" height="44"/>
                                 <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <state key="normal" image="LocationImage"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -461,7 +466,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-8S-ogi" userLabel="notRightForeign">
-                                <rect key="frame" x="81" y="519" width="159" height="29"/>
+                                <rect key="frame" x="81" y="492" width="159" height="56"/>
                                 <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="12"/>
                                 <color key="tintColor" red="0.75294125079999996" green="0.81176477670000002" blue="0.88235300780000003" alpha="1" colorSpace="deviceRGB"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
@@ -489,8 +494,8 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="4LU-Wx-rD3" firstAttribute="leading" secondItem="ojQ-gl-DCw" secondAttribute="leading" priority="750" id="FNI-6a-Ilo"/>
                             <constraint firstAttribute="centerX" secondItem="4LU-Wx-rD3" secondAttribute="centerX" priority="750" id="FPS-lr-wgL"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="trailing" secondItem="xbv-KQ-bt2" secondAttribute="trailing" priority="750" id="HrA-sV-lV3"/>
-                            <constraint firstItem="JTb-zy-q5M" firstAttribute="width" secondItem="4LU-Wx-rD3" secondAttribute="width" priority="750" id="J1O-aI-mRj"/>
-                            <constraint firstItem="JTb-zy-q5M" firstAttribute="width" secondItem="42k-4m-ZJV" secondAttribute="width" priority="750" id="LGK-gZ-Mfe"/>
+                            <constraint firstItem="JTb-zy-q5M" firstAttribute="width" secondItem="4LU-Wx-rD3" secondAttribute="width" id="J1O-aI-mRj"/>
+                            <constraint firstItem="JTb-zy-q5M" firstAttribute="width" secondItem="42k-4m-ZJV" secondAttribute="width" id="LGK-gZ-Mfe"/>
                             <constraint firstAttribute="centerX" secondItem="2oz-8S-ogi" secondAttribute="centerX" priority="750" id="PVc-4t-F1M"/>
                             <constraint firstAttribute="centerX" secondItem="Qrt-Hu-ahS" secondAttribute="centerX" id="RQ0-WZ-JMZ"/>
                             <constraint firstItem="Jw5-by-r0o" firstAttribute="top" secondItem="ah2-Ug-q1T" secondAttribute="bottom" id="RZn-9B-d07"/>
@@ -510,7 +515,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="X5t-hr-6OV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fcc-FU-WgL" secondAttribute="leadingMargin" constant="1" id="hiV-8i-WHn"/>
                             <constraint firstItem="ah2-Ug-q1T" firstAttribute="top" secondItem="oAv-8y-yzA" secondAttribute="top" constant="20" id="pFQ-48-7ly"/>
                             <constraint firstItem="ah2-Ug-q1T" firstAttribute="trailing" secondItem="fcc-FU-WgL" secondAttribute="trailing" id="pHx-5A-uZT"/>
-                            <constraint firstItem="JTb-zy-q5M" firstAttribute="width" secondItem="xbv-KQ-bt2" secondAttribute="width" priority="750" id="q7H-GX-xmc"/>
+                            <constraint firstItem="JTb-zy-q5M" firstAttribute="width" secondItem="xbv-KQ-bt2" secondAttribute="width" id="q7H-GX-xmc"/>
                             <constraint firstItem="0Wv-Kc-OMk" firstAttribute="top" secondItem="ah2-Ug-q1T" secondAttribute="top" constant="60" id="qKY-eB-3Yd"/>
                             <constraint firstItem="42k-4m-ZJV" firstAttribute="top" secondItem="ojQ-gl-DCw" secondAttribute="bottom" priority="750" constant="8" id="qg7-5j-cdP"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="centerX" secondItem="4LU-Wx-rD3" secondAttribute="centerX" priority="750" id="qxU-tp-Bnz"/>
@@ -518,6 +523,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="XlW-dl-76c" firstAttribute="top" secondItem="ojQ-gl-DCw" secondAttribute="bottom" priority="750" constant="48" id="tuw-jT-Drd"/>
                             <constraint firstItem="2oz-8S-ogi" firstAttribute="top" secondItem="xbv-KQ-bt2" secondAttribute="bottom" constant="5" id="uYu-HL-gic"/>
                             <constraint firstItem="q0b-Im-xuh" firstAttribute="top" secondItem="0Wv-Kc-OMk" secondAttribute="bottom" constant="8" id="xwN-La-aS6"/>
+                            <constraint firstItem="q0b-Im-xuh" firstAttribute="bottom" secondItem="4LU-Wx-rD3" secondAttribute="bottom" constant="-69" id="yyA-9A-zfX"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">

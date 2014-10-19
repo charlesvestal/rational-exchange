@@ -27,7 +27,6 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
         super.viewDidLoad()
     }
     
-    
     @IBAction func findMe(sender: AnyObject) {
         let containerView = self.view.superview as CVUIContainerView
        
@@ -125,6 +124,7 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
         mc.setToRecipients(toRecipents)
         
         self.presentViewController(mc, animated: true, completion: nil)
+        
     }
     
     func hideThings(){
