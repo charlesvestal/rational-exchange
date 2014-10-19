@@ -12,15 +12,22 @@ struct Locale {
     var name:String
     var additionalTaxRate:Double?
     var tipRate:Double?
+    var tipString:String?
     
     var country: Country
     
   
-    init(name:String!, additionalTaxRate:Double?, tipRate:Double?, country:Country!) {
+    init(name:String!, additionalTaxRate:Double?, tipRate:Double?, tipString:String?, country:Country!) {
         self.name = name
         self.additionalTaxRate = additionalTaxRate
         self.tipRate = tipRate
         self.country = country
+        if((tipString) != nil) {
+            self.tipString = tipString
+        } else {
+            self.tipString = country.tipString
+        }
+        
     }
     
 }

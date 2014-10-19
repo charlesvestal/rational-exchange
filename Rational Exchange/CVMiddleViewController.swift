@@ -312,10 +312,10 @@ class CVMiddleViewController: UIViewController {
             newTax = resource["additionalTaxRate"].number as? Double
             newTip = resource["tipRate"].number as? Double
             
-            
             let newCountryName = resource["country"].string
-            
-            exchangeCalc.localeList.localeList.append(Locale(name: localeName, additionalTaxRate: newTax, tipRate: newTip, country: exchangeCalc.localeList.getCountry(newCountryName)))
+            let newTipString = resource["tipString"].string
+
+            exchangeCalc.localeList.localeList.append(Locale(name: localeName, additionalTaxRate: newTax, tipRate: newTip, tipString: newTipString, country: exchangeCalc.localeList.getCountry(newCountryName)))
         }
         
     }

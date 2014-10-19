@@ -92,7 +92,9 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
             taxString.text = String(format: "%.2f%% in Sales Tax", locale.additionalTaxRate! * 100)
         }
         
-        if (locale.country.tipString != nil) {
+        if (locale.tipString != nil){
+            tipString.text = locale.tipString
+        } else if (locale.country.tipString != nil) {
             tipString.text = locale.country.tipString
         } else if (locale.tipRate == 0.0){
             tipString.text = "Tipping isn't the custom here."

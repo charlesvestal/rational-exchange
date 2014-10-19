@@ -4,859 +4,1002 @@
       "name": "Prague",
       "additionalTaxRate": null,
       "tipRate": 0.1000000000,
-      "country": "Czech Republic"
+      "country": "Czech Republic",
+	  "tipString": null
     },
     {
       "name": "Alberta",
       "additionalTaxRate": 0.0500000000,
       "tipRate": 0.2000000000,
-      "country": "Canada"
+      "country": "Canada",
+	  "tipString": null
     },
     {
       "name": "British Columbia",
       "additionalTaxRate": 0.1200000000,
       "tipRate": 0.2000000000,
-      "country": "Canada"
+      "country": "Canada",
+	  "tipString": null
     },
     {
       "name": "Manitoba",
       "additionalTaxRate": 0.1300000000,
       "tipRate": 0.2000000000,
-      "country": "Canada"
+      "country": "Canada",
+	  "tipString": null
     },
     {
       "name": "New Brunswick",
       "additionalTaxRate": 0.1300000000,
       "tipRate": 0.2000000000,
-      "country": "Canada"
+      "country": "Canada",
+	  "tipString": null
     },
     {
       "name": "Newfoundland and Labrador",
       "additionalTaxRate": 0.1300000000,
       "tipRate": 0.2000000000,
-      "country": "Canada"
+      "country": "Canada",
+	  "tipString": null
     },
     {
       "name": "Northwest Territories",
       "additionalTaxRate": 0.0500000000,
       "tipRate": 0.2000000000,
-      "country": "Canada"
+      "country": "Canada",
+	  "tipString": null
     },
     {
       "name": "Nova Scotia",
       "additionalTaxRate": 0.1500000000,
       "tipRate": 0.2000000000,
-      "country": "Canada"
+      "country": "Canada",
+	  "tipString": null
     },
     {
       "name": "Nunavut",
       "additionalTaxRate": 0.0500000000,
       "tipRate": 0.2000000000,
-      "country": "Canada"
+      "country": "Canada",
+	  "tipString": null
     },
     {
       "name": "Ontario",
       "additionalTaxRate": 0.1300000000,
       "tipRate": 0.2000000000,
-      "country": "Canada"
+      "country": "Canada",
+	  "tipString": null
     },
     {
       "name": "Prince Edward Island",
       "additionalTaxRate": 0.1400000000,
       "tipRate": 0.2000000000,
-      "country": "Canada"
+      "country": "Canada",
+	  "tipString": null
     },
     {
       "name": "Quebec",
       "additionalTaxRate": 0.1497500000,
       "tipRate": 0.2000000000,
-      "country": "Canada"
+      "country": "Canada",
+	  "tipString": null
     },
     {
       "name": "Saskatchewan",
       "additionalTaxRate": 0.1000000000,
       "tipRate": 0.2000000000,
-      "country": "Canada"
+      "country": "Canada",
+	  "tipString": null
     },
     {
       "name": "Yukon",
       "additionalTaxRate": 0.0500000000,
       "tipRate": 0.2000000000,
-      "country": "Canada"
+      "country": "Canada",
+	  "tipString": null
     },
     {
       "name": "Alabama",
       "additionalTaxRate": 0.0851000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Alaska",
       "additionalTaxRate": 0.0169000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Arizona",
       "additionalTaxRate": 0.0817000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Arkansas",
       "additionalTaxRate": 0.0919000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "California",
       "additionalTaxRate": 0.0841000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Colorado",
       "additionalTaxRate": 0.0739000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Connecticut",
       "additionalTaxRate": 0.0635000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Delaware",
       "additionalTaxRate": 0.0000000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Florida",
       "additionalTaxRate": 0.0662000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Georgia",
       "additionalTaxRate": 0.069700000,
       "tipRate": 0.2,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Hawaii",
       "additionalTaxRate": 0.0435000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Idaho",
       "additionalTaxRate": 0.0603000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Illinois",
       "additionalTaxRate": 0.0816000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Indiana",
       "additionalTaxRate": 0.0700000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Iowa",
       "additionalTaxRate": 0.0678000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Kansas",
       "additionalTaxRate": 0.0815000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Kentucky",
       "additionalTaxRate": 0.0600000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Louisiana",
       "additionalTaxRate": 0.0889000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Maine",
       "additionalTaxRate": 0.0550000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Maryland",
       "additionalTaxRate": 0.0600000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Massachusetts",
       "additionalTaxRate": 0.0625000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Michigan",
       "additionalTaxRate": 0.0600000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Minnesota",
       "additionalTaxRate": 0.0719000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Mississippi",
       "additionalTaxRate": 0.0700000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Missouri",
       "additionalTaxRate": 0.0758000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Montana",
       "additionalTaxRate": 0.0000000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Nebraska",
       "additionalTaxRate": 0.0679000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Nevada",
       "additionalTaxRate": 0.0793000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "New Hampshire",
       "additionalTaxRate": 0.0000000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "New Jersey",
       "additionalTaxRate": 0.0697000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "New Mexico",
       "additionalTaxRate": 0.0726000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "New York",
       "additionalTaxRate": 0.0847000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "North Carolina",
       "additionalTaxRate": 0.0690000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "North Dakota",
       "additionalTaxRate": 0.0655000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Ohio",
       "additionalTaxRate": 0.0711000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Oklahoma",
       "additionalTaxRate": 0.0872000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Oregon",
       "additionalTaxRate": 0.0000000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Pennsylvania",
       "additionalTaxRate": 0.0634000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Rhode Island",
       "additionalTaxRate": 0.0700000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "South Carolina",
       "additionalTaxRate": 0.0719000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "South Dakota",
       "additionalTaxRate": 0.0583000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Tennessee",
       "additionalTaxRate": 0.0945000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Texas",
       "additionalTaxRate": 0.0815000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Utah",
       "additionalTaxRate": 0.0668000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Vermont",
       "additionalTaxRate": 0.0614000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Virginia",
       "additionalTaxRate": 0.0563000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Washington",
       "additionalTaxRate": 0.0888000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "West Virginia",
       "additionalTaxRate": 0.0607000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Wisconsin",
       "additionalTaxRate": 0.0543000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Wyoming",
       "additionalTaxRate": 0.0549000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "District of Columbia",
       "additionalTaxRate": 0.0575000000,
       "tipRate": 0.2000000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Afghanistan",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Afghanistan"
+      "country": "Afghanistan",
+	  "tipString": null
     },
     {
       "name": "Albania",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Albania"
+      "country": "Albania",
+	  "tipString": null
     },
     {
       "name": "Algeria",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Algeria"
+      "country": "Algeria",
+	  "tipString": null
     },
     {
       "name": "American Samoa",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "American Samoa"
+      "country": "American Samoa",
+	  "tipString": null
     },
     {
       "name": "Andorra",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Andorra"
+      "country": "Andorra",
+	  "tipString": null
     },
     {
       "name": "Angola",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Angola"
+      "country": "Angola",
+	  "tipString": null
     },
     {
       "name": "Anguilla",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Anguilla"
+      "country": "Anguilla",
+	  "tipString": null
     },
     {
       "name": "Antarctica",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Antarctica"
+      "country": "Antarctica",
+	  "tipString": null
     },
     {
       "name": "Antigua and Barbuda",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Antigua and Barbuda"
+      "country": "Antigua and Barbuda",
+	  "tipString": null
     },
     {
       "name": "Argentina",
       "additionalTaxRate": null,
       "tipRate": 0.1000000000,
-      "country": "Argentina"
+      "country": "Argentina",
+	  "tipString": null
     },
     {
       "name": "Armenia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Armenia"
+      "country": "Armenia",
+	  "tipString": null
     },
     {
       "name": "Aruba",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Aruba"
+      "country": "Aruba",
+	  "tipString": null
     },
     {
       "name": "Australia",
       "additionalTaxRate": null,
       "tipRate": 0.1000000000,
-      "country": "Australia"
+      "country": "Australia",
+	  "tipString": null
     },
     {
       "name": "Austria",
       "additionalTaxRate": null,
       "tipRate": 0.0500000000,
-      "country": "Austria"
+      "country": "Austria",
+	  "tipString": null
     },
     {
       "name": "Azerbaijan",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Azerbaijan"
+      "country": "Azerbaijan",
+	  "tipString": null
     },
     {
       "name": "Bahamas",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Bahamas"
+      "country": "Bahamas",
+	  "tipString": null
     },
     {
       "name": "Bahrain",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Bahrain"
+      "country": "Bahrain",
+	  "tipString": null
     },
     {
       "name": "Bangladesh",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Bangladesh"
+      "country": "Bangladesh",
+	  "tipString": null
     },
     {
       "name": "Barbados",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Barbados"
+      "country": "Barbados",
+	  "tipString": null
     },
     {
       "name": "Belarus",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Belarus"
+      "country": "Belarus",
+	  "tipString": null
     },
     {
       "name": "Belgium",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Belgium"
+      "country": "Belgium",
+	  "tipString": null
     },
     {
       "name": "Belize",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Belize"
+      "country": "Belize",
+	  "tipString": null
     },
     {
       "name": "Benin",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Benin"
+      "country": "Benin",
+	  "tipString": null
     },
     {
       "name": "Bermuda",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Bermuda"
+      "country": "Bermuda",
+	  "tipString": null
     },
     {
       "name": "Bhutan",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Bhutan"
+      "country": "Bhutan",
+	  "tipString": null
     },
     {
       "name": "Bolivia",
       "additionalTaxRate": null,
       "tipRate": 0.0500000000,
-      "country": "Bolivia"
+      "country": "Bolivia",
+	  "tipString": null
     },
     {
       "name": "Bosnia-Herzegovina",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Bosnia-Herzegovina"
+      "country": "Bosnia-Herzegovina",
+	  "tipString": null
     },
     {
       "name": "Botswana",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Botswana"
+      "country": "Botswana",
+	  "tipString": null
     },
     {
       "name": "Bouvet Island",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Bouvet Island"
+      "country": "Bouvet Island",
+	  "tipString": null
     },
     {
       "name": "Brazil",
       "additionalTaxRate": null,
       "tipRate": 0.1000000000,
-      "country": "Brazil"
+      "country": "Brazil",
+	  "tipString": null
     },
     {
       "name": "British Indian Ocean Territory",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "British Indian Ocean Territory"
+      "country": "British Indian Ocean Territory",
+	  "tipString": null
     },
     {
       "name": "Brunei Darussalam",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Brunei Darussalam"
+      "country": "Brunei Darussalam",
+	  "tipString": null
     },
     {
       "name": "Bulgaria",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Bulgaria"
+      "country": "Bulgaria",
+	  "tipString": null
     },
     {
       "name": "Burkina Faso",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Burkina Faso"
+      "country": "Burkina Faso",
+	  "tipString": null
     },
     {
       "name": "Burundi",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Burundi"
+      "country": "Burundi",
+	  "tipString": null
     },
     {
       "name": "Cambodia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Cambodia"
+      "country": "Cambodia",
+	  "tipString": null
     },
     {
       "name": "Cameroon",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Cameroon"
+      "country": "Cameroon",
+	  "tipString": null
     },
     {
       "name": "Canada",
       "additionalTaxRate": 0.0875000000,
       "tipRate": 0.2000000000,
-      "country": "Canada"
+      "country": "Canada",
+	  "tipString": null
     },
     {
       "name": "Cape Verde",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Cape Verde"
+      "country": "Cape Verde",
+	  "tipString": null
     },
     {
       "name": "Cayman Islands",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Cayman Islands"
+      "country": "Cayman Islands",
+	  "tipString": null
     },
     {
       "name": "Central African Republic",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Central African Republic"
+      "country": "Central African Republic",
+	  "tipString": null
     },
     {
       "name": "Chad",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Chad"
+      "country": "Chad",
+	  "tipString": null
     },
     {
       "name": "Chile",
       "additionalTaxRate": null,
       "tipRate": 0.1000000000,
-      "country": "Chile"
+      "country": "Chile",
+	  "tipString": null
     },
     {
       "name": "China",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "China"
+      "country": "China",
+	  "tipString": null
     },
     {
       "name": "Christmas Island",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Christmas Island"
+      "country": "Christmas Island",
+	  "tipString": null
     },
     {
       "name": "Cocos (Keeling|), Islands",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Cocos (Keeling|), Islands"
+      "country": "Cocos (Keeling|), Islands",
+	  "tipString": null
     },
     {
       "name": "Colombia",
       "additionalTaxRate": null,
       "tipRate": 0.1000000000,
-      "country": "Colombia"
+      "country": "Colombia",
+	  "tipString": null
     },
     {
       "name": "Comoros",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Comoros"
+      "country": "Comoros",
+	  "tipString": null
     },
     {
       "name": "Congo",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Congo"
+      "country": "Congo",
+	  "tipString": null
     },
     {
       "name": "Cook Islands",
       "additionalTaxRate": null,
       "tipRate": 0.0000000000,
-      "country": "Cook Islands"
+      "country": "Cook Islands",
+	  "tipString": null
     },
     {
       "name": "Costa Rica",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Costa Rica"
+      "country": "Costa Rica",
+	  "tipString": null
     },
     {
       "name": "Croatia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Croatia"
+      "country": "Croatia",
+	  "tipString": null
     },
     {
       "name": "Cuba",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Cuba"
+      "country": "Cuba",
+	  "tipString": null
     },
     {
       "name": "Cyprus",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Cyprus"
+      "country": "Cyprus",
+	  "tipString": null
     },
     {
       "name": "Czech Republic",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Czech Republic"
+      "country": "Czech Republic",
+	  "tipString": null
     },
     {
       "name": "Denmark",
       "additionalTaxRate": null,
       "tipRate": 0.0000000000,
-      "country": "Denmark"
+      "country": "Denmark",
+	  "tipString": null
     },
     {
       "name": "Djibouti",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Djibouti"
+      "country": "Djibouti",
+	  "tipString": null
     },
     {
       "name": "Dominica",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Dominica"
+      "country": "Dominica",
+	  "tipString": null
     },
     {
       "name": "Dominican Republic",
       "additionalTaxRate": null,
       "tipRate": 0.2000000000,
-      "country": "Dominican Republic"
+      "country": "Dominican Republic",
+	  "tipString": null
     },
     {
       "name": "Egypt",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Egypt"
+      "country": "Egypt",
+	  "tipString": null
     },
     {
       "name": "El Salvador",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "El Salvador"
+      "country": "El Salvador",
+	  "tipString": null
     },
     {
       "name": "Equatorial Guinea",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Equatorial Guinea"
+      "country": "Equatorial Guinea",
+	  "tipString": null
     },
     {
       "name": "Eritrea",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Eritrea"
+      "country": "Eritrea",
+	  "tipString": null
     },
     {
       "name": "Estonia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Estonia"
+      "country": "Estonia",
+	  "tipString": null
     },
     {
       "name": "Ethiopia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Ethiopia"
+      "country": "Ethiopia",
+	  "tipString": null
     },
     {
       "name": "European Union",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "European Union"
+      "country": "European Union",
+	  "tipString": null
     },
     {
       "name": "Falkland Islands (Malvinas)",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Falkland Islands (Malvinas)"
+      "country": "Falkland Islands (Malvinas)",
+	  "tipString": null
     },
     {
       "name": "Faroe Islands",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Faroe Islands"
+      "country": "Faroe Islands",
+	  "tipString": null
     },
     {
       "name": "Fiji",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Fiji"
+      "country": "Fiji",
+	  "tipString": null
     },
     {
       "name": "Finland",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Finland"
+      "country": "Finland",
+	  "tipString": null
     },
     {
       "name": "France",
       "additionalTaxRate": null,
       "tipRate": 0.0000000000,
-      "country": "France"
+      "country": "France",
+	  "tipString": null
     },
     {
       "name": "French Guiana",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "French Guiana"
+      "country": "French Guiana",
+	  "tipString": null
     },
     {
       "name": "French Southern Territories",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "French Southern Territories"
+      "country": "French Southern Territories",
+	  "tipString": null
     },
     {
       "name": "Gabon",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Gabon"
+      "country": "Gabon",
+	  "tipString": null
     },
     {
       "name": "Gambia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Gambia"
+      "country": "Gambia",
+	  "tipString": null
     },
     {
       "name": "Germany",
       "additionalTaxRate": null,
       "tipRate": 0.05,
-      "country": "Germany"
+      "country": "Germany",
+	  "tipString": null
     },
     {
       "name": "Ghana",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Ghana"
+      "country": "Ghana",
+	  "tipString": null
     },
     {
       "name": "Gibraltar",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Gibraltar"
+      "country": "Gibraltar",
+	  "tipString": null
     },
     {
       "name": "England",
@@ -868,949 +1011,1114 @@
       "name": "Georgia (Country)",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Georgia (Country)"
+      "country": "Georgia (Country)",
+	  "tipString": null
     },
     {
       "name": "Greece",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Greece"
+      "country": "Greece",
+	  "tipString": null
     },
     {
       "name": "Greenland",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Greenland"
+      "country": "Greenland",
+	  "tipString": null
     },
     {
       "name": "Grenada",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Grenada"
+      "country": "Grenada",
+	  "tipString": null
     },
     {
       "name": "Guadeloupe (French)",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Guadeloupe (French)"
+      "country": "Guadeloupe (French)",
+	  "tipString": null
     },
     {
       "name": "Guam (USA)",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Guam (USA)"
+      "country": "Guam (USA)",
+	  "tipString": null
     },
     {
       "name": "Guinea",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Guinea"
+      "country": "Guinea",
+	  "tipString": null
     },
     {
       "name": "Guyana",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Guyana"
+      "country": "Guyana",
+	  "tipString": null
     },
     {
       "name": "Haiti",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Haiti"
+      "country": "Haiti",
+	  "tipString": null
     },
     {
       "name": "Heard Island and McDonald Islands",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Heard Island and McDonald Islands"
+      "country": "Heard Island and McDonald Islands",
+	  "tipString": null
     },
     {
       "name": "Honduras",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Honduras"
+      "country": "Honduras",
+	  "tipString": null
     },
     {
       "name": "Hong Kong",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Hong Kong"
+      "country": "Hong Kong",
+	  "tipString": null
     },
     {
       "name": "Hungary",
       "additionalTaxRate": null,
       "tipRate": 0.1000000000,
-      "country": "Hungary"
+      "country": "Hungary",
+	  "tipString": null
     },
     {
       "name": "Iceland",
       "additionalTaxRate": null,
       "tipRate": 0.0000000000,
-      "country": "Iceland"
+      "country": "Iceland",
+	  "tipString": null
     },
     {
       "name": "India",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "India"
+      "country": "India",
+	  "tipString": null
     },
     {
       "name": "Indonesia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Indonesia"
+      "country": "Indonesia",
+	  "tipString": null
     },
     {
       "name": "Iran",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Iran"
+      "country": "Iran",
+	  "tipString": null
     },
     {
       "name": "Iraq",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Iraq"
+      "country": "Iraq",
+	  "tipString": null
     },
     {
       "name": "Ireland",
       "additionalTaxRate": null,
       "tipRate": 0.0000000000,
-      "country": "Ireland"
+      "country": "Ireland",
+	  "tipString": null
+    },    
+	{
+      "name": "Dublin",
+      "additionalTaxRate": null,
+      "tipRate": 0.0000000000,
+      "country": "Ireland",
+	  "tipString": "Butts"
     },
     {
       "name": "Isle of Man",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Isle of Man"
+      "country": "Isle of Man",
+	  "tipString": null
     },
     {
       "name": "Israel",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Israel"
+      "country": "Israel",
+	  "tipString": null
     },
     {
       "name": "Italy",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Italy"
+      "country": "Italy",
+	  "tipString": null
     },
     {
       "name": "Ivory Coast",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Ivory Coast"
+      "country": "Ivory Coast",
+	  "tipString": null
     },
     {
       "name": "Jamaica",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Jamaica"
+      "country": "Jamaica",
+	  "tipString": null
     },
     {
       "name": "Japan",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Japan"
+      "country": "Japan",
+	  "tipString": null
     },
     {
       "name": "Jersey",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Jersey"
+      "country": "Jersey",
+	  "tipString": null
     },
     {
       "name": "Jordan",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Jordan"
+      "country": "Jordan",
+	  "tipString": null
     },
     {
       "name": "Kazakhstan",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Kazakhstan"
+      "country": "Kazakhstan",
+	  "tipString": null
     },
     {
       "name": "Kenya",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Kenya"
+      "country": "Kenya",
+	  "tipString": null
     },
     {
       "name": "Kiribati",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Kiribati"
+      "country": "Kiribati",
+	  "tipString": null
     },
     {
       "name": "Korea-North",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Korea-North"
+      "country": "Korea-North",
+	  "tipString": null
     },
     {
       "name": "Korea-South",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Korea-South"
+      "country": "Korea-South",
+	  "tipString": null
     },
     {
       "name": "Kuwait",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Kuwait"
+      "country": "Kuwait",
+	  "tipString": null
     },
     {
       "name": "Kyrgyzstan",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Kyrgyzstan"
+      "country": "Kyrgyzstan",
+	  "tipString": null
     },
     {
       "name": "Laos",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Laos"
+      "country": "Laos",
+	  "tipString": null
     },
     {
       "name": "Latvia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Latvia"
+      "country": "Latvia",
+	  "tipString": null
     },
     {
       "name": "Lebanon",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Lebanon"
+      "country": "Lebanon",
+	  "tipString": null
     },
     {
       "name": "Lesotho",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Lesotho"
+      "country": "Lesotho",
+	  "tipString": null
     },
     {
       "name": "Liberia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Liberia"
+      "country": "Liberia",
+	  "tipString": null
     },
     {
       "name": "Libya",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Libya"
+      "country": "Libya",
+	  "tipString": null
     },
     {
       "name": "Liechtenstein",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Liechtenstein"
+      "country": "Liechtenstein",
+	  "tipString": null
     },
     {
       "name": "Lithuania",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Lithuania"
+      "country": "Lithuania",
+	  "tipString": null
     },
     {
       "name": "Luxembourg",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Luxembourg"
+      "country": "Luxembourg",
+	  "tipString": null
     },
     {
       "name": "Macau",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Macau"
+      "country": "Macau",
+	  "tipString": null
     },
     {
       "name": "Macedonia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Macedonia"
+      "country": "Macedonia",
+	  "tipString": null
     },
     {
       "name": "Malawi",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Malawi"
+      "country": "Malawi",
+	  "tipString": null
     },
     {
       "name": "Malaysia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Malaysia"
+      "country": "Malaysia",
+	  "tipString": null
     },
     {
       "name": "Maldives",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Maldives"
+      "country": "Maldives",
+	  "tipString": null
     },
     {
       "name": "Mali",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Mali"
+      "country": "Mali",
+	  "tipString": null
     },
     {
       "name": "Malta",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Malta"
+      "country": "Malta",
+	  "tipString": null
     },
     {
       "name": "Marshall Islands",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Marshall Islands"
+      "country": "Marshall Islands",
+	  "tipString": null
     },
     {
       "name": "Martinique (French)",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Martinique (French)"
+      "country": "Martinique (French)",
+	  "tipString": null
     },
     {
       "name": "Mauritania",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Mauritania"
+      "country": "Mauritania",
+	  "tipString": null
     },
     {
       "name": "Mauritius",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Mauritius"
+      "country": "Mauritius",
+	  "tipString": null
     },
     {
       "name": "Mayotte",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Mayotte"
+      "country": "Mayotte",
+	  "tipString": null
     },
     {
       "name": "Mexico",
       "additionalTaxRate": null,
       "tipRate": 0.1000000000,
-      "country": "Mexico"
+      "country": "Mexico",
+	  "tipString": null
     },
     {
       "name": "Micronesia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Micronesia"
+      "country": "Micronesia",
+	  "tipString": null
     },
     {
       "name": "Moldova",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Moldova"
+      "country": "Moldova",
+	  "tipString": null
     },
     {
       "name": "Monaco",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Monaco"
+      "country": "Monaco",
+	  "tipString": null
     },
     {
       "name": "Mongolia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Mongolia"
+      "country": "Mongolia",
+	  "tipString": null
     },
     {
       "name": "Montenegro",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Montenegro"
+      "country": "Montenegro",
+	  "tipString": null
     },
     {
       "name": "Montserrat",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Montserrat"
+      "country": "Montserrat",
+	  "tipString": null
     },
     {
       "name": "Morocco",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Morocco"
+      "country": "Morocco",
+	  "tipString": null
     },
     {
       "name": "Mozambique",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Mozambique"
+      "country": "Mozambique",
+	  "tipString": null
     },
     {
       "name": "Myanmar",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Myanmar"
+      "country": "Myanmar",
+	  "tipString": null
     },
     {
       "name": "Namibia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Namibia"
+      "country": "Namibia",
+	  "tipString": null
     },
     {
       "name": "Nauru",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Nauru"
+      "country": "Nauru",
+	  "tipString": null
     },
     {
       "name": "Nepal",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Nepal"
+      "country": "Nepal",
+	  "tipString": null
     },
     {
       "name": "Netherlands Antilles",
       "additionalTaxRate": null,
       "tipRate": 0.0500000000,
-      "country": "Netherlands Antilles"
+      "country": "Netherlands Antilles",
+	  "tipString": null
     },
     {
       "name": "The Netherlands",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "The Netherlands"
+      "country": "The Netherlands",
+	  "tipString": null
     },
     {
       "name": "New Caledonia (French)",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "New Caledonia (French)"
+      "country": "New Caledonia (French)",
+	  "tipString": null
     },
     {
       "name": "New Zealand",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "New Zealand"
+      "country": "New Zealand",
+	  "tipString": null
     },
     {
       "name": "Nicaragua",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Nicaragua"
+      "country": "Nicaragua",
+	  "tipString": null
     },
     {
       "name": "Niger",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Niger"
+      "country": "Niger",
+	  "tipString": null
     },
     {
       "name": "Nigeria",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Nigeria"
+      "country": "Nigeria",
+	  "tipString": null
     },
     {
       "name": "Niue",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Niue"
+      "country": "Niue",
+	  "tipString": null
     },
     {
       "name": "Norfolk Island",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Norfolk Island"
+      "country": "Norfolk Island",
+	  "tipString": null
     },
     {
       "name": "Northern Mariana Islands",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Northern Mariana Islands"
+      "country": "Northern Mariana Islands",
+	  "tipString": null
     },
     {
       "name": "Norway",
       "additionalTaxRate": 0.0000000000,
       "tipRate": 0.0000000000,
-      "country": "Norway"
+      "country": "Norway",
+	  "tipString": null
     },
     {
       "name": "Oman",
       "additionalTaxRate": 0.0000000000,
       "tipRate": 0.0000000000,
-      "country": "Oman"
+      "country": "Oman",
+	  "tipString": null
     },
     {
       "name": "Pakistan",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Pakistan"
+      "country": "Pakistan",
+	  "tipString": null
     },
     {
       "name": "Palau",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Palau"
+      "country": "Palau",
+	  "tipString": null
     },
     {
       "name": "Panama",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Panama"
+      "country": "Panama",
+	  "tipString": null
     },
     {
       "name": "Papua New Guinea",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Papua New Guinea"
+      "country": "Papua New Guinea",
+	  "tipString": null
     },
     {
       "name": "Paraguay",
       "additionalTaxRate": null,
       "tipRate": 0.0000000000,
-      "country": "Paraguay"
+      "country": "Paraguay",
+	  "tipString": null
     },
     {
       "name": "Peru",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Peru"
+      "country": "Peru",
+	  "tipString": null
     },
     {
       "name": "Philippines",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Philippines"
+      "country": "Philippines",
+	  "tipString": null
     },
     {
       "name": "Pitcairn Island",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Pitcairn Island"
+      "country": "Pitcairn Island",
+	  "tipString": null
     },
     {
       "name": "Poland",
       "additionalTaxRate": null,
       "tipRate": 0.1000000000,
-      "country": "Poland"
+      "country": "Poland",
+	  "tipString": null
     },
     {
       "name": "Polynesia (French)",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Polynesia (French)"
+      "country": "Polynesia (French)",
+	  "tipString": null
     },
     {
       "name": "Portugal",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Portugal"
+      "country": "Portugal",
+	  "tipString": null
     },
     {
       "name": "Puerto Rico",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Puerto Rico"
+      "country": "Puerto Rico",
+	  "tipString": null
     },
     {
       "name": "Qatar",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Qatar"
+      "country": "Qatar",
+	  "tipString": null
     },
     {
       "name": "Reunion (French)",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Reunion (French)"
+      "country": "Reunion (French)",
+	  "tipString": null
     },
     {
       "name": "Romania",
       "additionalTaxRate": null,
       "tipRate": 0.1000000000,
-      "country": "Romania"
+      "country": "Romania",
+	  "tipString": null
     },
     {
       "name": "Russia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Russia"
+      "country": "Russia",
+	  "tipString": null
     },
     {
       "name": "Rwanda",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Rwanda"
+      "country": "Rwanda",
+	  "tipString": null
     },
     {
       "name": "Saint Helena",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Saint Helena"
+      "country": "Saint Helena",
+	  "tipString": null
     },
     {
       "name": "Saint Kitts & Nevis Anguilla",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Saint Kitts & Nevis Anguilla"
+      "country": "Saint Kitts & Nevis Anguilla",
+	  "tipString": null
     },
     {
       "name": "Saint Lucia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Saint Lucia"
+      "country": "Saint Lucia",
+	  "tipString": null
     },
     {
       "name": "Saint Pierre and Miquelon",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Saint Pierre and Miquelon"
+      "country": "Saint Pierre and Miquelon",
+	  "tipString": null
     },
     {
       "name": "Saint Vincent & Grenadines",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Saint Vincent & Grenadines"
+      "country": "Saint Vincent & Grenadines",
+	  "tipString": null
     },
     {
       "name": "Samoa",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Samoa"
+      "country": "Samoa",
+	  "tipString": null
     },
     {
       "name": "San Marino",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "San Marino"
+      "country": "San Marino",
+	  "tipString": null
     },
     {
       "name": "Sao Tome and Principe",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Sao Tome and Principe"
+      "country": "Sao Tome and Principe",
+	  "tipString": null
     },
     {
       "name": "Saudi Arabia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Saudi Arabia"
+      "country": "Saudi Arabia",
+	  "tipString": null
     },
     {
       "name": "Senegal",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Senegal"
+      "country": "Senegal",
+	  "tipString": null
     },
     {
       "name": "Serbia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Serbia"
+      "country": "Serbia",
+	  "tipString": null
     },
     {
       "name": "Seychelles",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Seychelles"
+      "country": "Seychelles",
+	  "tipString": null
     },
     {
       "name": "Sierra Leone",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Sierra Leone"
+      "country": "Sierra Leone",
+	  "tipString": null
     },
     {
       "name": "Singapore",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Singapore"
+      "country": "Singapore",
+	  "tipString": null
     },
     {
       "name": "Slovakia",
       "additionalTaxRate": null,
       "tipRate": 0.1000000000,
-      "country": "Slovakia"
+      "country": "Slovakia",
+	  "tipString": null
     },
     {
       "name": "Slovenia",
       "additionalTaxRate": null,
       "tipRate": 0.1000000000,
-      "country": "Slovenia"
+      "country": "Slovenia",
+	  "tipString": null
     },
     {
       "name": "Solomon Islands",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Solomon Islands"
+      "country": "Solomon Islands",
+	  "tipString": null
     },
     {
       "name": "Somalia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Somalia"
+      "country": "Somalia",
+	  "tipString": null
     },
     {
       "name": "South Africa",
       "additionalTaxRate": null,
       "tipRate": 0.1000000000,
-      "country": "South Africa"
+      "country": "South Africa",
+	  "tipString": null
     },
     {
       "name": "South Georgia & South Sandwich Islands",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "South Georgia & South Sandwich Islands"
+      "country": "South Georgia & South Sandwich Islands",
+	  "tipString": null
     },
     {
       "name": "Spain",
       "additionalTaxRate": null,
       "tipRate": 0.1000000000,
-      "country": "Spain"
+      "country": "Spain",
+	  "tipString": null
     },
     {
       "name": "Sri Lanka",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Sri Lanka"
+      "country": "Sri Lanka",
+	  "tipString": null
     },
     {
       "name": "Sudan",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Sudan"
+      "country": "Sudan",
+	  "tipString": null
     },
     {
       "name": "Suriname",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Suriname"
+      "country": "Suriname",
+	  "tipString": null
     },
     {
       "name": "Svalbard and Jan Mayen Islands",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Svalbard and Jan Mayen Islands"
+      "country": "Svalbard and Jan Mayen Islands",
+	  "tipString": null
     },
     {
       "name": "Swaziland",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Swaziland"
+      "country": "Swaziland",
+	  "tipString": null
     },
     {
       "name": "Sweden",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Sweden"
+      "country": "Sweden",
+	  "tipString": null
     },
     {
       "name": "Switzerland",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Switzerland"
+      "country": "Switzerland",
+	  "tipString": null
     },
     {
       "name": "Syria",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Syria"
+      "country": "Syria",
+	  "tipString": null
     },
     {
       "name": "Taiwan",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Taiwan"
+      "country": "Taiwan",
+	  "tipString": null
     },
     {
       "name": "Tajikistan",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Tajikistan"
+      "country": "Tajikistan",
+	  "tipString": null
     },
     {
       "name": "Tanzania",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Tanzania"
+      "country": "Tanzania",
+	  "tipString": null
     },
     {
       "name": "Thailand",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Thailand"
+      "country": "Thailand",
+	  "tipString": null
     },
     {
       "name": "Togo",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Togo"
+      "country": "Togo",
+	  "tipString": null
     },
     {
       "name": "Tokelau",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Tokelau"
+      "country": "Tokelau",
+	  "tipString": null
     },
     {
       "name": "Tonga",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Tonga"
+      "country": "Tonga",
+	  "tipString": null
     },
     {
       "name": "Trinidad and Tobago",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Trinidad and Tobago"
+      "country": "Trinidad and Tobago",
+	  "tipString": null
     },
     {
       "name": "Tunisia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Tunisia"
+      "country": "Tunisia",
+	  "tipString": null
     },
     {
       "name": "Turkey",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Turkey"
+      "country": "Turkey",
+	  "tipString": null
     },
     {
       "name": "Turkmenistan",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Turkmenistan"
+      "country": "Turkmenistan",
+	  "tipString": null
     },
     {
       "name": "Turks and Caicos Islands",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Turks and Caicos Islands"
+      "country": "Turks and Caicos Islands",
+	  "tipString": null
     },
     {
       "name": "Tuvalu",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Tuvalu"
+      "country": "Tuvalu",
+	  "tipString": null
     },
     {
       "name": "U.K.",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "U.K."
+      "country": "U.K.",
+	  "tipString": null
     },
     {
       "name": "Uganda",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Uganda"
+      "country": "Uganda",
+	  "tipString": null
     },
     {
       "name": "Ukraine",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Ukraine"
+      "country": "Ukraine",
+	  "tipString": null
     },
     {
       "name": "United Arab Emirates",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "United Arab Emirates"
+      "country": "United Arab Emirates",
+	  "tipString": null
     },
     {
       "name": "Uruguay",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Uruguay"
+      "country": "Uruguay",
+	  "tipString": null
     },
     {
       "name": "USA Minor Outlying Islands",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "USA Minor Outlying Islands"
+      "country": "USA Minor Outlying Islands",
+	  "tipString": null
     },
     {
       "name": "United States",
       "additionalTaxRate": 0.0964000000,
       "tipRate": 0.1500000000,
-      "country": "United States"
+      "country": "United States",
+	  "tipString": null
     },
     {
       "name": "Uzbekistan",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Uzbekistan"
+      "country": "Uzbekistan",
+	  "tipString": null
     },
     {
       "name": "Vanuatu",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Vanuatu"
+      "country": "Vanuatu",
+	  "tipString": null
     },
     {
       "name": "Vatican",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Vatican"
+      "country": "Vatican",
+	  "tipString": null
     },
     {
       "name": "Venezuela",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Venezuela"
+      "country": "Venezuela",
+	  "tipString": null
     },
     {
       "name": "Vietnam",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Vietnam"
+      "country": "Vietnam",
+	  "tipString": null
     },
     {
       "name": "Virgin Islands (British)",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Virgin Islands (British)"
+      "country": "Virgin Islands (British)",
+	  "tipString": null
     },
     {
       "name": "Virgin Islands (USA)",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Virgin Islands (USA)"
+      "country": "Virgin Islands (USA)",
+	  "tipString": null
     },
     {
       "name": "Wallis and Futuna Islands",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Wallis and Futuna Islands"
+      "country": "Wallis and Futuna Islands",
+	  "tipString": null
     },
     {
       "name": "Western Sahara",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Western Sahara"
+      "country": "Western Sahara",
+	  "tipString": null
     },
     {
       "name": "Yemen",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Yemen"
+      "country": "Yemen",
+	  "tipString": null
     },
     {
       "name": "Zambia",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Zambia"
+      "country": "Zambia",
+	  "tipString": null
     },
     {
       "name": "Choose a Locale",
       "additionalTaxRate": null,
       "tipRate": null,
-      "country": "Choose a Country"
+      "country": "Choose a Country",
+	  "tipString": null
     },
     {
       "name": "Great Britain",
