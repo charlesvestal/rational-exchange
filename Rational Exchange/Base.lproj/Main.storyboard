@@ -513,6 +513,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="xbv-KQ-bt2" firstAttribute="top" secondItem="XlW-dl-76c" secondAttribute="bottom" priority="750" constant="8" id="f3f-yC-eL8"/>
                             <constraint firstItem="ojQ-gl-DCw" firstAttribute="width" secondItem="4LU-Wx-rD3" secondAttribute="width" priority="750" id="hRS-Ws-Liz"/>
                             <constraint firstItem="X5t-hr-6OV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fcc-FU-WgL" secondAttribute="leadingMargin" constant="1" id="hiV-8i-WHn"/>
+                            <constraint firstItem="JTb-zy-q5M" firstAttribute="leading" secondItem="fcc-FU-WgL" secondAttribute="leadingMargin" constant="4" id="k9c-bu-sQ0"/>
                             <constraint firstItem="ah2-Ug-q1T" firstAttribute="top" secondItem="oAv-8y-yzA" secondAttribute="top" constant="20" id="pFQ-48-7ly"/>
                             <constraint firstItem="ah2-Ug-q1T" firstAttribute="trailing" secondItem="fcc-FU-WgL" secondAttribute="trailing" id="pHx-5A-uZT"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="width" secondItem="xbv-KQ-bt2" secondAttribute="width" id="q7H-GX-xmc"/>
@@ -524,6 +525,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="2oz-8S-ogi" firstAttribute="top" secondItem="xbv-KQ-bt2" secondAttribute="bottom" constant="5" id="uYu-HL-gic"/>
                             <constraint firstItem="q0b-Im-xuh" firstAttribute="top" secondItem="0Wv-Kc-OMk" secondAttribute="bottom" constant="8" id="xwN-La-aS6"/>
                             <constraint firstItem="q0b-Im-xuh" firstAttribute="bottom" secondItem="4LU-Wx-rD3" secondAttribute="bottom" constant="-69" id="yyA-9A-zfX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JTb-zy-q5M" secondAttribute="trailing" constant="4" id="zMx-88-NVp"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
