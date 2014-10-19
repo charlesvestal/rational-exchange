@@ -37,7 +37,9 @@ class CVMiddleViewController: UIViewController {
         super.viewDidLoad()
         keyboardSetup()
         roundTheButtons()
-        
+
+        readDefaults()
+
         updateCenterScreen()
 
         
@@ -47,8 +49,36 @@ class CVMiddleViewController: UIViewController {
     
     func actOnSpecialNotification() {
         updateCenterScreen()
+        setDefaults()
     }
     
+    func setDefaults() {
+        defaults.setObject(exchangeCalc.homeLocale.name, forKey: "homeLocaleName")
+        defaults.setObject(exchangeCalc.foreignLocale.name, forKey: "foreignLocaleName")
+        defaults.setObject(foreignCostField.text, forKey: "foreignCostField")
+        defaults.setBool(tipSwitch.on, forKey: "tipSwitch")
+        println("set defaults")
+        defaults.synchronize()
+    }
+    
+    func readDefaults()
+    {
+        if let homeLocaleisNotNil = defaults.objectForKey("homeLocaleName") as? String {
+            exchangeCalc.homeLocale = exchangeCalc.localeList.getLocale(defaults.objectForKey("homeLocaleName") as String)
+        }
+        
+        if let foreignLocaleisNotNil = defaults.objectForKey("foreignLocaleName") as? String {
+            exchangeCalc.foreignLocale = exchangeCalc.localeList.getLocale(defaults.objectForKey("foreignLocaleName") as String)
+        }
+        
+        if let foreignCostisNotNil = defaults.objectForKey("foreignCostField") as? String {
+            foreignCostField.text = defaults.objectForKey("foreignCostField") as String
+        }
+        
+        if let tipSwitchIsNotNil = defaults.objectForKey("tipSwitch") as? Bool {
+            tipSwitch.on = defaults.objectForKey("tipSwitch") as Bool
+        }
+    }
    
     
     func updateCenterScreen(){

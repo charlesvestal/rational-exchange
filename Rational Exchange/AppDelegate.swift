@@ -8,6 +8,7 @@
 
 import UIKit
 
+var defaults: NSUserDefaults = NSUserDefaults.standardUserDefaults()
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

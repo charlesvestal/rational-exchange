@@ -61,9 +61,18 @@ class exchangeCalculator {
             exchangeCalc.precision = newLocale.country.precision
         }
 
-        //    setDefaults()
+        setDefaults()
     
     }
+    
+    func setDefaults() {
+        defaults.setObject(exchangeCalc.homeLocale.name, forKey: "homeLocaleName")
+        defaults.setObject(exchangeCalc.foreignLocale.name, forKey: "foreignLocaleName")
+        println("set defaults")
+        defaults.synchronize()
+    }
+
+    
 
     
     func calcTotalAmount (tippable:Double) -> Double {
