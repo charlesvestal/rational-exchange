@@ -27,7 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
             
     
-        
+    
+    
     
 
     func applicationWillResignActive(application: UIApplication!) {

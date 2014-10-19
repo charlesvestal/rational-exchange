@@ -486,7 +486,7 @@ class LocaleList { //:NSObject {
                             }
                         }
                     }
-                                // println("Finished Refreshing Exchange Rates")
+                                println("Finished Refreshing Exchange Rates")
                                 self.cacheCountries()
                                 
                 }

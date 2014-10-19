@@ -20,8 +20,8 @@ class CVMiddleViewController: UIViewController {
     
     @IBAction func fieldChanged(sender : AnyObject) {
         updateCenterScreen()
-//        defaults.setBool(tipSwitch.on, forKey: "tipSwitch")
-//        defaults.synchronize()
+        defaults.setBool(tipSwitch.on, forKey: "tipSwitch")
+        defaults.synchronize()
     }
     
     @IBOutlet weak var tipSwitch: UISwitch!
@@ -39,6 +39,7 @@ class CVMiddleViewController: UIViewController {
         roundTheButtons()
 
         readDefaults()
+        parseInit()
 
         updateCenterScreen()
 
@@ -79,7 +80,7 @@ class CVMiddleViewController: UIViewController {
             tipSwitch.on = defaults.objectForKey("tipSwitch") as Bool
         }
     }
-   
+
     
     func updateCenterScreen(){
         
@@ -240,4 +241,73 @@ class CVMiddleViewController: UIViewController {
         self.view.endEditing(true)
     }
     // end keyboard done button implementation
+    
+
+
+    func parseInit() {
+        
+        var hud =  MBProgressHUD.showHUDAddedTo(self.view, animated: true)
+        hud.labelText = "Loading"
+        hud.detailsLabelText = "Updating Exchange Rates\n and Data"
+        hud.dimBackground = true
+        hud.hide(true, afterDelay:6.0)
+        
+        
+        let config = PFConfig.currentConfig()
+        if let localeInfo = config["localeInfo"] as? PFFile {
+            println("Loading from defaults. Processing config.")
+            let jsonData = JSONValue(localeInfo.getData())
+            self.parseLocaleJSON(jsonData)
+            self.readDefaults()
+            println("Finished processing config from defaults.")
+        }
+        
+        PFConfig.getConfigInBackgroundWithBlock {
+            (var config: PFConfig!, error) -> Void in
+            if (error == nil) {
+                if let localeInfo = config["localeInfo"] as? PFFile {
+                    println("Fetch successful. Processing config.")
+                    let jsonData = JSONValue(localeInfo.getData())
+                    self.parseLocaleJSON(jsonData)
+                    self.readDefaults()
+                    println("Finished processing config.")
+                }
+                                localeListSingleton.refreshCountries()
+                                self.updateCenterScreen()
+                hud.hide(true)
+            } else {
+                hud.hide(true)
+                println("Failed to fetch. Using Cached Config.")
+                config = PFConfig.currentConfig()
+                                localeListSingleton.refreshCountries()
+                                self.updateCenterScreen()
+                self.readDefaults()
+            }
+            
+        }
+        
+    }
+    
+    func parseLocaleJSON(jsonData:JSONValue) {
+        
+        exchangeCalc.localeList.localeList = [Locale]()
+        
+        var resources = jsonData["array"].array!
+        
+        
+        for resource in resources {
+            let localeName = resource["name"].string
+            var newTax:Double?
+            var newTip:Double?
+            
+            newTax = resource["additionalTaxRate"].number as? Double
+            newTip = resource["tipRate"].number as? Double
+            
+            
+            let newCountryName = resource["country"].string
+            
+            exchangeCalc.localeList.localeList.append(Locale(name: localeName, additionalTaxRate: newTax, tipRate: newTip, country: exchangeCalc.localeList.getCountry(newCountryName)))
+        }
+        
+    }
 }

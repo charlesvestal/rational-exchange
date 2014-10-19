@@ -35,7 +35,6 @@
 		FEC9F32419D4E65200831E98 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F32319D4E65200831E98 /* QuartzCore.framework */; };
 		FEE41C8519C344A500460538 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE41C8419C344A500460538 /* SwiftyJSON.swift */; };
 		FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5319B1767B00852F94 /* AppDelegate.swift */; };
-		FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5519B1767B00852F94 /* MainViewController.swift */; };
 		FEE86B5919B1767B00852F94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE86B5719B1767B00852F94 /* Main.storyboard */; };
 		FEE86B5B19B1767B00852F94 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEE86B5A19B1767B00852F94 /* Images.xcassets */; };
 		FEF4E83119D6366900DD27B2 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF4E83019D6366900DD27B2 /* Async.swift */; };
@@ -108,7 +107,6 @@
 		FEE86B4E19B1767B00852F94 /* RationalEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RationalEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE86B5219B1767B00852F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FEE86B5319B1767B00852F94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		FEE86B5519B1767B00852F94 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FEE86B5819B1767B00852F94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FEE86B5A19B1767B00852F94 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		FEE9588219CC66CE00D59C2D /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = dependencies/Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
@@ -142,7 +140,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FE38F53F19E57E5C00EE66C0 /* Refactor */ = {
+		FE38F53F19E57E5C00EE66C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				FE799BA019E6034700ACE2D0 /* CVUIContainerView.swift */,
@@ -151,7 +149,26 @@
 				FE799B9C19E5FE4B00ACE2D0 /* CVCountrySummaryViewController.swift */,
 				FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */,
 			);
-			name = Refactor;
+			name = Views;
+			sourceTree = "<group>";
+		};
+		FEBC8AAE19F3409E00B49D9E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				FEC792DC19D102FC006A45A2 /* LocationHelper.swift */,
+				FE205DC819BD040F00A2ADD8 /* LocaleFetcher.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		FEBC8AAF19F340A300B49D9E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */,
+				FE2AFEB619B4C95B0056F0E0 /* LocaleModel.swift */,
+				FEACB10919C5D3F4006F372D /* CountryModel.swift */,
+			);
+			name = Models;
 			sourceTree = "<group>";
 		};
 		FEE86B4519B1767B00852F94 = {
@@ -174,19 +191,13 @@
 		FEE86B5019B1767B00852F94 /* Rational Exchange */ = {
 			isa = PBXGroup;
 			children = (
-				FE2AFEB619B4C95B0056F0E0 /* LocaleModel.swift */,
-				FEACB10919C5D3F4006F372D /* CountryModel.swift */,
-				FE205DC819BD040F00A2ADD8 /* LocaleFetcher.swift */,
-				FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */,
 				FEE86B5319B1767B00852F94 /* AppDelegate.swift */,
-				FEE86B5519B1767B00852F94 /* MainViewController.swift */,
-				FE38F53F19E57E5C00EE66C0 /* Refactor */,
-				FEC792DC19D102FC006A45A2 /* LocationHelper.swift */,
 				FEE86B5719B1767B00852F94 /* Main.storyboard */,
+				FEBC8AAF19F340A300B49D9E /* Models */,
+				FEBC8AAE19F3409E00B49D9E /* Helpers */,
+				FE38F53F19E57E5C00EE66C0 /* Views */,
 				FEE86B5A19B1767B00852F94 /* Images.xcassets */,
-				FEA5629B19E1781900EDF4DD /* LaunchImage.storyboard */,
 				FEE86B5119B1767B00852F94 /* Supporting Files */,
-				FEC792E019D1A6E6006A45A2 /* Rational Exchange-Bridging-Header.h */,
 			);
 			path = "Rational Exchange";
 			sourceTree = "<group>";
@@ -194,6 +205,8 @@
 		FEE86B5119B1767B00852F94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FEC792E019D1A6E6006A45A2 /* Rational Exchange-Bridging-Header.h */,
+				FEA5629B19E1781900EDF4DD /* LaunchImage.storyboard */,
 				FEF4E83019D6366900DD27B2 /* Async.swift */,
 				FEE41C8419C344A500460538 /* SwiftyJSON.swift */,
 				FEB3667219D72F4400E82527 /* MBProgressHUD.h */,
@@ -325,7 +338,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE799BA119E6034700ACE2D0 /* CVUIContainerView.swift in Sources */,
-				FEE86B5619B1767B00852F94 /* MainViewController.swift in Sources */,
 				FEFD6C0D19D25C7700EBA2EF /* UIImage+ImageEffects.m in Sources */,
 				FEC792DD19D102FC006A45A2 /* LocationHelper.swift in Sources */,
 				FE38F53C19E57DC400EE66C0 /* CVMiddleViewController.swift in Sources */,
