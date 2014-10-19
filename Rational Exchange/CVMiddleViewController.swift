@@ -83,6 +83,7 @@ class CVMiddleViewController: UIViewController {
     
     func updateCenterScreen(){
         
+
         let currentForeignName = exchangeCalc.foreignLocale.name
         let currentHomeName = exchangeCalc.homeLocale.name
         exchangeCalc.updateLocale(currentForeignName, isForeign:true)
@@ -195,6 +196,15 @@ class CVMiddleViewController: UIViewController {
         }else {
             homeCostLabel.text = "Enter an amount above in order to see what it would cost back home."
         }
+        
+        
+// update flag buttons
+        var homeFlag = UIImage(named:exchangeCalc.homeLocale.country.ISOAbbreviation)
+        var foreignFlag = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
+
+        self.gotoTopButton.setBackgroundImage(foreignFlag?.applyDarkEffect(), forState: .Normal)
+        self.gotoBottomButton.setBackgroundImage(homeFlag?.applyDarkEffect(), forState: .Normal)
+
     }
     
     func isTippable() -> Double {
