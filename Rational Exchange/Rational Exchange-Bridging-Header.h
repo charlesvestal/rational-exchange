@@ -5,6 +5,7 @@
 #import "UIImage+ImageEffects.h"
 #import "NGAParallaxMotion.h"
 #import "MBProgressHUD.h"
+#import "SBStackedBarChart.m"
 
 
 #import <Foundation/Foundation.h>

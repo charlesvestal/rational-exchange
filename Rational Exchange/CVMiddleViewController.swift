@@ -44,10 +44,51 @@ class CVMiddleViewController: UIViewController {
         updateCenterScreen()
         updateFlags()
 
-        
+        makeChart()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "actOnSpecialNotification", name: mySpecialNotificationKey, object: nil)
     }
     
+    func makeChart(){
+
+        var horizontal = SBBarChart()
+        horizontal.frame = CGRectMake(10, 20, 300, 40)
+        horizontal.horizontal = true
+        
+        self.view.addSubview(horizontal)
+        
+        var segments:NSMutableArray = [SBBarSegment()]
+        
+        for (var i = 0; i <= 10; i++) {
+            
+            // Value randomly generated for demo
+            var segment:SBBarSegment = SBBarSegment.barComponentWithValue(2.0) as SBBarSegment
+            
+            switch (i) {
+            case 0:
+                segment.color = UIColor.redColor()   // Segment color
+                break;
+            case 1:
+                segment.color = UIColor.blueColor()
+                break;
+            case 2:
+                segment.color = UIColor.whiteColor()
+                break;
+            case 3:
+                segment.color = UIColor.brownColor()
+                break;
+            case 4:
+                segment.color = UIColor.greenColor()
+                break;
+            default:
+                segment.color = UIColor.orangeColor()
+                break;
+            }
+            segments.addObject(segment)
+        }
+    
+        horizontal.segments = segments
+        
+    }
     
     func actOnSpecialNotification() {
         updateCenterScreen()

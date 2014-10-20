@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FE1022F419CF76E7005B0485 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA2B9A919CF726400455670 /* CoreLocation.framework */; };
+		FE19E2FB19F5C484002D67A2 /* SBStackedBarChart.m in Sources */ = {isa = PBXBuildFile; fileRef = FE19E2FA19F5C484002D67A2 /* SBStackedBarChart.m */; };
 		FE205DC919BD040F00A2ADD8 /* LocaleFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE205DC819BD040F00A2ADD8 /* LocaleFetcher.swift */; };
 		FE2AFEB819B4C95B0056F0E0 /* LocaleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2AFEB619B4C95B0056F0E0 /* LocaleModel.swift */; };
 		FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */; };
@@ -80,6 +81,8 @@
 		1A8CF2B5952ADC764754CCD8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		1DEB309CE8226D7A6E858AC7 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		B60670BD518E8B87F667D4BC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE19E2F919F5C484002D67A2 /* SBStackedBarChart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBStackedBarChart.h; sourceTree = "<group>"; };
+		FE19E2FA19F5C484002D67A2 /* SBStackedBarChart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBStackedBarChart.m; sourceTree = "<group>"; };
 		FE205DC819BD040F00A2ADD8 /* LocaleFetcher.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleFetcher.swift; sourceTree = "<group>"; };
 		FE2AFEB619B4C95B0056F0E0 /* LocaleModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocaleModel.swift; sourceTree = "<group>"; };
 		FE2AFEB719B4C95B0056F0E0 /* ExchangeCalculator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExchangeCalculator.swift; sourceTree = "<group>"; };
@@ -235,6 +238,8 @@
 		FEE86B5119B1767B00852F94 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FE19E2F919F5C484002D67A2 /* SBStackedBarChart.h */,
+				FE19E2FA19F5C484002D67A2 /* SBStackedBarChart.m */,
 				FEC792E019D1A6E6006A45A2 /* Rational Exchange-Bridging-Header.h */,
 				FEA5629B19E1781900EDF4DD /* LaunchImage.storyboard */,
 				FEF4E83019D6366900DD27B2 /* Async.swift */,
@@ -382,6 +387,7 @@
 				FEF4E83119D6366900DD27B2 /* Async.swift in Sources */,
 				FE2AFEB919B4C95B0056F0E0 /* ExchangeCalculator.swift in Sources */,
 				FE38F53E19E57E5200EE66C0 /* CVScrollViewViewController.swift in Sources */,
+				FE19E2FB19F5C484002D67A2 /* SBStackedBarChart.m in Sources */,
 				FEE41C8519C344A500460538 /* SwiftyJSON.swift in Sources */,
 				FE2AFEB819B4C95B0056F0E0 /* LocaleModel.swift in Sources */,
 				FE799B9D19E5FE4B00ACE2D0 /* CVCountrySummaryViewController.swift in Sources */,
