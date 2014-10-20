@@ -119,7 +119,11 @@ protocol CountrySelectedDelegate {
         super.viewDidAppear(true)
         var containerView = super.view.superview?.superview?.superview as CVUIContainerView
         self.isForeign = containerView.isForeign
-     
+        if (isForeign) {
+            searchBar.placeholder = "Where are you visiting?"
+        } else {
+            searchBar.placeholder = "Where are you from?"
+        }
       
     }
     

@@ -21,6 +21,8 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
     @IBOutlet weak var taxString: UILabel!
     @IBOutlet weak var tipString: UILabel!
     
+    @IBOutlet weak var locationLabel: UILabel!
+    
     var MyCLController = locationHelper(domain: "home")
     
     override func viewDidLoad() {
@@ -29,7 +31,6 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
     
     @IBAction func findMe(sender: AnyObject) {
         let containerView = self.view.superview as CVUIContainerView
-       
         if(containerView.isForeign == true){
              MyCLController.setDomain("foreign")
             }else {
@@ -47,8 +48,10 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
         
         if(containerView.isForeign == true){
                 locale = exchangeCalc.foreignLocale
+                locationLabel.text = "WHERE YOU'RE VISITING"
         }else{
                 locale = exchangeCalc.homeLocale
+                locationLabel.text = "WHERE YOU'RE FROM"
         }
         
         setupFlag(locale)
