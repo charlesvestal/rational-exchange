@@ -23,10 +23,13 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
     
     @IBOutlet weak var locationLabel: UILabel!
     
+
     var MyCLController = locationHelper(domain: "home")
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
     }
     
     @IBAction func findMe(sender: AnyObject) {
@@ -48,10 +51,11 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
         
         if(containerView.isForeign == true){
                 locale = exchangeCalc.foreignLocale
-                locationLabel.text = "WHERE YOU'RE VISITING"
+                locationLabel.text = "YOU ARE VISITING"
+
         }else{
                 locale = exchangeCalc.homeLocale
-                locationLabel.text = "WHERE YOU'RE FROM"
+                locationLabel.text = "YOU ARE FROM"
         }
         
         setupFlag(locale)
