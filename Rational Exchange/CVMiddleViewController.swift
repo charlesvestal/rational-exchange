@@ -203,8 +203,12 @@ class CVMiddleViewController: UIViewController {
                 var homeFlag = UIImage(named:exchangeCalc.homeLocale.country.ISOAbbreviation)
                 var foreignFlag = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
         
-                self.gotoTopButton.setBackgroundImage(foreignFlag?.applyDarkEffect(), forState: .Normal)
-                self.gotoBottomButton.setBackgroundImage(homeFlag?.applyDarkEffect(), forState: .Normal)
+        let tintColor = UIColor(white:0.2, alpha:0.5)
+        
+
+        
+        self.gotoTopButton.setBackgroundImage(foreignFlag?.applyBlurWithRadius(5, tintColor: tintColor, saturationDeltaFactor: 1.8, maskImage: nil), forState: .Normal)
+        self.gotoBottomButton.setBackgroundImage(homeFlag?.applyBlurWithRadius(5, tintColor: tintColor, saturationDeltaFactor: 1.8, maskImage: nil), forState: .Normal)
         
 
     }

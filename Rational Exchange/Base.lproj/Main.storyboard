@@ -308,13 +308,13 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
             <objects>
                 <tableViewController id="bfl-eG-BOs" userLabel="Country Table View Controller" customClass="CountryTableViewController" customModule="RationalEx" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="foreignTableView" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f86-vJ-JCJ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="528"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" opaque="NO" contentMode="redraw" searchBarStyle="minimal" placeholder="Where Are You?" id="zq5-5b-0gK" userLabel="searchBar">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
@@ -378,23 +378,26 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         <viewControllerLayoutGuide type="bottom" id="Jw5-by-r0o"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fcc-FU-WgL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GB" translatesAutoresizingMaskIntoConstraints="NO" id="Qrt-Hu-ahS">
-                                <rect key="frame" x="-100" y="-100" width="520" height="768"/>
+                                <rect key="frame" x="-100" y="-100" width="614" height="936"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="40" y="220" width="240" height="128"/>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="IT LOOKS LIKE YOU'RE IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wv-Kc-OMk">
-                                <rect key="frame" x="40" y="100" width="241" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IT LOOKS LIKE YOU'RE IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wv-Kc-OMk">
+                                <rect key="frame" x="87" y="80" width="241" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="26" id="jpA-Aq-dUV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WHERE THEY SPEND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="4LU-Wx-rD3">
-                                <rect key="frame" x="20" y="287" width="280" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHERE THEY SPEND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="4LU-Wx-rD3">
+                                <rect key="frame" x="20" y="491" width="374" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="WPB-fe-VLl"/>
                                 </constraints>
@@ -402,38 +405,38 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Norwegian Kroner" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTb-zy-q5M">
-                                <rect key="frame" x="20" y="321" width="280" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Norwegian Kroner" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTb-zy-q5M">
+                                <rect key="frame" x="20" y="525" width="374" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="AND THEY ADD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="ojQ-gl-DCw">
-                                <rect key="frame" x="20" y="353" width="280" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AND THEY ADD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="ojQ-gl-DCw">
+                                <rect key="frame" x="20" y="557" width="374" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="8.25% Sales Tax" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42k-4m-ZJV">
-                                <rect key="frame" x="20" y="387" width="280" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.25% Sales Tax" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42k-4m-ZJV">
+                                <rect key="frame" x="20" y="591" width="374" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PLUS THEY TIP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="XlW-dl-76c">
-                                <rect key="frame" x="20" y="427" width="280" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLUS THEY TIP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="XlW-dl-76c">
+                                <rect key="frame" x="20" y="631" width="374" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="20% in Gratuity" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbv-KQ-bt2">
-                                <rect key="frame" x="20" y="461" width="280" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20% in Gratuity" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbv-KQ-bt2">
+                                <rect key="frame" x="20" y="665" width="374" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="500" misplaced="YES" text="CALIFORNIA AND" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="1" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-Im-xuh" customClass="CVUILabel">
-                                <rect key="frame" x="17" y="134" width="256" height="110"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="500" text="CALIFORNIA AND" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="1" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-Im-xuh" customClass="CVUILabel">
+                                <rect key="frame" x="26" y="114" width="332" height="334"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="750" constant="150" id="CBh-ok-NPk"/>
                                 </constraints>
@@ -447,14 +450,14 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                     </mask>
                                 </variation>
                             </label>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ah2-Ug-q1T">
-                                <rect key="frame" x="0.0" y="40" width="320" height="528"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ah2-Ug-q1T">
+                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
                                 <connections>
                                     <segue destination="bfl-eG-BOs" kind="embed" identifier="embedTableView" id="4Hb-Rv-q26"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5t-hr-6OV" userLabel="findMeButton">
-                                <rect key="frame" x="276" y="147" width="44" height="44"/>
+                                <rect key="frame" x="361" y="259" width="44" height="44"/>
                                 <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <state key="normal" image="LocationImage"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -464,8 +467,8 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                     <action selector="findMe:" destination="mPx-Hu-dt9" eventType="touchUpInside" id="Jj7-9F-pi1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-8S-ogi" userLabel="notRightForeign">
-                                <rect key="frame" x="81" y="492" width="159" height="56"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-8S-ogi" userLabel="notRightForeign">
+                                <rect key="frame" x="128" y="696" width="159" height="20"/>
                                 <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="12"/>
                                 <color key="tintColor" red="0.75294125079999996" green="0.81176477670000002" blue="0.88235300780000003" alpha="1" colorSpace="deviceRGB"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
@@ -486,7 +489,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="ah2-Ug-q1T" firstAttribute="leading" secondItem="fcc-FU-WgL" secondAttribute="leading" id="0Hf-6a-wrX"/>
                             <constraint firstItem="X5t-hr-6OV" firstAttribute="centerY" secondItem="q0b-Im-xuh" secondAttribute="centerY" id="0j5-0p-A0v"/>
                             <constraint firstItem="Qrt-Hu-ahS" firstAttribute="height" secondItem="fcc-FU-WgL" secondAttribute="height" constant="200" id="3CW-Nx-Jds"/>
-                            <constraint firstItem="ojQ-gl-DCw" firstAttribute="top" secondItem="4LU-Wx-rD3" secondAttribute="bottom" priority="750" constant="40" id="4A4-Uv-kF4"/>
+                            <constraint firstItem="ojQ-gl-DCw" firstAttribute="top" secondItem="4LU-Wx-rD3" secondAttribute="bottom" constant="40" id="4A4-Uv-kF4"/>
                             <constraint firstItem="q0b-Im-xuh" firstAttribute="width" secondItem="fcc-FU-WgL" secondAttribute="width" multiplier="0.8" id="6X3-6y-lEL"/>
                             <constraint firstItem="Jw5-by-r0o" firstAttribute="top" secondItem="2oz-8S-ogi" secondAttribute="bottom" constant="20" id="9HE-N4-MOM"/>
                             <constraint firstItem="X5t-hr-6OV" firstAttribute="leading" secondItem="q0b-Im-xuh" secondAttribute="trailing" priority="750" constant="3" id="E6n-9a-NZO"/>
@@ -498,6 +501,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstAttribute="centerX" secondItem="2oz-8S-ogi" secondAttribute="centerX" priority="750" id="PVc-4t-F1M"/>
                             <constraint firstAttribute="centerX" secondItem="Qrt-Hu-ahS" secondAttribute="centerX" id="RQ0-WZ-JMZ"/>
                             <constraint firstItem="Jw5-by-r0o" firstAttribute="top" secondItem="ah2-Ug-q1T" secondAttribute="bottom" id="RZn-9B-d07"/>
+                            <constraint firstItem="2oz-8S-ogi" firstAttribute="top" secondItem="Jw5-by-r0o" secondAttribute="top" constant="-40" id="Rz5-ZX-4BM"/>
                             <constraint firstItem="0Wv-Kc-OMk" firstAttribute="top" secondItem="oAv-8y-yzA" secondAttribute="bottom" priority="750" constant="20" id="VCQ-dE-MZq">
                                 <variation key="heightClass=regular" constant="20"/>
                             </constraint>
@@ -509,7 +513,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="XlW-dl-76c" firstAttribute="leading" secondItem="4LU-Wx-rD3" secondAttribute="leading" priority="750" id="bWH-Si-R5o"/>
                             <constraint firstAttribute="centerX" secondItem="0Wv-Kc-OMk" secondAttribute="centerX" priority="750" id="biA-mT-zPj"/>
                             <constraint firstAttribute="centerX" secondItem="q0b-Im-xuh" secondAttribute="centerX" priority="750" constant="15" id="d9f-hE-Pnk"/>
-                            <constraint firstItem="xbv-KQ-bt2" firstAttribute="top" secondItem="XlW-dl-76c" secondAttribute="bottom" priority="750" constant="8" id="f3f-yC-eL8"/>
+                            <constraint firstItem="xbv-KQ-bt2" firstAttribute="top" secondItem="XlW-dl-76c" secondAttribute="bottom" constant="8" id="f3f-yC-eL8"/>
                             <constraint firstItem="ojQ-gl-DCw" firstAttribute="width" secondItem="4LU-Wx-rD3" secondAttribute="width" priority="750" id="hRS-Ws-Liz"/>
                             <constraint firstItem="X5t-hr-6OV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fcc-FU-WgL" secondAttribute="leadingMargin" constant="1" id="hiV-8i-WHn"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="leading" secondItem="fcc-FU-WgL" secondAttribute="leadingMargin" constant="4" id="k9c-bu-sQ0"/>
@@ -517,10 +521,10 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="ah2-Ug-q1T" firstAttribute="trailing" secondItem="fcc-FU-WgL" secondAttribute="trailing" id="pHx-5A-uZT"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="width" secondItem="xbv-KQ-bt2" secondAttribute="width" id="q7H-GX-xmc"/>
                             <constraint firstItem="0Wv-Kc-OMk" firstAttribute="top" secondItem="ah2-Ug-q1T" secondAttribute="top" constant="60" id="qKY-eB-3Yd"/>
-                            <constraint firstItem="42k-4m-ZJV" firstAttribute="top" secondItem="ojQ-gl-DCw" secondAttribute="bottom" priority="750" constant="8" id="qg7-5j-cdP"/>
+                            <constraint firstItem="42k-4m-ZJV" firstAttribute="top" secondItem="ojQ-gl-DCw" secondAttribute="bottom" constant="8" id="qg7-5j-cdP"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="centerX" secondItem="4LU-Wx-rD3" secondAttribute="centerX" priority="750" id="qxU-tp-Bnz"/>
-                            <constraint firstItem="JTb-zy-q5M" firstAttribute="top" secondItem="4LU-Wx-rD3" secondAttribute="bottom" priority="750" constant="8" id="tBv-r8-195"/>
-                            <constraint firstItem="XlW-dl-76c" firstAttribute="top" secondItem="ojQ-gl-DCw" secondAttribute="bottom" priority="750" constant="48" id="tuw-jT-Drd"/>
+                            <constraint firstItem="JTb-zy-q5M" firstAttribute="top" secondItem="4LU-Wx-rD3" secondAttribute="bottom" constant="8" id="tBv-r8-195"/>
+                            <constraint firstItem="XlW-dl-76c" firstAttribute="top" secondItem="ojQ-gl-DCw" secondAttribute="bottom" constant="48" id="tuw-jT-Drd"/>
                             <constraint firstItem="2oz-8S-ogi" firstAttribute="top" secondItem="xbv-KQ-bt2" secondAttribute="bottom" constant="5" id="uYu-HL-gic"/>
                             <constraint firstItem="q0b-Im-xuh" firstAttribute="top" secondItem="0Wv-Kc-OMk" secondAttribute="bottom" constant="8" id="xwN-La-aS6"/>
                             <constraint firstItem="q0b-Im-xuh" firstAttribute="bottom" secondItem="4LU-Wx-rD3" secondAttribute="bottom" constant="-69" id="yyA-9A-zfX"/>
@@ -533,7 +537,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="j1U-f5-qLC"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="countryFlag" destination="Qrt-Hu-ahS" id="T5C-dm-J3d"/>
                         <outlet property="currencyName" destination="JTb-zy-q5M" id="DLQ-7q-hxp"/>
@@ -576,6 +580,6 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
         <image name="homeButton" width="45" height="45"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1Ab-so-sDK"/>
+        <segue reference="xqS-FG-khC"/>
     </inferredMetricsTieBreakers>
 </document>

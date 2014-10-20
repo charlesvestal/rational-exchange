@@ -111,27 +111,61 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
             tipString.text = String(format: "%.2f%% for Gratiuity", locale.tipRate! * 100)
         }
     }
-   
+    
+    
     @IBAction func notRightButton(sender: AnyObject) {
-        
-        var emailTitle = String(format:"Updating You on RationalEx - Location of %@", self.localeName.text!)
-
-        var messageBody1 = String(format:"<p>I noticed your information for %@ is incorrect.</p> <p>There should actually this much tax added to prices: </p> <p>And tipping should be:</p>", self.localeName.text!)
-       
-        var messageBody2 = String(format:"</br></br></br></br></br></br>Debug info: name: %@, tax: %@, tip: %@", self.localeName.text!, self.taxString.text!, self.tipString.text!)
-        var messageBody = messageBody1 + messageBody2
-        var toRecipents = ["charlesv@gmail.com"]
-        
         var mc: MFMailComposeViewController = MFMailComposeViewController()
-        mc.mailComposeDelegate = self
+        
+        var isForeign:String = ""
+        let containerView = self.view.superview as CVUIContainerView
+        if(containerView.isForeign == true){
+            isForeign = "was visiting"
+        }else {
+            isForeign = "am from"
+        }
+
+        
+        let emailTitle = String(format:"Updating You on RationalEx - Location of %@", self.localeName.text!)
+        let messageBody1 = String(format:"<p>I %@, and noticed your information for %@ is incorrect.</p> <p>There should actually this much tax added to prices: </p> <p>And tipping should be:</p>", isForeign, self.localeName.text!)
+        let messageBody2 = String(format:"</br></br></br></br></br></br>Debug info: name: %@, tax: %@, tip: %@ visiting: %@", self.localeName.text!, self.taxString.text!, self.tipString.text!, isForeign)
+        let messageBody = messageBody1 + messageBody2
+        let toRecipents = ["charlesv@gmail.com"]
+        
         
         mc.setSubject(emailTitle)
         mc.setMessageBody(messageBody, isHTML: true)
         mc.setToRecipients(toRecipents)
-        
-        self.presentViewController(mc, animated: true, completion: nil)
-        
+
+        mc.mailComposeDelegate = self
+
+        if (MFMailComposeViewController.canSendMail() == true){
+            self.presentViewController(mc, animated: true, completion: nil)
+            println("we did it")
+        }
+        else{
+            println("we didn't do it")
+            // Show some error message here
+        }
     }
+    
+    
+    func mailComposeController(controller:MFMailComposeViewController, didFinishWithResult result:MFMailComposeResult, error:NSError) {
+        switch result.value {
+        case MFMailComposeResultCancelled.value:
+            println("Mail cancelled")
+        case MFMailComposeResultSaved.value:
+            println("Mail saved")
+        case MFMailComposeResultSent.value:
+            println("Mail sent")
+        case MFMailComposeResultFailed.value:
+            println("Mail sent failure: %@", error.localizedDescription)
+        default:
+            break
+        }
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+
     
     func hideThings(){
      println("hide")
