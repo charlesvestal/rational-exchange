@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6249" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3DH-9s-nSH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3DH-9s-nSH">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6243"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -99,11 +99,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDQ-Rl-qg8">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="317"/>
+                                <rect key="frame" x="0.0" y="-20" width="414" height="337"/>
                                 <color key="backgroundColor" red="0.2600353956" green="0.52061373" blue="0.74229294059999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7I5-MG-AHL">
-                                <rect key="frame" x="139" y="108" width="12" height="28"/>
+                                <rect key="frame" x="139" y="88" width="12" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="LjI-CP-aHq"/>
                                 </constraints>
@@ -115,7 +115,7 @@
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MSd-om-yLk" userLabel="Foreign Amount Field">
-                                <rect key="frame" x="159" y="107" width="97" height="30"/>
+                                <rect key="frame" x="159" y="87" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bZ9-SI-axb"/>
                                     <constraint firstAttribute="width" constant="97" id="fQ6-l3-gFy"/>
@@ -136,7 +136,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjd-JL-O8L" userLabel="foreignButton">
-                                <rect key="frame" x="266" y="99" width="45" height="45"/>
+                                <rect key="frame" x="266" y="79" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="RiI-Gl-KBr"/>
                                     <constraint firstAttribute="width" constant="45" id="uNS-ws-vP6"/>
@@ -149,7 +149,7 @@
                                 </variation>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you in a bar or restaurant?" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyY-Vn-eeY">
-                                <rect key="frame" x="95" y="152" width="168" height="55"/>
+                                <rect key="frame" x="95" y="132" width="168" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="168" id="Q55-Th-RFc"/>
                                     <constraint firstAttribute="height" constant="55" id="svT-yN-bjn"/>
@@ -165,7 +165,7 @@
                                 </variation>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4s-Li-EnN">
-                                <rect key="frame" x="271" y="164" width="51" height="31"/>
+                                <rect key="frame" x="271" y="144" width="51" height="31"/>
                                 <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
                                     <rect key="frame" x="464" y="70" width="51" height="31"/>
                                 </variation>
@@ -186,7 +186,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12.50" textAlignment="center" minimumFontSize="2" translatesAutoresizingMaskIntoConstraints="NO" id="6X7-tr-Odi" userLabel="converted Amount">
-                                <rect key="frame" x="158" y="362" width="98" height="48"/>
+                                <rect key="frame" x="10" y="362" width="394" height="48"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -201,7 +201,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="The price tag says:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="83h-QH-g7P">
-                                <rect key="frame" x="10" y="40" width="394" height="44"/>
+                                <rect key="frame" x="10" y="20" width="394" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="p4l-aM-jDj"/>
                                 </constraints>
@@ -249,7 +249,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 <variation key="widthClass=compact" constant="-20"/>
                             </constraint>
                             <constraint firstItem="fFM-xq-rQ9" firstAttribute="width" secondItem="83h-QH-g7P" secondAttribute="width" id="6Lf-OE-Ell"/>
-                            <constraint firstAttribute="centerX" secondItem="6X7-tr-Odi" secondAttribute="centerX" priority="750" id="7uw-Jl-Pbm"/>
+                            <constraint firstItem="6X7-tr-Odi" firstAttribute="centerX" secondItem="6HQ-vK-pRQ" secondAttribute="centerX" priority="750" id="7uw-Jl-Pbm"/>
                             <constraint firstAttribute="centerX" secondItem="FCz-8K-TVU" secondAttribute="centerX" priority="750" id="B7A-3s-ptB"/>
                             <constraint firstItem="JDQ-Rl-qg8" firstAttribute="leading" secondItem="6HQ-vK-pRQ" secondAttribute="leading" id="BiW-3j-d2E"/>
                             <constraint firstItem="83h-QH-g7P" firstAttribute="top" secondItem="Q4l-Ic-dFa" secondAttribute="bottom" constant="20" id="FsE-RI-t5H"/>
@@ -265,6 +265,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="JDQ-Rl-qg8" firstAttribute="bottom" secondItem="fyY-Vn-eeY" secondAttribute="bottom" constant="20" id="aNl-29-kXq"/>
                             <constraint firstItem="MSd-om-yLk" firstAttribute="leading" secondItem="7I5-MG-AHL" secondAttribute="trailing" priority="750" constant="8" id="b7P-rN-Lk7"/>
                             <constraint firstAttribute="centerX" secondItem="fyY-Vn-eeY" secondAttribute="centerX" priority="750" constant="28" id="dGN-BM-1xD"/>
+                            <constraint firstItem="6X7-tr-Odi" firstAttribute="width" secondItem="JDQ-Rl-qg8" secondAttribute="width" constant="-20" id="dgm-8l-z9t"/>
                             <constraint firstAttribute="centerX" secondItem="fFM-xq-rQ9" secondAttribute="centerX" priority="750" id="iff-Az-xfr"/>
                             <constraint firstItem="fFM-xq-rQ9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fyY-Vn-eeY" secondAttribute="bottom" constant="5" id="k98-5T-DVk"/>
                             <constraint firstItem="83h-QH-g7P" firstAttribute="width" secondItem="6HQ-vK-pRQ" secondAttribute="width" constant="-20" id="nd2-5Y-CII"/>

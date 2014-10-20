@@ -50,6 +50,7 @@ class CVMiddleViewController: UIViewController {
     
     func actOnSpecialNotification() {
         updateCenterScreen()
+        updateFlags()
         setDefaults()
     }
     
@@ -82,8 +83,7 @@ class CVMiddleViewController: UIViewController {
 
     
     func updateCenterScreen(){
-        
-
+   
         let currentForeignName = exchangeCalc.foreignLocale.name
         let currentHomeName = exchangeCalc.homeLocale.name
         exchangeCalc.updateLocale(currentForeignName, isForeign:true)
@@ -119,8 +119,6 @@ class CVMiddleViewController: UIViewController {
         
         
         
-//        if(foreignCostField.text != "" && exchangeCalc.homeLocale.name != "Choose a Locale" && exchangeCalc.foreignLocale.name != "Choose a Locale") {
-
         if(foreignCostField.text != "") {
             homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
             foreignFormatter.currencyCode = exchangeCalc.foreignLocale.country.currencyCode
@@ -135,7 +133,7 @@ class CVMiddleViewController: UIViewController {
             var foreignTax = ""
             var foreignTip = ""
             var totalCostString = ""
-            
+
             // set the language for tax and tip, if they exist
             if(exchangeCalc.calcForeignTax()! == 0){
                 foreignTax = "no"
@@ -153,7 +151,7 @@ class CVMiddleViewController: UIViewController {
             
             // creat the initial string using tax and tip info
             var startString = String(format:"With %@ tax and %@ tip, y", foreignTax, foreignTip)
-            
+
             // change the ending language, depending on if your foreign and home total amounts are identical (no need to list them twice)
             if (foreignTotalAmount! != homeTotalAmount){
                 totalCostString = String(format:"our total is going to be %@, or %@", foreignTotalAmount!, homeTotalAmount!)
@@ -197,16 +195,18 @@ class CVMiddleViewController: UIViewController {
             homeCostLabel.text = "Enter an amount above in order to see what it would cost back home."
         }
         
-        
-// update flag buttons
-        var homeFlag = UIImage(named:exchangeCalc.homeLocale.country.ISOAbbreviation)
-        var foreignFlag = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
+}
 
-        self.gotoTopButton.setBackgroundImage(foreignFlag?.applyDarkEffect(), forState: .Normal)
-        self.gotoBottomButton.setBackgroundImage(homeFlag?.applyDarkEffect(), forState: .Normal)
+    func updateFlags() {
+        // update flag buttons
+                var homeFlag = UIImage(named:exchangeCalc.homeLocale.country.ISOAbbreviation)
+                var foreignFlag = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
+        
+                self.gotoTopButton.setBackgroundImage(foreignFlag?.applyDarkEffect(), forState: .Normal)
+                self.gotoBottomButton.setBackgroundImage(homeFlag?.applyDarkEffect(), forState: .Normal)
+        
 
     }
-    
     func isTippable() -> Double {
         var isTippable:Double
         if tipSwitch.on
