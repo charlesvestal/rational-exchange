@@ -42,6 +42,7 @@ class CVMiddleViewController: UIViewController {
         parseInit()
 
         updateCenterScreen()
+        updateFlags()
 
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "actOnSpecialNotification", name: mySpecialNotificationKey, object: nil)
