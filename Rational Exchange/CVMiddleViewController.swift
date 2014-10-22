@@ -15,8 +15,13 @@ class CVMiddleViewController: UIViewController {
     @IBOutlet weak var gotoBottomButton: UIButton!
     
     
+    @IBOutlet weak var foreignBackground: UIView!
+    @IBOutlet weak var thePriceTagSays: UILabel!
     @IBOutlet weak var foreignCurrencySymbol: UILabel!
     @IBOutlet weak var foreignCostField: UITextField!
+    @IBOutlet weak var barRestaurantLabel: UILabel!
+    @IBOutlet weak var tipSwitch: UISwitch!
+    
     
     @IBAction func fieldChanged(sender : AnyObject) {
         updateCenterScreen()
@@ -24,8 +29,9 @@ class CVMiddleViewController: UIViewController {
         defaults.synchronize()
     }
     
-    @IBOutlet weak var tipSwitch: UISwitch!
     
+    @IBOutlet var homeBackground: UIView!
+    @IBOutlet weak var backHomeLabel: UILabel!
     @IBOutlet weak var homeCostField: UITextField!
     @IBOutlet weak var homeCostLabel: UILabel!
     
@@ -42,8 +48,7 @@ class CVMiddleViewController: UIViewController {
         parseInit()
 
         updateCenterScreen()
-        updateFlags()
-
+        updateFlagsandColors()
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "actOnSpecialNotification", name: mySpecialNotificationKey, object: nil)
     }
@@ -51,9 +56,11 @@ class CVMiddleViewController: UIViewController {
     
     func actOnSpecialNotification() {
         updateCenterScreen()
-        updateFlags()
+        updateFlagsandColors()
         setDefaults()
+     
     }
+    
     
     func setDefaults() {
         defaults.setObject(exchangeCalc.homeLocale.name, forKey: "homeLocaleName")
@@ -198,7 +205,7 @@ class CVMiddleViewController: UIViewController {
         
 }
 
-    func updateFlags() {
+    func updateFlagsandColors() {
         // update flag buttons
                 var homeFlag = UIImage(named:exchangeCalc.homeLocale.country.ISOAbbreviation)
                 var foreignFlag = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
@@ -209,6 +216,20 @@ class CVMiddleViewController: UIViewController {
         
         self.gotoTopButton.setBackgroundImage(foreignFlag?.applyBlurWithRadius(5, tintColor: tintColor, saturationDeltaFactor: 1.8, maskImage: nil), forState: .Normal)
         self.gotoBottomButton.setBackgroundImage(homeFlag?.applyBlurWithRadius(5, tintColor: tintColor, saturationDeltaFactor: 1.8, maskImage: nil), forState: .Normal)
+        
+      // update colors based on flags
+        var foreignColorArt:SLColorArt = foreignFlag!.colorArt()
+        var homeColorArt:SLColorArt = homeFlag!.colorArt()
+        
+        foreignBackground.backgroundColor = foreignColorArt.backgroundColor
+        thePriceTagSays.textColor = foreignColorArt.primaryColor
+        foreignCurrencySymbol.textColor = foreignColorArt.secondaryColor
+        barRestaurantLabel.textColor = foreignColorArt.secondaryColor
+        
+        homeBackground.backgroundColor = homeColorArt.backgroundColor
+        backHomeLabel.textColor = homeColorArt.secondaryColor
+        homeCostField.textColor = homeColorArt.primaryColor
+        homeCostLabel.textColor = homeColorArt.secondaryColor
         
 
     }

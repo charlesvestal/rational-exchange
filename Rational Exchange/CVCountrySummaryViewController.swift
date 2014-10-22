@@ -32,23 +32,7 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
      
     }
     
-    func setColors(locale: Locale) {
-        var image = UIImage(named:locale.country.ISOAbbreviation)
-        image = image?.scaledToSize(view.frame.size)
-        var colorArt:SLColorArt = image!.colorArt()
-        self.localeName.textColor = colorArt.primaryColor
-        self.currencyName.textColor = colorArt.secondaryColor
-        self.locationLabel.textColor = colorArt.detailColor
-        self.taxString.textColor = colorArt.backgroundColor
-        
-//        self.fadedImageView.backgroundColor = colorArt.backgroundColor;
-//        self.fadedImageView.image = image;
-//        self.view.backgroundColor = colorArt.backgroundColor;
-//        self.headline.textColor = colorArt.primaryColor;
-//        self.subHeadline.textColor = colorArt.secondaryColor;
-//        self.text.textColor = colorArt.detailColor;
 
-    }
     
     @IBAction func findMe(sender: AnyObject) {
         let containerView = self.view.superview as CVUIContainerView
@@ -78,7 +62,6 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
         
         setupFlag(locale)
         setupLabels(locale)
-        setColors(locale)
         
     }
     
@@ -86,7 +69,7 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
     {
         setupFlag(selectedLocale)
         setupLabels(selectedLocale)
-        setColors(selectedLocale)
+
     }
     
     func setupFlag (locale:Locale) {

@@ -148,8 +148,8 @@
                                     <rect key="frame" x="459" y="5" width="45" height="45"/>
                                 </variation>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you in a bar or restaurant?" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyY-Vn-eeY">
-                                <rect key="frame" x="95" y="179" width="168" height="55"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Are you in a bar or restaurant?" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyY-Vn-eeY">
+                                <rect key="frame" x="95" y="180" width="168" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="168" id="Q55-Th-RFc"/>
                                     <constraint firstAttribute="height" constant="55" id="svT-yN-bjn"/>
@@ -292,12 +292,17 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
+                        <outlet property="backHomeLabel" destination="fFM-xq-rQ9" id="L52-bR-ZoS"/>
+                        <outlet property="barRestaurantLabel" destination="fyY-Vn-eeY" id="eev-b1-oon"/>
+                        <outlet property="foreignBackground" destination="JDQ-Rl-qg8" id="JDr-vh-jxl"/>
                         <outlet property="foreignCostField" destination="MSd-om-yLk" id="h0C-Cl-mVk"/>
                         <outlet property="foreignCurrencySymbol" destination="7I5-MG-AHL" id="Dgs-eF-Meg"/>
                         <outlet property="gotoBottomButton" destination="3Un-lc-8lx" id="R2Y-AZ-zce"/>
                         <outlet property="gotoTopButton" destination="qjd-JL-O8L" id="7dQ-Az-IJa"/>
+                        <outlet property="homeBackground" destination="6HQ-vK-pRQ" id="di9-ER-5QW"/>
                         <outlet property="homeCostField" destination="6X7-tr-Odi" id="VqJ-0v-pCr"/>
                         <outlet property="homeCostLabel" destination="FCz-8K-TVU" id="BZk-6K-9t7"/>
+                        <outlet property="thePriceTagSays" destination="83h-QH-g7P" id="NgH-bS-V2O"/>
                         <outlet property="tipSwitch" destination="z4s-Li-EnN" id="10O-Ne-yB2"/>
                     </connections>
                 </viewController>
