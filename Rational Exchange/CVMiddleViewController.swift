@@ -85,6 +85,8 @@ class CVMiddleViewController: UIViewController {
     
     func updateCenterScreen(){
    
+        // set formatters for home and foreign currency
+    
         let currentForeignName = exchangeCalc.foreignLocale.name
         let currentHomeName = exchangeCalc.homeLocale.name
         exchangeCalc.updateLocale(currentForeignName, isForeign:true)
@@ -101,9 +103,8 @@ class CVMiddleViewController: UIViewController {
         
         var foreignCurrencySymbolString:String = foreignFormatter.stringFromNumber(100)!
         var nonNumberCharacterSet = NSMutableCharacterSet.decimalDigitCharacterSet()
-            //nonNumberCharacterSet.invert()
+       
         foreignCurrencySymbolString = foreignCurrencySymbolString.componentsSeparatedByCharactersInSet(nonNumberCharacterSet)[0]
-
 
         foreignCurrencySymbol.text = foreignCurrencySymbolString
         
@@ -115,9 +116,6 @@ class CVMiddleViewController: UIViewController {
         exchangeCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
         
         exchangeCalc.calcExchangeRate()
-        
-        // set formatters for home and foreign currency
-       
     
         
         // get current tippable status

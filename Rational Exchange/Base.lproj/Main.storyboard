@@ -95,15 +95,15 @@
                         <viewControllerLayoutGuide type="bottom" id="4RP-r8-6yx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6HQ-vK-pRQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDQ-Rl-qg8">
-                                <rect key="frame" x="0.0" y="-20" width="414" height="337"/>
+                                <rect key="frame" x="0.0" y="-20" width="320" height="205"/>
                                 <color key="backgroundColor" red="0.2600353956" green="0.52061373" blue="0.74229294059999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7I5-MG-AHL">
-                                <rect key="frame" x="139" y="135" width="12" height="28"/>
+                                <rect key="frame" x="92" y="69" width="12" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="LjI-CP-aHq"/>
                                 </constraints>
@@ -115,7 +115,7 @@
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MSd-om-yLk" userLabel="Foreign Amount Field">
-                                <rect key="frame" x="159" y="134" width="97" height="30"/>
+                                <rect key="frame" x="112" y="68" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bZ9-SI-axb"/>
                                     <constraint firstAttribute="width" constant="97" id="fQ6-l3-gFy"/>
@@ -136,7 +136,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjd-JL-O8L" userLabel="foreignButton">
-                                <rect key="frame" x="266" y="126" width="45" height="45"/>
+                                <rect key="frame" x="219" y="60" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="RiI-Gl-KBr"/>
                                     <constraint firstAttribute="width" constant="45" id="uNS-ws-vP6"/>
@@ -149,7 +149,7 @@
                                 </variation>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you in a bar or restaurant?" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyY-Vn-eeY">
-                                <rect key="frame" x="95" y="179" width="168" height="55"/>
+                                <rect key="frame" x="48" y="113" width="168" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="168" id="Q55-Th-RFc"/>
                                     <constraint firstAttribute="height" constant="55" id="svT-yN-bjn"/>
@@ -165,7 +165,7 @@
                                 </variation>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4s-Li-EnN">
-                                <rect key="frame" x="271" y="191" width="51" height="31"/>
+                                <rect key="frame" x="224" y="125" width="51" height="31"/>
                                 <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
                                     <rect key="frame" x="464" y="70" width="51" height="31"/>
                                 </variation>
@@ -174,7 +174,7 @@
                                 </connections>
                             </switch>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="500" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="FCz-8K-TVU" userLabel="Longform cost story">
-                                <rect key="frame" x="10" y="423" width="394" height="243"/>
+                                <rect key="frame" x="10" y="291" width="300" height="119"/>
                                 <string key="text">Back home you'd pay a bit of whatever but here you'll see this and this. 
 
 and then you'll pay tax and tip and other stuff too so don't worry about it cool in Ireland</string>
@@ -186,7 +186,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12.50" textAlignment="center" minimumFontSize="2" translatesAutoresizingMaskIntoConstraints="NO" id="6X7-tr-Odi" userLabel="converted Amount">
-                                <rect key="frame" x="10" y="362" width="394" height="48"/>
+                                <rect key="frame" x="10" y="230" width="300" height="48"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -201,7 +201,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="The price tag says:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="83h-QH-g7P">
-                                <rect key="frame" x="10" y="67" width="394" height="44"/>
+                                <rect key="frame" x="10" y="1" width="300" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="p4l-aM-jDj"/>
                                 </constraints>
@@ -216,7 +216,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Un-lc-8lx" userLabel="homeButton">
-                                <rect key="frame" x="185" y="671" width="45" height="45"/>
+                                <rect key="frame" x="138" y="415" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="INi-a5-ZrW"/>
                                     <constraint firstAttribute="height" constant="45" id="Q6H-yA-JVY"/>
@@ -229,7 +229,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 </variation>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Back home they'd charge:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fFM-xq-rQ9">
-                                <rect key="frame" x="10" y="325" width="394" height="36"/>
+                                <rect key="frame" x="10" y="193" width="300" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="w62-dd-4BX"/>
                                 </constraints>
@@ -268,6 +268,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="6X7-tr-Odi" firstAttribute="width" secondItem="JDQ-Rl-qg8" secondAttribute="width" constant="-20" id="dgm-8l-z9t"/>
                             <constraint firstAttribute="centerX" secondItem="fFM-xq-rQ9" secondAttribute="centerX" priority="750" id="iff-Az-xfr"/>
                             <constraint firstItem="fFM-xq-rQ9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fyY-Vn-eeY" secondAttribute="bottom" constant="5" id="k98-5T-DVk"/>
+                            <constraint firstItem="83h-QH-g7P" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Q4l-Ic-dFa" secondAttribute="bottom" constant="1" id="mDU-Vt-X0K"/>
                             <constraint firstItem="83h-QH-g7P" firstAttribute="width" secondItem="6HQ-vK-pRQ" secondAttribute="width" constant="-20" id="nd2-5Y-CII"/>
                             <constraint firstItem="MSd-om-yLk" firstAttribute="top" secondItem="83h-QH-g7P" secondAttribute="bottom" constant="23" id="nll-qG-PTI"/>
                             <constraint firstItem="MSd-om-yLk" firstAttribute="centerY" secondItem="qjd-JL-O8L" secondAttribute="centerY" priority="750" constant="1" id="qhf-3e-uUh"/>
@@ -290,7 +291,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                     </view>
                     <navigationItem key="navigationItem" id="9BC-yf-evc"/>
                     <nil key="simulatedTopBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="foreignCostField" destination="MSd-om-yLk" id="h0C-Cl-mVk"/>
                         <outlet property="foreignCurrencySymbol" destination="7I5-MG-AHL" id="Dgs-eF-Meg"/>
@@ -303,7 +304,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uwe-Rb-X1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1597.5" y="-1539.5"/>
+            <point key="canvasLocation" x="1603" y="-1557"/>
         </scene>
         <!--Country Table View Controller-->
         <scene sceneID="I2N-vs-nqz">
