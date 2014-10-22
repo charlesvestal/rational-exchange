@@ -53,6 +53,17 @@ class CVMiddleViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "actOnSpecialNotification", name: mySpecialNotificationKey, object: nil)
     }
     
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        var bottomBorder:CALayer = CALayer()
+        bottomBorder.frame = CGRectMake(0.0, foreignBackground.bounds.height, foreignBackground.frame.size.width, 1.0)
+        println(bottomBorder.frame)
+        bottomBorder.backgroundColor = UIColor.lightTextColor().CGColor
+        foreignBackground.layer.addSublayer(bottomBorder)
+
+        
+    }
     
     func actOnSpecialNotification() {
         updateCenterScreen()
@@ -207,8 +218,8 @@ class CVMiddleViewController: UIViewController {
 
     func updateFlagsandColors() {
         // update flag buttons
-                var homeFlag = UIImage(named:exchangeCalc.homeLocale.country.ISOAbbreviation)
-                var foreignFlag = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
+        var homeFlag = UIImage(named:exchangeCalc.homeLocale.country.ISOAbbreviation)
+        var foreignFlag = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
         
         let tintColor = UIColor(white:0.2, alpha:0.5)
         
@@ -248,8 +259,12 @@ class CVMiddleViewController: UIViewController {
     // start round the buttons
     func roundTheButtons() {
         gotoTopButton.layer.cornerRadius = 0.5 * gotoTopButton.bounds.size.width
+        gotoTopButton.layer.borderColor = UIColor.whiteColor().CGColor
+        gotoTopButton.layer.borderWidth = 1.0;
         gotoTopButton.layer.masksToBounds = true
         
+        gotoBottomButton.layer.borderColor = UIColor.whiteColor().CGColor
+        gotoBottomButton.layer.borderWidth = 1.0;
         gotoBottomButton.layer.cornerRadius = 0.5 * gotoBottomButton.bounds.size.width
         gotoBottomButton.layer.masksToBounds = true
     }
