@@ -90,17 +90,35 @@ class CVMiddleViewController: UIViewController {
         exchangeCalc.updateLocale(currentForeignName, isForeign:true)
         exchangeCalc.updateLocale(currentHomeName, isForeign:false)
         
-        // set the exchangeCalc singleton value to the foreign Cost lable
-        exchangeCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
-        
-        // set formatters for home and foreign currency
         var homeFormatter = NSNumberFormatter()
         homeFormatter.numberStyle = .CurrencyStyle
         homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
-    
+        
         var foreignFormatter = NSNumberFormatter()
         foreignFormatter.numberStyle = .CurrencyStyle
         foreignFormatter.currencyCode = exchangeCalc.foreignLocale.country.currencyCode
+        
+        
+        var foreignCurrencySymbolString:String = foreignFormatter.stringFromNumber(100)!
+        var nonNumberCharacterSet = NSMutableCharacterSet.decimalDigitCharacterSet()
+            //nonNumberCharacterSet.invert()
+        foreignCurrencySymbolString = foreignCurrencySymbolString.componentsSeparatedByCharactersInSet(nonNumberCharacterSet)[0]
+
+
+        foreignCurrencySymbol.text = foreignCurrencySymbolString
+        
+        
+        
+        
+        
+        // set the exchangeCalc singleton value to the foreign Cost lable
+        exchangeCalc.foreignTheyWant = Double((foreignCostField.text as NSString).doubleValue)
+        
+        exchangeCalc.calcExchangeRate()
+        
+        // set formatters for home and foreign currency
+       
+    
         
         // get current tippable status
         var tippable = isTippable()
