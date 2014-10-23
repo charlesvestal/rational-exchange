@@ -147,6 +147,9 @@
                                 <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
                                     <rect key="frame" x="459" y="5" width="45" height="45"/>
                                 </variation>
+                                <connections>
+                                    <action selector="gotoTopButton:" destination="p1u-ni-V8n" eventType="touchUpInside" id="ufl-Si-F7T"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you in a bar or restaurant?" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyY-Vn-eeY">
                                 <rect key="frame" x="48" y="113" width="168" height="55"/>
@@ -227,6 +230,9 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
                                     <rect key="frame" x="378" y="335" width="45" height="45"/>
                                 </variation>
+                                <connections>
+                                    <action selector="gotoButtomButton:" destination="p1u-ni-V8n" eventType="touchUpInside" id="SqR-MU-Rsl"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Back home they'd charge:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fFM-xq-rQ9">
                                 <rect key="frame" x="10" y="193" width="300" height="36"/>
@@ -284,8 +290,8 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="aNl-29-kXq"/>
                                 <exclude reference="FsE-RI-t5H"/>
+                                <exclude reference="aNl-29-kXq"/>
                             </mask>
                         </variation>
                     </view>

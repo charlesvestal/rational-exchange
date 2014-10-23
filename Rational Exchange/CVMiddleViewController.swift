@@ -81,8 +81,16 @@ class CVMiddleViewController: UIViewController {
             tipSwitch.on = defaults.objectForKey("tipSwitch") as Bool
         }
     }
-
+    @IBAction func gotoTopButton(sender: AnyObject) {
+        println("go to top")
+    }
     
+    @IBAction func gotoButtomButton(sender: AnyObject) {
+        println("go to bottom")
+    }
+    
+    
+
     func updateCenterScreen(){
    
         // set formatters for home and foreign currency
@@ -171,9 +179,9 @@ class CVMiddleViewController: UIViewController {
 
             // change the ending language, depending on if your foreign and home total amounts are identical (no need to list them twice)
             if (foreignTotalAmount! != homeTotalAmount){
-                totalCostString = String(format:"our total is going to be %@, or %@", foreignTotalAmount!, homeTotalAmount!)
+                totalCostString = String(format:"our total in %@ is going to be %@, or %@", exchangeCalc.foreignLocale.name,foreignTotalAmount!, homeTotalAmount!)
             }else {
-                totalCostString = String(format:"our total is going to be %@", foreignTotalAmount!)
+                totalCostString = String(format:"our total in %@ is going to be %@", exchangeCalc.foreignLocale.name, foreignTotalAmount!)
             }
             
             // only show "back home" if you're doing something else!
@@ -242,10 +250,17 @@ class CVMiddleViewController: UIViewController {
     
     // start round the buttons
     func roundTheButtons() {
+       
+        
         gotoTopButton.layer.cornerRadius = 0.5 * gotoTopButton.bounds.size.width
+        gotoTopButton.layer.borderColor = UIColor.whiteColor().CGColor
+        gotoTopButton.layer.borderWidth = 1.0;
         gotoTopButton.layer.masksToBounds = true
         
+        
         gotoBottomButton.layer.cornerRadius = 0.5 * gotoBottomButton.bounds.size.width
+        gotoBottomButton.layer.borderColor = UIColor.whiteColor().CGColor
+        gotoBottomButton.layer.borderWidth = 1.0;
         gotoBottomButton.layer.masksToBounds = true
     }
     // end rounding the buttons
