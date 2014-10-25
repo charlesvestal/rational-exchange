@@ -122,6 +122,9 @@
                                         <state key="normal" image="arrowUp">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="gotoTopButton:" destination="p1u-ni-V8n" eventType="touchUpInside" id="0m8-hj-Hu7"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </view>
@@ -133,6 +136,9 @@
                                         <state key="normal" image="arrowDown">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="gotoButtomButton:" destination="p1u-ni-V8n" eventType="touchUpInside" id="ub0-yC-Tos"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>

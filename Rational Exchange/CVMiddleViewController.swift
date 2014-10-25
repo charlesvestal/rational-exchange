@@ -67,7 +67,7 @@ class CVMiddleViewController: UIViewController {
         var upArrowFrame = self.upArrow.frame
         var downArrowFrame = self.downArrow.frame
         
-        UIView.animateWithDuration(2.0, delay: 0.0, options:  .CurveEaseOut, animations: {
+        UIView.animateWithDuration(2.0, delay: 0.0, options: .AllowUserInteraction | .CurveEaseOut, animations: {
             
             upArrowFrame.origin.y -= upArrowFrame.size.height
             downArrowFrame.origin.y += downArrowFrame.size.height
@@ -84,7 +84,7 @@ class CVMiddleViewController: UIViewController {
     
     func animateArrows2(oldUpOrigin: CGPoint, oldDownOrigin: CGPoint) {
         
-        UIView.animateWithDuration(0.2, delay: 0.0, options:  .CurveEaseOut, animations: {
+        UIView.animateWithDuration(0.2, delay: 0.0, options: .AllowUserInteraction | .CurveEaseOut, animations: {
             
             self.upArrow.alpha = 0
             self.downArrow.alpha = 0
