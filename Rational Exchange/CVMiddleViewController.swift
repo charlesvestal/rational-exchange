@@ -8,6 +8,9 @@
 
 import Foundation
 
+let scrollTopKey = "com.andrewcbancroft.specialNotificationKeyTop"
+let scrollBottomKey = "com.andrewcbancroft.specialNotificationKeyBottom"
+
 
 class CVMiddleViewController: UIViewController {
 
@@ -81,12 +84,15 @@ class CVMiddleViewController: UIViewController {
             tipSwitch.on = defaults.objectForKey("tipSwitch") as Bool
         }
     }
+    
+    
     @IBAction func gotoTopButton(sender: AnyObject) {
-        println("go to top")
+        NSNotificationCenter.defaultCenter().postNotificationName(scrollTopKey, object: self)
+
     }
     
     @IBAction func gotoButtomButton(sender: AnyObject) {
-        println("go to bottom")
+        NSNotificationCenter.defaultCenter().postNotificationName(scrollBottomKey, object: self)
     }
     
     
@@ -175,13 +181,13 @@ class CVMiddleViewController: UIViewController {
             }
             
             // creat the initial string using tax and tip info
-            var startString = String(format:"With %@ tax and %@ tip, y", foreignTax, foreignTip)
+            var startString = String(format:"In %@, with %@ tax and %@ tip, y", exchangeCalc.foreignLocale.name, foreignTax, foreignTip)
 
             // change the ending language, depending on if your foreign and home total amounts are identical (no need to list them twice)
             if (foreignTotalAmount! != homeTotalAmount){
-                totalCostString = String(format:"our total in %@ is going to be %@, or %@", exchangeCalc.foreignLocale.name,foreignTotalAmount!, homeTotalAmount!)
+                totalCostString = String(format:"our total is going to be %@, or %@",foreignTotalAmount!, homeTotalAmount!)
             }else {
-                totalCostString = String(format:"our total in %@ is going to be %@", exchangeCalc.foreignLocale.name, foreignTotalAmount!)
+                totalCostString = String(format:"our total is going to be %@", foreignTotalAmount!)
             }
             
             // only show "back home" if you're doing something else!
@@ -196,7 +202,7 @@ class CVMiddleViewController: UIViewController {
             
             // include an "and" if you're adding tip AND tax
             if(exchangeCalc.calcShouldTaxLike(tippable) != 0) && (exchangeCalc.calcShouldTipLike(tippable) != 0) {
-                andString = " and "
+                andString = " and"
             }
             
             // only show tip string if you're adding tip

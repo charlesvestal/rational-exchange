@@ -8,6 +8,8 @@
 
 import Foundation
 
+
+
 class CVScrollViewViewController: UIViewController {
     
     @IBOutlet var mainView: UIView!
@@ -16,7 +18,32 @@ class CVScrollViewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupScrollView()
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "gotoTop", name: scrollTopKey, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "gotoBottom", name: scrollBottomKey, object: nil)
+
         }
+    
+    
+   
+
+
+
+    func gotoTop() {
+        println("scrollview top")
+        scrollView.setContentOffset(CGPointMake(0,0), animated: true)
+
+    }
+    
+    func gotoBottom() {
+        let pageNumber:CGFloat = 2
+        var thirdPageStart =
+        CGPointMake(0,(mainView.bounds.height * pageNumber))
+        
+        scrollView.setContentOffset(thirdPageStart, animated: true)
+        println("scrollview bottom")
+    }
     
     
     

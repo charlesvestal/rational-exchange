@@ -178,7 +178,7 @@ protocol CountrySelectedDelegate {
             delegate?.UserDidSelectLocale(newLocale, isForeign: isForeign)
         }
         
- NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: self)
+        NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: self)
         
         self.searchDisplayController?.setActive(false, animated: true)
         

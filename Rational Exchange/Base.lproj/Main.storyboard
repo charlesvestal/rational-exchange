@@ -203,8 +203,8 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                     <rect key="frame" x="351" y="159" width="98" height="48"/>
                                 </variation>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="The price tag says:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="83h-QH-g7P">
-                                <rect key="frame" x="10" y="1" width="300" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="The price tag here says:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="83h-QH-g7P">
+                                <rect key="frame" x="30" y="1" width="260" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="p4l-aM-jDj"/>
                                 </constraints>
@@ -234,7 +234,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                     <action selector="gotoButtomButton:" destination="p1u-ni-V8n" eventType="touchUpInside" id="SqR-MU-Rsl"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Back home they'd charge:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fFM-xq-rQ9">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="The price at home would be:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fFM-xq-rQ9">
                                 <rect key="frame" x="10" y="193" width="300" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="w62-dd-4BX"/>
@@ -263,6 +263,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="qjd-JL-O8L" firstAttribute="leading" secondItem="MSd-om-yLk" secondAttribute="trailing" priority="750" constant="10" id="JLg-bV-DSE"/>
                             <constraint firstItem="FCz-8K-TVU" firstAttribute="top" secondItem="6X7-tr-Odi" secondAttribute="bottom" priority="800" constant="13" id="L7M-dq-Mxk"/>
                             <constraint firstItem="6X7-tr-Odi" firstAttribute="top" secondItem="fFM-xq-rQ9" secondAttribute="bottom" constant="1" id="Lmt-6C-hv3"/>
+                            <constraint firstItem="fFM-xq-rQ9" firstAttribute="width" secondItem="6HQ-vK-pRQ" secondAttribute="width" constant="-20" id="N3y-f6-Mws"/>
                             <constraint firstItem="JDQ-Rl-qg8" firstAttribute="top" secondItem="Q4l-Ic-dFa" secondAttribute="bottom" constant="-20" id="O53-aU-L9F"/>
                             <constraint firstItem="JDQ-Rl-qg8" firstAttribute="bottom" secondItem="fFM-xq-rQ9" secondAttribute="top" constant="-8" id="QL2-H7-8Ec"/>
                             <constraint firstItem="fyY-Vn-eeY" firstAttribute="centerY" secondItem="z4s-Li-EnN" secondAttribute="centerY" priority="750" id="Rbh-PJ-HXK"/>
@@ -275,7 +276,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstAttribute="centerX" secondItem="fFM-xq-rQ9" secondAttribute="centerX" priority="750" id="iff-Az-xfr"/>
                             <constraint firstItem="fFM-xq-rQ9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="fyY-Vn-eeY" secondAttribute="bottom" constant="5" id="k98-5T-DVk"/>
                             <constraint firstItem="83h-QH-g7P" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Q4l-Ic-dFa" secondAttribute="bottom" constant="1" id="mDU-Vt-X0K"/>
-                            <constraint firstItem="83h-QH-g7P" firstAttribute="width" secondItem="6HQ-vK-pRQ" secondAttribute="width" constant="-20" id="nd2-5Y-CII"/>
+                            <constraint firstItem="83h-QH-g7P" firstAttribute="width" secondItem="6HQ-vK-pRQ" secondAttribute="width" constant="-60" id="nd2-5Y-CII"/>
                             <constraint firstItem="MSd-om-yLk" firstAttribute="top" secondItem="83h-QH-g7P" secondAttribute="bottom" constant="23" id="nll-qG-PTI"/>
                             <constraint firstItem="MSd-om-yLk" firstAttribute="centerY" secondItem="qjd-JL-O8L" secondAttribute="centerY" priority="750" constant="1" id="qhf-3e-uUh"/>
                             <constraint firstAttribute="centerX" secondItem="MSd-om-yLk" secondAttribute="centerX" priority="750" id="qtK-f8-9mZ"/>
@@ -290,8 +291,9 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="FsE-RI-t5H"/>
                                 <exclude reference="aNl-29-kXq"/>
+                                <exclude reference="FsE-RI-t5H"/>
+                                <exclude reference="6Lf-OE-Ell"/>
                             </mask>
                         </variation>
                     </view>
