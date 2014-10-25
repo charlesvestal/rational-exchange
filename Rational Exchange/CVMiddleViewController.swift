@@ -29,6 +29,9 @@ class CVMiddleViewController: UIViewController {
     
     @IBOutlet weak var tipSwitch: UISwitch!
     
+    @IBOutlet weak var upArrow: UIView!
+    @IBOutlet weak var downArrow: UIView!
+    
     @IBOutlet weak var homeCostField: UITextField!
     @IBOutlet weak var homeCostLabel: UILabel!
     
@@ -43,12 +46,60 @@ class CVMiddleViewController: UIViewController {
 
         readDefaults()
         parseInit()
-
+        //animateButtons()
         updateCenterScreen()
         updateFlags()
 
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "actOnSpecialNotification", name: mySpecialNotificationKey, object: nil)
+    }
+    
+        override func viewDidAppear(animated: Bool) {
+            
+            var oldUpOrigin = upArrow.frame.origin
+            var oldDownOrigin = downArrow.frame.origin
+            
+            animateArrows1(oldUpOrigin, oldDownOrigin: oldDownOrigin)
+        }
+    
+
+    func animateArrows1(oldUpOrigin: CGPoint, oldDownOrigin: CGPoint) {
+        var upArrowFrame = self.upArrow.frame
+        var downArrowFrame = self.downArrow.frame
+        
+        UIView.animateWithDuration(2.0, delay: 0.0, options:  .CurveEaseOut, animations: {
+            
+            upArrowFrame.origin.y -= upArrowFrame.size.height
+            downArrowFrame.origin.y += downArrowFrame.size.height
+            self.upArrow.alpha = 1
+            self.downArrow.alpha = 1
+            self.upArrow.frame = upArrowFrame
+            self.downArrow.frame = downArrowFrame
+            }, completion: { finished in
+               self.animateArrows2(oldUpOrigin, oldDownOrigin: oldDownOrigin)
+            
+            }
+        )
+    }
+    
+    func animateArrows2(oldUpOrigin: CGPoint, oldDownOrigin: CGPoint) {
+        
+        UIView.animateWithDuration(0.2, delay: 0.0, options:  .CurveEaseOut, animations: {
+            
+            self.upArrow.alpha = 0
+            self.downArrow.alpha = 0
+            
+            }, completion: { finished in
+                self.upArrow.frame.origin = oldUpOrigin
+                self.downArrow.frame.origin = oldDownOrigin
+                
+                self.animateArrows1(oldUpOrigin, oldDownOrigin: oldDownOrigin)
+                
+            }
+        )
+
+        
+        
     }
     
     
