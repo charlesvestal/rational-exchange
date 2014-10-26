@@ -114,38 +114,6 @@
                                     <rect key="frame" x="332" y="14" width="12" height="28"/>
                                 </variation>
                             </label>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZDa-Hz-DR3" userLabel="upArrowButtonView">
-                                <rect key="frame" x="291" y="83" width="22" height="22"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ddd-Ci-RMP">
-                                        <rect key="frame" x="0.0" y="1" width="22" height="22"/>
-                                        <state key="normal" image="arrowUp">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="gotoTopButton:" destination="p1u-ni-V8n" eventType="touchUpInside" id="0m8-hj-Hu7"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </view>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uLM-79-aCo" userLabel="downArrowButtonView">
-                                <rect key="frame" x="291" y="410" width="22" height="22"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bgi-7Z-h2j">
-                                        <rect key="frame" x="0.0" y="1" width="22" height="22"/>
-                                        <state key="normal" image="arrowDown">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="gotoButtomButton:" destination="p1u-ni-V8n" eventType="touchUpInside" id="ub0-yC-Tos"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="22" id="1nK-Oy-13c"/>
-                                    <constraint firstAttribute="height" constant="22" id="D4U-g5-kq9"/>
-                                </constraints>
-                            </view>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MSd-om-yLk" userLabel="Foreign Amount Field">
                                 <rect key="frame" x="112" y="68" width="97" height="30"/>
                                 <constraints>
@@ -289,9 +257,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="fFM-xq-rQ9" firstAttribute="width" secondItem="83h-QH-g7P" secondAttribute="width" id="6Lf-OE-Ell"/>
                             <constraint firstItem="6X7-tr-Odi" firstAttribute="centerX" secondItem="6HQ-vK-pRQ" secondAttribute="centerX" priority="750" id="7uw-Jl-Pbm"/>
                             <constraint firstAttribute="centerX" secondItem="FCz-8K-TVU" secondAttribute="centerX" priority="750" id="B7A-3s-ptB"/>
-                            <constraint firstItem="4RP-r8-6yx" firstAttribute="top" secondItem="uLM-79-aCo" secondAttribute="bottom" constant="48" id="BN0-Bu-bEh"/>
                             <constraint firstItem="JDQ-Rl-qg8" firstAttribute="leading" secondItem="6HQ-vK-pRQ" secondAttribute="leading" id="BiW-3j-d2E"/>
-                            <constraint firstItem="uLM-79-aCo" firstAttribute="leading" secondItem="3Un-lc-8lx" secondAttribute="trailing" constant="108" id="CfK-5Z-WwB"/>
                             <constraint firstItem="83h-QH-g7P" firstAttribute="top" secondItem="Q4l-Ic-dFa" secondAttribute="bottom" constant="20" id="FsE-RI-t5H"/>
                             <constraint firstItem="FCz-8K-TVU" firstAttribute="height" secondItem="6HQ-vK-pRQ" secondAttribute="height" multiplier="0.33" priority="750" id="IZB-Qd-aoo"/>
                             <constraint firstItem="qjd-JL-O8L" firstAttribute="leading" secondItem="MSd-om-yLk" secondAttribute="trailing" priority="750" constant="10" id="JLg-bV-DSE"/>
@@ -299,14 +265,12 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="6X7-tr-Odi" firstAttribute="top" secondItem="fFM-xq-rQ9" secondAttribute="bottom" constant="1" id="Lmt-6C-hv3"/>
                             <constraint firstItem="fFM-xq-rQ9" firstAttribute="width" secondItem="6HQ-vK-pRQ" secondAttribute="width" constant="-20" id="N3y-f6-Mws"/>
                             <constraint firstItem="JDQ-Rl-qg8" firstAttribute="top" secondItem="Q4l-Ic-dFa" secondAttribute="bottom" constant="-20" id="O53-aU-L9F"/>
-                            <constraint firstItem="uLM-79-aCo" firstAttribute="top" secondItem="FCz-8K-TVU" secondAttribute="bottom" id="Oq6-Fb-f6l"/>
                             <constraint firstItem="JDQ-Rl-qg8" firstAttribute="bottom" secondItem="fFM-xq-rQ9" secondAttribute="top" constant="-8" id="QL2-H7-8Ec"/>
                             <constraint firstItem="fyY-Vn-eeY" firstAttribute="centerY" secondItem="z4s-Li-EnN" secondAttribute="centerY" priority="750" id="Rbh-PJ-HXK"/>
                             <constraint firstItem="6X7-tr-Odi" firstAttribute="top" relation="lessThanOrEqual" secondItem="fFM-xq-rQ9" secondAttribute="bottom" priority="750" constant="11" id="S5O-6u-spE"/>
                             <constraint firstItem="z4s-Li-EnN" firstAttribute="leading" secondItem="fyY-Vn-eeY" secondAttribute="trailing" priority="750" constant="8" id="Zqd-he-jfd"/>
                             <constraint firstItem="JDQ-Rl-qg8" firstAttribute="bottom" secondItem="fyY-Vn-eeY" secondAttribute="bottom" constant="20" id="aNl-29-kXq"/>
                             <constraint firstItem="MSd-om-yLk" firstAttribute="leading" secondItem="7I5-MG-AHL" secondAttribute="trailing" priority="750" constant="8" id="b7P-rN-Lk7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="uLM-79-aCo" secondAttribute="trailing" constant="-9" id="cS2-TM-ZN9"/>
                             <constraint firstAttribute="centerX" secondItem="fyY-Vn-eeY" secondAttribute="centerX" priority="750" constant="28" id="dGN-BM-1xD"/>
                             <constraint firstItem="6X7-tr-Odi" firstAttribute="width" secondItem="JDQ-Rl-qg8" secondAttribute="width" constant="-20" id="dgm-8l-z9t"/>
                             <constraint firstAttribute="centerX" secondItem="fFM-xq-rQ9" secondAttribute="centerX" priority="750" id="iff-Az-xfr"/>
@@ -337,7 +301,6 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                     <nil key="simulatedTopBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="downArrow" destination="uLM-79-aCo" id="WFo-K1-7Ic"/>
                         <outlet property="foreignCostField" destination="MSd-om-yLk" id="h0C-Cl-mVk"/>
                         <outlet property="foreignCurrencySymbol" destination="7I5-MG-AHL" id="Dgs-eF-Meg"/>
                         <outlet property="gotoBottomButton" destination="3Un-lc-8lx" id="R2Y-AZ-zce"/>
@@ -345,7 +308,6 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         <outlet property="homeCostField" destination="6X7-tr-Odi" id="VqJ-0v-pCr"/>
                         <outlet property="homeCostLabel" destination="FCz-8K-TVU" id="BZk-6K-9t7"/>
                         <outlet property="tipSwitch" destination="z4s-Li-EnN" id="10O-Ne-yB2"/>
-                        <outlet property="upArrow" destination="ZDa-Hz-DR3" id="S66-U4-XIl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uwe-Rb-X1v" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -631,10 +593,8 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
         <image name="AU" width="512" height="512"/>
         <image name="GB" width="512" height="512"/>
         <image name="LocationImage" width="44" height="44"/>
-        <image name="arrowDown" width="22" height="13"/>
-        <image name="arrowUp" width="22" height="13"/>
-        <image name="awayButton" width="45" height="45"/>
-        <image name="homeButton" width="45" height="45"/>
+        <image name="awayButton" width="90" height="90"/>
+        <image name="homeButton" width="90" height="90"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="xqS-FG-khC"/>

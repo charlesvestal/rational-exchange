@@ -56,51 +56,48 @@ class CVMiddleViewController: UIViewController {
     
         override func viewDidAppear(animated: Bool) {
             
-            var oldUpOrigin = upArrow.frame.origin
-            var oldDownOrigin = downArrow.frame.origin
-            
-            animateArrows1(oldUpOrigin, oldDownOrigin: oldDownOrigin)
+//            var oldUpOrigin = upArrow.frame.origin
+//            var oldDownOrigin = downArrow.frame.origin
+//            
+//            animateArrows1(oldUpOrigin, oldDownOrigin: oldDownOrigin)
         }
+//    
+//
+//    func animateArrows1(oldUpOrigin: CGPoint, oldDownOrigin: CGPoint) {
+//        var upArrowFrame = self.upArrow.frame
+//        var downArrowFrame = self.downArrow.frame
+//        
+//        UIView.animateWithDuration(2.0, delay: 0.0, options: .Repeat | .Autoreverse | .AllowUserInteraction | .CurveEaseOut, animations: {
+////            
+////            upArrowFrame.origin.y -= upArrowFrame.size.height
+////            downArrowFrame.origin.y += downArrowFrame.size.height
+//            self.upArrow.alpha = 1
+//            self.downArrow.alpha = 1
+////            self.upArrow.frame = upArrowFrame
+////            self.downArrow.frame = downArrowFrame
+//            }, completion: nil
+//        )
+//    }
     
-
-    func animateArrows1(oldUpOrigin: CGPoint, oldDownOrigin: CGPoint) {
-        var upArrowFrame = self.upArrow.frame
-        var downArrowFrame = self.downArrow.frame
-        
-        UIView.animateWithDuration(2.0, delay: 0.0, options: .AllowUserInteraction | .CurveEaseOut, animations: {
-            
-            upArrowFrame.origin.y -= upArrowFrame.size.height
-            downArrowFrame.origin.y += downArrowFrame.size.height
-            self.upArrow.alpha = 1
-            self.downArrow.alpha = 1
-            self.upArrow.frame = upArrowFrame
-            self.downArrow.frame = downArrowFrame
-            }, completion: { finished in
-               self.animateArrows2(oldUpOrigin, oldDownOrigin: oldDownOrigin)
-            
-            }
-        )
-    }
-    
-    func animateArrows2(oldUpOrigin: CGPoint, oldDownOrigin: CGPoint) {
-        
-        UIView.animateWithDuration(0.2, delay: 0.0, options: .AllowUserInteraction | .CurveEaseOut, animations: {
-            
-            self.upArrow.alpha = 0
-            self.downArrow.alpha = 0
-            
-            }, completion: { finished in
-                self.upArrow.frame.origin = oldUpOrigin
-                self.downArrow.frame.origin = oldDownOrigin
-                
-                self.animateArrows1(oldUpOrigin, oldDownOrigin: oldDownOrigin)
-                
-            }
-        )
-
-        
-        
-    }
+//    func animateArrows2(oldUpOrigin: CGPoint, oldDownOrigin: CGPoint) {
+//        
+//        UIView.animateWithDuration(0.2, delay: 0.0, options: .AllowUserInteraction | .CurveEaseOut, animations: {
+//            
+//            self.upArrow.alpha = 0
+//            self.downArrow.alpha = 0
+//            
+//            }, completion: { finished in
+//                self.upArrow.frame.origin = oldUpOrigin
+//                self.downArrow.frame.origin = oldDownOrigin
+//                
+//                self.animateArrows1(oldUpOrigin, oldDownOrigin: oldDownOrigin)
+//                
+//            }
+//        )
+//
+//        
+//        
+//    }
     
     
     func actOnSpecialNotification() {
@@ -291,8 +288,8 @@ class CVMiddleViewController: UIViewController {
         self.gotoTopButton.setBackgroundImage(foreignFlag?.applyBlurWithRadius(5, tintColor: tintColor, saturationDeltaFactor: 1.8, maskImage: nil), forState: .Normal)
         self.gotoBottomButton.setBackgroundImage(homeFlag?.applyBlurWithRadius(5, tintColor: tintColor, saturationDeltaFactor: 1.8, maskImage: nil), forState: .Normal)
         
-
     }
+    
     func isTippable() -> Double {
         var isTippable:Double
         if tipSwitch.on
@@ -311,13 +308,13 @@ class CVMiddleViewController: UIViewController {
         
         gotoTopButton.layer.cornerRadius = 0.5 * gotoTopButton.bounds.size.width
         gotoTopButton.layer.borderColor = UIColor.whiteColor().CGColor
-        gotoTopButton.layer.borderWidth = 1.0;
+        gotoTopButton.layer.borderWidth = 2.0;
         gotoTopButton.layer.masksToBounds = true
         
         
         gotoBottomButton.layer.cornerRadius = 0.5 * gotoBottomButton.bounds.size.width
         gotoBottomButton.layer.borderColor = UIColor.whiteColor().CGColor
-        gotoBottomButton.layer.borderWidth = 1.0;
+        gotoBottomButton.layer.borderWidth = 2.0;
         gotoBottomButton.layer.masksToBounds = true
     }
     // end rounding the buttons
