@@ -15,14 +15,14 @@
                     <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TBB-9q-PIN">
-                            <rect key="frame" x="0.0" y="0.0" width="480" height="240"/>
+                            <rect key="frame" x="0.0" y="0.0" width="480" height="205"/>
                             <color key="backgroundColor" red="0.2600353956" green="0.52061373" blue="0.74229294059999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </view>
                     </subviews>
                     <color key="backgroundColor" red="0.42482569809999998" green="0.67353582379999999" blue="0.84614747759999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="TBB-9q-PIN" firstAttribute="leading" secondItem="n0D-73-zaJ" secondAttribute="leading" id="DaF-nE-gZB"/>
-                        <constraint firstItem="TBB-9q-PIN" firstAttribute="height" secondItem="n0D-73-zaJ" secondAttribute="height" multiplier="0.5" id="Pim-nk-RfF"/>
+                        <constraint firstItem="TBB-9q-PIN" firstAttribute="height" secondItem="n0D-73-zaJ" secondAttribute="height" multiplier="0.427083" id="Pim-nk-RfF"/>
                         <constraint firstItem="TBB-9q-PIN" firstAttribute="top" secondItem="n0D-73-zaJ" secondAttribute="top" id="XoL-V9-auM"/>
                         <constraint firstItem="TBB-9q-PIN" firstAttribute="trailing" secondItem="n0D-73-zaJ" secondAttribute="trailing" id="bKg-ID-PLg"/>
                         <constraint firstItem="TBB-9q-PIN" firstAttribute="centerY" secondItem="n0D-73-zaJ" secondAttribute="centerY" id="prU-WH-QKT"/>
