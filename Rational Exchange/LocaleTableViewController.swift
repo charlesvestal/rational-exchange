@@ -64,13 +64,13 @@ protocol CountrySelectedDelegate {
     }
     
     func searchDisplayController(controller: UISearchDisplayController, willShowSearchResultsTableView tableView: UITableView) {
-        
+        searchBar.tintColor = UIColor(red:0.0, green:122.0/255.0, blue:1.0, alpha:1.0)
         delegate?.hideThings()
         updateList()
     }
     
     func searchDisplayController(controller: UISearchDisplayController, willHideSearchResultsTableView tableView: UITableView) {
-        
+        searchBar.tintColor = UIColor.lightTextColor()
         delegate?.showThings()
         updateList()
     }
@@ -106,10 +106,8 @@ protocol CountrySelectedDelegate {
         
         var searchField = searchBar.valueForKey("searchField") as UITextField
         searchField.setValue(UIColor.whiteColor(), forKeyPath:"_placeholderLabel.textColor")
-//        searchField.setValue(nil, forKeyPath:"_leftView")
         
-        searchBar.setImage(UIImage(named:"searchIcon"), forSearchBarIcon: UISearchBarIcon.Search, state: UIControlState.Normal)
-    
+        searchBar.setImage(UIImage(named:"searchIcon")?.imageWithRenderingMode(.AlwaysTemplate), forSearchBarIcon: UISearchBarIcon.Search, state: UIControlState.Normal)
         
         self.tableView.delegate = self
         self.tableView.dataSource = self
