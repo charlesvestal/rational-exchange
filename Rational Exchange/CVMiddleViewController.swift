@@ -14,6 +14,9 @@ let scrollBottomKey = "com.andrewcbancroft.specialNotificationKeyBottom"
 
 class CVMiddleViewController: UIViewController {
 
+    @IBOutlet var mainView: UIView!
+    @IBOutlet weak var foreignView: UIView!
+    
     @IBOutlet weak var gotoTopButton: UIButton!
     @IBOutlet weak var gotoBottomButton: UIButton!
     
@@ -42,17 +45,20 @@ class CVMiddleViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
         keyboardSetup()
         roundTheButtons()
 
         readDefaults()
         parseInit()
-        //animateButtons()
-   
+        
         updateCenterScreen()
         updateFlags()
-
         
+        foreignView.backgroundColor = UIColor(red: 0.204, green: 0.44, blue: 0.682, alpha: 1.0)
+        mainView.backgroundColor = UIColor(red: 0.359, green:0.67, blue:0.857, alpha:1.0)
+
+    
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "actOnSpecialNotification", name: mySpecialNotificationKey, object: nil)
     }
     
@@ -154,11 +160,15 @@ class CVMiddleViewController: UIViewController {
         
         // set the should feels like value to the rounded amount
         
-        homeCostField.text = homeShouldFeelLikeFormated
+        
+        if ((exchangeCalc.homeLocale.name == "init") || (exchangeCalc.foreignLocale.name == "init")) {
+            homeCostField.text = "?"
+        } else {
+            homeCostField.text = homeShouldFeelLikeFormated
+        }
         
         
-        
-        if(foreignCostField.text != "") {
+        if((foreignCostField.text != "") && (exchangeCalc.homeLocale.name != "init") && (exchangeCalc.foreignLocale.name != "init") ) {
             homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
             foreignFormatter.currencyCode = exchangeCalc.foreignLocale.country.currencyCode
             
@@ -231,19 +241,28 @@ class CVMiddleViewController: UIViewController {
             
             homeCostLabel.text = totalString
         }else {
-            homeCostLabel.text = "Swipe up or own to choose your away and home locales. \n\n Enter an amount above in order to see what it would cost back home."
+            homeCostLabel.text = "Swipe up or down to choose your away and home locales. \n\n Enter an amount above in order to see what it would cost back home."
         }
         
 }
 
     func updateFlags() {
         // update flag buttons
-                var homeFlag = UIImage(named:exchangeCalc.homeLocale.country.ISOAbbreviation)
-                var foreignFlag = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
+        
+        var homeFlag:UIImage? = nil
+        var foreignFlag:UIImage? = nil
+        
+        if (exchangeCalc.homeLocale.name != "init") {
+             homeFlag = UIImage(named:exchangeCalc.homeLocale.country.ISOAbbreviation)
+        }
+        
+        if (exchangeCalc.foreignLocale.name != "init") {
+            foreignFlag = UIImage(named:exchangeCalc.foreignLocale.country.ISOAbbreviation)
+        }
+        
         
         let tintColor = UIColor(white:0.2, alpha:0.5)
-        
-
+    
         
         self.gotoTopButton.setBackgroundImage(foreignFlag?.applyBlurWithRadius(5, tintColor: tintColor, saturationDeltaFactor: 1.8, maskImage: nil), forState: .Normal)
         self.gotoBottomButton.setBackgroundImage(homeFlag?.applyBlurWithRadius(5, tintColor: tintColor, saturationDeltaFactor: 1.8, maskImage: nil), forState: .Normal)
@@ -367,6 +386,8 @@ class CVMiddleViewController: UIViewController {
 
             exchangeCalc.localeList.localeList.append(Locale(name: localeName, additionalTaxRate: newTax, tipRate: newTip, tipString: newTipString, country: exchangeCalc.localeList.getCountry(newCountryName)))
         }
+        
+        exchangeCalc.localeList.localeList.append(Locale(name: "init", additionalTaxRate: 0.057500000, tipRate: 0.20, tipString: nil, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")))
         
     }
 }

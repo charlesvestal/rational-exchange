@@ -128,6 +128,7 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
             
             delegate?.setupFlag(newLocale)
             delegate?.setupLabels(newLocale)
+            delegate?.showAllTheLabels()
            
             NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: self)
             

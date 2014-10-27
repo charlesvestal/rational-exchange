@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3DH-9s-nSH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -65,7 +66,7 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lV2-Qm-ySP" firstAttribute="centerX" secondItem="LIa-b8-aq1" secondAttribute="centerX" id="3il-ol-Z81"/>
                             <constraint firstItem="lV2-Qm-ySP" firstAttribute="height" secondItem="LIa-b8-aq1" secondAttribute="height" id="ZbI-TG-Qot"/>
@@ -247,7 +248,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 </variation>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.30914759635925293" green="0.72359037399291992" blue="0.89625716209411621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.42482569813728333" green="0.67353582382202148" blue="0.84614747762680054" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="fyY-Vn-eeY" firstAttribute="top" secondItem="MSd-om-yLk" secondAttribute="bottom" constant="15" id="08K-Or-CrO"/>
                             <constraint firstAttribute="trailing" secondItem="JDQ-Rl-qg8" secondAttribute="trailing" id="39K-Dw-rVi"/>
@@ -303,10 +304,12 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                     <connections>
                         <outlet property="foreignCostField" destination="MSd-om-yLk" id="h0C-Cl-mVk"/>
                         <outlet property="foreignCurrencySymbol" destination="7I5-MG-AHL" id="Dgs-eF-Meg"/>
+                        <outlet property="foreignView" destination="JDQ-Rl-qg8" id="10w-Qn-ahT"/>
                         <outlet property="gotoBottomButton" destination="3Un-lc-8lx" id="R2Y-AZ-zce"/>
                         <outlet property="gotoTopButton" destination="qjd-JL-O8L" id="7dQ-Az-IJa"/>
                         <outlet property="homeCostField" destination="6X7-tr-Odi" id="VqJ-0v-pCr"/>
                         <outlet property="homeCostLabel" destination="FCz-8K-TVU" id="BZk-6K-9t7"/>
+                        <outlet property="mainView" destination="6HQ-vK-pRQ" id="ZtP-ch-yH9"/>
                         <outlet property="tipSwitch" destination="z4s-Li-EnN" id="10O-Ne-yB2"/>
                     </connections>
                 </viewController>
@@ -327,6 +330,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         <searchBar key="tableHeaderView" opaque="NO" contentMode="redraw" searchBarStyle="minimal" placeholder="Where Are You?" id="zq5-5b-0gK" userLabel="searchBar">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="bfl-eG-BOs" id="l3d-uy-vNf"/>
@@ -446,6 +450,43 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3u4-Ec-Ra7" userLabel="No Country View">
+                                <rect key="frame" x="-1" y="50" width="415" height="636"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Choose Your Home Location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.20000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="C96-PT-LnB">
+                                        <rect key="frame" x="21" y="545" width="374" height="55"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="40"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeBig" translatesAutoresizingMaskIntoConstraints="NO" id="qLi-JW-Nfi">
+                                        <rect key="frame" x="21" y="152" width="374" height="373"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="qLi-JW-Nfi" secondAttribute="height" constant="1" id="4jx-AZ-74e"/>
+                                            <constraint firstAttribute="height" constant="636" id="gEQ-Qg-pHS"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="gEQ-Qg-pHS"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qLi-JW-Nfi" firstAttribute="height" secondItem="3u4-Ec-Ra7" secondAttribute="height" id="5hR-Vk-poM"/>
+                                    <constraint firstItem="qLi-JW-Nfi" firstAttribute="width" secondItem="3u4-Ec-Ra7" secondAttribute="width" constant="-40" id="AF3-c2-BWR"/>
+                                    <constraint firstItem="C96-PT-LnB" firstAttribute="top" secondItem="qLi-JW-Nfi" secondAttribute="bottom" constant="20" id="Cln-Me-cxk"/>
+                                    <constraint firstItem="qLi-JW-Nfi" firstAttribute="centerY" secondItem="3u4-Ec-Ra7" secondAttribute="centerY" constant="20" id="Iie-Tt-R7W"/>
+                                    <constraint firstItem="qLi-JW-Nfi" firstAttribute="centerX" secondItem="3u4-Ec-Ra7" secondAttribute="centerX" id="JqU-xn-UnM"/>
+                                    <constraint firstItem="qLi-JW-Nfi" firstAttribute="centerX" secondItem="C96-PT-LnB" secondAttribute="centerX" id="Lg1-9x-8vl"/>
+                                    <constraint firstItem="C96-PT-LnB" firstAttribute="width" secondItem="qLi-JW-Nfi" secondAttribute="width" id="vAJ-TL-dAb"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5hR-Vk-poM"/>
+                                    </mask>
+                                </variation>
+                            </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="500" text="CALIFORNIA AND" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="1" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-Im-xuh" customClass="CVUILabel">
                                 <rect key="frame" x="21" y="114" width="372" height="334"/>
                                 <constraints>
@@ -506,9 +547,11 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="X5t-hr-6OV" firstAttribute="leading" secondItem="q0b-Im-xuh" secondAttribute="trailing" priority="750" id="E6n-9a-NZO"/>
                             <constraint firstItem="4LU-Wx-rD3" firstAttribute="leading" secondItem="ojQ-gl-DCw" secondAttribute="leading" priority="750" id="FNI-6a-Ilo"/>
                             <constraint firstAttribute="centerX" secondItem="4LU-Wx-rD3" secondAttribute="centerX" priority="750" id="FPS-lr-wgL"/>
+                            <constraint firstItem="3u4-Ec-Ra7" firstAttribute="height" secondItem="fcc-FU-WgL" secondAttribute="height" constant="-100" id="HpU-dX-ash"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="trailing" secondItem="xbv-KQ-bt2" secondAttribute="trailing" priority="750" id="HrA-sV-lV3"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="width" secondItem="4LU-Wx-rD3" secondAttribute="width" id="J1O-aI-mRj"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="width" secondItem="42k-4m-ZJV" secondAttribute="width" id="LGK-gZ-Mfe"/>
+                            <constraint firstItem="3u4-Ec-Ra7" firstAttribute="width" secondItem="fcc-FU-WgL" secondAttribute="width" id="Mce-Va-YEz"/>
                             <constraint firstAttribute="centerX" secondItem="2oz-8S-ogi" secondAttribute="centerX" priority="750" id="PVc-4t-F1M"/>
                             <constraint firstAttribute="centerX" secondItem="Qrt-Hu-ahS" secondAttribute="centerX" id="RQ0-WZ-JMZ"/>
                             <constraint firstItem="Jw5-by-r0o" firstAttribute="top" secondItem="ah2-Ug-q1T" secondAttribute="bottom" id="RZn-9B-d07"/>
@@ -518,6 +561,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             </constraint>
                             <constraint firstAttribute="centerY" secondItem="Qrt-Hu-ahS" secondAttribute="centerY" id="WSg-BJ-U4Q"/>
                             <constraint firstItem="4LU-Wx-rD3" firstAttribute="width" secondItem="fcc-FU-WgL" secondAttribute="width" priority="750" constant="-40" id="Wyx-Ra-Lwp"/>
+                            <constraint firstAttribute="centerY" secondItem="3u4-Ec-Ra7" secondAttribute="centerY" id="Xck-PD-4T5"/>
                             <constraint firstItem="ojQ-gl-DCw" firstAttribute="width" secondItem="XlW-dl-76c" secondAttribute="width" priority="750" id="ZoS-4Q-Nmb"/>
                             <constraint firstItem="Qrt-Hu-ahS" firstAttribute="width" secondItem="fcc-FU-WgL" secondAttribute="width" constant="200" id="bGw-qw-0IC"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="trailing" secondItem="42k-4m-ZJV" secondAttribute="trailing" priority="750" id="bNy-Ct-lth"/>
@@ -529,6 +573,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="ojQ-gl-DCw" firstAttribute="width" secondItem="4LU-Wx-rD3" secondAttribute="width" priority="750" id="hRS-Ws-Liz"/>
                             <constraint firstItem="X5t-hr-6OV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fcc-FU-WgL" secondAttribute="leadingMargin" constant="1" id="hiV-8i-WHn"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="leading" secondItem="fcc-FU-WgL" secondAttribute="leadingMargin" constant="4" id="k9c-bu-sQ0"/>
+                            <constraint firstAttribute="centerX" secondItem="3u4-Ec-Ra7" secondAttribute="centerX" id="lNR-yk-FhE"/>
                             <constraint firstItem="ah2-Ug-q1T" firstAttribute="top" secondItem="oAv-8y-yzA" secondAttribute="top" constant="20" id="pFQ-48-7ly"/>
                             <constraint firstItem="ah2-Ug-q1T" firstAttribute="trailing" secondItem="fcc-FU-WgL" secondAttribute="trailing" id="pHx-5A-uZT"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="width" secondItem="xbv-KQ-bt2" secondAttribute="width" id="q7H-GX-xmc"/>
@@ -556,12 +601,19 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="countryFlag" destination="Qrt-Hu-ahS" id="T5C-dm-J3d"/>
+                        <outlet property="countryView" destination="fcc-FU-WgL" id="dnh-wt-0g0"/>
+                        <outlet property="currencyLabel" destination="4LU-Wx-rD3" id="nZ0-Ec-mhA"/>
                         <outlet property="currencyName" destination="JTb-zy-q5M" id="DLQ-7q-hxp"/>
                         <outlet property="findMeButton" destination="X5t-hr-6OV" id="QK2-I5-I4P"/>
                         <outlet property="localeName" destination="q0b-Im-xuh" id="ydQ-56-Qt8"/>
                         <outlet property="locationLabel" destination="0Wv-Kc-OMk" id="m0O-uv-RiR"/>
+                        <outlet property="noCountryImage" destination="qLi-JW-Nfi" id="OHt-N2-szG"/>
+                        <outlet property="noCountryLabel" destination="C96-PT-LnB" id="TWF-h4-kZ1"/>
+                        <outlet property="noCountryView" destination="3u4-Ec-Ra7" id="meU-Fi-uik"/>
                         <outlet property="notRightButtonButton" destination="2oz-8S-ogi" id="vHZ-iU-ZMd"/>
+                        <outlet property="taxLabel" destination="ojQ-gl-DCw" id="kdz-Ry-Apg"/>
                         <outlet property="taxString" destination="42k-4m-ZJV" id="pMd-92-68f"/>
+                        <outlet property="tipLabel" destination="XlW-dl-76c" id="RnJ-W0-Ulg"/>
                         <outlet property="tipString" destination="xbv-KQ-bt2" id="Fwj-zK-oel"/>
                     </connections>
                 </viewController>
@@ -593,6 +645,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
         <image name="AU" width="512" height="512"/>
         <image name="LocationImage" width="44" height="44"/>
         <image name="awayButton" width="90" height="90"/>
+        <image name="homeBig" width="560" height="560"/>
         <image name="homeButton" width="90" height="90"/>
     </resources>
     <inferredMetricsTieBreakers>

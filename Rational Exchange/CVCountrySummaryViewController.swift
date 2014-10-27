@@ -12,24 +12,62 @@ import CoreLocation
 
 class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControllerDelegate, CountrySelectedDelegate {
  
+    @IBOutlet var countryView: UIView!
+    
     @IBOutlet weak var countryFlag: UIImageView!
     
-    @IBOutlet weak var notRightButtonButton: UIButton!
     @IBOutlet weak var findMeButton: UIButton!
-    @IBOutlet weak var localeName: UILabel!
-    @IBOutlet weak var currencyName: UILabel!
-    @IBOutlet weak var taxString: UILabel!
-    @IBOutlet weak var tipString: UILabel!
-    
     @IBOutlet weak var locationLabel: UILabel!
-    
+    @IBOutlet weak var localeName: UILabel!
 
+
+    @IBOutlet weak var currencyLabel: UILabel!
+    @IBOutlet weak var currencyName: UILabel!
+    @IBOutlet weak var taxLabel: UILabel!
+    @IBOutlet weak var taxString: UILabel!
+    @IBOutlet weak var tipLabel: UILabel!
+    @IBOutlet weak var tipString: UILabel!
+
+    @IBOutlet weak var noCountryView: UIView!
+    
+    @IBOutlet weak var noCountryLabel: UILabel!
+    @IBOutlet weak var notRightButtonButton: UIButton!
+    @IBOutlet weak var noCountryImage: UIImageView!
+    
     var MyCLController = locationHelper(domain: "home")
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+    }
+    
+    
+    
+
+    func hideAllTheLabels() {
+        countryFlag.hidden = true
+        localeName.hidden = true
+        currencyLabel.hidden = true
+        currencyName.hidden = true
+        taxLabel.hidden = true
+        taxString.hidden = true
+        tipLabel.hidden = true
+        tipString.hidden = true
+        notRightButtonButton.hidden = true
+        noCountryView.hidden = false
+    }
+    
+    func showAllTheLabels () {
+        countryFlag.hidden = false
+        localeName.hidden = false
+        currencyLabel.hidden = false
+        currencyName.hidden = false
+        taxLabel.hidden = false
+        taxString.hidden = false
+        tipLabel.hidden = false
+        tipString.hidden = false
+        notRightButtonButton.hidden = false
+        noCountryView.hidden = true
     }
     
     @IBAction func findMe(sender: AnyObject) {
@@ -52,11 +90,22 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
         if(containerView.isForeign == true){
                 locale = exchangeCalc.foreignLocale
                 locationLabel.text = "YOU ARE VISITING"
-
+                noCountryLabel.text = "Choose Your Visiting Location"
+                noCountryImage.image = UIImage(named: "awayBig")
+                countryView.backgroundColor = UIColor(red: 0.204, green: 0.44, blue: 0.682, alpha: 1.0)
         }else{
                 locale = exchangeCalc.homeLocale
                 locationLabel.text = "YOU ARE FROM"
+                noCountryLabel.text = "Choose Your Home Location"
+                noCountryImage.image = UIImage(named: "homeBig")
+                countryView.backgroundColor = UIColor(red: 0.359, green:0.67, blue:0.857, alpha:1.0)
         }
+        
+        
+        if (locale.name == "init") {
+            hideAllTheLabels()
+        }
+
         
         setupFlag(locale)
         setupLabels(locale)
@@ -182,13 +231,38 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
     
     func showThings(){
         println("show")
-        notRightButtonButton.hidden = false
 
+        var localeName:String
+        let containerView = self.view.superview as CVUIContainerView
+        
+        if(containerView.isForeign == true){
+            localeName = exchangeCalc.foreignLocale.name
+        } else {
+            localeName = exchangeCalc.homeLocale.name
+        }
+        
+        if(localeName != "init") {
+            self.notRightButtonButton.hidden = false
+        }
     }
+    
     func enableThings(){
         println("enable")
                 self.findMeButton.enabled = true
-                self.notRightButtonButton.enabled = true
+        
+        
+        var localeName:String
+        let containerView = self.view.superview as CVUIContainerView
+
+        if(containerView.isForeign == true){
+            localeName = exchangeCalc.foreignLocale.name
+        } else {
+            localeName = exchangeCalc.homeLocale.name
+        }
+        
+        if(localeName != "init") {
+            self.notRightButtonButton.enabled = true
+        }
     }
     
     func disableThings(){

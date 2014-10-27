@@ -16,6 +16,7 @@ protocol CountrySelectedDelegate {
     func showThings()
     func enableThings()
     func disableThings()
+    func showAllTheLabels()
 }
 
 @IBDesignable class CountryTableViewController : UITableViewController, UISearchBarDelegate, UISearchDisplayDelegate {
@@ -38,18 +39,20 @@ protocol CountrySelectedDelegate {
     func filterContentForSearchText(searchText: String) {
         
       self.filteredLocales = self.locales.filter({( locale: Locale) -> Bool in
-            
+        if(locale.name == "init") {
+            return false
+        }
+        
+            let currencyMatch = locale.country.currencyCode.rangeOfString(searchText, options:NSStringCompareOptions(1))
             let nameMatch = locale.name.rangeOfString(searchText, options:NSStringCompareOptions(1))
             let countryMatch = locale.country.name.rangeOfString(searchText, options:NSStringCompareOptions(1))
-            let currencyMatch = locale.country.currencyCode.rangeOfString(searchText, options:NSStringCompareOptions(1))
-            
-            if (currencyMatch != nil)
-            {
+        
+            if (currencyMatch != nil){
               return currencyMatch != nil
             }
             
             if (nameMatch != nil){
-             return nameMatch != nil
+                return nameMatch != nil
             }
         
             if (countryMatch != nil){
@@ -161,7 +164,7 @@ protocol CountrySelectedDelegate {
         } else {
             locale = locales[0]
         }
-        
+
         return cell
     }
     
@@ -182,7 +185,7 @@ protocol CountrySelectedDelegate {
         
         self.searchDisplayController?.setActive(false, animated: true)
         
-       
+        delegate?.showAllTheLabels()
         
         }
 

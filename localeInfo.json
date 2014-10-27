@@ -1145,7 +1145,7 @@
       "additionalTaxRate": null,
       "tipRate": 0.0000000000,
       "country": "Ireland",
-	  "tipString": "Butts"
+	  "tipString": null
     },
     {
       "name": "Isle of Man",

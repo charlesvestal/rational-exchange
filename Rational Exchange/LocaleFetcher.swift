@@ -18,13 +18,9 @@ class LocaleList { //:NSObject {
     var countryList: [Country]
     var states: [String: String]
     
-   // var delegate:ViewController?
     
-    init () {//override init() {
+    init () {
         localeList = [Locale]()
-//        countryList = [Country]()
-//        states = [String: String]()
-//        super.init()
         countryList = [
             Country(name: "Afghanistan", currencyName: "Afghanistan Afghani", currencyCode: "AFN", exchangeRate: 1.0, tipRate:nil, additionalTaxRate:nil, precision:1.0, tipString:"Round up.", taxString:"Tax varies.", ISOAbbreviation:"AF"), // just a test 56.68
             Country(name: "Albania", currencyName: "Albanian Lek", currencyCode: "ALL", exchangeRate: 108.175003, tipRate:nil, additionalTaxRate:nil, precision:1.0, tipString:nil, taxString:nil, ISOAbbreviation:"AL"),
@@ -412,8 +408,8 @@ class LocaleList { //:NSObject {
             Locale(name: "West Virginia", additionalTaxRate: 0.060700000, tipRate: 0.20, tipString: nil, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
             Locale(name: "Wisconsin", additionalTaxRate: 0.054300000, tipRate: 0.20, tipString: nil, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
             Locale(name: "Wyoming", additionalTaxRate: 0.054900000, tipRate: 0.20, tipString: nil, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
-            Locale(name: "District of Columbia", additionalTaxRate: 0.057500000, tipRate: 0.20, tipString: nil, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")
-            )
+            Locale(name: "District of Columbia", additionalTaxRate: 0.057500000, tipRate: 0.20, tipString: nil, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US")),
+              Locale(name: "init", additionalTaxRate: 0.057500000, tipRate: 0.20, tipString: nil, country: Country(name: "United States", currencyName: "US Dollar", currencyCode: "USD", exchangeRate: 1, tipRate: 0.15, additionalTaxRate:0.0964, precision:0.25, tipString:nil, taxString:nil, ISOAbbreviation:"US"))
         ]
         
         readCachedCountries()
