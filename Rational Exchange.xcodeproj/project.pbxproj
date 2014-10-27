@@ -22,7 +22,6 @@
 		FE891BF019C12C4B008CC947 /* LocaleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE891BEF19C12C4B008CC947 /* LocaleTableViewController.swift */; };
 		FE9692CE19CE08C1002554A9 /* AwesomeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9692CC19CE08C1002554A9 /* AwesomeCache.swift */; };
 		FE9692CF19CE08C1002554A9 /* AwesomeCacheObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9692CD19CE08C1002554A9 /* AwesomeCacheObject.swift */; };
-		FEA5629C19E1781900EDF4DD /* LaunchImage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEA5629B19E1781900EDF4DD /* LaunchImage.storyboard */; };
 		FEA9EF1919D4E6C40031AD70 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA9EF1819D4E6C40031AD70 /* Security.framework */; };
 		FEA9EF1B19D4E6CD0031AD70 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA9EF1A19D4E6CD0031AD70 /* StoreKit.framework */; };
 		FEA9EF1D19D4E6D30031AD70 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEA9EF1C19D4E6D30031AD70 /* SystemConfiguration.framework */; };
@@ -35,6 +34,7 @@
 		FEC9F32019D4E64300831E98 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F31F19D4E64300831E98 /* libz.dylib */; };
 		FEC9F32219D4E64C00831E98 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F32119D4E64C00831E98 /* MobileCoreServices.framework */; };
 		FEC9F32419D4E65200831E98 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEC9F32319D4E65200831E98 /* QuartzCore.framework */; };
+		FEDFA3D419FDF71A00F96EFB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEDFA3D319FDF71A00F96EFB /* LaunchScreen.xib */; };
 		FEE41C8519C344A500460538 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE41C8419C344A500460538 /* SwiftyJSON.swift */; };
 		FEE86B5419B1767B00852F94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEE86B5319B1767B00852F94 /* AppDelegate.swift */; };
 		FEE86B5919B1767B00852F94 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEE86B5719B1767B00852F94 /* Main.storyboard */; };
@@ -95,7 +95,6 @@
 		FE9692CC19CE08C1002554A9 /* AwesomeCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwesomeCache.swift; path = dependencies/AweomeCache/Source/AwesomeCache.swift; sourceTree = SOURCE_ROOT; };
 		FE9692CD19CE08C1002554A9 /* AwesomeCacheObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AwesomeCacheObject.swift; path = dependencies/AweomeCache/Source/AwesomeCacheObject.swift; sourceTree = SOURCE_ROOT; };
 		FEA2B9A919CF726400455670 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		FEA5629B19E1781900EDF4DD /* LaunchImage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchImage.storyboard; sourceTree = "<group>"; };
 		FEA9EF1819D4E6C40031AD70 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FEA9EF1A19D4E6CD0031AD70 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		FEA9EF1C19D4E6D30031AD70 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
@@ -110,6 +109,7 @@
 		FEC9F31F19D4E64300831E98 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		FEC9F32119D4E64C00831E98 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FEC9F32319D4E65200831E98 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FEDFA3D319FDF71A00F96EFB /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LaunchScreen.xib; path = "Rational Exchange/LaunchScreen.xib"; sourceTree = "<group>"; };
 		FEE41C8419C344A500460538 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		FEE86B4E19B1767B00852F94 /* RationalEx.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RationalEx.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEE86B5219B1767B00852F94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -202,6 +202,7 @@
 		FEE86B4519B1767B00852F94 = {
 			isa = PBXGroup;
 			children = (
+				FEDFA3D319FDF71A00F96EFB /* LaunchScreen.xib */,
 				FEE86B5019B1767B00852F94 /* Rational Exchange */,
 				FEE86B4F19B1767B00852F94 /* Products */,
 				FEE9588219CC66CE00D59C2D /* Alamofire.xcodeproj */,
@@ -236,7 +237,6 @@
 			isa = PBXGroup;
 			children = (
 				FEC792E019D1A6E6006A45A2 /* Rational Exchange-Bridging-Header.h */,
-				FEA5629B19E1781900EDF4DD /* LaunchImage.storyboard */,
 				FEF4E83019D6366900DD27B2 /* Async.swift */,
 				FEE41C8419C344A500460538 /* SwiftyJSON.swift */,
 				FEB3667219D72F4400E82527 /* MBProgressHUD.h */,
@@ -354,8 +354,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FEA5629C19E1781900EDF4DD /* LaunchImage.storyboard in Resources */,
 				FEE86B5919B1767B00852F94 /* Main.storyboard in Resources */,
+				FEDFA3D419FDF71A00F96EFB /* LaunchScreen.xib in Resources */,
 				FEE86B5B19B1767B00852F94 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,7 +483,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -506,7 +505,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				FRAMEWORK_SEARCH_PATHS = (
