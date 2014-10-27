@@ -392,7 +392,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GB" translatesAutoresizingMaskIntoConstraints="NO" id="Qrt-Hu-ahS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qrt-Hu-ahS">
                                 <rect key="frame" x="-100" y="-100" width="614" height="936"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="40" y="220" width="240" height="128"/>
@@ -591,7 +591,6 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
     <resources>
         <image name="AD" width="512" height="512"/>
         <image name="AU" width="512" height="512"/>
-        <image name="GB" width="512" height="512"/>
         <image name="LocationImage" width="44" height="44"/>
         <image name="awayButton" width="90" height="90"/>
         <image name="homeButton" width="90" height="90"/>
