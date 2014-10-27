@@ -33,8 +33,6 @@ class CVMiddleViewController: UIViewController {
     
     @IBOutlet weak var tipSwitch: UISwitch!
     
-    @IBOutlet weak var upArrow: UIView!
-    @IBOutlet weak var downArrow: UIView!
     
     @IBOutlet weak var homeCostField: UITextField!
     @IBOutlet weak var homeCostLabel: UILabel!

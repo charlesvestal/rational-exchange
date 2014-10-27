@@ -27,11 +27,10 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
     @IBOutlet weak var taxString: UILabel!
     @IBOutlet weak var tipLabel: UILabel!
     @IBOutlet weak var tipString: UILabel!
-
-    @IBOutlet weak var noCountryView: UIView!
-    
-    @IBOutlet weak var noCountryLabel: UILabel!
     @IBOutlet weak var notRightButtonButton: UIButton!
+
+    @IBOutlet weak var noCountryView: UIView!    
+    @IBOutlet weak var noCountryLabel: UILabel!
     @IBOutlet weak var noCountryImage: UIImageView!
     
     var MyCLController = locationHelper(domain: "home")
