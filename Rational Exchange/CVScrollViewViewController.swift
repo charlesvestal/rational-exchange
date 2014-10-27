@@ -9,6 +9,7 @@
 import Foundation
 
 
+let userHasOnboardedKey = "user_has_onboarded"
 
 class CVScrollViewViewController: UIViewController {
     
@@ -19,6 +20,11 @@ class CVScrollViewViewController: UIViewController {
         super.viewDidLoad()
         setupScrollView()
         
+        var userHasOnboardedAlready = false //NSUserDefaults.standardUserDefaults().boolForKey(userHasOnboardedKey);
+        
+        if (!userHasOnboardedAlready) {
+            bump()
+        }
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "gotoTop", name: scrollTopKey, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "gotoBottom", name: scrollBottomKey, object: nil)
@@ -26,7 +32,27 @@ class CVScrollViewViewController: UIViewController {
         }
     
     
-   
+    func bump ()
+    {
+     
+        let startingPage:CGFloat = 1
+        
+        
+        var bumpHeight = mainView.bounds.height - (mainView.bounds.height / 15)
+        
+        UIView.animateWithDuration(0.17, delay: 3.0, options: .Repeat | .Autoreverse | .AllowUserInteraction | .CurveEaseIn, animations: {
+            UIView.setAnimationRepeatCount(2.5)
+            self.scrollView.setContentOffset(CGPointMake(0, bumpHeight), animated: false)
+            }, completion: { finished in
+                UIView.animateWithDuration(0.17, delay: 0.0, options: .AllowUserInteraction | .CurveEaseInOut, animations: {
+                    self.scrollView.setContentOffset(CGPointMake(0,(self.mainView.bounds.height * startingPage)), animated: false)
+                    }, completion: nil)
+                        
+            }
+                )
+         NSUserDefaults.standardUserDefaults().setBool(true, forKey: userHasOnboardedKey)
+    }
+    
 
 
 
