@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="3DH-9s-nSH">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
@@ -329,6 +330,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         <searchBar key="tableHeaderView" opaque="NO" contentMode="redraw" searchBarStyle="minimal" placeholder="Where Are You?" id="zq5-5b-0gK" userLabel="searchBar">
                             <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="bfl-eG-BOs" id="l3d-uy-vNf"/>
@@ -394,7 +396,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GB" translatesAutoresizingMaskIntoConstraints="NO" id="Qrt-Hu-ahS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qrt-Hu-ahS">
                                 <rect key="frame" x="-100" y="-100" width="614" height="936"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="40" y="220" width="240" height="128"/>
@@ -463,20 +465,36 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                     </mask>
                                 </variation>
                             </label>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1PM-98-9mt" userLabel="noCountryView">
-                                <rect key="frame" x="103" y="184" width="207" height="368"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1PM-98-9mt" userLabel="noCountryView">
+                                <rect key="frame" x="-1" y="0.0" width="415" height="736"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NQp-Nb-OLm">
-                                        <rect key="frame" x="82" y="174" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="awayBig" translatesAutoresizingMaskIntoConstraints="NO" id="XfB-dl-5ZA">
+                                        <rect key="frame" x="26" y="206" width="364" height="364"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="XfB-dl-5ZA" secondAttribute="height" multiplier="1:1" id="F1H-u0-WBX"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.15000000000000008" translatesAutoresizingMaskIntoConstraints="NO" id="NQp-Nb-OLm">
+                                        <rect key="frame" x="26" y="580" width="364" height="55"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="40"/>
+                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XfB-dl-5ZA">
-                                        <rect key="frame" x="51" y="92" width="104" height="184"/>
-                                    </imageView>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="XfB-dl-5ZA" firstAttribute="height" secondItem="1PM-98-9mt" secondAttribute="height" id="CJo-6H-mvC"/>
+                                    <constraint firstItem="NQp-Nb-OLm" firstAttribute="width" secondItem="XfB-dl-5ZA" secondAttribute="width" id="SZj-ar-NHg"/>
+                                    <constraint firstItem="NQp-Nb-OLm" firstAttribute="centerX" secondItem="XfB-dl-5ZA" secondAttribute="centerX" id="bPP-cL-TfP"/>
+                                    <constraint firstItem="XfB-dl-5ZA" firstAttribute="width" secondItem="1PM-98-9mt" secondAttribute="width" constant="-50" id="liB-Ej-RXg"/>
+                                    <constraint firstAttribute="centerY" secondItem="XfB-dl-5ZA" secondAttribute="centerY" constant="-20" id="nLQ-wI-jHg"/>
+                                    <constraint firstAttribute="centerX" secondItem="XfB-dl-5ZA" secondAttribute="centerX" id="nq7-kN-wCb"/>
+                                    <constraint firstItem="NQp-Nb-OLm" firstAttribute="top" secondItem="XfB-dl-5ZA" secondAttribute="bottom" constant="10" id="yT6-nb-1MB"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="CJo-6H-mvC"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ah2-Ug-q1T">
                                 <rect key="frame" x="0.0" y="20" width="414" height="716"/>
@@ -527,9 +545,11 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="width" secondItem="4LU-Wx-rD3" secondAttribute="width" id="J1O-aI-mRj"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="width" secondItem="42k-4m-ZJV" secondAttribute="width" id="LGK-gZ-Mfe"/>
                             <constraint firstAttribute="centerX" secondItem="2oz-8S-ogi" secondAttribute="centerX" priority="750" id="PVc-4t-F1M"/>
+                            <constraint firstItem="1PM-98-9mt" firstAttribute="centerX" secondItem="fcc-FU-WgL" secondAttribute="centerX" id="RAw-OU-khH"/>
                             <constraint firstAttribute="centerX" secondItem="Qrt-Hu-ahS" secondAttribute="centerX" id="RQ0-WZ-JMZ"/>
                             <constraint firstItem="Jw5-by-r0o" firstAttribute="top" secondItem="ah2-Ug-q1T" secondAttribute="bottom" id="RZn-9B-d07"/>
                             <constraint firstItem="2oz-8S-ogi" firstAttribute="top" secondItem="Jw5-by-r0o" secondAttribute="top" constant="-40" id="Rz5-ZX-4BM"/>
+                            <constraint firstAttribute="height" secondItem="1PM-98-9mt" secondAttribute="height" id="SGh-NI-tXt"/>
                             <constraint firstItem="0Wv-Kc-OMk" firstAttribute="top" secondItem="oAv-8y-yzA" secondAttribute="bottom" priority="750" constant="20" id="VCQ-dE-MZq">
                                 <variation key="heightClass=regular" constant="20"/>
                             </constraint>
@@ -542,10 +562,12 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstAttribute="centerX" secondItem="0Wv-Kc-OMk" secondAttribute="centerX" priority="750" constant="11" id="biA-mT-zPj"/>
                             <constraint firstAttribute="centerX" secondItem="q0b-Im-xuh" secondAttribute="centerX" priority="750" id="d9f-hE-Pnk"/>
                             <constraint firstItem="xbv-KQ-bt2" firstAttribute="top" secondItem="XlW-dl-76c" secondAttribute="bottom" constant="8" id="f3f-yC-eL8"/>
+                            <constraint firstAttribute="centerY" secondItem="1PM-98-9mt" secondAttribute="centerY" id="gcp-Le-u8f"/>
                             <constraint firstItem="X5t-hr-6OV" firstAttribute="leading" secondItem="0Wv-Kc-OMk" secondAttribute="trailing" id="gdN-RU-hFQ"/>
                             <constraint firstItem="ojQ-gl-DCw" firstAttribute="width" secondItem="4LU-Wx-rD3" secondAttribute="width" priority="750" id="hRS-Ws-Liz"/>
                             <constraint firstItem="X5t-hr-6OV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fcc-FU-WgL" secondAttribute="leadingMargin" constant="1" id="hiV-8i-WHn"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="leading" secondItem="fcc-FU-WgL" secondAttribute="leadingMargin" constant="4" id="k9c-bu-sQ0"/>
+                            <constraint firstAttribute="width" secondItem="1PM-98-9mt" secondAttribute="width" id="ob8-uY-6ft"/>
                             <constraint firstItem="ah2-Ug-q1T" firstAttribute="top" secondItem="oAv-8y-yzA" secondAttribute="top" constant="20" id="pFQ-48-7ly"/>
                             <constraint firstItem="ah2-Ug-q1T" firstAttribute="trailing" secondItem="fcc-FU-WgL" secondAttribute="trailing" id="pHx-5A-uZT"/>
                             <constraint firstItem="JTb-zy-q5M" firstAttribute="width" secondItem="xbv-KQ-bt2" secondAttribute="width" id="q7H-GX-xmc"/>
@@ -615,8 +637,8 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
     <resources>
         <image name="AD" width="512" height="512"/>
         <image name="AU" width="512" height="512"/>
-        <image name="GB" width="512" height="512"/>
         <image name="LocationImage" width="44" height="44"/>
+        <image name="awayBig" width="560" height="560"/>
         <image name="awayButton" width="90" height="90"/>
         <image name="homeButton" width="90" height="90"/>
     </resources>
