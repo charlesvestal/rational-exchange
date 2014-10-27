@@ -24,6 +24,7 @@ class CVMiddleViewController: UIViewController {
     @IBAction func fieldChanged(sender : AnyObject) {
         updateCenterScreen()
         defaults.setBool(tipSwitch.on, forKey: "tipSwitch")
+        defaults.setObject(foreignCostField.text, forKey: "foreignCostField")
         defaults.synchronize()
     }
     
@@ -47,6 +48,7 @@ class CVMiddleViewController: UIViewController {
         readDefaults()
         parseInit()
         //animateButtons()
+   
         updateCenterScreen()
         updateFlags()
 
@@ -54,10 +56,9 @@ class CVMiddleViewController: UIViewController {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "actOnSpecialNotification", name: mySpecialNotificationKey, object: nil)
     }
     
-        override func viewDidAppear(animated: Bool) {
     
-    }
-      
+    
+    
     
     func actOnSpecialNotification() {
         updateCenterScreen()
@@ -230,7 +231,7 @@ class CVMiddleViewController: UIViewController {
             
             homeCostLabel.text = totalString
         }else {
-            homeCostLabel.text = "Enter an amount above in order to see what it would cost back home."
+            homeCostLabel.text = "Swipe up or own to choose your away and home locales. \n\n Enter an amount above in order to see what it would cost back home."
         }
         
 }
