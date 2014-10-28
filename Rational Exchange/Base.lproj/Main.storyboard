@@ -18,6 +18,54 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yuz-A8-62f" userLabel="made by charles top">
+                                <rect key="frame" x="0.0" y="40" width="600" height="57"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">made by charles
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="17" name="Avenir-Roman"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">www.charlesvestal.com
+</string>
+                                        <attributes>
+                                            <color key="NSColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="12" name="Avenir-Roman"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCa-UZ-LOB" userLabel="made by charles bottom">
+                                <rect key="frame" x="0.0" y="523" width="600" height="57"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">made by charles
+</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="17" name="Avenir-Roman"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">www.charlesvestal.com
+</string>
+                                        <attributes>
+                                            <color key="NSColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <font key="NSFont" size="12" name="Avenir-Roman"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lV2-Qm-ySP">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <subviews>
@@ -65,15 +113,27 @@
                                 </constraints>
                             </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="lV2-Qm-ySP" firstAttribute="centerX" secondItem="LIa-b8-aq1" secondAttribute="centerX" id="3il-ol-Z81"/>
+                            <constraint firstAttribute="centerX" secondItem="Yuz-A8-62f" secondAttribute="centerX" id="6q7-rN-fGp"/>
+                            <constraint firstItem="Yuz-A8-62f" firstAttribute="top" secondItem="BDc-Qv-Iog" secondAttribute="bottom" constant="20" id="Dcf-Fb-kYK"/>
+                            <constraint firstItem="cxv-yG-TSQ" firstAttribute="top" secondItem="pCa-UZ-LOB" secondAttribute="bottom" constant="20" id="Kml-Bn-cqL"/>
+                            <constraint firstAttribute="width" secondItem="Yuz-A8-62f" secondAttribute="width" id="OqK-gC-vdS"/>
+                            <constraint firstItem="pCa-UZ-LOB" firstAttribute="width" secondItem="lV2-Qm-ySP" secondAttribute="width" id="Xd8-td-pB1"/>
                             <constraint firstItem="lV2-Qm-ySP" firstAttribute="height" secondItem="LIa-b8-aq1" secondAttribute="height" id="ZbI-TG-Qot"/>
+                            <constraint firstItem="cxv-yG-TSQ" firstAttribute="top" secondItem="pCa-UZ-LOB" secondAttribute="bottom" constant="289" id="a7O-rs-sHj"/>
                             <constraint firstItem="lV2-Qm-ySP" firstAttribute="height" secondItem="LIa-b8-aq1" secondAttribute="height" id="asK-QQ-te0"/>
                             <constraint firstItem="lV2-Qm-ySP" firstAttribute="width" secondItem="LIa-b8-aq1" secondAttribute="width" id="bhl-lN-LwB"/>
                             <constraint firstItem="lV2-Qm-ySP" firstAttribute="centerY" secondItem="LIa-b8-aq1" secondAttribute="centerY" id="fIi-Vt-RZS"/>
+                            <constraint firstAttribute="centerX" secondItem="pCa-UZ-LOB" secondAttribute="centerX" id="jKm-w8-tVj"/>
                             <constraint firstItem="lV2-Qm-ySP" firstAttribute="width" secondItem="LIa-b8-aq1" secondAttribute="width" id="uzt-hM-ZMz"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="a7O-rs-sHj"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="KYg-43-Pqm"/>
                     <nil key="simulatedTopBarMetrics"/>
