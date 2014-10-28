@@ -165,6 +165,8 @@ class CVMiddleViewController: UIViewController {
             homeCostField.text = homeShouldFeelLikeFormated
         }
         
+        var errorString1:String = ""
+        var errorString2:String = ""
         
         if((foreignCostField.text != "") && (exchangeCalc.homeLocale.name != "init") && (exchangeCalc.foreignLocale.name != "init") ) {
             homeFormatter.currencyCode = exchangeCalc.homeLocale.country.currencyCode
@@ -239,7 +241,18 @@ class CVMiddleViewController: UIViewController {
             
             homeCostLabel.text = totalString
         }else {
-            homeCostLabel.text = "Swipe up or down to choose your away and home locales. \n\n Enter an amount above in order to see what it would cost back home."
+            if(foreignCostField.text == ""){
+                errorString1 = "Enter an amount above in order to see what it would cost back home."
+            }
+            
+            if (exchangeCalc.homeLocale.name == "init") || (exchangeCalc.foreignLocale.name == "init") {
+                if(foreignCostField.text == "") {
+                    errorString2 = "\n\n"
+                }
+                errorString2 += "Swipe up or down to choose your away and home locales."
+            }
+            
+            homeCostLabel.text = errorString1 + errorString2
         }
         
 }
