@@ -40,9 +40,6 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
         
     }
     
-    
-    
-
     func hideAllTheLabels() {
         countryFlag.hidden = true
         localeName.hidden = true
