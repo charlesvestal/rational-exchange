@@ -3,7 +3,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -412,7 +411,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHERE THEY SPEND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="4LU-Wx-rD3">
-                                <rect key="frame" x="20" y="491" width="374" height="26"/>
+                                <rect key="frame" x="24" y="491" width="366" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="WPB-fe-VLl"/>
                                 </constraints>
@@ -421,31 +420,31 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Norwegian Kroner" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTb-zy-q5M">
-                                <rect key="frame" x="20" y="525" width="374" height="26"/>
+                                <rect key="frame" x="24" y="525" width="366" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AND THEY ADD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="ojQ-gl-DCw">
-                                <rect key="frame" x="20" y="557" width="374" height="26"/>
+                                <rect key="frame" x="24" y="557" width="366" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.25% Sales Tax" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42k-4m-ZJV">
-                                <rect key="frame" x="20" y="591" width="374" height="26"/>
+                                <rect key="frame" x="24" y="591" width="366" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLUS THEY TIP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="XlW-dl-76c">
-                                <rect key="frame" x="20" y="631" width="374" height="26"/>
+                                <rect key="frame" x="24" y="631" width="366" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20% in Gratuity" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbv-KQ-bt2">
-                                <rect key="frame" x="20" y="665" width="374" height="26"/>
+                                <rect key="frame" x="24" y="665" width="366" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -565,8 +564,8 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstAttribute="centerY" secondItem="1PM-98-9mt" secondAttribute="centerY" id="gcp-Le-u8f"/>
                             <constraint firstItem="X5t-hr-6OV" firstAttribute="leading" secondItem="0Wv-Kc-OMk" secondAttribute="trailing" id="gdN-RU-hFQ"/>
                             <constraint firstItem="ojQ-gl-DCw" firstAttribute="width" secondItem="4LU-Wx-rD3" secondAttribute="width" priority="750" id="hRS-Ws-Liz"/>
-                            <constraint firstItem="X5t-hr-6OV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fcc-FU-WgL" secondAttribute="leadingMargin" constant="1" id="hiV-8i-WHn"/>
-                            <constraint firstItem="JTb-zy-q5M" firstAttribute="leading" secondItem="fcc-FU-WgL" secondAttribute="leadingMargin" constant="4" id="k9c-bu-sQ0"/>
+                            <constraint firstItem="X5t-hr-6OV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fcc-FU-WgL" secondAttribute="leading" constant="1" id="hiV-8i-WHn"/>
+                            <constraint firstItem="JTb-zy-q5M" firstAttribute="leading" secondItem="fcc-FU-WgL" secondAttribute="leading" constant="24" id="k9c-bu-sQ0"/>
                             <constraint firstAttribute="width" secondItem="1PM-98-9mt" secondAttribute="width" id="ob8-uY-6ft"/>
                             <constraint firstItem="ah2-Ug-q1T" firstAttribute="top" secondItem="oAv-8y-yzA" secondAttribute="top" constant="20" id="pFQ-48-7ly"/>
                             <constraint firstItem="ah2-Ug-q1T" firstAttribute="trailing" secondItem="fcc-FU-WgL" secondAttribute="trailing" id="pHx-5A-uZT"/>
@@ -580,7 +579,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                             <constraint firstItem="X5t-hr-6OV" firstAttribute="centerY" secondItem="0Wv-Kc-OMk" secondAttribute="centerY" id="vkJ-Hb-4dC"/>
                             <constraint firstItem="q0b-Im-xuh" firstAttribute="top" secondItem="0Wv-Kc-OMk" secondAttribute="bottom" constant="8" id="xwN-La-aS6"/>
                             <constraint firstItem="q0b-Im-xuh" firstAttribute="bottom" secondItem="4LU-Wx-rD3" secondAttribute="bottom" constant="-69" id="yyA-9A-zfX"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="JTb-zy-q5M" secondAttribute="trailing" constant="4" id="zMx-88-NVp"/>
+                            <constraint firstAttribute="trailing" secondItem="JTb-zy-q5M" secondAttribute="trailing" constant="24" id="zMx-88-NVp"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
