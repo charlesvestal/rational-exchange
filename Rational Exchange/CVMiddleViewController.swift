@@ -344,32 +344,44 @@ class CVMiddleViewController: UIViewController {
         
         let config = PFConfig.currentConfig()
         if let localeInfo = config["localeInfo"] as? PFFile {
-//            println("Loading from defaults. Processing config.")
-            let jsonData = JSONValue(localeInfo.getData())
-            self.parseLocaleJSON(jsonData)
-            self.readDefaults()
-//            println("Finished processing config from defaults.")
+          println("Loading from defaults. Processing config.")
+            localeInfo.getDataInBackgroundWithBlock {
+                (parseData: NSData!, error: NSError!) -> Void in
+                if error == nil {
+                    let jsonData = JSONValue(parseData)
+                    self.parseLocaleJSON(jsonData)
+                    self.readDefaults()
+                    self.updateCenterScreen()
+                }
+            }
+            println("Finished processing config from defaults.")
         }
         
         PFConfig.getConfigInBackgroundWithBlock {
             (var config: PFConfig!, error) -> Void in
             if (error == nil) {
                 if let localeInfo = config["localeInfo"] as? PFFile {
-//                    println("Fetch successful. Processing config.")
-                    let jsonData = JSONValue(localeInfo.getData())
-                    self.parseLocaleJSON(jsonData)
-                    self.readDefaults()
-//                    println("Finished processing config.")
+                 println("Fetch successful. Processing config.")
+            localeInfo.getDataInBackgroundWithBlock {
+                    (parseData: NSData!, error: NSError!) -> Void in
+                    if error == nil {
+                        let jsonData = JSONValue(parseData)
+                        self.parseLocaleJSON(jsonData)
+                        localeListSingleton.refreshCountries()
+                        self.readDefaults()
+                        self.updateCenterScreen()
+                    }
                 }
-                                localeListSingleton.refreshCountries()
-                                self.updateCenterScreen()
+                    println("Finished processing config.")
+                }
+                
                 hud.hide(true)
             } else {
                 hud.hide(true)
-//                println("Failed to fetch. Using Cached Config.")
+                println("Failed to fetch. Using Cached Config.")
                 config = PFConfig.currentConfig()
-                                localeListSingleton.refreshCountries()
-                                self.updateCenterScreen()
+                localeListSingleton.refreshCountries()
+                self.updateCenterScreen()
                 self.readDefaults()
             }
             
