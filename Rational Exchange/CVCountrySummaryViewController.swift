@@ -66,12 +66,17 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
         noCountryView.hidden = true
     }
     
-    @IBAction func findMe(sender: AnyObject) {
-        
+    func showLocationHud(){
         var hud =  MBProgressHUD.showHUDAddedTo(self.view, animated: true)
         hud.detailsLabelText = "Finding Your Location"
         hud.dimBackground = true
         hud.hide(true, afterDelay:2.0)
+    }
+    
+       
+    @IBAction func findMe(sender: AnyObject) {
+        
+        showLocationHud()
         
         let containerView = self.view.superview as CVUIContainerView
         if(containerView.isForeign == true){

@@ -37,11 +37,27 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
     
+    func locationError() {
+        
+        var alert = UIAlertController(title: "Error Finding Location", message: "Please check your location and data settings.", preferredStyle: UIAlertControllerStyle.Alert)
+        //alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+        delegate?.presentViewController(alert, animated: true, completion: nil)
+        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+            
+        }))
+        
+    }
+    
+    func locationManager(manager:CLLocationManager!, didFailWithError: NSError) {
+        locationManager.stopUpdatingLocation()
+        self.locationError()
+    }
+    
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: {(placemarks, error)->Void in
             
             if (error != nil) {
-//                println("Reverse geocoder failed with error" + error.localizedDescription)
+                println("Reverse geocoder failed with error" + error.localizedDescription)
                 return
             }
             
@@ -51,7 +67,7 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
 //                println("updating location")
 //                println(self.setDomainer)
             } else {
-//                println("Problem with the data received from geocoder")
+                println("Problem with the data received from geocoder")
             }
         })
     }
