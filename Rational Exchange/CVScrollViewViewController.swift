@@ -63,7 +63,7 @@ class CVScrollViewViewController: UIViewController {
 
 
     func gotoTop() {
-        println("scrollview top")
+//        println("scrollview top")
         scrollView.setContentOffset(CGPointMake(0,0), animated: true)
 
     }
@@ -74,7 +74,7 @@ class CVScrollViewViewController: UIViewController {
         CGPointMake(0,(mainView.bounds.height * pageNumber))
         
         scrollView.setContentOffset(thirdPageStart, animated: true)
-        println("scrollview bottom")
+//        println("scrollview bottom")
     }
     
     

@@ -41,17 +41,17 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
         CLGeocoder().reverseGeocodeLocation(manager.location, completionHandler: {(placemarks, error)->Void in
             
             if (error != nil) {
-                println("Reverse geocoder failed with error" + error.localizedDescription)
+//                println("Reverse geocoder failed with error" + error.localizedDescription)
                 return
             }
             
             if placemarks.count > 0 {
                 let pm = placemarks[0] as CLPlacemark
                 self.updateLocationInfo(pm, localeDomain:self.setDomainer)
-                println("updating location")
-                println(self.setDomainer)
+//                println("updating location")
+//                println(self.setDomainer)
             } else {
-                println("Problem with the data received from geocoder")
+//                println("Problem with the data received from geocoder")
             }
         })
     }
@@ -70,9 +70,9 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
             var country = placemark.country
 
             
-            println(locality)
-            println(state)
-            println(country)
+//            println(locality)
+//            println(state)
+//            println(country)
             var newLocale:Locale = localeListSingleton.getLocale("Oregon")
             
             if (localeDomain == "home"){
@@ -94,10 +94,10 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
                       exchangeCalc.updateLocale(newLocale.name, isForeign: false)
                     
                 } else {
-                    println("we didn't find anything")
-                    println(locality)
-                    println(state)
-                    println(country)
+//                    println("we didn't find anything")
+//                    println(locality)
+//                    println(state)
+//                    println(country)
                 }
             } else if
             (localeDomain == "foreign"){
@@ -118,13 +118,13 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
                     exchangeCalc.updateLocale(newLocale.name, isForeign: true)
                     
                 } else {
-                    println("we didn't find anything")
-                    println(locality)
-                    println(state)
-                    println(country)
+//                    println("we didn't find anything")
+//                    println(locality)
+//                    println(state)
+//                    println(country)
                 }
             }
-            println("update the ui now")
+//            println("update the ui now")
             
             delegate?.setupFlag(newLocale)
             delegate?.setupLabels(newLocale)

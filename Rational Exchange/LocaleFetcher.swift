@@ -451,7 +451,7 @@ class LocaleList { //:NSObject {
             .responseJSON { (request, response, data, error) in
                 if (error != nil)
                 {
-                    println(error)
+//                    println(error)
                     
                 }
                 else
@@ -481,7 +481,7 @@ class LocaleList { //:NSObject {
                             }
                         }
                     }
-                                println("Finished Refreshing Exchange Rates")
+//                                println("Finished Refreshing Exchange Rates")
                                 self.cacheCountries()
                                 
                 }

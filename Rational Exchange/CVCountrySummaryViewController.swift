@@ -198,10 +198,10 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
 
         if (MFMailComposeViewController.canSendMail() == true){
             self.presentViewController(mc, animated: true, completion: nil)
-            println("we did it")
+//            println("we did it")
         }
         else{
-            println("we didn't do it")
+//            println("we didn't do it")
             // Show some error message here
         }
     }
@@ -209,14 +209,6 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
     
     func mailComposeController(controller:MFMailComposeViewController, didFinishWithResult result:MFMailComposeResult, error:NSError) {
         switch result.value {
-        case MFMailComposeResultCancelled.value:
-            println("Mail cancelled")
-        case MFMailComposeResultSaved.value:
-            println("Mail saved")
-        case MFMailComposeResultSent.value:
-            println("Mail sent")
-        case MFMailComposeResultFailed.value:
-            println("Mail sent failure: %@", error.localizedDescription)
         default:
             break
         }
@@ -226,13 +218,13 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
 
     
     func hideThings(){
-     println("hide")
+//     println("hide")
         notRightButtonButton.hidden = true
 
     }
     
     func showThings(){
-        println("show")
+//        println("show")
 
         var localeName:String
         let containerView = self.view.superview as CVUIContainerView
@@ -249,7 +241,7 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
     }
     
     func enableThings(){
-        println("enable")
+//        println("enable")
                 self.findMeButton.enabled = true
         
         
@@ -268,7 +260,7 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
     }
     
     func disableThings(){
-        println("disable")
+//        println("disable")
                 self.findMeButton.enabled = false
                 self.notRightButtonButton.enabled = false
     }
