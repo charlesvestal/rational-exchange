@@ -125,12 +125,14 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
                 }
             }
 //            println("update the ui now")
-            
-            delegate?.setupFlag(newLocale)
-            delegate?.setupLabels(newLocale)
-            delegate?.showAllTheLabels()
+            if(newLocale.name != "init") {
+                delegate?.setupFlag(newLocale)
+                delegate?.setupLabels(newLocale)
+                delegate?.showAllTheLabels()
            
             NSNotificationCenter.defaultCenter().postNotificationName(mySpecialNotificationKey, object: self)
+            }
+            
             
            
         }
