@@ -171,7 +171,7 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
             tipString.text = "We're not sure. Usually you should round up."
         }
         else {
-            tipString.text = String(format: "%.2f%% for Gratiuity", locale.tipRate! * 100)
+            tipString.text = String(format: "%.2f%% for Gratuity", locale.tipRate! * 100)
         }
     }
     
