@@ -68,7 +68,7 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
     
     func showLocationHud(){
         var hud =  MBProgressHUD.showHUDAddedTo(self.view, animated: true)
-        hud.detailsLabelText = "Finding Your Location"
+        hud.detailsLabelText = "Atempting to Find Your Location"
         hud.dimBackground = true
         hud.hide(true, afterDelay:2.0)
     }

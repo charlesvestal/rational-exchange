@@ -37,20 +37,22 @@ class locationHelper:NSObject, CLLocationManagerDelegate {
         locationManager.startUpdatingLocation()
     }
     
-    func locationError() {
-        
-        var alert = UIAlertController(title: "Error Finding Location", message: "Please check your location and data settings.", preferredStyle: UIAlertControllerStyle.Alert)
-        //alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
-        delegate?.presentViewController(alert, animated: true, completion: nil)
-        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-            
-        }))
-        
-    }
+//    func locationError() {
+//        
+//        var alert = UIAlertController(title: "Error Finding Location", message: "Please check your location and data settings.", preferredStyle: UIAlertControllerStyle.Alert)
+//        //alert.addAction(UIAlertAction(title: "Click", style: UIAlertActionStyle.Default, handler: nil))
+//        delegate?.presentViewController(alert, animated: true, completion: nil)
+//        alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
+//            
+//        }))
+//        
+//    }
     
-    func locationManager(manager:CLLocationManager!, didFailWithError: NSError) {
+
+    
+    func locationManager(manager:CLLocationManager!, didFailWithError error:NSError) {
+        println("Error while updating location!!! " + error.localizedDescription)
         locationManager.stopUpdatingLocation()
-        self.locationError()
     }
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {

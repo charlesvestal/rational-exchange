@@ -46,11 +46,11 @@ class CVScrollViewViewController: UIViewController {
         
         var bumpHeight = mainView.bounds.height - (mainView.bounds.height / 3)
         
-        UIView.animateWithDuration(0.25, delay: 3.0, options: .Repeat | .Autoreverse | .AllowUserInteraction | .CurveEaseIn, animations: {
+        UIView.animateWithDuration(0.25, delay: 2.0, options: .Repeat | .Autoreverse | .AllowUserInteraction | .CurveEaseIn, animations: {
             UIView.setAnimationRepeatCount(2.5)
             self.scrollView.setContentOffset(CGPointMake(0, bumpHeight), animated: false)
             }, completion: { finished in
-                UIView.animateWithDuration(0.25, delay: 0.5, options: .AllowUserInteraction | .CurveEaseInOut, animations: {
+                UIView.animateWithDuration(0.25, delay: 0.25, options: .AllowUserInteraction | .CurveEaseInOut, animations: {
                     self.scrollView.setContentOffset(CGPointMake(0,(self.mainView.bounds.height * startingPage)), animated: false)
                     }, completion: nil)
                         
