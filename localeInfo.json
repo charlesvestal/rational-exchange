@@ -2119,7 +2119,7 @@
       "additionalTaxRate": null,
       "tipRate": 0.1,
       "country": "Zambia",
-      "tipString": "If no service charge is on your bill, add 12%"
+      "tipString": "If no service charge is on your bill, add 10%"
     }
   ]
 }
