@@ -1145,7 +1145,7 @@
       "additionalTaxRate": null,
       "tipRate": 0.0000000000,
       "country": "Ireland",
-	  "tipString": "Butts"
+	  "tipString": null
     },
     {
       "name": "Isle of Man",
@@ -2114,23 +2114,10 @@
 	  "tipString": null
     },
     {
-      "name": "Choose a Locale",
-      "additionalTaxRate": null,
-      "tipRate": null,
-      "country": "Choose a Country",
-	  "tipString": null
-    },
-    {
       "name": "Great Britain",
       "additionalTaxRate": 0.0,
       "tipRate": null,
       "country": "England"
-    },
-    {
-      "name": "Some Place in Yemen",
-      "additionalTaxRate": 0.4,
-      "tipRate": 0.3,
-      "country": "Yemen"
     }
   ]
 }
