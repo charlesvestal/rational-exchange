@@ -192,7 +192,7 @@ class CVCountrySummaryViewController:UIViewController, MFMailComposeViewControll
         let messageBody1 = String(format:"<p>I %@, and noticed your information for %@ is incorrect.</p> <p>There should actually this much tax added to prices: </p> <p>And tipping should be:</p>", isForeign, self.localeName.text!)
         let messageBody2 = String(format:"</br></br></br></br></br></br>Debug info: name: %@, tax: %@, tip: %@ visiting: %@", self.localeName.text!, self.taxString.text!, self.tipString.text!, isForeign)
         let messageBody = messageBody1 + messageBody2
-        let toRecipents = ["charlesv@gmail.com"]
+        let toRecipents = ["rationalexchangeapp@gmail.com"]
         
         
         mc.setSubject(emailTitle)

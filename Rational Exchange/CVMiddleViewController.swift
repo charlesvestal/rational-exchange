@@ -100,14 +100,57 @@ class CVMiddleViewController: UIViewController {
     
     @IBAction func gotoTopButton(sender: AnyObject) {
         NSNotificationCenter.defaultCenter().postNotificationName(scrollTopKey, object: self)
-
+ //       printLocales()
     }
     
     @IBAction func gotoButtomButton(sender: AnyObject) {
         NSNotificationCenter.defaultCenter().postNotificationName(scrollBottomKey, object: self)
     }
     
+    func printLocales() {
+        println("{")
+        println("\"array\": [")
+        
+        for locale in exchangeCalc.localeList.localeList {
+            
+//            {
+//                "name": "British Columbia",
+//                "additionalTaxRate": 0.1200000000,
+//                "tipRate": 0.2000000000,
+//                "country": "Canada",
+//                "tipString": null
+//            },
+            
+            println("{")
+            println (String(format:"\"name\": \"%@\",", locale.name))
+            
+            if(locale.additionalTaxRate != nil) {
+                println (String(format:"\"additionalTaxRate\": %1.5f,", locale.additionalTaxRate!))
+            }else {
+                println (String(format:"\"additionalTaxRate\": null,"))
+            }
+            
+            if(locale.tipRate != nil) {
+                println (String(format:"\"tipRate\": %1.5f,", locale.tipRate!))
+            }else {
+                println (String(format:"\"tipRate\": null,"))
+            }
+            
+            println (String(format:"\"country\": \"%@\",", locale.country.name))
+            
+            if(locale.tipString != nil) {
+                println (String(format:"\"tipString\": \"%@\"", locale.tipString!))
+            }else {
+                println (String(format:"\"tipString\": null"))
+            }
+            println("},")
+            
+        }
+        println("]")
+        println("}")
     
+    
+    }
 
     func updateCenterScreen(){
    

@@ -3,2121 +3,2123 @@
     {
       "name": "Prague",
       "additionalTaxRate": null,
-      "tipRate": 0.1000000000,
+      "tipRate": 0.1,
       "country": "Czech Republic",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Alberta",
-      "additionalTaxRate": 0.0500000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.05,
+      "tipRate": 0.15,
       "country": "Canada",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "British Columbia",
-      "additionalTaxRate": 0.1200000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.12,
+      "tipRate": 0.15,
       "country": "Canada",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Manitoba",
-      "additionalTaxRate": 0.1300000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.13,
+      "tipRate": 0.15,
       "country": "Canada",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "New Brunswick",
-      "additionalTaxRate": 0.1300000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.13,
+      "tipRate": 0.15,
       "country": "Canada",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Newfoundland and Labrador",
-      "additionalTaxRate": 0.1300000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.13,
+      "tipRate": 0.15,
       "country": "Canada",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Northwest Territories",
-      "additionalTaxRate": 0.0500000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.05,
+      "tipRate": 0.15,
       "country": "Canada",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Nova Scotia",
-      "additionalTaxRate": 0.1500000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.15,
+      "tipRate": 0.15,
       "country": "Canada",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Nunavut",
-      "additionalTaxRate": 0.0500000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.05,
+      "tipRate": 0.15,
       "country": "Canada",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Ontario",
-      "additionalTaxRate": 0.1300000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.13,
+      "tipRate": 0.15,
       "country": "Canada",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Prince Edward Island",
-      "additionalTaxRate": 0.1400000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.14,
+      "tipRate": 0.15,
       "country": "Canada",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Quebec",
-      "additionalTaxRate": 0.1497500000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.14975,
+      "tipRate": 0.15,
       "country": "Canada",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Saskatchewan",
-      "additionalTaxRate": 0.1000000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.1,
+      "tipRate": 0.15,
       "country": "Canada",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Yukon",
-      "additionalTaxRate": 0.0500000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.05,
+      "tipRate": 0.15,
       "country": "Canada",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Alabama",
-      "additionalTaxRate": 0.0851000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0851,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Alaska",
-      "additionalTaxRate": 0.0169000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0169,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Arizona",
-      "additionalTaxRate": 0.0817000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0817,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Arkansas",
-      "additionalTaxRate": 0.0919000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0919,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "California",
-      "additionalTaxRate": 0.0841000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0841,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Colorado",
-      "additionalTaxRate": 0.0739000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0739,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Connecticut",
-      "additionalTaxRate": 0.0635000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0635,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Delaware",
-      "additionalTaxRate": 0.0000000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Florida",
-      "additionalTaxRate": 0.0662000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0662,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Georgia",
-      "additionalTaxRate": 0.069700000,
-      "tipRate": 0.2,
+      "additionalTaxRate": 0.0697,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Hawaii",
-      "additionalTaxRate": 0.0435000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0435,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Idaho",
-      "additionalTaxRate": 0.0603000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0603,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Illinois",
-      "additionalTaxRate": 0.0816000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0816,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Indiana",
-      "additionalTaxRate": 0.0700000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.07,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Iowa",
-      "additionalTaxRate": 0.0678000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0678,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Kansas",
-      "additionalTaxRate": 0.0815000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0815,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Kentucky",
-      "additionalTaxRate": 0.0600000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.06,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Louisiana",
-      "additionalTaxRate": 0.0889000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0889,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Maine",
-      "additionalTaxRate": 0.0550000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.055,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Maryland",
-      "additionalTaxRate": 0.0600000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.06,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Massachusetts",
-      "additionalTaxRate": 0.0625000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0625,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Michigan",
-      "additionalTaxRate": 0.0600000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.06,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Minnesota",
-      "additionalTaxRate": 0.0719000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0719,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Mississippi",
-      "additionalTaxRate": 0.0700000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.07,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Missouri",
-      "additionalTaxRate": 0.0758000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0758,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Montana",
-      "additionalTaxRate": 0.0000000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Nebraska",
-      "additionalTaxRate": 0.0679000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0679,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Nevada",
-      "additionalTaxRate": 0.0793000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0793,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "New Hampshire",
-      "additionalTaxRate": 0.0000000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "New Jersey",
-      "additionalTaxRate": 0.0697000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0697,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "New Mexico",
-      "additionalTaxRate": 0.0726000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0726,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "New York",
-      "additionalTaxRate": 0.0847000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0847,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "North Carolina",
-      "additionalTaxRate": 0.0690000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.069,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "North Dakota",
-      "additionalTaxRate": 0.0655000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0655,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Ohio",
-      "additionalTaxRate": 0.0711000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0711,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Oklahoma",
-      "additionalTaxRate": 0.0872000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0872,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Oregon",
-      "additionalTaxRate": 0.0000000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Pennsylvania",
-      "additionalTaxRate": 0.0634000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0634,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Rhode Island",
-      "additionalTaxRate": 0.0700000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.07,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "South Carolina",
-      "additionalTaxRate": 0.0719000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0719,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "South Dakota",
-      "additionalTaxRate": 0.0583000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0583,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Tennessee",
-      "additionalTaxRate": 0.0945000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0945,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Texas",
-      "additionalTaxRate": 0.0815000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0815,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Utah",
-      "additionalTaxRate": 0.0668000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0668,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Vermont",
-      "additionalTaxRate": 0.0614000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0614,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Virginia",
-      "additionalTaxRate": 0.0563000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0563,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Washington",
-      "additionalTaxRate": 0.0888000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0888,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "West Virginia",
-      "additionalTaxRate": 0.0607000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0607,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Wisconsin",
-      "additionalTaxRate": 0.0543000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0543,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Wyoming",
-      "additionalTaxRate": 0.0549000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0549,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "District of Columbia",
-      "additionalTaxRate": 0.0575000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0575,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
+    },
+    {
+      "name": "init",
+      "additionalTaxRate": 0.0575,
+      "tipRate": 0.15,
+      "country": "United States",
+      "tipString": null
     },
     {
       "name": "Afghanistan",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Afghanistan",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 5%"
     },
     {
       "name": "Albania",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Albania",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Algeria",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Algeria",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "American Samoa",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "American Samoa",
-	  "tipString": null
+      "tipString": "10%, but only at tourist spots"
     },
     {
       "name": "Andorra",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Andorra",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Angola",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Angola",
-	  "tipString": null
+      "tipString": "Add 5-10%, even if a service charge is included"
     },
     {
       "name": "Anguilla",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Anguilla",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Antarctica",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Antarctica",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Antigua and Barbuda",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Antigua and Barbuda",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Argentina",
       "additionalTaxRate": null,
-      "tipRate": 0.1000000000,
+      "tipRate": 0.05,
       "country": "Argentina",
-	  "tipString": null
+      "tipString": "Add 5-10%, even if a service charge is included"
     },
     {
       "name": "Armenia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Armenia",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Aruba",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.15,
       "country": "Aruba",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Australia",
       "additionalTaxRate": null,
-      "tipRate": 0.1000000000,
+      "tipRate": 0.1,
       "country": "Australia",
-	  "tipString": null
+      "tipString": "No tip necessary, though special treatment deserves a 10% tip"
     },
     {
       "name": "Austria",
       "additionalTaxRate": null,
-      "tipRate": 0.0500000000,
+      "tipRate": 0.1,
       "country": "Austria",
-	  "tipString": null
+      "tipString": "Add 5-10%, even if a service charge is included"
     },
     {
       "name": "Azerbaijan",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Azerbaijan",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Bahamas",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.15,
       "country": "Bahamas",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 15%"
     },
     {
       "name": "Bahrain",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Bahrain",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Bangladesh",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Bangladesh",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 5-10%"
     },
     {
       "name": "Barbados",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.15,
       "country": "Barbados",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Belarus",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Belarus",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Belgium",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Belgium",
-	  "tipString": null
+      "tipString": "Round up to the nearest whole bill"
     },
     {
       "name": "Belize",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Belize",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Benin",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Benin",
-	  "tipString": null
+      "tipString": "No tip necessary, though special treatment deserves a 10% tip"
     },
     {
       "name": "Bermuda",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.15,
       "country": "Bermuda",
-	  "tipString": null
+      "tipString": "No tip necessary, though special treatment deserves a 15% tip"
     },
     {
       "name": "Bhutan",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Bhutan",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 5-10%"
     },
     {
       "name": "Bolivia",
       "additionalTaxRate": null,
-      "tipRate": 0.0500000000,
+      "tipRate": 0.05,
       "country": "Bolivia",
-	  "tipString": null
+      "tipString": "No tip necessary, though special treatment deserves a 5-10% tip"
     },
     {
       "name": "Bosnia-Herzegovina",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Bosnia-Herzegovina",
-	  "tipString": null
+      "tipString": "Tip 10% if you receive exceptional treatment"
     },
     {
       "name": "Botswana",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Botswana",
-	  "tipString": null
+      "tipString": "Tip 10% if you receive exceptional treatment"
     },
     {
       "name": "Bouvet Island",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Bouvet Island",
-	  "tipString": null
+      "tipString": "0"
     },
     {
       "name": "Brazil",
       "additionalTaxRate": null,
-      "tipRate": 0.1000000000,
+      "tipRate": 0.1,
       "country": "Brazil",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "British Indian Ocean Territory",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "British Indian Ocean Territory",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Brunei Darussalam",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Brunei Darussalam",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Bulgaria",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Bulgaria",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Burkina Faso",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Burkina Faso",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Burundi",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Burundi",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Cambodia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Cambodia",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Cameroon",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Cameroon",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Canada",
-      "additionalTaxRate": 0.0875000000,
-      "tipRate": 0.2000000000,
+      "additionalTaxRate": 0.0875,
+      "tipRate": 0.15,
       "country": "Canada",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Cape Verde",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Cape Verde",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Cayman Islands",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.15,
       "country": "Cayman Islands",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Central African Republic",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Central African Republic",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Chad",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Chad",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Chile",
       "additionalTaxRate": null,
-      "tipRate": 0.1000000000,
+      "tipRate": 0.1,
       "country": "Chile",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%, otherwise add 5%"
     },
     {
       "name": "China",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "China",
-	  "tipString": null
+      "tipString": "10%, but only in fancy restaurants"
     },
     {
       "name": "Christmas Island",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Christmas Island",
-	  "tipString": null
+      "tipString": "Tip 10% if you receive exceptional treatment"
     },
     {
-      "name": "Cocos (Keeling|), Islands",
+      "name": "Cocos (Keeling), Islands",
       "additionalTaxRate": null,
-      "tipRate": null,
-      "country": "Cocos (Keeling|), Islands",
-	  "tipString": null
+      "tipRate": 0,
+      "country": "Cocos (Keeling), Islands",
+      "tipString": null
     },
     {
       "name": "Colombia",
       "additionalTaxRate": null,
-      "tipRate": 0.1000000000,
+      "tipRate": 0.1,
       "country": "Colombia",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Comoros",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Comoros",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Congo",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Congo",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Cook Islands",
       "additionalTaxRate": null,
-      "tipRate": 0.0000000000,
+      "tipRate": 0,
       "country": "Cook Islands",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Costa Rica",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Costa Rica",
-	  "tipString": null
+      "tipString": "Round up to the nearest whole bill"
     },
     {
       "name": "Croatia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Croatia",
-	  "tipString": null
+      "tipString": "10-15%, but only in fancy restaurants"
     },
     {
       "name": "Cuba",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Cuba",
-	  "tipString": null
+      "tipString": "For good service, leave 1 CUC"
     },
     {
       "name": "Cyprus",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Cyprus",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Czech Republic",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Czech Republic",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Denmark",
       "additionalTaxRate": null,
-      "tipRate": 0.0000000000,
+      "tipRate": 0.1,
       "country": "Denmark",
-	  "tipString": null
+      "tipString": "For exceptional treatment, add 10% in addition to the service charge"
     },
     {
       "name": "Djibouti",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Djibouti",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%, otherwise round up"
     },
     {
       "name": "Dominica",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Dominica",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%, otherwise round up"
     },
     {
       "name": "Dominican Republic",
       "additionalTaxRate": null,
-      "tipRate": 0.2000000000,
+      "tipRate": 0.1,
       "country": "Dominican Republic",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%, otherwise round up"
     },
     {
       "name": "Egypt",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Egypt",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%, otherwise round up"
     },
     {
       "name": "El Salvador",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "El Salvador",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Equatorial Guinea",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Equatorial Guinea",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Eritrea",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Eritrea",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Estonia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Estonia",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Ethiopia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Ethiopia",
-	  "tipString": null
+      "tipString": "10%, but only in fancy restaurants"
     },
     {
       "name": "European Union",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "European Union",
-	  "tipString": null
+      "tipString": "It varies, usually round up, and/or tip 10-15%"
     },
     {
       "name": "Falkland Islands (Malvinas)",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Falkland Islands (Malvinas)",
-	  "tipString": null
+      "tipString": "Tipping is not expected, but add 10% for exceptional treatment"
     },
     {
       "name": "Faroe Islands",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Faroe Islands",
-	  "tipString": null
+      "tipString": "Tipping is not expected, but add 10% for exceptional treatment"
     },
     {
       "name": "Fiji",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Fiji",
-	  "tipString": null
+      "tipString": "Tipping is not expected, but add 10% for exceptional treatment"
     },
     {
       "name": "Finland",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Finland",
-	  "tipString": null
+      "tipString": "Tipping is not expected, but round up for exceptional treatment"
     },
     {
       "name": "France",
       "additionalTaxRate": null,
-      "tipRate": 0.0000000000,
+      "tipRate": 0.05,
       "country": "France",
-	  "tipString": null
+      "tipString": "Add 5% to the 15% service charge included in your bill"
     },
     {
       "name": "French Guiana",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "French Guiana",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "French Southern Territories",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "French Southern Territories",
-	  "tipString": null
+      "tipString": "Tipping is not expected"
     },
     {
       "name": "Gabon",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Gabon",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Gambia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Gambia",
-	  "tipString": null
+      "tipString": "Add 5% to the 10% service charge included in your bill"
+    },
+    {
+      "name": "Georgia (Country)",
+      "additionalTaxRate": null,
+      "tipRate": 0.1,
+      "country": "Georgia (Country)",
+      "tipString": "If no service charge is on your bill, add 10%, otherwise add 5%"
     },
     {
       "name": "Germany",
       "additionalTaxRate": null,
-      "tipRate": 0.05,
+      "tipRate": 0.1,
       "country": "Germany",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Ghana",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Ghana",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Gibraltar",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Gibraltar",
-	  "tipString": null
+      "tipString": null
+    },
+    {
+      "name": "Great Britain",
+      "additionalTaxRate": null,
+      "tipRate": 0.1,
+      "country": "Great Britain",
+      "tipString": null
     },
     {
       "name": "England",
       "additionalTaxRate": null,
-      "tipRate": 0.1000000000,
-      "country": "England"
-    },    
-	{
-      "name": "Georgia (Country)",
-      "additionalTaxRate": null,
-      "tipRate": null,
-      "country": "Georgia (Country)",
-	  "tipString": null
+      "tipRate": 0.1,
+      "country": "England",
+      "tipString": null
     },
     {
       "name": "Greece",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Greece",
-	  "tipString": null
+      "tipString": "Add 5-10% to the service charge already included in your bill"
     },
     {
       "name": "Greenland",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Greenland",
-	  "tipString": null
+      "tipString": "Add 5% to the service charge already included in your bill"
     },
     {
       "name": "Grenada",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Grenada",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Guadeloupe (French)",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Guadeloupe (French)",
-	  "tipString": null
+      "tipString": "Add 5-10% to the service charge already included in your bill"
     },
     {
       "name": "Guam (USA)",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Guam (USA)",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Guinea",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Guinea",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Guyana",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Guyana",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Haiti",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Haiti",
-	  "tipString": null
+      "tipString": "Add 10% to the service charge already included in your bill"
     },
     {
       "name": "Heard Island and McDonald Islands",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Heard Island and McDonald Islands",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Honduras",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Honduras",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Hong Kong",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Hong Kong",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Hungary",
       "additionalTaxRate": null,
-      "tipRate": 0.1000000000,
+      "tipRate": 0.1,
       "country": "Hungary",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Iceland",
       "additionalTaxRate": null,
-      "tipRate": 0.0000000000,
+      "tipRate": 0.1,
       "country": "Iceland",
-	  "tipString": null
+      "tipString": "Add 5-10% to the service charge already included in your bill"
     },
     {
       "name": "India",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "India",
-	  "tipString": null
+      "tipString": "Add 5-10% to the service charge already included in your bill"
     },
     {
       "name": "Indonesia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Indonesia",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 5-10%"
     },
     {
       "name": "Iran",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Iran",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Iraq",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Iraq",
-	  "tipString": null
+      "tipString": "10%, but only in fancy restaurants"
     },
     {
       "name": "Ireland",
       "additionalTaxRate": null,
-      "tipRate": 0.0000000000,
+      "tipRate": 0.1,
       "country": "Ireland",
-	  "tipString": null
-    },    
-	{
-      "name": "Dublin",
-      "additionalTaxRate": null,
-      "tipRate": 0.0000000000,
-      "country": "Ireland",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Isle of Man",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Isle of Man",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Israel",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Israel",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15% for exceptional treatment"
     },
     {
       "name": "Italy",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Italy",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15% for exceptional treatment"
     },
     {
       "name": "Ivory Coast",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Ivory Coast",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10% for exceptional treatment"
     },
     {
       "name": "Jamaica",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Jamaica",
-	  "tipString": null
+      "tipString": "10-20%, but only at fancy restaurants"
     },
     {
       "name": "Japan",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Japan",
-	  "tipString": null
+      "tipString": "Tipping is considered an insult"
     },
     {
       "name": "Jersey",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Jersey",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Jordan",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Jordan",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Kazakhstan",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Kazakhstan",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Kenya",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Kenya",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Kiribati",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Kiribati",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Korea-North",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Korea-North",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Korea-South",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Korea-South",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Kuwait",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Kuwait",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Kyrgyzstan",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Kyrgyzstan",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Laos",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Laos",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Latvia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Latvia",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Lebanon",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Lebanon",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Lesotho",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Lesotho",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Liberia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Liberia",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Libya",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Libya",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Liechtenstein",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Liechtenstein",
-	  "tipString": null
+      "tipString": "For exceptional treatment, add 5%"
     },
     {
       "name": "Lithuania",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Lithuania",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 5-15%"
     },
     {
       "name": "Luxembourg",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Luxembourg",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Macau",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Macau",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 5-10%"
     },
     {
       "name": "Macedonia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Macedonia",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Malawi",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Malawi",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Malaysia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Malaysia",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Maldives",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Maldives",
-	  "tipString": null
+      "tipString": "Round up to the nearest whole bill"
     },
     {
       "name": "Mali",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Mali",
-	  "tipString": null
+      "tipString": "Round up to the nearest whole bill"
     },
     {
       "name": "Malta",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Malta",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 5-10%"
     },
     {
       "name": "Marshall Islands",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Marshall Islands",
-	  "tipString": null
+      "tipString": "Tipping is only customary at fancy restaurants ___InSERT ___"
     },
     {
       "name": "Martinique (French)",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Martinique (French)",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Mauritania",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Mauritania",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Mauritius",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Mauritius",
-	  "tipString": null
+      "tipString": "Tipping is only customary at fancy restaurants ___InSERT ___"
     },
     {
       "name": "Mayotte",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Mayotte",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Mexico",
       "additionalTaxRate": null,
-      "tipRate": 0.1000000000,
+      "tipRate": 0.1,
       "country": "Mexico",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Micronesia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Micronesia",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Moldova",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Moldova",
-	  "tipString": null
+      "tipString": "Round up to the nearest whole bill"
     },
     {
       "name": "Monaco",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.15,
       "country": "Monaco",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 15%"
     },
     {
       "name": "Mongolia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Mongolia",
-	  "tipString": null
+      "tipString": "10%, but only in fancy restaurants"
     },
     {
       "name": "Montenegro",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Montenegro",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Montserrat",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Montserrat",
-	  "tipString": null
+      "tipString": "Add 5% to the service charge already included in your bill"
     },
     {
       "name": "Morocco",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Morocco",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Mozambique",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Mozambique",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Myanmar",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Myanmar",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Namibia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Namibia",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Nauru",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Nauru",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Nepal",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Nepal",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 5-10%"
     },
     {
       "name": "Netherlands Antilles",
       "additionalTaxRate": null,
-      "tipRate": 0.0500000000,
+      "tipRate": 0,
       "country": "Netherlands Antilles",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "The Netherlands",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "The Netherlands",
-	  "tipString": null
+      "tipString": "Add €1 to €2 in addition to the service charge already on your bill"
     },
     {
       "name": "New Caledonia (French)",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "New Caledonia (French)",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "New Zealand",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "New Zealand",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Nicaragua",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Nicaragua",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Niger",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Niger",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Nigeria",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Nigeria",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 5%"
     },
     {
       "name": "Niue",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Niue",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Norfolk Island",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Norfolk Island",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Northern Mariana Islands",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Northern Mariana Islands",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Norway",
-      "additionalTaxRate": 0.0000000000,
-      "tipRate": 0.0000000000,
+      "additionalTaxRate": 0,
+      "tipRate": 0.05,
       "country": "Norway",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Oman",
-      "additionalTaxRate": 0.0000000000,
-      "tipRate": 0.0000000000,
+      "additionalTaxRate": 0,
+      "tipRate": 0,
       "country": "Oman",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Pakistan",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Pakistan",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Palau",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Palau",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Panama",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Panama",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Papua New Guinea",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Papua New Guinea",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Paraguay",
       "additionalTaxRate": null,
-      "tipRate": 0.0000000000,
+      "tipRate": 0.1,
       "country": "Paraguay",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Peru",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Peru",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Philippines",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Philippines",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Pitcairn Island",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Pitcairn Island",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Poland",
       "additionalTaxRate": null,
-      "tipRate": 0.1000000000,
+      "tipRate": 0.1,
       "country": "Poland",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Polynesia (French)",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Polynesia (French)",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Portugal",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Portugal",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Puerto Rico",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.15,
       "country": "Puerto Rico",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 15%"
     },
     {
       "name": "Qatar",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Qatar",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Reunion (French)",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Reunion (French)",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Romania",
       "additionalTaxRate": null,
-      "tipRate": 0.1000000000,
+      "tipRate": 0.1,
       "country": "Romania",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Russia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Russia",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Rwanda",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Rwanda",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Saint Helena",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Saint Helena",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Saint Kitts & Nevis Anguilla",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Saint Kitts & Nevis Anguilla",
-	  "tipString": null
+      "tipString": "Add 5-10% to the service charge already included in your bill"
     },
     {
       "name": "Saint Lucia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Saint Lucia",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Saint Pierre and Miquelon",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Saint Pierre and Miquelon",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Saint Vincent & Grenadines",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Saint Vincent & Grenadines",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Samoa",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Samoa",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "San Marino",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "San Marino",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Sao Tome and Principe",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Sao Tome and Principe",
-	  "tipString": null
+      "tipString": "10%, but only in fancy restaurants"
     },
     {
       "name": "Saudi Arabia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Saudi Arabia",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Senegal",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Senegal",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Serbia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Serbia",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Seychelles",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Seychelles",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 5-10%"
     },
     {
       "name": "Sierra Leone",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Sierra Leone",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Singapore",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Singapore",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 5-10%"
     },
     {
       "name": "Slovakia",
       "additionalTaxRate": null,
-      "tipRate": 0.1000000000,
+      "tipRate": 0.1,
       "country": "Slovakia",
-	  "tipString": null
+      "tipString": "Round up to the nearest whole bill"
     },
     {
       "name": "Slovenia",
       "additionalTaxRate": null,
-      "tipRate": 0.1000000000,
+      "tipRate": 0.1,
       "country": "Slovenia",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Solomon Islands",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Solomon Islands",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Somalia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Somalia",
-	  "tipString": null
+      "tipString": "10%, but only in fancy restaurants"
     },
     {
       "name": "South Africa",
       "additionalTaxRate": null,
-      "tipRate": 0.1000000000,
+      "tipRate": 0.1,
       "country": "South Africa",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "South Georgia & South Sandwich Islands",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "South Georgia & South Sandwich Islands",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Spain",
       "additionalTaxRate": null,
-      "tipRate": 0.1000000000,
+      "tipRate": 0.1,
       "country": "Spain",
-	  "tipString": null
+      "tipString": "Leave the change"
     },
     {
       "name": "Sri Lanka",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Sri Lanka",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Sudan",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Sudan",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Suriname",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Suriname",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Svalbard and Jan Mayen Islands",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Svalbard and Jan Mayen Islands",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Swaziland",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Swaziland",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Sweden",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Sweden",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 5-10%, otherwise round up"
     },
     {
       "name": "Switzerland",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Switzerland",
-	  "tipString": null
+      "tipString": "Round up to the nearest whole bill"
     },
     {
       "name": "Syria",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Syria",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Taiwan",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Taiwan",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Tajikistan",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Tajikistan",
-	  "tipString": null
+      "tipString": "10%, but only in fancy restaurants"
     },
     {
       "name": "Tanzania",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Tanzania",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 5%"
     },
     {
       "name": "Thailand",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Thailand",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Togo",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Togo",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Tokelau",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Tokelau",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Tonga",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Tonga",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Trinidad and Tobago",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Trinidad and Tobago",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Tunisia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Tunisia",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Turkey",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Turkey",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Turkmenistan",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Turkmenistan",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Turks and Caicos Islands",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Turks and Caicos Islands",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Tuvalu",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Tuvalu",
-	  "tipString": null
+      "tipString": null
     },
     {
-      "name": "U.K.",
+      "name": "U.K",
       "additionalTaxRate": null,
-      "tipRate": null,
-      "country": "U.K.",
-	  "tipString": null
+      "tipRate": 0.1,
+      "country": "U.K",
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Uganda",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Uganda",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 5-10%"
     },
     {
       "name": "Ukraine",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Ukraine",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "United Arab Emirates",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "United Arab Emirates",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10-15%"
     },
     {
       "name": "Uruguay",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Uruguay",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "USA Minor Outlying Islands",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.15,
       "country": "USA Minor Outlying Islands",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "United States",
-      "additionalTaxRate": 0.0964000000,
-      "tipRate": 0.1500000000,
+      "additionalTaxRate": 0.0964,
+      "tipRate": 0.15,
       "country": "United States",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Uzbekistan",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Uzbekistan",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Vanuatu",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0,
       "country": "Vanuatu",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Vatican",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Vatican",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Venezuela",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Venezuela",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 10%"
     },
     {
       "name": "Vietnam",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Vietnam",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 5-10%"
     },
     {
       "name": "Virgin Islands (British)",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.15,
       "country": "Virgin Islands (British)",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 15%"
     },
     {
       "name": "Virgin Islands (USA)",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.15,
       "country": "Virgin Islands (USA)",
-	  "tipString": null
+      "tipString": "If no service charge is on your bill, add 15%"
     },
     {
       "name": "Wallis and Futuna Islands",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.05,
       "country": "Wallis and Futuna Islands",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Western Sahara",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Western Sahara",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Yemen",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Yemen",
-	  "tipString": null
+      "tipString": null
     },
     {
       "name": "Zambia",
       "additionalTaxRate": null,
-      "tipRate": null,
+      "tipRate": 0.1,
       "country": "Zambia",
-	  "tipString": null
-    },
-    {
-      "name": "Great Britain",
-      "additionalTaxRate": 0.0,
-      "tipRate": null,
-      "country": "England"
+      "tipString": "If no service charge is on your bill, add 12%"
     }
   ]
 }
