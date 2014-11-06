@@ -1,0 +1,14 @@
+{
+    "applications": {
+        "Rational Exchange": {
+            "applicationId": "37b5nCCzv1CXDFpymf5OaeQJh30EXaejHgmqUdEa", 
+            "masterKey": "neA3xfrqfZjwR5qFXwS9AZ3EU1OVegnWVw2JiETe"
+        }, 
+        "_default": {
+            "link": "Rational Exchange"
+        }
+    }, 
+    "global": {
+        "parseVersion": "1.3.1"
+    }
+}

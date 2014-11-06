@@ -1,0 +1,630 @@
+/* Reset */
+html,body,div,span,object,iframe,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{background:transparent;border:0;font-size:100%;margin:0;outline:0;padding:0;vertical-align:baseline}body{line-height:1}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}a{background:transparent;font-size:100%;margin:0;padding:0;vertical-align:baseline}ins{background-color:#ff9;color:#000;text-decoration:none}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:700}del{text-decoration:line-through}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help}table{border-collapse:collapse;border-spacing:0}hr{border:0;border-top:1px solid #ccc;display:block;height:1px;margin:1em 0;padding:0}input,select{vertical-align:middle}
+
+/* General */
+::selection{
+	background:#000;
+	color:#FFF;
+}
+::-moz-selection{
+	background-color:#000;
+	color:#FFF;
+}
+::-moz-focus-inner{
+	border:0;
+	margin:0;
+	padding:0;
+}
+a,a:visited{
+	color:#2e2e2e;
+	outline:none;
+	text-decoration:none;
+}
+a:hover{
+	color:#666;
+	outline:none;
+	text-decoration:none;
+}
+h1, h2, h3{
+	font-family:'Varela Round', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	border:0;
+	margin:0;
+	padding:0;
+}
+
+body{
+	-webkit-font-smoothing:antialiased;
+	color:#2D2D2D;
+	font-family:'Varela Round', sans-serif;
+	line-height:1;
+	word-wrap:break-word;
+	overflow-x:hidden;background-image:none;
+	background-color:#FFF;
+	margin:0;
+	padding:0;
+	overflow-x:hidden;
+}
+
+.inner_wrapper{
+	width:1000px;
+	margin-right:auto;
+	margin-left:auto;
+}
+
+.inner_page {
+	display:none;
+}
+
+/* Loading Screen */
+.loading_screen {
+	width:100%;
+	height:100%;
+	background-color:#FFF;
+	position:absolute;
+	background-image:url(../images/loading_icon.GIF);
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+/* Header */
+.header {
+	width: 100%;
+	float: left;
+	height: 769px;
+	background-color: #2A1040;
+	background-image:url(../images/header_background.jpg);
+	background-size:cover;
+	overflow: hidden;
+}
+
+.iphone_hand {
+	width: 483px;
+	height: 629px;
+	float: left;
+	background-image:url(../images/iphone_hand.png);
+	background-repeat:no-repeat;
+	margin-top: 140px;
+}
+
+.header_right_column {
+	width: 480px;
+	float: right;
+	height: auto;
+	padding-top: 310px;
+}
+
+.header_right_column h1 {
+	color: #FFF;
+	font-size: 36px;
+	line-height: 50px;
+	padding-bottom:25px;
+}
+
+/* Appstore Button */
+a.appstore_button{
+	background-image:url(../images/store_buttons.png);
+	display: block;
+	float: left;
+	height: 71px;
+	width: 208px;
+	margin-right:25px;
+}
+
+/* Google Play Button */
+a.google_play_button{
+	background-image: url(../images/store_buttons.png);
+	background-repeat: no-repeat;
+	float: left;
+	display: block;
+	float: left;
+	height: 71px;
+	width: 208px;
+	background-position: -208px 0;
+}
+
+/* Section One */
+.section_one {
+	width: 100%;
+	height: 690px;
+	float: left;
+	background-color: #FFF;
+}
+
+.section_one_header {
+	width: 690px;
+	margin-left: auto;
+	margin-right: auto;
+	height: 228px;
+}
+
+.section_one h2 {
+	font-size: 32px;
+	color: #474747;
+	text-align: center;
+	padding-top: 90px;
+}
+
+.section_one p {
+	font-size: 14px;
+	color: #969696;
+	text-align: center;
+	line-height: 26px;
+	padding-top: 10px;
+}
+
+.section_one_iphones_wrapper {
+	width: 900px;
+	height: 462px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section_one_iphone_one {
+	width: 260px;
+	height: 422px;
+	float: left;
+	background-image:url(../images/iphone_1_section_1.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	margin-top: 40px;
+}
+
+.section_one_iphone_two {
+	width: 260px;
+	height: 422px;
+	float: left;
+	background-image:url(../images/iphone_2_section_1.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	margin-left:60px;
+	margin-right:60px;
+	margin-top: 40px;
+}
+
+.section_one_iphone_three {
+	width: 260px;
+	height: 422px;
+	float: left;
+	background-image:url(../images/iphone_3_section_1.png);
+	background-repeat: no-repeat;
+	background-position: top center;
+	margin-top: 40px;
+}
+
+/* Features Section */
+.features_section {
+	background-color: #F4F4F4;
+	float: left;
+	width: 100%;
+	padding-top: 80px;
+}
+
+.features_section h3 {
+	font-size: 32px;
+	color: #474747;
+	text-align: center;
+}
+
+ul.features_list {
+	width: 760px;
+	margin-left: auto;
+	margin-right: auto;
+	list-style: none;
+	padding-top: 60px;
+}
+
+ul.features_list li {
+	width: 280px;
+	margin-left:50px;
+	margin-right:50px;
+	margin-bottom:80px;
+	float:left;
+	text-align: center;
+}
+
+ul.features_list li .feature_icon {
+	width: 50px;
+	height:50px;
+	margin-left:auto;
+	margin-right:auto;
+	background-image:url(../images/feature_icons.png);
+	background-repeat: no-repeat;
+	margin-bottom:10px;
+}
+
+.feature_icon.location {
+	background-position: -3px -3px;
+}
+
+.feature_icon.cloud {
+	background-position: -3px -60px;
+}
+
+.feature_icon.storage {
+	background-position: -2px -117px;
+}
+
+.feature_icon.music {
+	background-position: -3px -178px;
+}
+
+.feature_icon.docs {
+	background-position: -3px -238px;
+}
+
+.feature_icon.stats {
+	background-position: -3px -299px;
+}
+
+ul.features_list li p.feature_title {
+	color: #585858;
+	font-size: 18px;
+}
+
+ul.features_list li p {
+	color: #979797;
+	font-size: 15px;
+	line-height: 24px;
+}
+
+/* Team Section */
+.team_section {
+	width: 100%;
+	height: 560px;
+	background-color: #FFF;
+	float: left;
+}
+
+.team_section .inner_wrapper {
+	width: 900px;
+}
+
+.team_section h4 {
+	font-size: 32px;
+	color: #474747;
+	text-align: center;
+	padding-top: 70px;
+}
+
+.team_member_wrapper {
+	width: 140px;
+	float: left;
+}
+
+.team_member_avatar {
+	width: 140px;
+	height: 140px;
+}
+
+.team_member_avatar img {
+	width: 122px;
+	height: 122px;
+	border: solid 8px #FFF;
+	-moz-box-shadow: 0 0 10px 0 #D3D3D3;
+	-webkit-box-shadow: 0 0 10px 0 #D3D3D3;
+	box-shadow: 0 0 10px 0 #D3D3D3;
+	border-radius: 50%;
+}
+
+p.team_member_name {
+	text-align: center;
+	font-size: 16px;
+	color: #494949;
+	text-transform: uppercase;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
+p.team_member_position {
+	text-align: center;
+	text-transform: uppercase;
+	color: #B0B0B0;
+	font-size: 12px;
+}
+
+.team_member_social_icons {
+	width: 110px;
+	height: 30px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top: 16px;
+}
+
+.team_member_social_icons a {
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	background-image:url(../images/team_social_icons.png);
+	background-repeat:no-repeat;
+}
+
+.team_member_social_icons a.twitter_icon {
+	background-position:0px 0px;
+}
+
+.team_member_social_icons a.dribbble_icon {
+  background-position:-31px 0px;
+}
+
+.team_member_social_icons a.fb_icon {
+	background-position:-62px 0px;
+	margin-right:0px;
+}
+
+.team_member_wrapper {
+	width: 140px;
+	float: left;
+	margin-left: 80px;
+	margin-right: 80px;
+	margin-top: 80px;
+}
+
+
+/* Final call to action Section */
+.final_cta_section {
+	width: 100%;
+	height: 310px;
+	float: left;
+	background-color: #000;
+	background-color: #2A1040;
+	background-image:url(../images/header_background.jpg);
+	background-size:cover;
+	background-position: 0px -130px;
+}
+
+.final_cta_section h4 {
+	font-size: 32px;
+	color: #FFF;
+	text-align: center;
+	padding-top: 90px;
+}
+
+.final_cta_store_buttons_wrapper {
+	width: 220px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 30px;
+}
+
+
+/* Footer */
+.footer {
+	width: 100%;
+	float: left;
+	text-align: center;
+	padding-top: 30px;
+	padding-bottom: 20px;
+	height: auto;
+}
+
+.footer p {
+	font-size:13px;
+	color:#969696;
+	padding-bottom:10px;
+}
+.footer_social_icons {
+	margin-left: auto;
+	margin-right: auto;
+	width: 33px;
+	height: 50px;
+}
+.footer_social_icons a {
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin-right: 10px;
+	background-image:url(../images/team_social_icons.png);
+	background-repeat:no-repeat;
+}
+
+.footer_social_icons a.twitter_icon {
+	background-position:0px 0px;
+}
+
+.footer_social_icons a.fb_icon {
+	background-position:-62px 0px;
+}
+
+.footer_social_icons a.appstore_icon {
+	background-position: -93px 0px;
+	margin-right: 0px;
+}
+
+/* Animations (Compressed)*/
+.animated{-webkit-animation-duration:1s;-moz-animation-duration:1s;-o-animation-duration:1s;animation-duration:1s;-webkit-animation-fill-mode:both;-moz-animation-fill-mode:both;-o-animation-fill-mode:both;animation-fill-mode:both}
+@-webkit-keyframes fadeInDownBig{0%{opacity:0;-webkit-transform:translateY(-2000px)}100%{opacity:1;-webkit-transform:translateY(0)}}@-moz-keyframes fadeInDownBig{0%{opacity:0;-moz-transform:translateY(-2000px)}100%{opacity:1;-moz-transform:translateY(0)}}@-o-keyframes fadeInDownBig{0%{opacity:0;-o-transform:translateY(-2000px)}100%{opacity:1;-o-transform:translateY(0)}}@keyframes fadeInDownBig{0%{opacity:0;transform:translateY(-2000px)}100%{opacity:1;transform:translateY(0)}}.fadeInDownBig{-webkit-animation-name:fadeInDownBig;-moz-animation-name:fadeInDownBig;-o-animation-name:fadeInDownBig;animation-name:fadeInDownBig}@-webkit-keyframes fadeInUpBig{0%{opacity:0;-webkit-transform:translateY(2000px)}100%{opacity:1;-webkit-transform:translateY(0)}}@-moz-keyframes fadeInUpBig{0%{opacity:0;-moz-transform:translateY(2000px)}100%{opacity:1;-moz-transform:translateY(0)}}@-o-keyframes fadeInUpBig{0%{opacity:0;-o-transform:translateY(2000px)}100%{opacity:1;-o-transform:translateY(0)}}@keyframes fadeInUpBig{0%{opacity:0;transform:translateY(2000px)}100%{opacity:1;transform:translateY(0)}}.fadeInUpBig{-webkit-animation-name:fadeInUpBig;-moz-animation-name:fadeInUpBig;-o-animation-name:fadeInUpBig;animation-name:fadeInUpBig}
+
+
+/* Responsive */
+@media screen and (max-width: 1000px) {
+	
+.iphone_hand {
+	margin-top: 40%;
+	max-width:690px;
+	background-size: 100%;
+	background-position: center bottom;
+}
+
+.header_right_column {
+	width: 70%;
+	margin-left: 16%;
+	margin-right: 5%;
+	float: right;
+	height: auto;
+	padding-top: 0px;
+	margin-top: 10%;
+	position: absolute;
+}
+	
+.inner_wrapper {
+	width: 100%;
+	margin-right: 0;
+	margin-left: 0;
+}
+	
+.header_right_column {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	float: right;
+	height: auto;
+	padding-top: 0px;
+	margin-top: 10%;
+	position: absolute;
+}
+
+.header {
+	height: auto;
+}
+
+}
+
+
+@media screen and (max-width: 900px) {
+.team_section .inner_wrapper {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.team_section {
+	height: auto;
+	padding-bottom: 80px;
+}
+
+.section_one_iphone_two {
+	margin-right: 0px;
+}
+
+.section_one_iphones_wrapper {
+	width: 580px;
+	height: 462px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section_one_iphone_three {
+	display:none;
+}
+
+.final_cta_section {
+	background-position: 0px 0px;
+}
+
+.section_one_header {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+}
+
+@media screen and (max-width: 780px) {
+	
+.features_section h3 {
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+ul.features_list {
+	width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+ul.features_list li {
+	width: 280px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 80px;
+	float: none;
+	text-align: center;
+	clear: both;
+}
+
+.iphone_hand {
+	margin-top: 50%;
+}
+
+}
+
+
+@media screen and (max-width: 590px) {
+
+.iphone_hand {
+	margin-top: 80%;
+}
+
+.section_one_iphone_two {
+	display:none;
+}
+
+.section_one_iphone_one {
+	float: none;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.section_one_iphones_wrapper {
+	width: 100%;
+}
+
+.section_one {
+	height: auto;
+}
+
+.section_one_header {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+	height: auto;
+	padding-bottom: 30px;
+}
+
+}
+
+
+@media screen and (max-width: 550px) {
+	
+.header_right_column a.appstore_button {
+	margin-bottom: 20px;
+}
+
+}
+
+@media screen and (max-width: 490px) {
+	
+.iphone_hand {
+	margin-top: 110%;
+	width: 90%;
+	background-size: 100%;
+	background-position: center bottom;
+	height: 575px;
+}
+
+.final_cta_store_buttons_wrapper {
+	width: 208px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+a.appstore_button {
+	margin-right: 0px;
+	margin-bottom: 30px;
+}
+
+.header_right_column {
+	margin-top: 20%;
+}
+
+.final_cta_section {
+	width: 100%;
+	height: auto;
+	padding-bottom:70px;
+}
+
+}
