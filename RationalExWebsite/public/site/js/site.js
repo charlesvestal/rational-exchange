@@ -2,7 +2,7 @@
 
 $(document).ready(function(){
 
-<!----  appstore button - google play button hover ---->
+	// google play and app store button hovers
 $("a.appstore_button, a.google_play_button, .footer_social_icons a, .team_member_social_icons a").fadeTo("fast", 1.0); 
 $("a.appstore_button, a.google_play_button, .footer_social_icons a, .team_member_social_icons a").hover(function(){
 $(this).fadeTo("fast", 0.6); 
@@ -31,26 +31,22 @@ height:'422px'
 });
 
 
-<!----  fadein header ---->
+// fade in headers
+
 $(window).bind("load", function() {
 
-$(".loading_screen").fadeOut(400);
+$(".loading_screen").fadeOut(0);
 
-$(".inner_page").delay(800).fadeIn(400);
 
-$(".header").show().addClass('animated fadeInDownBig');
-setTimeout(function(){
-}, 800);
-
-setTimeout(function(){
-
-$(".iphone_hand").show().addClass('animated fadeInUpBig');
-}, 1100);
-
-setTimeout(function(){
-$(".header_right_column").show().addClass('animated fadeInUpBig');
-
-}, 1300);
+// setTimeout(function(){
+//
+// $(".iphone_hand").show().addClass('animated fadeInUpBig');
+// }, 1100);
+//
+// setTimeout(function(){
+// $(".header_right_column").show().addClass('animated fadeInUpBig');
+//
+// }, 200);
 
 });
 
