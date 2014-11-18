@@ -1571,7 +1571,7 @@
     {
       "name": "Norway",
       "additionalTaxRate": 0,
-      "tipRate": 0.05,
+      "tipRate": 0.1,
       "country": "Norway",
       "tipString": "If no service charge is on your bill, add 10%"
     },
