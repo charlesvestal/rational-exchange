@@ -157,7 +157,7 @@ protocol CountrySelectedDelegate {
         var locale: Locale
         if tableView == self.searchDisplayController!.searchResultsTableView {
             locale = filteredLocales[indexPath.row]
-            cell.textLabel.text = locale.name
+            cell.textLabel?.text = locale.name
             cell.detailTextLabel?.text = String(format:"%@",locale.country.currencyCode)
         } else {
             locale = locales[0]
@@ -170,7 +170,7 @@ protocol CountrySelectedDelegate {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
 
         
-        let selectedLocale = tableView.cellForRowAtIndexPath(indexPath)?.textLabel.text
+        let selectedLocale = tableView.cellForRowAtIndexPath(indexPath)?.textLabel?.text
         let newLocale = localeListSingleton.getLocale(selectedLocale!)
        
         exchangeCalc.updateLocale(newLocale.name, isForeign: isForeign)
