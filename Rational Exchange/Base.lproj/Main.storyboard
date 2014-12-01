@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4LO-2H-goP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="4LO-2H-goP">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -15,11 +15,11 @@
                         <viewControllerLayoutGuide type="bottom" id="cxv-yG-TSQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="LIa-b8-aq1">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yuz-A8-62f" userLabel="made by charles top">
-                                <rect key="frame" x="0.0" y="40" width="600" height="57"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yuz-A8-62f" userLabel="made by charles top">
+                                <rect key="frame" x="0.0" y="40" width="736" height="57"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">made by charles
@@ -41,9 +41,12 @@
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="125" height="57"/>
+                                </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCa-UZ-LOB" userLabel="made by charles bottom">
-                                <rect key="frame" x="0.0" y="523" width="600" height="57"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pCa-UZ-LOB" userLabel="made by charles bottom">
+                                <rect key="frame" x="0.0" y="337" width="736" height="57"/>
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">made by charles
@@ -65,30 +68,42 @@
                                     </fragment>
                                 </attributedString>
                                 <nil key="highlightedColor"/>
+                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="125" height="57"/>
+                                </variation>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lV2-Qm-ySP">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lV2-Qm-ySP">
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                                 <subviews>
-                                    <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfj-GU-4ig" userLabel="top" customClass="CVUIContainerView" customModule="RationalEx" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                    <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Cfj-GU-4ig" userLabel="top" customClass="CVUIContainerView" customModule="RationalEx" customModuleProvider="target">
+                                        <rect key="frame" x="44" y="-17" width="43" height="40"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isForeign" value="YES"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
+                                            <rect key="frame" x="22" y="47" width="54" height="98"/>
+                                        </variation>
                                         <connections>
                                             <segue destination="mPx-Hu-dt9" kind="embed" id="1Ab-so-sDK"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zpT-yS-Xcz" userLabel="middle">
-                                        <rect key="frame" x="0.0" y="600" width="600" height="600"/>
+                                    <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zpT-yS-Xcz" userLabel="middle">
+                                        <rect key="frame" x="0.0" y="414" width="736" height="414"/>
+                                        <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                            <rect key="frame" x="0.0" y="0.0" width="368" height="414"/>
+                                        </variation>
                                         <connections>
                                             <segue destination="p1u-ni-V8n" kind="embed" identifier="embedMiddleView" id="EHg-7M-Xgc"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VXv-1r-sfc" userLabel="bottom" customClass="CVUIContainerView" customModule="RationalEx" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="1200" width="600" height="600"/>
+                                    <containerView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VXv-1r-sfc" userLabel="bottom" customClass="CVUIContainerView" customModule="RationalEx" customModuleProvider="target">
+                                        <rect key="frame" x="70" y="10" width="1" height="42"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="boolean" keyPath="isForeign" value="NO"/>
                                         </userDefinedRuntimeAttributes>
+                                        <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
+                                            <rect key="frame" x="57" y="85" width="95" height="54"/>
+                                        </variation>
                                         <connections>
                                             <segue destination="mPx-Hu-dt9" kind="embed" id="xqS-FG-khC"/>
                                         </connections>
@@ -97,6 +112,12 @@
                                 <constraints>
                                     <constraint firstItem="zpT-yS-Xcz" firstAttribute="centerX" secondItem="Cfj-GU-4ig" secondAttribute="centerX" id="2AW-CB-qbr"/>
                                     <constraint firstItem="zpT-yS-Xcz" firstAttribute="width" secondItem="VXv-1r-sfc" secondAttribute="width" id="5S3-oe-eU1"/>
+                                    <constraint firstItem="zpT-yS-Xcz" firstAttribute="leading" secondItem="lV2-Qm-ySP" secondAttribute="leading" constant="71" id="6BV-SB-SdO">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                                    </constraint>
+                                    <constraint firstItem="zpT-yS-Xcz" firstAttribute="centerY" secondItem="lV2-Qm-ySP" secondAttribute="centerY" constant="-43" id="Bpd-Mn-TXN">
+                                        <variation key="heightClass=compact-widthClass=regular" constant="0.0"/>
+                                    </constraint>
                                     <constraint firstItem="Cfj-GU-4ig" firstAttribute="height" secondItem="lV2-Qm-ySP" secondAttribute="height" id="OBF-lV-M74"/>
                                     <constraint firstItem="VXv-1r-sfc" firstAttribute="bottom" secondItem="lV2-Qm-ySP" secondAttribute="bottom" id="OEv-zd-eo9"/>
                                     <constraint firstItem="Cfj-GU-4ig" firstAttribute="top" secondItem="lV2-Qm-ySP" secondAttribute="top" id="OvL-kq-xMs"/>
@@ -107,10 +128,54 @@
                                     <constraint firstItem="Cfj-GU-4ig" firstAttribute="leading" secondItem="lV2-Qm-ySP" secondAttribute="leading" id="jC0-4Y-Aw4"/>
                                     <constraint firstItem="zpT-yS-Xcz" firstAttribute="height" secondItem="Cfj-GU-4ig" secondAttribute="height" id="jNZ-M6-gy7"/>
                                     <constraint firstItem="zpT-yS-Xcz" firstAttribute="width" secondItem="Cfj-GU-4ig" secondAttribute="width" id="mGf-5A-hit"/>
+                                    <constraint firstItem="zpT-yS-Xcz" firstAttribute="height" secondItem="lV2-Qm-ySP" secondAttribute="height" id="pVy-dL-92U"/>
                                     <constraint firstItem="zpT-yS-Xcz" firstAttribute="bottom" secondItem="VXv-1r-sfc" secondAttribute="top" id="qrF-hj-vES"/>
                                     <constraint firstItem="zpT-yS-Xcz" firstAttribute="top" secondItem="Cfj-GU-4ig" secondAttribute="bottom" id="rps-aj-TVl"/>
                                     <constraint firstItem="zpT-yS-Xcz" firstAttribute="centerX" secondItem="VXv-1r-sfc" secondAttribute="centerX" id="tyT-WM-ywy"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="OBF-lV-M74"/>
+                                        <exclude reference="OvL-kq-xMs"/>
+                                        <exclude reference="XDW-iq-sWf"/>
+                                        <exclude reference="aN7-IL-lOS"/>
+                                        <exclude reference="eSr-yG-IyO"/>
+                                        <exclude reference="jC0-4Y-Aw4"/>
+                                        <exclude reference="OEv-zd-eo9"/>
+                                        <exclude reference="2AW-CB-qbr"/>
+                                        <exclude reference="5S3-oe-eU1"/>
+                                        <exclude reference="6BV-SB-SdO"/>
+                                        <exclude reference="Bpd-Mn-TXN"/>
+                                        <exclude reference="TZg-Gc-6wF"/>
+                                        <exclude reference="jNZ-M6-gy7"/>
+                                        <exclude reference="mGf-5A-hit"/>
+                                        <exclude reference="qrF-hj-vES"/>
+                                        <exclude reference="rps-aj-TVl"/>
+                                        <exclude reference="tyT-WM-ywy"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="368" y="0.0" width="0.0" height="414"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="OBF-lV-M74"/>
+                                        <include reference="OvL-kq-xMs"/>
+                                        <include reference="XDW-iq-sWf"/>
+                                        <include reference="aN7-IL-lOS"/>
+                                        <include reference="eSr-yG-IyO"/>
+                                        <include reference="jC0-4Y-Aw4"/>
+                                        <include reference="OEv-zd-eo9"/>
+                                        <include reference="2AW-CB-qbr"/>
+                                        <include reference="5S3-oe-eU1"/>
+                                        <include reference="TZg-Gc-6wF"/>
+                                        <include reference="jNZ-M6-gy7"/>
+                                        <include reference="mGf-5A-hit"/>
+                                        <include reference="qrF-hj-vES"/>
+                                        <include reference="rps-aj-TVl"/>
+                                        <include reference="tyT-WM-ywy"/>
+                                    </mask>
+                                </variation>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -120,23 +185,64 @@
                             <constraint firstItem="Yuz-A8-62f" firstAttribute="top" secondItem="BDc-Qv-Iog" secondAttribute="bottom" constant="20" id="Dcf-Fb-kYK"/>
                             <constraint firstItem="cxv-yG-TSQ" firstAttribute="top" secondItem="pCa-UZ-LOB" secondAttribute="bottom" constant="20" id="Kml-Bn-cqL"/>
                             <constraint firstAttribute="width" secondItem="Yuz-A8-62f" secondAttribute="width" id="OqK-gC-vdS"/>
+                            <constraint firstItem="lV2-Qm-ySP" firstAttribute="height" secondItem="LIa-b8-aq1" secondAttribute="height" id="QzO-IX-Nyj"/>
                             <constraint firstItem="pCa-UZ-LOB" firstAttribute="width" secondItem="lV2-Qm-ySP" secondAttribute="width" id="Xd8-td-pB1"/>
                             <constraint firstItem="lV2-Qm-ySP" firstAttribute="height" secondItem="LIa-b8-aq1" secondAttribute="height" id="ZbI-TG-Qot"/>
-                            <constraint firstItem="cxv-yG-TSQ" firstAttribute="top" secondItem="pCa-UZ-LOB" secondAttribute="bottom" constant="289" id="a7O-rs-sHj"/>
                             <constraint firstItem="lV2-Qm-ySP" firstAttribute="height" secondItem="LIa-b8-aq1" secondAttribute="height" id="asK-QQ-te0"/>
+                            <constraint firstItem="zpT-yS-Xcz" firstAttribute="width" secondItem="LIa-b8-aq1" secondAttribute="width" multiplier="0.5" id="bbI-ZA-99G"/>
                             <constraint firstItem="lV2-Qm-ySP" firstAttribute="width" secondItem="LIa-b8-aq1" secondAttribute="width" id="bhl-lN-LwB"/>
                             <constraint firstItem="lV2-Qm-ySP" firstAttribute="centerY" secondItem="LIa-b8-aq1" secondAttribute="centerY" id="fIi-Vt-RZS"/>
                             <constraint firstAttribute="centerX" secondItem="pCa-UZ-LOB" secondAttribute="centerX" id="jKm-w8-tVj"/>
                             <constraint firstItem="lV2-Qm-ySP" firstAttribute="width" secondItem="LIa-b8-aq1" secondAttribute="width" id="uzt-hM-ZMz"/>
+                            <constraint firstItem="lV2-Qm-ySP" firstAttribute="centerX" secondItem="LIa-b8-aq1" secondAttribute="centerX" id="ybE-gE-HV6"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="a7O-rs-sHj"/>
+                                <exclude reference="3il-ol-Z81"/>
+                                <exclude reference="QzO-IX-Nyj"/>
+                                <exclude reference="ZbI-TG-Qot"/>
+                                <exclude reference="asK-QQ-te0"/>
+                                <exclude reference="bhl-lN-LwB"/>
+                                <exclude reference="fIi-Vt-RZS"/>
+                                <exclude reference="uzt-hM-ZMz"/>
+                                <exclude reference="ybE-gE-HV6"/>
+                                <exclude reference="6q7-rN-fGp"/>
+                                <exclude reference="Dcf-Fb-kYK"/>
+                                <exclude reference="OqK-gC-vdS"/>
+                                <exclude reference="Xd8-td-pB1"/>
+                                <exclude reference="jKm-w8-tVj"/>
+                                <exclude reference="Kml-Bn-cqL"/>
+                                <exclude reference="bbI-ZA-99G"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=regular">
+                            <mask key="constraints">
+                                <include reference="QzO-IX-Nyj"/>
+                                <include reference="ybE-gE-HV6"/>
+                                <include reference="bbI-ZA-99G"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="3il-ol-Z81"/>
+                                <include reference="ZbI-TG-Qot"/>
+                                <include reference="asK-QQ-te0"/>
+                                <include reference="bhl-lN-LwB"/>
+                                <include reference="fIi-Vt-RZS"/>
+                                <include reference="uzt-hM-ZMz"/>
+                                <include reference="6q7-rN-fGp"/>
+                                <include reference="Dcf-Fb-kYK"/>
+                                <include reference="OqK-gC-vdS"/>
+                                <include reference="Xd8-td-pB1"/>
+                                <include reference="jKm-w8-tVj"/>
+                                <include reference="Kml-Bn-cqL"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="KYg-43-Pqm"/>
                     <nil key="simulatedTopBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <connections>
                         <outlet property="mainView" destination="LIa-b8-aq1" id="mz4-1f-8EP"/>
                         <outlet property="scrollView" destination="lV2-Qm-ySP" id="EVw-d6-Gbt"/>
@@ -155,27 +261,24 @@
                         <viewControllerLayoutGuide type="bottom" id="4RP-r8-6yx"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="6HQ-vK-pRQ" userLabel="mainView">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDQ-Rl-qg8" userLabel="foreignView">
-                                <rect key="frame" x="0.0" y="-20" width="320" height="205"/>
+                                <rect key="frame" x="0.0" y="-20" width="480" height="205"/>
                                 <color key="backgroundColor" red="0.2600353956" green="0.52061373" blue="0.74229294059999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7I5-MG-AHL">
-                                <rect key="frame" x="92" y="69" width="12" height="28"/>
+                                <rect key="frame" x="172" y="69" width="12" height="28"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="LjI-CP-aHq"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="20"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="332" y="14" width="12" height="28"/>
-                                </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MSd-om-yLk" userLabel="Foreign Amount Field">
-                                <rect key="frame" x="112" y="68" width="97" height="30"/>
+                                <rect key="frame" x="192" y="68" width="97" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="bZ9-SI-axb"/>
                                     <constraint firstAttribute="width" constant="97" id="fQ6-l3-gFy"/>
@@ -185,9 +288,6 @@
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="112" y="111" width="97" height="30"/>
                                 </variation>
-                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="352" y="13" width="97" height="30"/>
-                                </variation>
                                 <connections>
                                     <action selector="fieldChanged:" destination="p1u-ni-V8n" eventType="editingChanged" id="1dm-qL-m7B"/>
                                     <action selector="fieldChanged:" destination="p1u-ni-V8n" eventType="editingDidBegin" id="RMk-L9-4HA"/>
@@ -196,7 +296,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qjd-JL-O8L" userLabel="foreignButton">
-                                <rect key="frame" x="219" y="60" width="45" height="45"/>
+                                <rect key="frame" x="299" y="60" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="45" id="RiI-Gl-KBr"/>
                                     <constraint firstAttribute="width" constant="45" id="uNS-ws-vP6"/>
@@ -204,52 +304,39 @@
                                 <state key="normal" title="Button" image="awayButton" backgroundImage="AD">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="459" y="5" width="45" height="45"/>
-                                </variation>
                                 <connections>
                                     <action selector="gotoTopButton:" destination="p1u-ni-V8n" eventType="touchUpInside" id="ufl-Si-F7T"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you in a bar or restaurant?" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyY-Vn-eeY">
-                                <rect key="frame" x="48" y="113" width="168" height="55"/>
+                                <rect key="frame" x="128" y="113" width="168" height="55"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="168" id="Q55-Th-RFc"/>
                                     <constraint firstAttribute="height" constant="55" id="svT-yN-bjn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="48" y="169" width="168" height="21"/>
                                 </variation>
-                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="288" y="58" width="168" height="55"/>
-                                </variation>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z4s-Li-EnN">
-                                <rect key="frame" x="224" y="125" width="51" height="31"/>
-                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="464" y="70" width="51" height="31"/>
-                                </variation>
+                                <rect key="frame" x="304" y="125" width="51" height="31"/>
                                 <connections>
                                     <action selector="fieldChanged:" destination="p1u-ni-V8n" eventType="valueChanged" id="eVT-xL-08A"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="500" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="FCz-8K-TVU" userLabel="Longform cost story">
-                                <rect key="frame" x="10" y="291" width="300" height="119"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="500" misplaced="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="FCz-8K-TVU" userLabel="Longform cost story">
                                 <string key="text">Back home you'd pay a bit of whatever but here you'll see this and this. 
 
 and then you'll pay tax and tip and other stuff too so don't worry about it cool in Ireland</string>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="10" y="220" width="780" height="110"/>
-                                </variation>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="12.50" textAlignment="center" minimumFontSize="2" translatesAutoresizingMaskIntoConstraints="NO" id="6X7-tr-Odi" userLabel="converted Amount">
-                                <rect key="frame" x="10" y="230" width="300" height="48"/>
+                                <rect key="frame" x="10" y="230" width="460" height="48"/>
                                 <accessibility key="accessibilityConfiguration">
                                     <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                 </accessibility>
@@ -259,12 +346,9 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="35"/>
                                 <textInputTraits key="textInputTraits"/>
-                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="351" y="159" width="98" height="48"/>
-                                </variation>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="The price tag here says:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="83h-QH-g7P">
-                                <rect key="frame" x="30" y="1" width="260" height="44"/>
+                                <rect key="frame" x="30" y="1" width="420" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="p4l-aM-jDj"/>
                                 </constraints>
@@ -274,12 +358,9 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 <variation key="widthClass=compact" misplaced="YES">
                                     <rect key="frame" x="50" y="28" width="300" height="40"/>
                                 </variation>
-                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="10" y="-54" width="780" height="44"/>
-                                </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Un-lc-8lx" userLabel="homeButton">
-                                <rect key="frame" x="138" y="415" width="45" height="45"/>
+                                <rect key="frame" x="218" y="255" width="45" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="45" id="INi-a5-ZrW"/>
                                     <constraint firstAttribute="height" constant="45" id="Q6H-yA-JVY"/>
@@ -287,24 +368,18 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 <state key="normal" title="Button" image="homeButton" backgroundImage="AU">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="378" y="335" width="45" height="45"/>
-                                </variation>
                                 <connections>
                                     <action selector="gotoButtomButton:" destination="p1u-ni-V8n" eventType="touchUpInside" id="SqR-MU-Rsl"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="The price at home would be:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fFM-xq-rQ9">
-                                <rect key="frame" x="10" y="193" width="300" height="36"/>
+                                <rect key="frame" x="10" y="193" width="460" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="36" id="w62-dd-4BX"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="32"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES">
-                                    <rect key="frame" x="10" y="114" width="780" height="44"/>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.30914759635925293" green="0.72359037399291992" blue="0.89625716209411621" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -381,15 +456,15 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
             <objects>
                 <tableViewController id="bfl-eG-BOs" userLabel="Country Table View Controller" customClass="CountryTableViewController" customModule="RationalEx" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="foreignTableView" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" delaysContentTouches="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="f86-vJ-JCJ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="716"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="394"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <searchBar key="tableHeaderView" opaque="NO" contentMode="redraw" searchBarStyle="minimal" placeholder="Where Are You?" id="zq5-5b-0gK" userLabel="searchBar">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="736" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                             <textInputTraits key="textInputTraits"/>
                             <connections>
                                 <outlet property="delegate" destination="bfl-eG-BOs" id="l3d-uy-vNf"/>
@@ -404,7 +479,7 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="mXG-UK-i56">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bRp-XE-cgu">
@@ -452,31 +527,31 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         <viewControllerLayoutGuide type="bottom" id="Jw5-by-r0o"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fcc-FU-WgL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qrt-Hu-ahS">
-                                <rect key="frame" x="-100" y="-100" width="614" height="936"/>
+                                <rect key="frame" x="-100" y="-100" width="936" height="614"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="40" y="220" width="240" height="128"/>
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IT LOOKS LIKE YOU'RE IN" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Wv-Kc-OMk">
-                                <rect key="frame" x="76" y="80" width="241" height="26"/>
+                                <rect key="frame" x="237" y="80" width="241" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="jpA-Aq-dUV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WHERE THEY SPEND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="4LU-Wx-rD3">
-                                <rect key="frame" x="24" y="481" width="366" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="WHERE THEY SPEND" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="4LU-Wx-rD3">
+                                <rect key="frame" x="24" y="159" width="688" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="WPB-fe-VLl"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="default">
                                     <mask key="constraints">
@@ -484,38 +559,38 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                     </mask>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Norwegian Kroner" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTb-zy-q5M">
-                                <rect key="frame" x="24" y="511" width="366" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Norwegian Kroner" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JTb-zy-q5M">
+                                <rect key="frame" x="24" y="189" width="688" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AND THEY ADD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="ojQ-gl-DCw">
-                                <rect key="frame" x="24" y="545" width="366" height="26"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="AND THEY ADD" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="ojQ-gl-DCw">
+                                <rect key="frame" x="24" y="223" width="688" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Usually Tax is Included, but you should check. asdasd a a d asdasda" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42k-4m-ZJV">
-                                <rect key="frame" x="24" y="575" width="366" height="52"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Usually Tax is Included, but you should check. asdasd a a d asdasda" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="42k-4m-ZJV">
+                                <rect key="frame" x="24" y="253" width="688" height="52"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLUS THEY TIP" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="19" translatesAutoresizingMaskIntoConstraints="NO" id="XlW-dl-76c">
-                                <rect key="frame" x="24" y="635" width="366" height="26"/>
+                                <rect key="frame" x="24" y="313" width="688" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
-                                <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tipping isn't the custom here" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="none" minimumFontSize="10" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xbv-KQ-bt2">
-                                <rect key="frame" x="24" y="665" width="366" height="26"/>
+                                <rect key="frame" x="24" y="343" width="688" height="26"/>
                                 <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="19"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="500" text="CALIFORNIA AND" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="1" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-Im-xuh">
-                                <rect key="frame" x="21" y="114" width="372" height="324"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="500" misplaced="YES" text="CALIFORNIA AND" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" minimumFontSize="1" preferredMaxLayoutWidth="256" translatesAutoresizingMaskIntoConstraints="NO" id="q0b-Im-xuh">
+                                <rect key="frame" x="37" y="114" width="662" height="2"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="750" constant="150" id="CBh-ok-NPk"/>
                                 </constraints>
@@ -530,18 +605,18 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 </variation>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1PM-98-9mt" userLabel="noCountryView">
-                                <rect key="frame" x="-1" y="0.0" width="415" height="736"/>
+                                <rect key="frame" x="-1" y="0.0" width="737" height="414"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="awayBig" translatesAutoresizingMaskIntoConstraints="NO" id="XfB-dl-5ZA">
-                                        <rect key="frame" x="26" y="206" width="364" height="364"/>
+                                        <rect key="frame" x="26" y="-116" width="686" height="686"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="XfB-dl-5ZA" secondAttribute="height" multiplier="1:1" id="F1H-u0-WBX"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.15000000000000008" translatesAutoresizingMaskIntoConstraints="NO" id="NQp-Nb-OLm">
-                                        <rect key="frame" x="26" y="580" width="364" height="55"/>
+                                        <rect key="frame" x="26" y="580" width="686" height="55"/>
                                         <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="40"/>
-                                        <color key="textColor" cocoaTouchSystemColor="lightTextColor"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -561,14 +636,14 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 </variation>
                             </view>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ah2-Ug-q1T">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="20" width="736" height="394"/>
                                 <connections>
                                     <segue destination="bfl-eG-BOs" kind="embed" identifier="embedTableView" id="4Hb-Rv-q26"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X5t-hr-6OV" userLabel="findMeButton">
-                                <rect key="frame" x="317" y="71" width="44" height="44"/>
-                                <color key="tintColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <rect key="frame" x="478" y="71" width="44" height="44"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="LocationImage"/>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
                                     <rect key="frame" x="296" y="74" width="99" height="44"/>
@@ -578,12 +653,12 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oz-8S-ogi" userLabel="notRightForeign">
-                                <rect key="frame" x="128" y="696" width="159" height="20"/>
+                                <rect key="frame" x="289" y="374" width="159" height="20"/>
                                 <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="12"/>
                                 <color key="tintColor" red="0.75294125079999996" green="0.81176477670000002" blue="0.88235300780000003" alpha="1" colorSpace="deviceRGB"/>
                                 <size key="titleShadowOffset" width="1" height="1"/>
                                 <state key="normal" title="NOT RIGHT? LET US KNOW.">
-                                    <color key="titleColor" cocoaTouchSystemColor="lightTextColor"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
@@ -651,13 +726,13 @@ and then you'll pay tax and tip and other stuff too so don't worry about it cool
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="4A4-Uv-kF4"/>
                                 <exclude reference="VCQ-dE-MZq"/>
+                                <exclude reference="tuw-jT-Drd"/>
+                                <exclude reference="f3f-yC-eL8"/>
                                 <exclude reference="0j5-0p-A0v"/>
                                 <exclude reference="E6n-9a-NZO"/>
                                 <exclude reference="hiV-8i-WHn"/>
-                                <exclude reference="4A4-Uv-kF4"/>
-                                <exclude reference="tuw-jT-Drd"/>
-                                <exclude reference="f3f-yC-eL8"/>
                             </mask>
                         </variation>
                     </view>
