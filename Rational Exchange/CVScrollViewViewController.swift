@@ -34,7 +34,7 @@ class CVScrollViewViewController: UIViewController {
         var userHasOnboardedAlready =  NSUserDefaults.standardUserDefaults().boolForKey(userHasOnboardedKey);
         
         if (!userHasOnboardedAlready) {
-            bump()
+            //bump()
         }
         
     }
